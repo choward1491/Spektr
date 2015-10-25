@@ -24,6 +24,7 @@ public:
 	D pop();
 	void printKeys();
 	int getHeapCount(){ return heap_count; }
+    int size(){ return heap_count; }
 	int getArrayLength(){ return length_arr; }
 
 
@@ -292,6 +293,7 @@ public:
 	D pop();
 	void printKeys();
 	int getHeapCount(){ return heap_count; }
+    int size(){ return heap_count; }
 	int getArrayLength(){ return length_arr; }
 
 private:

@@ -11,7 +11,7 @@
 
 
 
-ExplicitEuler::ExplicitEuler( NumCH::Model** & _models, int _numModels ){
+ExplicitEuler::ExplicitEuler( Model** & _models, int _numModels ){
     models      = &_models;
     numModels   = _numModels;
     setModels(_models, _numModels);
@@ -33,7 +33,7 @@ void ExplicitEuler::integrate( double dt ){
     }
     
 }
-void ExplicitEuler::setModels( NumCH::Model** & _models, int _numModels ){
+void ExplicitEuler::setModels( Model** & _models, int _numModels ){
     k1 = new Vec[_numModels];
     for (int i = 0; i < _numModels; i++) {
         k1[i] = Vec((_models[i])->numDims());

@@ -14,9 +14,7 @@
 //
 // Simplified alias for a double Vect
 //
-using Vec = NumCH::Vect<double>;
-
-namespace NumCH {
+using Vec = Vect<double>;
 
 
 /*!
@@ -158,7 +156,7 @@ private:
     
 };
     
-}
+
 
 
 #endif /* Model_cpp */

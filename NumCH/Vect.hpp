@@ -14,7 +14,6 @@
 
 
 
-namespace NumCH {
     
     
     /*!
@@ -215,7 +214,7 @@ namespace NumCH {
         
     };
 
-}
+
 
 
 #include "Vect.cpp"

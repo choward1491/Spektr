@@ -14,7 +14,6 @@
 
 
 
-namespace NumCH {
 
 class GenIntegrator {
     
@@ -33,7 +32,7 @@ protected:
     
 };
 
-}
+
 
 
 #endif /* GenIntegrator_cpp */

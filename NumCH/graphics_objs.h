@@ -9,8 +9,7 @@
 #ifndef GraphicsLearning_graphics_objs_h
 #define GraphicsLearning_graphics_objs_h
 
-#include "sphere.h"
-#include "PointLight.h"
+
 
 
 #endif

@@ -16,11 +16,9 @@
 #include "Scheduler.hpp"
 #include "RandomNumberGenerator.hpp"
 
-using Rand = NumCH::RandomNumberGenerator;
+using Rand = RandomNumberGenerator;
 
 
-
-namespace NumCH {
 
 /*!
  * This object is built to represent
@@ -221,6 +219,6 @@ protected:
 };
 
     
-}
+
 
 #endif /* Simulator_cpp */

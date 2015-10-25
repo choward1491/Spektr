@@ -9,6 +9,6 @@
 #include "GenIntegrator.hpp"
 
 
-NumCH::GenIntegrator::~GenIntegrator(){
+GenIntegrator::~GenIntegrator(){
     models = 0;
 }

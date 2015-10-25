@@ -21,7 +21,7 @@
 #ifndef Vect_cpp2
 #define Vect_cpp2
 
-namespace NumCH {
+
 
         
     
@@ -351,7 +351,7 @@ namespace NumCH {
     
     
     
-}
+
 
 
 

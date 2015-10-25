@@ -12,7 +12,7 @@
 #include "heap.h"
 #include "Model.hpp"
 
-namespace NumCH {
+
 
 class Scheduler : public MinHeap<double, Model*> {
 public:
@@ -20,6 +20,6 @@ public:
 
 };
     
-}
+
 
 #endif /* Scheduler_cpp */

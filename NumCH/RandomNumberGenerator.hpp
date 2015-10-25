@@ -12,13 +12,12 @@
 
 #include <stdio.h>
 
-namespace NumCH {
 
 class RandomNumberGenerator {
     
 public:
     RandomNumberGenerator(int seed = 173);
-    double simple();
+    double rand();
     void print() const;
     
 private:
@@ -30,7 +29,7 @@ private:
     
 };
     
-}
+
 
 
 

@@ -32,7 +32,7 @@ public:
 
 private:
 
-	MaxHeap< FigData2D* > data2plot;
+	//MaxHeap< FigData2D* > data2plot;
 	float plot_bounds[4];
 	Axis  plot_ax;
 	Pixel plot_bg_color;

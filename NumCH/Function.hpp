@@ -47,25 +47,6 @@ protected:
     
 };
 
-
-
-
-
-
-class Quadratic : public Function<1, 2, double> {
-public:
-        
-protected:
-    virtual void compute( const double * & input, double * & output ) const {
-        double dx = input[0] - 50;
-        //output[0] = dx*dx*dx*dx;
-        //output[1] = 4*dx*dx*dx;
-        output[0] = dx*dx;
-        output[1] = 2*dx;
-    }
-    
-    
-};
     
 }
 

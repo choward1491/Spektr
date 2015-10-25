@@ -13,7 +13,6 @@
 #include "ConfigParser.hpp"
 
 
-namespace NumCH {
 
 class Constants {
 public:
@@ -38,6 +37,6 @@ private:
     
 };
     
-}
+
 
 #endif /* ConstantsSet_cpp */

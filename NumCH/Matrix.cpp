@@ -1,5 +1,5 @@
 
-#include "matrix.h"
+#include "Matrix.h"
 #include <math.h>
 
 
@@ -11,7 +11,7 @@ int abs(int c)
 }
 
 
-namespace NumCH {
+
     
 
 //Matrix constructors
@@ -715,4 +715,3 @@ Matrix Matrix::squareRoot() const
     }
 }
 
-}

@@ -10,7 +10,7 @@
 
 
     
-void NumCH::Constants::readFile( const char* filename ){
+void Constants::readFile( const char* filename ){
     if( parser == 0 ){
         parser = new ConfigParser(filename);
     }else{
@@ -18,15 +18,15 @@ void NumCH::Constants::readFile( const char* filename ){
     }
 }
     
-NumCH::Constants::~Constants(){
+Constants::~Constants(){
     deleteParser();
 }
 
-void NumCH::Constants::setConstants(){
+void Constants::setConstants(){
     // Do nothing for this object
 }
 
-void NumCH::Constants::deleteParser(){
+void Constants::deleteParser(){
     if( parser != 0 ){
         delete parser;
         parser = 0;

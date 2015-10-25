@@ -6,9 +6,9 @@
 #include <string>
 using namespace std;
 
-namespace NumCH {
 
-enum TYPE{DIAG,TDIAG,SYM,UTRI,LTRI,SPARSE, GEN};
+
+enum MatrixType{DIAG,TDIAG,SYM,UTRI,LTRI,SPARSE, GEN};
 
 class Matrix
 {
@@ -82,6 +82,6 @@ Matrix gaussElim(Matrix & A, Matrix & b);
 Matrix linspace(double xs, double xe, int N);
 
 
-}
+
 
 #endif

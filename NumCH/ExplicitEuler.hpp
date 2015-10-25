@@ -13,15 +13,15 @@
 
 
 
-class ExplicitEuler : public NumCH::GenIntegrator {
+class ExplicitEuler : public GenIntegrator {
     
 public:
-    ExplicitEuler( NumCH::Model** & _models, int _numModels );
+    ExplicitEuler( Model** & _models, int _numModels );
     virtual ~ExplicitEuler();
     virtual void integrate( double dt );
     
 protected:
-    virtual void setModels( NumCH::Model** & _models, int _numModels );
+    virtual void setModels( Model** & _models, int _numModels );
     
 private:
     Vec * k1;

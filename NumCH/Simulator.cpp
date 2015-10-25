@@ -8,7 +8,6 @@
 
 #include "Simulator.hpp"
 
-namespace NumCH {
     
 
 
@@ -96,4 +95,4 @@ namespace NumCH {
         }
     }
     
-}
+

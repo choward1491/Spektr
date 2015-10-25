@@ -7,28 +7,26 @@
 //
 
 #include <iostream>
-#include "TestSim.hpp"
-#include "ConfigParser.hpp"
-#include "Function.hpp"
-#include "GradientDescent.hpp"
-using namespace NumCH;
+#include "NumCH.h"
+typedef NeuralNetwork<1, 1, 1, 1> ANN;
+
+
 
 int main(int argc, const char * argv[]) {
+    int num = ANN::numWeights;
     
-    //TestSim sim;
-    //sim.simLoop();
+    ANN net;
     
-    GradientDescent<1, 2> test;
-    test.setMaxIterations( 5000 );
-    test.setStopThreshold( 1e-20 );
+    net(0,0,0) = 1;
+    net(0,1,0) = 0;
+    net(1,0,0) = 1;
+    net(1,1,0) = 0;
     
+    double x = 5.0;
+    ANN::Input in = { x };
     
-    Quadratic quad;
-    Vect<double> guess(1);
-    guess[0] = 5.0;
-    Vect<double> output = test.solve( guess, quad );
-    output.print();
-    printf("Num Iters = %i\n", test.numIters);
+    printf("f(%lf) = %lf\n", x, net(in));
+    
     
     return 0;
 }
