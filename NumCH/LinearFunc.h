@@ -11,12 +11,16 @@
 
 #include "NodeFunc.h"
 
-class ConstFunc : public NodeFunc {
+/*!
+ * Method to represent linear operator
+ * and it's derivative
+ *
+ */
+class LinearFunc : public NodeFunc {
 public:
+    virtual ~LinearFunc(){ }
     virtual double operator()(double input);
     virtual double derivative(double input);
-    
-    
     
 };
 

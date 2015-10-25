@@ -17,6 +17,8 @@
 		AD47683C1B77E52800E6B11D /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47683A1B77E52800E6B11D /* ExplicitEuler.cpp */; };
 		AD4768461B780D7200E6B11D /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768441B780D7200E6B11D /* RandomNumberGenerator.cpp */; };
 		AD47684A1B781F9E00E6B11D /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768481B781F9E00E6B11D /* ConfigParser.cpp */; };
+		AD97F9521BDCBD1A00C57E0B /* libarmadillo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */; };
+		ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
 		ADB85D851B79B959002879D2 /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D831B79B959002879D2 /* Function.cpp */; };
 		ADB85D8C1B815AF2002879D2 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D8A1B815AF2002879D2 /* Matrix.cpp */; };
 		ADB85D9B1B815E27002879D2 /* cpixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D8F1B815E27002879D2 /* cpixel.cpp */; };
@@ -30,7 +32,7 @@
 		ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A31BDA04E300D84DB6 /* LinkedList.cpp */; settings = {ASSET_TAGS = (); }; };
 		ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A61BDA04E300D84DB6 /* PopArray.cpp */; settings = {ASSET_TAGS = (); }; };
 		ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86AA1BDA04E300D84DB6 /* Vec.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C21BDA05CE00D84DB6 /* ConstFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B71BDA05CE00D84DB6 /* ConstFunc.cpp */; settings = {ASSET_TAGS = (); }; };
+		ADFE86C21BDA05CE00D84DB6 /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */; settings = {ASSET_TAGS = (); }; };
 		ADFE86C31BDA05CE00D84DB6 /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B91BDA05CE00D84DB6 /* NeuralNetwork.cpp */; settings = {ASSET_TAGS = (); }; };
 		ADFE86C41BDA05CE00D84DB6 /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */; settings = {ASSET_TAGS = (); }; };
 		ADFE86C51BDA05CE00D84DB6 /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BD1BDA05CE00D84DB6 /* RadialBasisFunc.cpp */; settings = {ASSET_TAGS = (); }; };
@@ -78,7 +80,8 @@
 		AD4768451B780D7200E6B11D /* RandomNumberGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RandomNumberGenerator.hpp; sourceTree = "<group>"; };
 		AD4768481B781F9E00E6B11D /* ConfigParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigParser.cpp; sourceTree = "<group>"; };
 		AD4768491B781F9E00E6B11D /* ConfigParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigParser.hpp; sourceTree = "<group>"; };
-		ADB0ABC91BDC48B700049605 /* tuple.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tuple.h; sourceTree = "<group>"; };
+		AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarmadillo.dylib; path = usr/lib/libarmadillo.dylib; sourceTree = SDKROOT; };
+		ADB0ABCA1BDCB66900049605 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		ADB85D831B79B959002879D2 /* Function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Function.cpp; sourceTree = "<group>"; };
 		ADB85D841B79B959002879D2 /* Function.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Function.hpp; sourceTree = "<group>"; };
 		ADB85D8A1B815AF2002879D2 /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 		ADB85D9F1B815E58002879D2 /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		ADB85DA01B815E58002879D2 /* graphics_objs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_objs.h; sourceTree = "<group>"; };
 		ADB85DA11B815ED4002879D2 /* color_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color_map.h; sourceTree = "<group>"; };
+		ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libarmadillo.6.10.1.dylib; sourceTree = "<group>"; };
 		ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdaptiveArray.cpp; sourceTree = "<group>"; };
 		ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveArray.h; sourceTree = "<group>"; };
 		ADFE86951BDA04E300D84DB6 /* avl_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avl_tree.h; sourceTree = "<group>"; };
@@ -122,8 +126,8 @@
 		ADFE86A91BDA04E300D84DB6 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
 		ADFE86AA1BDA04E300D84DB6 /* Vec.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec.cpp; sourceTree = "<group>"; };
 		ADFE86AB1BDA04E300D84DB6 /* Vec.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vec.h; sourceTree = "<group>"; };
-		ADFE86B71BDA05CE00D84DB6 /* ConstFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConstFunc.cpp; sourceTree = "<group>"; };
-		ADFE86B81BDA05CE00D84DB6 /* ConstFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstFunc.h; sourceTree = "<group>"; };
+		ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinearFunc.cpp; sourceTree = "<group>"; };
+		ADFE86B81BDA05CE00D84DB6 /* LinearFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearFunc.h; sourceTree = "<group>"; };
 		ADFE86B91BDA05CE00D84DB6 /* NeuralNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralNetwork.cpp; sourceTree = "<group>"; };
 		ADFE86BA1BDA05CE00D84DB6 /* NeuralNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuralNetwork.h; sourceTree = "<group>"; };
 		ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeFunc.cpp; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD97F9521BDCBD1A00C57E0B /* libarmadillo.dylib in Frameworks */,
+				ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */,
 				ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -178,6 +184,9 @@
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
+				AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */,
+				ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */,
+				ADB0ABCA1BDCB66900049605 /* Accelerate.framework */,
 				AD4768041B76EAF100E6B11D /* NumCH */,
 				AD4768031B76EAF100E6B11D /* Products */,
 			);
@@ -252,7 +261,6 @@
 		AD4768101B76EB1600E6B11D /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
-				ADB0ABC81BDC48A100049605 /* Tuple */,
 				AD4768431B780D3500E6B11D /* RandomNumber */,
 				ADFE86F21BDC3A1400D84DB6 /* Numbers.h */,
 			);
@@ -339,14 +347,6 @@
 				AD4768491B781F9E00E6B11D /* ConfigParser.hpp */,
 			);
 			name = "Config Parser";
-			sourceTree = "<group>";
-		};
-		ADB0ABC81BDC48A100049605 /* Tuple */ = {
-			isa = PBXGroup;
-			children = (
-				ADB0ABC91BDC48B700049605 /* tuple.h */,
-			);
-			name = Tuple;
 			sourceTree = "<group>";
 		};
 		ADB85D821B79B932002879D2 /* Function */ = {
@@ -577,8 +577,8 @@
 		ADFE86FE1BDC3C8700D84DB6 /* NodeFuncs */ = {
 			isa = PBXGroup;
 			children = (
-				ADFE86B71BDA05CE00D84DB6 /* ConstFunc.cpp */,
-				ADFE86B81BDA05CE00D84DB6 /* ConstFunc.h */,
+				ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */,
+				ADFE86B81BDA05CE00D84DB6 /* LinearFunc.h */,
 				ADFE86BF1BDA05CE00D84DB6 /* Sigmoid.cpp */,
 				ADFE86C01BDA05CE00D84DB6 /* Sigmoid.h */,
 				ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */,
@@ -664,7 +664,7 @@
 				ADFE86D81BDA05FA00D84DB6 /* GradientDescent.cpp in Sources */,
 				ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
-				ADFE86C21BDA05CE00D84DB6 /* ConstFunc.cpp in Sources */,
+				ADFE86C21BDA05CE00D84DB6 /* LinearFunc.cpp in Sources */,
 				ADFE86DD1BDA05FA00D84DB6 /* Swarm.cpp in Sources */,
 				ADB85D851B79B959002879D2 /* Function.cpp in Sources */,
 				ADFE86C61BDA05CE00D84DB6 /* Sigmoid.cpp in Sources */,
@@ -773,9 +773,15 @@
 		AD47680A1B76EAF100E6B11D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/include/armadillo,
+					/usr/include/armadillo_bits/,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NumCH",
+					"$(PROJECT_DIR)",
+					/usr/lib/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -784,9 +790,15 @@
 		AD47680B1B76EAF100E6B11D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = (
+					/usr/include/armadillo,
+					/usr/include/armadillo_bits/,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NumCH",
+					"$(PROJECT_DIR)",
+					/usr/lib/,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

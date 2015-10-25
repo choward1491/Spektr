@@ -11,6 +11,7 @@
 
 #include "Vect.hpp"
 #include "Matrix.h"
+#include "/usr/include/armadillo"
 
 
 #endif /* LinearAlgebra_h */

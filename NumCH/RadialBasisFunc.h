@@ -13,55 +13,58 @@
 #include "Coordinate.h"
 #include <math.h>
 
+/*!
+* This template class represents a gaussian RBF
+* for an N dimensional input
+*
+*/
 template<int Dim>
 class RadialBasisFunc {
 public:
-    RadialBasisFunc(){
-        assignConstSigma(1.0);
-        coef = 0;
-    }
-    void assignCenter( const Coordinate<Dim> & _center ){
-        center = _center;
-    }
-    void assignSigma ( const Coordinate<Dim> & _sigma  ){ sigma  = _sigma;  }
-    void assignConstSigma( double newSigma ){
-        for (int i = 0; i < Dim; i++) {
-            sigma[i] = newSigma;
-        }
-    }
-    void makeConstant(){ constant = true; }
-    void assignCoefficient( double _coef ){ coef = _coef; }
     
-    double operator()( const Coordinate<Dim> & x ){
-        double value = 0;
-        double tmp = 0;
-        if( coef == 0.0 ){ return 0.0; };
-        if( constant ){
-            return -3.0;
-        }
-        
-        for (int i = 0; i < Dim; i++ ) {
-            tmp = (center[i]-x[i])/sigma[i];
-            if (fabs(tmp) >= 5.0 ) {
-                return 0.0;
-            }
-            value += tmp*tmp;
-        }
-        
-        return coef*exp( -value );
-    }
+    // Null constructor
+    RadialBasisFunc();
     
     
+    // Method to allow changing the center of the RBF
+    void assignCenter( const Coordinate<Dim> & _center );
+    
+    
+    // Method to allow changing the standard deviation vector.
+    // This vector of sigmas represent having a different deviation for
+    // each dimension of the input vector
+    void assignSigma ( const Coordinate<Dim> & _sigma  );
+    
+    
+    
+    // Method to set sigma vector to a constant value
+    void assignConstSigma( double newSigma );
+    
+    
+    
+    // This is to assign a coefficient to multiply the result
+    // of this RBF by
+    void assignCoefficient( double _coef );
+    
+    
+    // Operator method to operate on an input N dimensional vector
+    double operator()( const Coordinate<Dim> & x );
+    
+    
+    
+    
+private:
     Coordinate<Dim> sigma;
     Coordinate<Dim> center;
     double coef;
-    bool constant = false;
-    
-private:
-    //double sigma;
-    
     
     
 };
+
+
+
+#ifndef _gaussrbf_cpp_
+#include "RadialBasisFunc.cpp"
+#endif
 
 #endif /* defined(__Data_Structs__RadialBasisFunc__) */

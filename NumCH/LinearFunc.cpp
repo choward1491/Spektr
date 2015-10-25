@@ -6,12 +6,12 @@
 //  Copyright (c) 2015 Christian Howard. All rights reserved.
 //
 
-#include "ConstFunc.h"
+#include "LinearFunc.h"
 
 
-double ConstFunc::operator()(double input){
+double LinearFunc::operator()(double input){
     return input;
 }
-double ConstFunc::derivative(double input){
+double LinearFunc::derivative(double input){
     return 1;
 }

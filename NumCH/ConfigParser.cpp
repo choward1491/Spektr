@@ -26,8 +26,8 @@ void ConfigParser::parse( const char* filename ){
         //
         // Define temp variables
         //
-        char    str[64];
-        char    name[16];
+        char    str[512];
+        char    name[32];
         char    number[64];
         double  value = 0;
         
@@ -40,7 +40,7 @@ void ConfigParser::parse( const char* filename ){
             if ( str[0] != '#' && str[0] != '/' && str[0] != '\0' ) {
                 sscanf(str, "%[^:]: %[-eE1234567890.]", name, number);
                 sscanf(number, "%lf", &value);
-                //printf("Name: %s, Number: %lf \n",name, value);
+                printf("name = %s, num = %lf\n",name, value);
                 if (name[0] != '\0') {
                     parameters[string(name)] = value;
                 }
@@ -68,6 +68,11 @@ ConfigParser::ConfigParser( const char* filename ){
 template<typename T>
 T ConfigParser::getValueFrom( const char* parameterName ) {
     return (T)parameters[string(parameterName)];
+}
+
+template<>
+bool ConfigParser::getValueFrom( const char* parameterName ) {
+    return (1==(int)parameters[string(parameterName)]);
 }
 
 

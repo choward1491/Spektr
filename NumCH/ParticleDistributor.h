@@ -14,14 +14,21 @@
 #include "Vec.h"
 #include <math.h>
 
+
+/*!
+ * This is a abstract base class that represents a
+ * particle swarm particle distributor
+ *
+ */
 template<int Dim>
 class ParticleDistributor {
 public:
+    // specify valuable swarm particle typedefs
     typedef SwarmParticle<Dim> Particle;
     typedef Vec<Particle> Particles;
     typedef Coordinate<2> Point2D;
     
-    
+    // abstract virtual method to distribute particles
     virtual void distribute( Particles & particles, Vec<Point2D> & bounds ) = 0;
     
     

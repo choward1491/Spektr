@@ -12,7 +12,7 @@
 #include "NeuralNetwork.h"
 #include "NodeFunc.h"
 #include "Sigmoid.h"
-#include "ConstFunc.h"
+#include "LinearFunc.h"
 #include "RadialBasisFunc.h"
 
 #endif /* MachineLearning_h */
