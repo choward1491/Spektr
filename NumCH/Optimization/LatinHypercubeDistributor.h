@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 #include "ParticleDistributor.h"
-#include "PseudoRandomGenerator.h"
+#include "RandomNumberGenerator.hpp"
 #include "PopArray.h"
 
 // typedef a pop array
@@ -115,7 +115,7 @@ public:
     }
     
 private:
-    PseudoRandomGenerator generator;
+    RandomNumberGenerator generator;
 };
 
 

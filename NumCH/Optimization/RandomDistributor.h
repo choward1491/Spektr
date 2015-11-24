@@ -10,7 +10,7 @@
 #define __Data_Structs__RandomDistributor__
 
 #include <stdio.h>
-#include "PseudoRandomGenerator.h"
+#include "RandomNumberGenerator.hpp"
 #include "ParticleDistributor.h"
 
 
@@ -46,7 +46,7 @@ public:
     }
     
 private:
-    PseudoRandomGenerator generator;
+    RandomNumberGenerator generator;
     
     
     

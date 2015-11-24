@@ -19,6 +19,7 @@ public:
     RandomNumberGenerator(int seed = 173);
     void setSeed( int seed );
     double rand();
+    unsigned int randInt();
     double gaussRand();
     double gaussRand(double mean, double sigma);
     void print() const;
