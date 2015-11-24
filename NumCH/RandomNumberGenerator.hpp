@@ -17,7 +17,10 @@ class RandomNumberGenerator {
     
 public:
     RandomNumberGenerator(int seed = 173);
+    void setSeed( int seed );
     double rand();
+    double gaussRand();
+    double gaussRand(double mean, double sigma);
     void print() const;
     
 private:
@@ -27,6 +30,8 @@ private:
     const unsigned int    MAX_NUM_INT = 0xFFFFFFFF;
     const double INV_MAX_NUM_DBL = 1.0 / (double)MAX_NUM_INT;
     
+    double gaussGetXFromCDF(double cdfValue);
+    int binarySearchForIndex( double value, double * cdf, int size );
 };
     
 

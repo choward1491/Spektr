@@ -7,13 +7,19 @@
 //
 
 #include <iostream>
-#include "NumCH.h"
-#include "ODESim.h"
+//#include "NumCH.h"
+//#include "ODESim.h"
+#include "cpng.h"
+#include "PreciseTime.h"
 
 
 
 int main(int argc, const char * argv[]) {
-    ConfigParser("/Users/christianjhoward/test.cfg");
+    
+    Time test(50,29);
+    double val = test.convert<double>();
+    printf("Value = %lf\n",val);
     
     return 0;
 }
+

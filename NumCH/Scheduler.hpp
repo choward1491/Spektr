@@ -10,14 +10,16 @@
 #define Scheduler_cpp
 
 #include "heap.h"
-#include "Model.hpp"
+#include "DiscreteModel.hpp"
+#include "PreciseTime.h"
 
 
 
-class Scheduler : public MinHeap<double, Model*> {
+class Scheduler : public MinHeap<Time, DiscreteModel*> {
 public:
-    double getNextTime(){ return getRootKey(); }
-
+    Time getNextTime();
+    void addNewModel( Time firstTime, DiscreteModel* model );
+    void reset();
 };
     
 

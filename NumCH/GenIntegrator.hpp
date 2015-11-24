@@ -9,29 +9,29 @@
 #ifndef GenIntegrator_cpp
 #define GenIntegrator_cpp
 
-//#include <stdio.h>
-#include "Model.hpp"
+#include "AdaptiveArray.h"
+#include "DynamicModel.hpp"
+
+typedef AdaptiveArray<DynamicModel*> DiffeqList;
 
 
+enum IntegratorType { ExplicitEuler, RungeKutta4, ExplicitTrapezoidal };
 
 
 class GenIntegrator {
     
 public:
     
-    
+    GenIntegrator();
+    virtual void setNumDimensions( int numDimensions ) = 0;
     virtual ~GenIntegrator();
-    virtual void integrate( double dt ) = 0;
+    virtual void integrate( double time, double dt , double* lastState, DiffeqList & list ) = 0;
     
 protected:
     
-    int numModels;
-    Model*** models;
-    virtual void setModels( Model** & _models, int _numModels ) = 0;
-    
+    int numDims;
     
 };
-
 
 
 

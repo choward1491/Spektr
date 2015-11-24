@@ -16,15 +16,15 @@
 class ExplicitEuler : public GenIntegrator {
     
 public:
-    ExplicitEuler( Model** & _models, int _numModels );
+    ExplicitEuler() : GenIntegrator() {}
     virtual ~ExplicitEuler();
-    virtual void integrate( double dt );
-    
-protected:
-    virtual void setModels( Model** & _models, int _numModels );
-    
+    virtual void setNumDimensions( int numDimensions );
+    virtual void integrate( double time, double dt , double* inOutState, DiffeqList & list );
+
 private:
-    Vec * k1;
+    void clear();
+    void create( int totalNumber );
+    double* tmp;
     
 };
 

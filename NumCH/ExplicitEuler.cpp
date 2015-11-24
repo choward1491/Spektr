@@ -8,35 +8,48 @@
 
 #include "ExplicitEuler.hpp"
 
-
-
-
-ExplicitEuler::ExplicitEuler( Model** & _models, int _numModels ){
-    models      = &_models;
-    numModels   = _numModels;
-    setModels(_models, _numModels);
+void ExplicitEuler::integrate( double time, double dt , double* inOutState, DiffeqList & list ){
+    double * dqdt = &tmp[0];
     
-}
-ExplicitEuler::~ExplicitEuler(){
-    models = 0;
-    if( k1 != 0 ){
-        delete [] k1;
-    }
-}
-void ExplicitEuler::integrate( double dt ){
-    for (int i = 0; i < numModels; i++) {
-        (*models)[i]->equationsOfMotion( k1[i] );
+    if( list.size() > 0 ){
+        // compute dqdt
+        for (int i = 0; i < list.size(); i++) {
+            (*list[i])(time, dqdt);
+            dqdt = dqdt+list[i]->numDims();
+        }
         
-        for (int j = 0; j < k1[i].size(); j++) {
-            (*(*models)[i])[j] = (*(*models)[i])[j] + dt * k1[i][j];
+        // clear dqdt pointer
+        dqdt = 0;
+        
+        // compute resulting integration step
+        for (int i = 0; i < numDims; i++ ){
+            inOutState[i] += dt*tmp[i];
         }
     }
+}
+
+
+
+ExplicitEuler::~ExplicitEuler(){
+    clear();
+}
+void ExplicitEuler::setNumDimensions( int numDimensions ){
+    if (numDims != numDimensions && tmp != 0 ) {
+        clear();
+    }
+    numDims = numDimensions;
+    create(numDims);
     
 }
-void ExplicitEuler::setModels( Model** & _models, int _numModels ){
-    k1 = new Vec[_numModels];
-    for (int i = 0; i < _numModels; i++) {
-        k1[i] = Vec((_models[i])->numDims());
+
+void ExplicitEuler::clear(){
+    if( tmp != 0 ){
+        delete [] tmp; tmp = 0;
     }
 }
-    
+void ExplicitEuler::create( int totalNumber ){
+    tmp  = new double[totalNumber];
+}
+
+
+

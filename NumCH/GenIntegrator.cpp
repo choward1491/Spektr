@@ -9,6 +9,5 @@
 #include "GenIntegrator.hpp"
 
 
-GenIntegrator::~GenIntegrator(){
-    models = 0;
-}
+GenIntegrator::GenIntegrator(){ numDims = -1; }
+GenIntegrator::~GenIntegrator(){ }

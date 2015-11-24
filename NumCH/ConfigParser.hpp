@@ -12,7 +12,6 @@
 #include <stdio.h>
 #include <map>
 #include <string>
-using namespace std;
 
 /*!
  * Class to read inputs from a file and put them into
@@ -22,6 +21,9 @@ using namespace std;
 class ConfigParser {
 public:
     
+    // Null constructor
+    ConfigParser(){}
+    
     // Initialize config file parser from filename
     ConfigParser( const char* filename );
     
@@ -29,12 +31,29 @@ public:
     template<typename T>
     T getValueFrom( const char* parameterName ) ;
     
+    template<typename T>
+    T getValueFrom( const std::string & parameterName ) ;
+    
+    
+    
+    
     // method to parse a file and dump it's contents into a hash table
+    //
+    // Note that comments are denoted by either # or // and are only one line
+    // An example config file could be the following:
+    //
+    // # Here's some comment
+    // test: 15
+    // toDance: 1
+    //
+    // # Here's another comment
+    // variable1: 104.3
+    //
     void parse( const char* filename );
     
 private:
     
-    map<string, double> parameters;
+    std::map<std::string, double> parameters;
     
     
 };

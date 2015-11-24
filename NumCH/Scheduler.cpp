@@ -7,3 +7,17 @@
 //
 
 #include "Scheduler.hpp"
+
+
+Time Scheduler::getNextTime(){ return getRootKey(); }
+
+void Scheduler::addNewModel( Time firstTime, DiscreteModel* model ){
+    this->push(firstTime, model);
+}
+
+void Scheduler::reset(){
+    for (int i = 0; i < size(); i++) {
+        setKeyAt(i, getDataAt(i)->getFracDt());
+    }
+    generateHeap();
+}

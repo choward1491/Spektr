@@ -17,6 +17,8 @@ public:
 	~MinHeap();
 
 	D operator[](int index){ if( heap != 0 ){ return heap[index].data; } return D(); }
+    D getDataAt(int index) const { return heap[index].data; }
+    K getKeyAt(int index) const { return heap[index].key; }
 
 	K getRootKey();
 	D getRootData();
@@ -28,6 +30,12 @@ public:
 	int getArrayLength(){ return length_arr; }
 
 
+    
+protected:
+    
+    void setKeyAt(int index, K newKey ){ heap[index].key = newKey; }
+    void generateHeap();
+    
 private:
 
 	typedef struct Node{
@@ -40,9 +48,10 @@ private:
 	int heap_count;
 
 	void resize();
-	void pushHelper(int index);
-	void generateHeap();
+	void pushHelper( int index );
 	void swapDown( int index );
+    
+    
 
 };
 

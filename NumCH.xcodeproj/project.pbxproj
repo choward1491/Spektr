@@ -11,13 +11,108 @@
 		AD4768151B76EC8D00E6B11D /* Vect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768131B76EC8D00E6B11D /* Vect.cpp */; };
 		AD47681A1B77143500E6B11D /* GenIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768181B77143500E6B11D /* GenIntegrator.cpp */; };
 		AD47681E1B7719D600E6B11D /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47681C1B7719D600E6B11D /* Simulator.cpp */; };
-		AD4768211B771A5900E6B11D /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47681F1B771A5900E6B11D /* Model.cpp */; };
 		AD4768321B77CDAE00E6B11D /* ConstantsSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768301B77CDAE00E6B11D /* ConstantsSet.cpp */; };
 		AD4768351B77D2D800E6B11D /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768331B77D2D800E6B11D /* Scheduler.cpp */; };
 		AD47683C1B77E52800E6B11D /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47683A1B77E52800E6B11D /* ExplicitEuler.cpp */; };
 		AD4768461B780D7200E6B11D /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768441B780D7200E6B11D /* RandomNumberGenerator.cpp */; };
 		AD47684A1B781F9E00E6B11D /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768481B781F9E00E6B11D /* ConfigParser.cpp */; };
-		AD97F9521BDCBD1A00C57E0B /* libarmadillo.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */; };
+		AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
+		AD5B19701BE455F1003E0233 /* libarmadillo.6.10.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */; };
+		AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
+		AD7867A71BFD93D700A6FE07 /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BD1BDA05CE00D84DB6 /* RadialBasisFunc.cpp */; };
+		AD7867A81BFD93D700A6FE07 /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */; };
+		AD7867A91BFD93D700A6FE07 /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BF1BDA05CE00D84DB6 /* Sigmoid.cpp */; };
+		AD7867AA1BFD93D700A6FE07 /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */; };
+		AD7867AB1BFD93D700A6FE07 /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B91BDA05CE00D84DB6 /* NeuralNetwork.cpp */; };
+		AD7867AC1BFD93D700A6FE07 /* cpixel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D8F1B815E27002879D2 /* cpixel.cpp */; };
+		AD7867AD1BFD93D700A6FE07 /* cpng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D911B815E27002879D2 /* cpng.cpp */; };
+		AD7867AE1BFD93D700A6FE07 /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D831B79B959002879D2 /* Function.cpp */; };
+		AD7867AF1BFD93D700A6FE07 /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48BF31BE4A18B003E34AC /* Fraction.cpp */; };
+		AD7867B01BFD93D700A6FE07 /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768441B780D7200E6B11D /* RandomNumberGenerator.cpp */; };
+		AD7867B11BFD93D700A6FE07 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D8A1B815AF2002879D2 /* Matrix.cpp */; };
+		AD7867B21BFD93D700A6FE07 /* Vect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768131B76EC8D00E6B11D /* Vect.cpp */; };
+		AD7867B31BFD93D700A6FE07 /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C71BDA05FA00D84DB6 /* CostFunc.cpp */; };
+		AD7867B41BFD93D700A6FE07 /* GradientDescent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C91BDA05FA00D84DB6 /* GradientDescent.cpp */; };
+		AD7867B51BFD93D700A6FE07 /* GradientDescentStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CB1BDA05FA00D84DB6 /* GradientDescentStep.cpp */; };
+		AD7867B61BFD93D700A6FE07 /* LatinHypercubeDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CD1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp */; };
+		AD7867B71BFD93D700A6FE07 /* ParticleDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CF1BDA05FA00D84DB6 /* ParticleDistributor.cpp */; };
+		AD7867B81BFD93D700A6FE07 /* RandomDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D11BDA05FA00D84DB6 /* RandomDistributor.cpp */; };
+		AD7867B91BFD93D700A6FE07 /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D31BDA05FA00D84DB6 /* Swarm.cpp */; };
+		AD7867BA1BFD93D700A6FE07 /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D51BDA05FA00D84DB6 /* SwarmParticle.cpp */; };
+		AD7867BB1BFD93D700A6FE07 /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768481B781F9E00E6B11D /* ConfigParser.cpp */; };
+		AD7867BC1BFD93D700A6FE07 /* ConstantsSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768301B77CDAE00E6B11D /* ConstantsSet.cpp */; };
+		AD7867BD1BFD93D700A6FE07 /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768331B77D2D800E6B11D /* Scheduler.cpp */; };
+		AD7867BE1BFD93D700A6FE07 /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47681C1B7719D600E6B11D /* Simulator.cpp */; };
+		AD7867BF1BFD93D700A6FE07 /* GenIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768181B77143500E6B11D /* GenIntegrator.cpp */; };
+		AD7867C01BFD93D700A6FE07 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD47683A1B77E52800E6B11D /* ExplicitEuler.cpp */; };
+		AD7867C11BFD93D700A6FE07 /* DiscreteModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48BFB1BE87722003E34AC /* DiscreteModel.cpp */; };
+		AD7867C21BFD93D700A6FE07 /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48C001BE87738003E34AC /* DynamicModel.cpp */; };
+		AD7867C31BFD943500A6FE07 /* NumCH.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86EA1BDC36DE00D84DB6 /* NumCH.h */; };
+		AD7867C41BFD943500A6FE07 /* DataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = AD5B17991BE4365F003E0233 /* DataFilter.h */; };
+		AD7867C51BFD943500A6FE07 /* AdaptiveArray.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */; };
+		AD7867C61BFD943500A6FE07 /* avl_tree.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86951BDA04E300D84DB6 /* avl_tree.h */; };
+		AD7867C71BFD943500A6FE07 /* convex_hull2D.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86961BDA04E300D84DB6 /* convex_hull2D.h */; };
+		AD7867C81BFD943500A6FE07 /* convex_hull3D.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86971BDA04E300D84DB6 /* convex_hull3D.h */; };
+		AD7867C91BFD943500A6FE07 /* Coordinate.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86991BDA04E300D84DB6 /* Coordinate.h */; };
+		AD7867CA1BFD943500A6FE07 /* Graph.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADFE869B1BDA04E300D84DB6 /* Graph.hpp */; };
+		AD7867CB1BFD943500A6FE07 /* hash_table.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE869C1BDA04E300D84DB6 /* hash_table.h */; };
+		AD7867CC1BFD943500A6FE07 /* heap.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE869D1BDA04E300D84DB6 /* heap.h */; };
+		AD7867CD1BFD943500A6FE07 /* kd_tree.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE869E1BDA04E300D84DB6 /* kd_tree.h */; };
+		AD7867CE1BFD943500A6FE07 /* kdfunction.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE869F1BDA04E300D84DB6 /* kdfunction.h */; };
+		AD7867CF1BFD943500A6FE07 /* L1Norm.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A11BDA04E300D84DB6 /* L1Norm.h */; };
+		AD7867D01BFD943500A6FE07 /* L2Norm.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A21BDA04E300D84DB6 /* L2Norm.h */; };
+		AD7867D11BFD943500A6FE07 /* LinkedList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A41BDA04E300D84DB6 /* LinkedList.hpp */; };
+		AD7867D21BFD943500A6FE07 /* PopArray.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A71BDA04E300D84DB6 /* PopArray.h */; };
+		AD7867D31BFD943500A6FE07 /* queue.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A81BDA04E300D84DB6 /* queue.h */; };
+		AD7867D41BFD943500A6FE07 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A91BDA04E300D84DB6 /* stack.h */; };
+		AD7867D51BFD943500A6FE07 /* Vec.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86AB1BDA04E300D84DB6 /* Vec.h */; };
+		AD7867D61BFD943500A6FE07 /* RadialBasisFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86BE1BDA05CE00D84DB6 /* RadialBasisFunc.h */; };
+		AD7867D71BFD943500A6FE07 /* LinearFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86B81BDA05CE00D84DB6 /* LinearFunc.h */; };
+		AD7867D81BFD943500A6FE07 /* Sigmoid.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86C01BDA05CE00D84DB6 /* Sigmoid.h */; };
+		AD7867D91BFD943500A6FE07 /* NodeFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86BC1BDA05CE00D84DB6 /* NodeFunc.h */; };
+		AD7867DA1BFD943500A6FE07 /* NeuralNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86BA1BDA05CE00D84DB6 /* NeuralNetwork.h */; };
+		AD7867DB1BFD943600A6FE07 /* MachineLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE87001BDC3F7F00D84DB6 /* MachineLearning.h */; };
+		AD7867DC1BFD943600A6FE07 /* cpixel.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB85D901B815E27002879D2 /* cpixel.h */; };
+		AD7867DD1BFD943600A6FE07 /* cpng.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB85D921B815E27002879D2 /* cpng.h */; };
+		AD7867DE1BFD943600A6FE07 /* Graphics.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F51BDC3A6A00D84DB6 /* Graphics.h */; };
+		AD7867DF1BFD943600A6FE07 /* Function.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADB85D841B79B959002879D2 /* Function.hpp */; };
+		AD7867E01BFD943600A6FE07 /* point.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB85D9A1B815E27002879D2 /* point.h */; };
+		AD7867E11BFD943600A6FE07 /* Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F41BDC3A4700D84DB6 /* Geometry.h */; };
+		AD7867E21BFD943600A6FE07 /* PDESim.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F31BDC3A3600D84DB6 /* PDESim.h */; };
+		AD7867E31BFD943600A6FE07 /* Fraction.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE48BF11BE4A019003E34AC /* Fraction.h */; };
+		AD7867E41BFD943600A6FE07 /* RandomNumberGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768451B780D7200E6B11D /* RandomNumberGenerator.hpp */; };
+		AD7867E51BFD943600A6FE07 /* Numbers.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F21BDC3A1400D84DB6 /* Numbers.h */; };
+		AD7867E61BFD943600A6FE07 /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = ADB85D8B1B815AF2002879D2 /* Matrix.h */; };
+		AD7867E71BFD943600A6FE07 /* Vect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768141B76EC8D00E6B11D /* Vect.hpp */; };
+		AD7867E81BFD943700A6FE07 /* LinearAlgebra.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F11BDC399100D84DB6 /* LinearAlgebra.h */; };
+		AD7867E91BFD943700A6FE07 /* CostFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86C81BDA05FA00D84DB6 /* CostFunc.h */; };
+		AD7867EA1BFD943700A6FE07 /* GradientDescent.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86CA1BDA05FA00D84DB6 /* GradientDescent.hpp */; };
+		AD7867EB1BFD943700A6FE07 /* GradientDescentStep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86CC1BDA05FA00D84DB6 /* GradientDescentStep.hpp */; };
+		AD7867EC1BFD943700A6FE07 /* LatinHypercubeDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86CE1BDA05FA00D84DB6 /* LatinHypercubeDistributor.h */; };
+		AD7867ED1BFD943700A6FE07 /* ParticleDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86D01BDA05FA00D84DB6 /* ParticleDistributor.h */; };
+		AD7867EE1BFD943700A6FE07 /* RandomDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86D21BDA05FA00D84DB6 /* RandomDistributor.h */; };
+		AD7867EF1BFD943700A6FE07 /* Swarm.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86D41BDA05FA00D84DB6 /* Swarm.h */; };
+		AD7867F01BFD943700A6FE07 /* SwarmParticle.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86D61BDA05FA00D84DB6 /* SwarmParticle.h */; };
+		AD7867F11BFD943700A6FE07 /* PSO.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86EF1BDC377800D84DB6 /* PSO.h */; };
+		AD7867F21BFD943800A6FE07 /* Optimization.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86EE1BDC376600D84DB6 /* Optimization.h */; };
+		AD7867F31BFD943800A6FE07 /* PreciseTime.h in Headers */ = {isa = PBXBuildFile; fileRef = ADE48BEE1BE49FCF003E34AC /* PreciseTime.h */; };
+		AD7867F41BFD943800A6FE07 /* ConfigParser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768491B781F9E00E6B11D /* ConfigParser.hpp */; };
+		AD7867F51BFD943800A6FE07 /* ConstantsSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768311B77CDAE00E6B11D /* ConstantsSet.hpp */; };
+		AD7867F61BFD943800A6FE07 /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768341B77D2D800E6B11D /* Scheduler.hpp */; };
+		AD7867F71BFD943800A6FE07 /* Simulator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD47681D1B7719D600E6B11D /* Simulator.hpp */; };
+		AD7867F81BFD943800A6FE07 /* GenIntegrator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD4768191B77143500E6B11D /* GenIntegrator.hpp */; };
+		AD7867F91BFD943800A6FE07 /* ExplicitEuler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD47683B1B77E52800E6B11D /* ExplicitEuler.hpp */; };
+		AD7867FB1BFD943800A6FE07 /* DiscreteModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADE48BFC1BE87722003E34AC /* DiscreteModel.hpp */; };
+		AD7867FC1BFD943900A6FE07 /* DynamicModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADE48C011BE87738003E34AC /* DynamicModel.hpp */; };
+		AD7867FD1BFD943900A6FE07 /* ODESim.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86F01BDC38FE00D84DB6 /* ODESim.h */; };
+		AD7867FE1BFD943900A6FE07 /* Malloc2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADE48C051BEB3250003E34AC /* Malloc2D.hpp */; };
+		AD78680A1C01259200A6FE07 /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD7868081C01259200A6FE07 /* DataPrinter.cpp */; };
+		AD78680B1C01966600A6FE07 /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD7868081C01259200A6FE07 /* DataPrinter.cpp */; };
+		AD78680E1C019B5200A6FE07 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78680C1C019B5200A6FE07 /* RungeKutta4.cpp */; };
+		AD78680F1C01A43100A6FE07 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78680C1C019B5200A6FE07 /* RungeKutta4.cpp */; };
+		AD78682D1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78682B1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp */; };
+		AD78682E1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD78682B1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp */; };
+		AD78682F1C02D0E400A6FE07 /* ExplicitTrapezoidal.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD78682C1C02D0E400A6FE07 /* ExplicitTrapezoidal.hpp */; };
 		ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
 		ADB85D851B79B959002879D2 /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D831B79B959002879D2 /* Function.cpp */; };
 		ADB85D8C1B815AF2002879D2 /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D8A1B815AF2002879D2 /* Matrix.cpp */; };
@@ -25,30 +120,43 @@
 		ADB85D9C1B815E27002879D2 /* cpng.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D911B815E27002879D2 /* cpng.cpp */; };
 		ADB85D9D1B815E27002879D2 /* FigData.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB85D931B815E27002879D2 /* FigData.cpp */; };
 		ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
-		ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86981BDA04E300D84DB6 /* Coordinate.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE869A1BDA04E300D84DB6 /* Graph.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A01BDA04E300D84DB6 /* kdtree.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A31BDA04E300D84DB6 /* LinkedList.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A61BDA04E300D84DB6 /* PopArray.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86AA1BDA04E300D84DB6 /* Vec.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C21BDA05CE00D84DB6 /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C31BDA05CE00D84DB6 /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B91BDA05CE00D84DB6 /* NeuralNetwork.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C41BDA05CE00D84DB6 /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C51BDA05CE00D84DB6 /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BD1BDA05CE00D84DB6 /* RadialBasisFunc.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86C61BDA05CE00D84DB6 /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BF1BDA05CE00D84DB6 /* Sigmoid.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86D71BDA05FA00D84DB6 /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C71BDA05FA00D84DB6 /* CostFunc.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86D81BDA05FA00D84DB6 /* GradientDescent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C91BDA05FA00D84DB6 /* GradientDescent.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86D91BDA05FA00D84DB6 /* GradientDescentStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CB1BDA05FA00D84DB6 /* GradientDescentStep.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86DA1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CD1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86DB1BDA05FA00D84DB6 /* ParticleDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CF1BDA05FA00D84DB6 /* ParticleDistributor.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86DC1BDA05FA00D84DB6 /* RandomDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D11BDA05FA00D84DB6 /* RandomDistributor.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86DD1BDA05FA00D84DB6 /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D31BDA05FA00D84DB6 /* Swarm.cpp */; settings = {ASSET_TAGS = (); }; };
-		ADFE86DE1BDA05FA00D84DB6 /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D51BDA05FA00D84DB6 /* SwarmParticle.cpp */; settings = {ASSET_TAGS = (); }; };
+		ADE48BF41BE4A18B003E34AC /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48BF31BE4A18B003E34AC /* Fraction.cpp */; };
+		ADE48BFD1BE87722003E34AC /* DiscreteModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48BFB1BE87722003E34AC /* DiscreteModel.cpp */; };
+		ADE48C021BE87738003E34AC /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48C001BE87738003E34AC /* DynamicModel.cpp */; };
+		ADE48C061BEB3250003E34AC /* Malloc2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE48C051BEB3250003E34AC /* Malloc2D.hpp */; };
+		ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */; };
+		ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86981BDA04E300D84DB6 /* Coordinate.cpp */; };
+		ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE869A1BDA04E300D84DB6 /* Graph.cpp */; };
+		ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A01BDA04E300D84DB6 /* kdtree.cpp */; };
+		ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A31BDA04E300D84DB6 /* LinkedList.cpp */; };
+		ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86A61BDA04E300D84DB6 /* PopArray.cpp */; };
+		ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86AA1BDA04E300D84DB6 /* Vec.cpp */; };
+		ADFE86C21BDA05CE00D84DB6 /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B71BDA05CE00D84DB6 /* LinearFunc.cpp */; };
+		ADFE86C31BDA05CE00D84DB6 /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86B91BDA05CE00D84DB6 /* NeuralNetwork.cpp */; };
+		ADFE86C41BDA05CE00D84DB6 /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BB1BDA05CE00D84DB6 /* NodeFunc.cpp */; };
+		ADFE86C51BDA05CE00D84DB6 /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BD1BDA05CE00D84DB6 /* RadialBasisFunc.cpp */; };
+		ADFE86C61BDA05CE00D84DB6 /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86BF1BDA05CE00D84DB6 /* Sigmoid.cpp */; };
+		ADFE86D71BDA05FA00D84DB6 /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C71BDA05FA00D84DB6 /* CostFunc.cpp */; };
+		ADFE86D81BDA05FA00D84DB6 /* GradientDescent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86C91BDA05FA00D84DB6 /* GradientDescent.cpp */; };
+		ADFE86D91BDA05FA00D84DB6 /* GradientDescentStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CB1BDA05FA00D84DB6 /* GradientDescentStep.cpp */; };
+		ADFE86DA1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CD1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp */; };
+		ADFE86DB1BDA05FA00D84DB6 /* ParticleDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86CF1BDA05FA00D84DB6 /* ParticleDistributor.cpp */; };
+		ADFE86DC1BDA05FA00D84DB6 /* RandomDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D11BDA05FA00D84DB6 /* RandomDistributor.cpp */; };
+		ADFE86DD1BDA05FA00D84DB6 /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D31BDA05FA00D84DB6 /* Swarm.cpp */; };
+		ADFE86DE1BDA05FA00D84DB6 /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86D51BDA05FA00D84DB6 /* SwarmParticle.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		AD4768001B76EAF100E6B11D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		AD5B18621BE442CE003E0233 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -68,8 +176,6 @@
 		AD4768191B77143500E6B11D /* GenIntegrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GenIntegrator.hpp; sourceTree = "<group>"; };
 		AD47681C1B7719D600E6B11D /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
 		AD47681D1B7719D600E6B11D /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simulator.hpp; sourceTree = "<group>"; };
-		AD47681F1B771A5900E6B11D /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
-		AD4768201B771A5900E6B11D /* Model.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Model.hpp; sourceTree = "<group>"; };
 		AD4768301B77CDAE00E6B11D /* ConstantsSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConstantsSet.cpp; sourceTree = "<group>"; };
 		AD4768311B77CDAE00E6B11D /* ConstantsSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConstantsSet.hpp; sourceTree = "<group>"; };
 		AD4768331B77D2D800E6B11D /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
@@ -80,7 +186,15 @@
 		AD4768451B780D7200E6B11D /* RandomNumberGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RandomNumberGenerator.hpp; sourceTree = "<group>"; };
 		AD4768481B781F9E00E6B11D /* ConfigParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigParser.cpp; sourceTree = "<group>"; };
 		AD4768491B781F9E00E6B11D /* ConfigParser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConfigParser.hpp; sourceTree = "<group>"; };
-		AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libarmadillo.dylib; path = usr/lib/libarmadillo.dylib; sourceTree = SDKROOT; };
+		AD5B17991BE4365F003E0233 /* DataFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataFilter.h; sourceTree = "<group>"; };
+		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5B19041BE4540D003E0233 /* libNumCHLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNumCHLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD7868081C01259200A6FE07 /* DataPrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataPrinter.cpp; sourceTree = "<group>"; };
+		AD7868091C01259200A6FE07 /* DataPrinter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataPrinter.hpp; sourceTree = "<group>"; };
+		AD78680C1C019B5200A6FE07 /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RungeKutta4.cpp; sourceTree = "<group>"; };
+		AD78680D1C019B5200A6FE07 /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RungeKutta4.hpp; sourceTree = "<group>"; };
+		AD78682B1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
+		AD78682C1C02D0E400A6FE07 /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
 		ADB0ABCA1BDCB66900049605 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		ADB85D831B79B959002879D2 /* Function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Function.cpp; sourceTree = "<group>"; };
 		ADB85D841B79B959002879D2 /* Function.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Function.hpp; sourceTree = "<group>"; };
@@ -93,7 +207,7 @@
 		ADB85D931B815E27002879D2 /* FigData.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FigData.cpp; sourceTree = "<group>"; };
 		ADB85D941B815E27002879D2 /* FigData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FigData.h; sourceTree = "<group>"; };
 		ADB85D951B815E27002879D2 /* Figure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Figure.h; sourceTree = "<group>"; };
-		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libpng16.16.dylib; sourceTree = "<group>"; };
+		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADB85D971B815E27002879D2 /* png.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = png.h; sourceTree = "<group>"; };
 		ADB85D981B815E27002879D2 /* pngconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pngconf.h; sourceTree = "<group>"; };
 		ADB85D991B815E27002879D2 /* pnglibconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnglibconf.h; sourceTree = "<group>"; };
@@ -101,6 +215,14 @@
 		ADB85D9F1B815E58002879D2 /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
 		ADB85DA01B815E58002879D2 /* graphics_objs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = graphics_objs.h; sourceTree = "<group>"; };
 		ADB85DA11B815ED4002879D2 /* color_map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = color_map.h; sourceTree = "<group>"; };
+		ADE48BEE1BE49FCF003E34AC /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
+		ADE48BF11BE4A019003E34AC /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		ADE48BF31BE4A18B003E34AC /* Fraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fraction.cpp; sourceTree = "<group>"; };
+		ADE48BFB1BE87722003E34AC /* DiscreteModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiscreteModel.cpp; sourceTree = "<group>"; };
+		ADE48BFC1BE87722003E34AC /* DiscreteModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DiscreteModel.hpp; sourceTree = "<group>"; };
+		ADE48C001BE87738003E34AC /* DynamicModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicModel.cpp; sourceTree = "<group>"; };
+		ADE48C011BE87738003E34AC /* DynamicModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DynamicModel.hpp; sourceTree = "<group>"; };
+		ADE48C051BEB3250003E34AC /* Malloc2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Malloc2D.hpp; sourceTree = "<group>"; };
 		ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libarmadillo.6.10.1.dylib; sourceTree = "<group>"; };
 		ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdaptiveArray.cpp; sourceTree = "<group>"; };
 		ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveArray.h; sourceTree = "<group>"; };
@@ -172,9 +294,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD97F9521BDCBD1A00C57E0B /* libarmadillo.dylib in Frameworks */,
 				ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */,
 				ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B18611BE442CE003E0233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B19011BE4540D003E0233 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */,
+				AD5B19701BE455F1003E0233 /* libarmadillo.6.10.1.dylib in Frameworks */,
+				AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +322,8 @@
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
-				AD97F9511BDCBD1A00C57E0B /* libarmadillo.dylib */,
 				ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */,
+				ADB85D961B815E27002879D2 /* libpng16.16.dylib */,
 				ADB0ABCA1BDCB66900049605 /* Accelerate.framework */,
 				AD4768041B76EAF100E6B11D /* NumCH */,
 				AD4768031B76EAF100E6B11D /* Products */,
@@ -196,6 +334,8 @@
 			isa = PBXGroup;
 			children = (
 				AD4768021B76EAF100E6B11D /* NumCH */,
+				AD5B18641BE442CE003E0233 /* LearnCannonAI */,
+				AD5B19041BE4540D003E0233 /* libNumCHLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -217,6 +357,7 @@
 				AD47680E1B76EB0900E6B11D /* Optimization */,
 				AD47680C1B76EAF800E6B11D /* ODE Sim */,
 				AD4768051B76EAF100E6B11D /* main.cpp */,
+				ADE48C051BEB3250003E34AC /* Malloc2D.hpp */,
 			);
 			path = NumCH;
 			sourceTree = "<group>";
@@ -224,6 +365,7 @@
 		AD47680C1B76EAF800E6B11D /* ODE Sim */ = {
 			isa = PBXGroup;
 			children = (
+				ADE48BED1BE49FAF003E34AC /* Time */,
 				AD4768471B781F5F00E6B11D /* Config Parser */,
 				AD4768231B77BB4000E6B11D /* Constants Set */,
 				AD4768221B771EFC00E6B11D /* Scheduler */,
@@ -261,6 +403,7 @@
 		AD4768101B76EB1600E6B11D /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				ADE48BF01BE49FE3003E34AC /* Fraction */,
 				AD4768431B780D3500E6B11D /* RandomNumber */,
 				ADFE86F21BDC3A1400D84DB6 /* Numbers.h */,
 			);
@@ -287,8 +430,12 @@
 		AD4768161B7713C300E6B11D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AD47681F1B771A5900E6B11D /* Model.cpp */,
-				AD4768201B771A5900E6B11D /* Model.hpp */,
+				ADE48BFB1BE87722003E34AC /* DiscreteModel.cpp */,
+				ADE48BFC1BE87722003E34AC /* DiscreteModel.hpp */,
+				ADE48C001BE87738003E34AC /* DynamicModel.cpp */,
+				ADE48C011BE87738003E34AC /* DynamicModel.hpp */,
+				AD7868081C01259200A6FE07 /* DataPrinter.cpp */,
+				AD7868091C01259200A6FE07 /* DataPrinter.hpp */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -300,6 +447,10 @@
 				AD4768191B77143500E6B11D /* GenIntegrator.hpp */,
 				AD47683A1B77E52800E6B11D /* ExplicitEuler.cpp */,
 				AD47683B1B77E52800E6B11D /* ExplicitEuler.hpp */,
+				AD78680C1C019B5200A6FE07 /* RungeKutta4.cpp */,
+				AD78680D1C019B5200A6FE07 /* RungeKutta4.hpp */,
+				AD78682B1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp */,
+				AD78682C1C02D0E400A6FE07 /* ExplicitTrapezoidal.hpp */,
 			);
 			name = Integrators;
 			sourceTree = "<group>";
@@ -369,6 +520,23 @@
 			name = Graphics;
 			sourceTree = "<group>";
 		};
+		ADE48BED1BE49FAF003E34AC /* Time */ = {
+			isa = PBXGroup;
+			children = (
+				ADE48BEE1BE49FCF003E34AC /* PreciseTime.h */,
+			);
+			name = Time;
+			sourceTree = "<group>";
+		};
+		ADE48BF01BE49FE3003E34AC /* Fraction */ = {
+			isa = PBXGroup;
+			children = (
+				ADE48BF11BE4A019003E34AC /* Fraction.h */,
+				ADE48BF31BE4A18B003E34AC /* Fraction.cpp */,
+			);
+			name = Fraction;
+			sourceTree = "<group>";
+		};
 		ADFE86851BDA00CE00D84DB6 /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
@@ -414,8 +582,9 @@
 			isa = PBXGroup;
 			children = (
 				ADFE86E21BDA06B000D84DB6 /* MonteCarlo */,
-				ADFE86E11BDA06A200D84DB6 /* SigmaPoint */,
+				ADFE86E11BDA06A200D84DB6 /* UnscentedKalman */,
 				ADFE86E01BDA069900D84DB6 /* Kalman */,
+				AD5B17991BE4365F003E0233 /* DataFilter.h */,
 			);
 			name = Filters;
 			sourceTree = "<group>";
@@ -427,11 +596,11 @@
 			name = Kalman;
 			sourceTree = "<group>";
 		};
-		ADFE86E11BDA06A200D84DB6 /* SigmaPoint */ = {
+		ADFE86E11BDA06A200D84DB6 /* UnscentedKalman */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			name = SigmaPoint;
+			name = UnscentedKalman;
 			sourceTree = "<group>";
 		};
 		ADFE86E21BDA06B000D84DB6 /* MonteCarlo */ = {
@@ -529,7 +698,6 @@
 		ADFE86F61BDC3A7200D84DB6 /* PNG */ = {
 			isa = PBXGroup;
 			children = (
-				ADB85D961B815E27002879D2 /* libpng16.16.dylib */,
 				ADB85D8F1B815E27002879D2 /* cpixel.cpp */,
 				ADB85D901B815E27002879D2 /* cpixel.h */,
 				ADB85D911B815E27002879D2 /* cpng.cpp */,
@@ -598,6 +766,76 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		AD5B19021BE4540D003E0233 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD7867C31BFD943500A6FE07 /* NumCH.h in Headers */,
+				AD7867C41BFD943500A6FE07 /* DataFilter.h in Headers */,
+				AD7867C51BFD943500A6FE07 /* AdaptiveArray.h in Headers */,
+				AD7867C61BFD943500A6FE07 /* avl_tree.h in Headers */,
+				AD7867C71BFD943500A6FE07 /* convex_hull2D.h in Headers */,
+				AD7867C81BFD943500A6FE07 /* convex_hull3D.h in Headers */,
+				AD7867C91BFD943500A6FE07 /* Coordinate.h in Headers */,
+				AD7867CA1BFD943500A6FE07 /* Graph.hpp in Headers */,
+				AD7867CB1BFD943500A6FE07 /* hash_table.h in Headers */,
+				AD7867CC1BFD943500A6FE07 /* heap.h in Headers */,
+				AD7867CD1BFD943500A6FE07 /* kd_tree.h in Headers */,
+				AD7867CE1BFD943500A6FE07 /* kdfunction.h in Headers */,
+				AD7867CF1BFD943500A6FE07 /* L1Norm.h in Headers */,
+				AD7867D01BFD943500A6FE07 /* L2Norm.h in Headers */,
+				AD7867D11BFD943500A6FE07 /* LinkedList.hpp in Headers */,
+				AD7867D21BFD943500A6FE07 /* PopArray.h in Headers */,
+				AD7867D31BFD943500A6FE07 /* queue.h in Headers */,
+				AD7867D41BFD943500A6FE07 /* stack.h in Headers */,
+				AD7867D51BFD943500A6FE07 /* Vec.h in Headers */,
+				AD7867D61BFD943500A6FE07 /* RadialBasisFunc.h in Headers */,
+				AD7867D71BFD943500A6FE07 /* LinearFunc.h in Headers */,
+				AD7867D81BFD943500A6FE07 /* Sigmoid.h in Headers */,
+				AD7867D91BFD943500A6FE07 /* NodeFunc.h in Headers */,
+				AD7867DA1BFD943500A6FE07 /* NeuralNetwork.h in Headers */,
+				AD7867DB1BFD943600A6FE07 /* MachineLearning.h in Headers */,
+				AD7867DC1BFD943600A6FE07 /* cpixel.h in Headers */,
+				AD7867DD1BFD943600A6FE07 /* cpng.h in Headers */,
+				AD7867DE1BFD943600A6FE07 /* Graphics.h in Headers */,
+				AD7867DF1BFD943600A6FE07 /* Function.hpp in Headers */,
+				AD7867E01BFD943600A6FE07 /* point.h in Headers */,
+				AD78682F1C02D0E400A6FE07 /* ExplicitTrapezoidal.hpp in Headers */,
+				AD7867E11BFD943600A6FE07 /* Geometry.h in Headers */,
+				AD7867E21BFD943600A6FE07 /* PDESim.h in Headers */,
+				AD7867E31BFD943600A6FE07 /* Fraction.h in Headers */,
+				AD7867E41BFD943600A6FE07 /* RandomNumberGenerator.hpp in Headers */,
+				AD7867E51BFD943600A6FE07 /* Numbers.h in Headers */,
+				AD7867E61BFD943600A6FE07 /* Matrix.h in Headers */,
+				AD7867E71BFD943600A6FE07 /* Vect.hpp in Headers */,
+				AD7867E81BFD943700A6FE07 /* LinearAlgebra.h in Headers */,
+				AD7867E91BFD943700A6FE07 /* CostFunc.h in Headers */,
+				AD7867EA1BFD943700A6FE07 /* GradientDescent.hpp in Headers */,
+				AD7867EB1BFD943700A6FE07 /* GradientDescentStep.hpp in Headers */,
+				AD7867EC1BFD943700A6FE07 /* LatinHypercubeDistributor.h in Headers */,
+				AD7867ED1BFD943700A6FE07 /* ParticleDistributor.h in Headers */,
+				AD7867EE1BFD943700A6FE07 /* RandomDistributor.h in Headers */,
+				AD7867EF1BFD943700A6FE07 /* Swarm.h in Headers */,
+				AD7867F01BFD943700A6FE07 /* SwarmParticle.h in Headers */,
+				AD7867F11BFD943700A6FE07 /* PSO.h in Headers */,
+				AD7867F21BFD943800A6FE07 /* Optimization.h in Headers */,
+				AD7867F31BFD943800A6FE07 /* PreciseTime.h in Headers */,
+				AD7867F41BFD943800A6FE07 /* ConfigParser.hpp in Headers */,
+				AD7867F51BFD943800A6FE07 /* ConstantsSet.hpp in Headers */,
+				AD7867F61BFD943800A6FE07 /* Scheduler.hpp in Headers */,
+				AD7867F71BFD943800A6FE07 /* Simulator.hpp in Headers */,
+				AD7867F81BFD943800A6FE07 /* GenIntegrator.hpp in Headers */,
+				AD7867F91BFD943800A6FE07 /* ExplicitEuler.hpp in Headers */,
+				AD7867FB1BFD943800A6FE07 /* DiscreteModel.hpp in Headers */,
+				AD7867FC1BFD943900A6FE07 /* DynamicModel.hpp in Headers */,
+				AD7867FD1BFD943900A6FE07 /* ODESim.h in Headers */,
+				AD7867FE1BFD943900A6FE07 /* Malloc2D.hpp in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		AD4768011B76EAF100E6B11D /* NumCH */ = {
 			isa = PBXNativeTarget;
@@ -616,6 +854,40 @@
 			productReference = AD4768021B76EAF100E6B11D /* NumCH */;
 			productType = "com.apple.product-type.tool";
 		};
+		AD5B18631BE442CE003E0233 /* LearnCannonAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD5B18681BE442CE003E0233 /* Build configuration list for PBXNativeTarget "LearnCannonAI" */;
+			buildPhases = (
+				AD5B18601BE442CE003E0233 /* Sources */,
+				AD5B18611BE442CE003E0233 /* Frameworks */,
+				AD5B18621BE442CE003E0233 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LearnCannonAI;
+			productName = LearnCannonAI;
+			productReference = AD5B18641BE442CE003E0233 /* LearnCannonAI */;
+			productType = "com.apple.product-type.tool";
+		};
+		AD5B19031BE4540D003E0233 /* NumCHLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AD5B19071BE4540D003E0233 /* Build configuration list for PBXNativeTarget "NumCHLib" */;
+			buildPhases = (
+				AD5B19001BE4540D003E0233 /* Sources */,
+				AD5B19011BE4540D003E0233 /* Frameworks */,
+				AD5B19021BE4540D003E0233 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NumCHLib;
+			productName = NumCHLib;
+			productReference = AD5B19041BE4540D003E0233 /* libNumCHLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -627,6 +899,12 @@
 				TargetAttributes = {
 					AD4768011B76EAF100E6B11D = {
 						CreatedOnToolsVersion = 7.0;
+					};
+					AD5B18631BE442CE003E0233 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					AD5B19031BE4540D003E0233 = {
+						CreatedOnToolsVersion = 7.1;
 					};
 				};
 			};
@@ -643,6 +921,8 @@
 			projectRoot = "";
 			targets = (
 				AD4768011B76EAF100E6B11D /* NumCH */,
+				AD5B18631BE442CE003E0233 /* LearnCannonAI */,
+				AD5B19031BE4540D003E0233 /* NumCHLib */,
 			);
 		};
 /* End PBXProject section */
@@ -655,6 +935,8 @@
 				ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */,
 				ADB85D8C1B815AF2002879D2 /* Matrix.cpp in Sources */,
 				ADFE86D71BDA05FA00D84DB6 /* CostFunc.cpp in Sources */,
+				ADE48C061BEB3250003E34AC /* Malloc2D.hpp in Sources */,
+				ADE48BF41BE4A18B003E34AC /* Fraction.cpp in Sources */,
 				AD47684A1B781F9E00E6B11D /* ConfigParser.cpp in Sources */,
 				ADFE86C41BDA05CE00D84DB6 /* NodeFunc.cpp in Sources */,
 				ADFE86C31BDA05CE00D84DB6 /* NeuralNetwork.cpp in Sources */,
@@ -664,8 +946,10 @@
 				ADFE86D81BDA05FA00D84DB6 /* GradientDescent.cpp in Sources */,
 				ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
+				AD78682D1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp in Sources */,
 				ADFE86C21BDA05CE00D84DB6 /* LinearFunc.cpp in Sources */,
 				ADFE86DD1BDA05FA00D84DB6 /* Swarm.cpp in Sources */,
+				ADE48C021BE87738003E34AC /* DynamicModel.cpp in Sources */,
 				ADB85D851B79B959002879D2 /* Function.cpp in Sources */,
 				ADFE86C61BDA05CE00D84DB6 /* Sigmoid.cpp in Sources */,
 				AD4768061B76EAF100E6B11D /* main.cpp in Sources */,
@@ -678,7 +962,7 @@
 				ADFE86DC1BDA05FA00D84DB6 /* RandomDistributor.cpp in Sources */,
 				ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */,
 				ADFE86DA1BDA05FA00D84DB6 /* LatinHypercubeDistributor.cpp in Sources */,
-				AD4768211B771A5900E6B11D /* Model.cpp in Sources */,
+				AD78680A1C01259200A6FE07 /* DataPrinter.cpp in Sources */,
 				ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */,
 				ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */,
 				AD47681E1B7719D600E6B11D /* Simulator.cpp in Sources */,
@@ -686,7 +970,54 @@
 				AD4768321B77CDAE00E6B11D /* ConstantsSet.cpp in Sources */,
 				ADB85D9D1B815E27002879D2 /* FigData.cpp in Sources */,
 				AD4768461B780D7200E6B11D /* RandomNumberGenerator.cpp in Sources */,
+				ADE48BFD1BE87722003E34AC /* DiscreteModel.cpp in Sources */,
+				AD78680E1C019B5200A6FE07 /* RungeKutta4.cpp in Sources */,
 				AD4768151B76EC8D00E6B11D /* Vect.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B18601BE442CE003E0233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AD5B19001BE4540D003E0233 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AD78680F1C01A43100A6FE07 /* RungeKutta4.cpp in Sources */,
+				AD78680B1C01966600A6FE07 /* DataPrinter.cpp in Sources */,
+				AD78682E1C02D0E400A6FE07 /* ExplicitTrapezoidal.cpp in Sources */,
+				AD7867A71BFD93D700A6FE07 /* RadialBasisFunc.cpp in Sources */,
+				AD7867A81BFD93D700A6FE07 /* LinearFunc.cpp in Sources */,
+				AD7867A91BFD93D700A6FE07 /* Sigmoid.cpp in Sources */,
+				AD7867AA1BFD93D700A6FE07 /* NodeFunc.cpp in Sources */,
+				AD7867AB1BFD93D700A6FE07 /* NeuralNetwork.cpp in Sources */,
+				AD7867AC1BFD93D700A6FE07 /* cpixel.cpp in Sources */,
+				AD7867AD1BFD93D700A6FE07 /* cpng.cpp in Sources */,
+				AD7867AE1BFD93D700A6FE07 /* Function.cpp in Sources */,
+				AD7867AF1BFD93D700A6FE07 /* Fraction.cpp in Sources */,
+				AD7867B01BFD93D700A6FE07 /* RandomNumberGenerator.cpp in Sources */,
+				AD7867B11BFD93D700A6FE07 /* Matrix.cpp in Sources */,
+				AD7867B21BFD93D700A6FE07 /* Vect.cpp in Sources */,
+				AD7867B31BFD93D700A6FE07 /* CostFunc.cpp in Sources */,
+				AD7867B41BFD93D700A6FE07 /* GradientDescent.cpp in Sources */,
+				AD7867B51BFD93D700A6FE07 /* GradientDescentStep.cpp in Sources */,
+				AD7867B61BFD93D700A6FE07 /* LatinHypercubeDistributor.cpp in Sources */,
+				AD7867B71BFD93D700A6FE07 /* ParticleDistributor.cpp in Sources */,
+				AD7867B81BFD93D700A6FE07 /* RandomDistributor.cpp in Sources */,
+				AD7867B91BFD93D700A6FE07 /* Swarm.cpp in Sources */,
+				AD7867BA1BFD93D700A6FE07 /* SwarmParticle.cpp in Sources */,
+				AD7867BB1BFD93D700A6FE07 /* ConfigParser.cpp in Sources */,
+				AD7867BC1BFD93D700A6FE07 /* ConstantsSet.cpp in Sources */,
+				AD7867BD1BFD93D700A6FE07 /* Scheduler.cpp in Sources */,
+				AD7867BE1BFD93D700A6FE07 /* Simulator.cpp in Sources */,
+				AD7867BF1BFD93D700A6FE07 /* GenIntegrator.cpp in Sources */,
+				AD7867C01BFD93D700A6FE07 /* ExplicitEuler.cpp in Sources */,
+				AD7867C11BFD93D700A6FE07 /* DiscreteModel.cpp in Sources */,
+				AD7867C21BFD93D700A6FE07 /* DynamicModel.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -804,6 +1135,50 @@
 			};
 			name = Release;
 		};
+		AD5B18691BE442CE003E0233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD5B186A1BE442CE003E0233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		AD5B19051BE4540D003E0233 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NumCH",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AD5B19061BE4540D003E0233 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				EXECUTABLE_PREFIX = lib;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/NumCH",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -821,6 +1196,24 @@
 			buildConfigurations = (
 				AD47680A1B76EAF100E6B11D /* Debug */,
 				AD47680B1B76EAF100E6B11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD5B18681BE442CE003E0233 /* Build configuration list for PBXNativeTarget "LearnCannonAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD5B18691BE442CE003E0233 /* Debug */,
+				AD5B186A1BE442CE003E0233 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD5B19071BE4540D003E0233 /* Build configuration list for PBXNativeTarget "NumCHLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD5B19051BE4540D003E0233 /* Debug */,
+				AD5B19061BE4540D003E0233 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

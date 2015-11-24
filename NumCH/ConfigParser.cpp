@@ -9,6 +9,9 @@
 #include "ConfigParser.hpp"
 
 
+
+
+
 void ConfigParser::parse( const char* filename ){
     
     //
@@ -42,7 +45,7 @@ void ConfigParser::parse( const char* filename ){
                 sscanf(number, "%lf", &value);
                 printf("name = %s, num = %lf\n",name, value);
                 if (name[0] != '\0') {
-                    parameters[string(name)] = value;
+                    parameters[std::string(name)] = value;
                 }
             }
         }
@@ -67,12 +70,32 @@ ConfigParser::ConfigParser( const char* filename ){
 
 template<typename T>
 T ConfigParser::getValueFrom( const char* parameterName ) {
-    return (T)parameters[string(parameterName)];
+    return (T)parameters[std::string(parameterName)];
+}
+
+template<>
+double ConfigParser::getValueFrom( const char* parameterName ) {
+    return (double)parameters[std::string(parameterName)];
 }
 
 template<>
 bool ConfigParser::getValueFrom( const char* parameterName ) {
-    return (1==(int)parameters[string(parameterName)]);
+    return (1==(int)parameters[std::string(parameterName)]);
+}
+
+template<typename T>
+T ConfigParser::getValueFrom( const std::string & parameterName ) {
+    return (T)parameters[parameterName];
+}
+
+template<>
+bool ConfigParser::getValueFrom( const std::string & parameterName ) {
+    return (1==(int)parameters[parameterName]);
+}
+
+template<>
+double ConfigParser::getValueFrom( const std::string & parameterName ) {
+    return (double)parameters[parameterName];
 }
 
 
