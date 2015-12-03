@@ -21,6 +21,7 @@
 #include "PreciseTime.h"
 #include "ConfigParser.hpp"
 #include "DataPrinter.hpp"
+#include "ConstantsSet.hpp"
 
 typedef RandomNumberGenerator Rand;
 typedef AdaptiveArray<DynamicModel*> DiffeqList;
@@ -222,6 +223,7 @@ public:
     double uniformRand();
     double gaussRand();
     double gaussRand(double mean, double sigma);
+    Rand * getReferenceToGenerator();
     
     
     

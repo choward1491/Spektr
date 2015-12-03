@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		AD4768061B76EAF100E6B11D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768051B76EAF100E6B11D /* main.cpp */; };
 		AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
-		AD5B19701BE455F1003E0233 /* libarmadillo.6.10.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */; };
 		AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
 		AD7867C51BFD943500A6FE07 /* AdaptiveArray.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */; };
 		AD7867C61BFD943500A6FE07 /* avl_tree.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86951BDA04E300D84DB6 /* avl_tree.h */; };
@@ -29,9 +28,6 @@
 		AD7867D41BFD943500A6FE07 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86A91BDA04E300D84DB6 /* stack.h */; };
 		AD7867D51BFD943500A6FE07 /* Vec.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86AB1BDA04E300D84DB6 /* Vec.h */; };
 		AD84DC421C042FFF00C4CFFA /* DataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBD51C042FFF00C4CFFA /* DataFilter.h */; };
-		AD84DC431C042FFF00C4CFFA /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBD71C042FFF00C4CFFA /* Function.cpp */; };
-		AD84DC441C042FFF00C4CFFA /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBD71C042FFF00C4CFFA /* Function.cpp */; };
-		AD84DC451C042FFF00C4CFFA /* Function.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBD81C042FFF00C4CFFA /* Function.hpp */; };
 		AD84DC461C042FFF00C4CFFA /* Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBDA1C042FFF00C4CFFA /* Geometry.h */; };
 		AD84DC471C042FFF00C4CFFA /* point.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBDB1C042FFF00C4CFFA /* point.h */; };
 		AD84DC481C042FFF00C4CFFA /* camera.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBDD1C042FFF00C4CFFA /* camera.h */; };
@@ -55,12 +51,6 @@
 		AD84DC5A1C04300000C4CFFA /* PNGImages.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBEC1C042FFF00C4CFFA /* PNGImages.h */; };
 		AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBED1C042FFF00C4CFFA /* pnglibconf.h */; };
 		AD84DC5C1C04300000C4CFFA /* LinearAlgebra.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBEF1C042FFF00C4CFFA /* LinearAlgebra.h */; };
-		AD84DC5D1C04300000C4CFFA /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF01C042FFF00C4CFFA /* Matrix.cpp */; };
-		AD84DC5E1C04300000C4CFFA /* Matrix.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF01C042FFF00C4CFFA /* Matrix.cpp */; };
-		AD84DC5F1C04300000C4CFFA /* Matrix.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF11C042FFF00C4CFFA /* Matrix.h */; };
-		AD84DC601C04300000C4CFFA /* Vect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF21C042FFF00C4CFFA /* Vect.cpp */; };
-		AD84DC611C04300000C4CFFA /* Vect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF21C042FFF00C4CFFA /* Vect.cpp */; };
-		AD84DC621C04300000C4CFFA /* Vect.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF31C042FFF00C4CFFA /* Vect.hpp */; };
 		AD84DC631C04300000C4CFFA /* ClassificationCost.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF51C042FFF00C4CFFA /* ClassificationCost.h */; };
 		AD84DC641C04300000C4CFFA /* ClassificationLearning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */; };
 		AD84DC651C04300000C4CFFA /* ClassificationLearning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */; };
@@ -152,6 +142,14 @@
 		AD84DCBB1C04300100C4CFFA /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */; };
 		AD84DCBC1C04300100C4CFFA /* SwarmParticle.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */; };
 		AD84DCBD1C04300100C4CFFA /* PDESim.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC411C042FFF00C4CFFA /* PDESim.h */; };
+		AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD211C057E8000C4CFFA /* Quaternion.cpp */; };
+		AD84DD241C057E8000C4CFFA /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD211C057E8000C4CFFA /* Quaternion.cpp */; };
+		AD84DD251C057E8000C4CFFA /* Quaternion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD221C057E8000C4CFFA /* Quaternion.hpp */; };
+		AD84DD5E1C06CBC300C4CFFA /* Vec3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD5C1C06CBC300C4CFFA /* Vec3D.cpp */; };
+		AD84DD5F1C06CBC300C4CFFA /* Vec3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD5C1C06CBC300C4CFFA /* Vec3D.cpp */; };
+		AD84DD601C06CBC300C4CFFA /* Vec3D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */; };
+		AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD621C06CBDD00C4CFFA /* Vector.cpp */; };
+		AD84DD661C06CBDD00C4CFFA /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD631C06CBDD00C4CFFA /* Vector.hpp */; };
 		ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
 		ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
 		ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */; };
@@ -190,8 +188,6 @@
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libNumCHLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNumCHLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD84DBD51C042FFF00C4CFFA /* DataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFilter.h; sourceTree = "<group>"; };
-		AD84DBD71C042FFF00C4CFFA /* Function.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Function.cpp; sourceTree = "<group>"; };
-		AD84DBD81C042FFF00C4CFFA /* Function.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Function.hpp; sourceTree = "<group>"; };
 		AD84DBDA1C042FFF00C4CFFA /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		AD84DBDB1C042FFF00C4CFFA /* point.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = point.h; sourceTree = "<group>"; };
 		AD84DBDD1C042FFF00C4CFFA /* camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = camera.h; sourceTree = "<group>"; };
@@ -212,10 +208,6 @@
 		AD84DBEC1C042FFF00C4CFFA /* PNGImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImages.h; sourceTree = "<group>"; };
 		AD84DBED1C042FFF00C4CFFA /* pnglibconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnglibconf.h; sourceTree = "<group>"; };
 		AD84DBEF1C042FFF00C4CFFA /* LinearAlgebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearAlgebra.h; sourceTree = "<group>"; };
-		AD84DBF01C042FFF00C4CFFA /* Matrix.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Matrix.cpp; sourceTree = "<group>"; };
-		AD84DBF11C042FFF00C4CFFA /* Matrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matrix.h; sourceTree = "<group>"; };
-		AD84DBF21C042FFF00C4CFFA /* Vect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vect.cpp; sourceTree = "<group>"; };
-		AD84DBF31C042FFF00C4CFFA /* Vect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vect.hpp; sourceTree = "<group>"; };
 		AD84DBF51C042FFF00C4CFFA /* ClassificationCost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationCost.h; sourceTree = "<group>"; };
 		AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassificationLearning.cpp; sourceTree = "<group>"; };
 		AD84DBF71C042FFF00C4CFFA /* ClassificationLearning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationLearning.h; sourceTree = "<group>"; };
@@ -280,9 +272,14 @@
 		AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwarmParticle.cpp; sourceTree = "<group>"; };
 		AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwarmParticle.h; sourceTree = "<group>"; };
 		AD84DC411C042FFF00C4CFFA /* PDESim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDESim.h; sourceTree = "<group>"; };
+		AD84DD211C057E8000C4CFFA /* Quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quaternion.cpp; sourceTree = "<group>"; };
+		AD84DD221C057E8000C4CFFA /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
+		AD84DD5C1C06CBC300C4CFFA /* Vec3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3D.cpp; sourceTree = "<group>"; };
+		AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec3D.hpp; sourceTree = "<group>"; };
+		AD84DD621C06CBDD00C4CFFA /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
+		AD84DD631C06CBDD00C4CFFA /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
 		ADB0ABCA1BDCB66900049605 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
-		ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; path = libarmadillo.6.10.1.dylib; sourceTree = "<group>"; };
 		ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdaptiveArray.cpp; sourceTree = "<group>"; };
 		ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveArray.h; sourceTree = "<group>"; };
 		ADFE86951BDA04E300D84DB6 /* avl_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avl_tree.h; sourceTree = "<group>"; };
@@ -331,7 +328,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */,
-				AD5B19701BE455F1003E0233 /* libarmadillo.6.10.1.dylib in Frameworks */,
 				AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,7 +338,6 @@
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
-				ADE6D60A1BDCB98200175EEE /* libarmadillo.6.10.1.dylib */,
 				ADB85D961B815E27002879D2 /* libpng16.16.dylib */,
 				ADB0ABCA1BDCB66900049605 /* Accelerate.framework */,
 				AD4768041B76EAF100E6B11D /* NumCH */,
@@ -391,8 +386,6 @@
 		AD84DBD61C042FFF00C4CFFA /* Function */ = {
 			isa = PBXGroup;
 			children = (
-				AD84DBD71C042FFF00C4CFFA /* Function.cpp */,
-				AD84DBD81C042FFF00C4CFFA /* Function.hpp */,
 			);
 			path = Function;
 			sourceTree = "<group>";
@@ -400,6 +393,9 @@
 		AD84DBD91C042FFF00C4CFFA /* Geometry */ = {
 			isa = PBXGroup;
 			children = (
+				AD84DD5B1C06CBB700C4CFFA /* Vec3D */,
+				AD84DD1A1C057E0900C4CFFA /* EulerAngles */,
+				AD84DD191C057DFC00C4CFFA /* Quaternion */,
 				AD84DBDA1C042FFF00C4CFFA /* Geometry.h */,
 				AD84DBDB1C042FFF00C4CFFA /* point.h */,
 			);
@@ -434,10 +430,6 @@
 			isa = PBXGroup;
 			children = (
 				AD84DBEF1C042FFF00C4CFFA /* LinearAlgebra.h */,
-				AD84DBF01C042FFF00C4CFFA /* Matrix.cpp */,
-				AD84DBF11C042FFF00C4CFFA /* Matrix.h */,
-				AD84DBF21C042FFF00C4CFFA /* Vect.cpp */,
-				AD84DBF31C042FFF00C4CFFA /* Vect.hpp */,
 			);
 			path = LinearAlgebra;
 			sourceTree = "<group>";
@@ -582,24 +574,10 @@
 		AD84DC2D1C042FFF00C4CFFA /* Optimization */ = {
 			isa = PBXGroup;
 			children = (
-				AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */,
-				AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */,
-				AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */,
-				AD84DC311C042FFF00C4CFFA /* GradientDescent.hpp */,
-				AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */,
-				AD84DC331C042FFF00C4CFFA /* GradientDescentStep.hpp */,
-				AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */,
-				AD84DC351C042FFF00C4CFFA /* LatinHypercubeDistributor.h */,
+				AD84DCC41C05773600C4CFFA /* CostFunction */,
+				AD84DCC31C05772500C4CFFA /* PSO */,
+				AD84DCC21C05771100C4CFFA /* GradientDescent */,
 				AD84DC361C042FFF00C4CFFA /* Optimization.h */,
-				AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */,
-				AD84DC381C042FFF00C4CFFA /* ParticleDistributor.h */,
-				AD84DC391C042FFF00C4CFFA /* PSO.h */,
-				AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */,
-				AD84DC3B1C042FFF00C4CFFA /* RandomDistributor.h */,
-				AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */,
-				AD84DC3D1C042FFF00C4CFFA /* Swarm.h */,
-				AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */,
-				AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */,
 			);
 			path = Optimization;
 			sourceTree = "<group>";
@@ -610,6 +588,71 @@
 				AD84DC411C042FFF00C4CFFA /* PDESim.h */,
 			);
 			path = PDE_Sim;
+			sourceTree = "<group>";
+		};
+		AD84DCC21C05771100C4CFFA /* GradientDescent */ = {
+			isa = PBXGroup;
+			children = (
+				AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */,
+				AD84DC311C042FFF00C4CFFA /* GradientDescent.hpp */,
+				AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */,
+				AD84DC331C042FFF00C4CFFA /* GradientDescentStep.hpp */,
+			);
+			name = GradientDescent;
+			sourceTree = "<group>";
+		};
+		AD84DCC31C05772500C4CFFA /* PSO */ = {
+			isa = PBXGroup;
+			children = (
+				AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */,
+				AD84DC351C042FFF00C4CFFA /* LatinHypercubeDistributor.h */,
+				AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */,
+				AD84DC381C042FFF00C4CFFA /* ParticleDistributor.h */,
+				AD84DC391C042FFF00C4CFFA /* PSO.h */,
+				AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */,
+				AD84DC3B1C042FFF00C4CFFA /* RandomDistributor.h */,
+				AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */,
+				AD84DC3D1C042FFF00C4CFFA /* Swarm.h */,
+				AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */,
+				AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */,
+			);
+			name = PSO;
+			sourceTree = "<group>";
+		};
+		AD84DCC41C05773600C4CFFA /* CostFunction */ = {
+			isa = PBXGroup;
+			children = (
+				AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */,
+				AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */,
+			);
+			name = CostFunction;
+			sourceTree = "<group>";
+		};
+		AD84DD191C057DFC00C4CFFA /* Quaternion */ = {
+			isa = PBXGroup;
+			children = (
+				AD84DD211C057E8000C4CFFA /* Quaternion.cpp */,
+				AD84DD221C057E8000C4CFFA /* Quaternion.hpp */,
+			);
+			name = Quaternion;
+			sourceTree = "<group>";
+		};
+		AD84DD1A1C057E0900C4CFFA /* EulerAngles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = EulerAngles;
+			sourceTree = "<group>";
+		};
+		AD84DD5B1C06CBB700C4CFFA /* Vec3D */ = {
+			isa = PBXGroup;
+			children = (
+				AD84DD621C06CBDD00C4CFFA /* Vector.cpp */,
+				AD84DD631C06CBDD00C4CFFA /* Vector.hpp */,
+				AD84DD5C1C06CBC300C4CFFA /* Vec3D.cpp */,
+				AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */,
+			);
+			name = Vec3D;
 			sourceTree = "<group>";
 		};
 		ADFE86921BDA04E300D84DB6 /* Data_Structs */ = {
@@ -662,11 +705,12 @@
 				AD7867C61BFD943500A6FE07 /* avl_tree.h in Headers */,
 				AD7867C71BFD943500A6FE07 /* convex_hull2D.h in Headers */,
 				AD84DC541C04300000C4CFFA /* Figures.h in Headers */,
+				AD84DD661C06CBDD00C4CFFA /* Vector.hpp in Headers */,
 				AD7867C81BFD943500A6FE07 /* convex_hull3D.h in Headers */,
 				AD7867C91BFD943500A6FE07 /* Coordinate.h in Headers */,
+				AD84DD251C057E8000C4CFFA /* Quaternion.hpp in Headers */,
 				AD84DC5A1C04300000C4CFFA /* PNGImages.h in Headers */,
 				AD84DC591C04300000C4CFFA /* pngconf.h in Headers */,
-				AD84DC451C042FFF00C4CFFA /* Function.hpp in Headers */,
 				AD7867CA1BFD943500A6FE07 /* Graph.hpp in Headers */,
 				AD84DC851C04300000C4CFFA /* ConstantsSet.hpp in Headers */,
 				AD84DC421C042FFF00C4CFFA /* DataFilter.h in Headers */,
@@ -676,7 +720,6 @@
 				AD84DC8B1C04300000C4CFFA /* DiscreteModel.hpp in Headers */,
 				AD84DCB21C04300100C4CFFA /* ParticleDistributor.h in Headers */,
 				AD84DC9C1C04300000C4CFFA /* PreciseTime.h in Headers */,
-				AD84DC621C04300000C4CFFA /* Vect.hpp in Headers */,
 				AD84DC561C04300000C4CFFA /* graphics_objs.h in Headers */,
 				AD7867CC1BFD943500A6FE07 /* heap.h in Headers */,
 				AD84DC701C04300000C4CFFA /* NodeFunc.h in Headers */,
@@ -698,7 +741,6 @@
 				AD84DCBC1C04300100C4CFFA /* SwarmParticle.h in Headers */,
 				AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */,
 				AD7867D31BFD943500A6FE07 /* queue.h in Headers */,
-				AD84DC5F1C04300000C4CFFA /* Matrix.h in Headers */,
 				AD84DC971C04300000C4CFFA /* GenIntegrator.hpp in Headers */,
 				AD84DC471C042FFF00C4CFFA /* point.h in Headers */,
 				AD84DC7E1C04300000C4CFFA /* RandomNumberGenerator.hpp in Headers */,
@@ -724,6 +766,7 @@
 				AD84DC5C1C04300000C4CFFA /* LinearAlgebra.h in Headers */,
 				AD84DC7F1C04300000C4CFFA /* NumCH.h in Headers */,
 				AD84DC521C04300000C4CFFA /* FigData.h in Headers */,
+				AD84DD601C06CBC300C4CFFA /* Vec3D.hpp in Headers */,
 				AD84DC691C04300000C4CFFA /* LinearFunc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,8 +875,6 @@
 				AD84DC4D1C04300000C4CFFA /* cpng.cpp in Sources */,
 				AD84DC6E1C04300000C4CFFA /* NodeFunc.cpp in Sources */,
 				AD84DC6B1C04300000C4CFFA /* NeuralNetwork.cpp in Sources */,
-				AD84DC431C042FFF00C4CFFA /* Function.cpp in Sources */,
-				AD84DC601C04300000C4CFFA /* Vect.cpp in Sources */,
 				AD84DC891C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
 				AD84DC8F1C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC8C1C04300000C4CFFA /* DynamicModel.cpp in Sources */,
@@ -855,18 +896,20 @@
 				AD84DC501C04300000C4CFFA /* FigData.cpp in Sources */,
 				ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */,
 				AD84DC4A1C04300000C4CFFA /* cpixel.cpp in Sources */,
+				AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 				AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
 				AD84DC711C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */,
 				AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
 				AD84DCAC1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
 				AD84DCA01C04300000C4CFFA /* Simulator.cpp in Sources */,
 				AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */,
+				AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */,
 				AD84DCB01C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
 				AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
 				AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */,
 				AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */,
-				AD84DC5D1C04300000C4CFFA /* Matrix.cpp in Sources */,
 				ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */,
+				AD84DD5E1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,14 +935,13 @@
 				AD84DCB11C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
 				AD84DC931C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
 				AD84DCBB1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
-				AD84DC441C042FFF00C4CFFA /* Function.cpp in Sources */,
 				AD84DCA41C04300000C4CFFA /* CostFunc.cpp in Sources */,
 				AD84DC6F1C04300000C4CFFA /* NodeFunc.cpp in Sources */,
 				AD84DCAD1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
 				AD84DC721C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */,
+				AD84DD5F1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
 				AD84DCA71C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				AD84DC8A1C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
-				AD84DC611C04300000C4CFFA /* Vect.cpp in Sources */,
 				AD84DC651C04300000C4CFFA /* ClassificationLearning.cpp in Sources */,
 				AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DC991C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
@@ -913,7 +955,7 @@
 				AD84DC811C04300000C4CFFA /* ConfigParser.cpp in Sources */,
 				AD84DC681C04300000C4CFFA /* LinearFunc.cpp in Sources */,
 				AD84DCA11C04300000C4CFFA /* Simulator.cpp in Sources */,
-				AD84DC5E1C04300000C4CFFA /* Matrix.cpp in Sources */,
+				AD84DD241C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -53,7 +53,11 @@ public:
     
 private:
     
-    std::map<std::string, double> parameters;
+    
+    bool isOnlyNumbers( const std::string & str);
+    
+    
+    std::map<std::string, std::string> parameters;
     
     
 };

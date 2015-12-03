@@ -9,9 +9,8 @@
 #ifndef LinearAlgebra_h
 #define LinearAlgebra_h
 
-#include "Vect.hpp"
-#include "Matrix.h"
-#include "/usr/include/armadillo"
+//#include "Vect.hpp"
+//#include "Matrix.h"
 
 
 #endif /* LinearAlgebra_h */

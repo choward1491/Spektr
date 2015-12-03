@@ -226,7 +226,7 @@ double Simulator::getNextTime() const { return newTime; }
 double Simulator::uniformRand() { return generator.rand(); }
 double Simulator::gaussRand(){ return generator.gaussRand(); }
 double Simulator::gaussRand( double mean, double sigma ){ return generator.gaussRand(mean, sigma); }
-
+Rand * Simulator::getReferenceToGenerator(){ return &generator; }
 
 
 
