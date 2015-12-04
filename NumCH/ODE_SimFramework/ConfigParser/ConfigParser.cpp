@@ -40,6 +40,14 @@ void ConfigParser::parse( const char* filename ){
         while ( fscanf(fptr, " %[^\n]\n", str) != EOF ){
             if ( str[0] != '#' && str[0] != '/' && str[0] != '\0' ) {
                 sscanf(str, "%[^:]: %[^/#]", name, value);
+                
+                int ind = 0;
+                for (int i = 0; name[i] != '\0'; i++) {
+                    if( name[i] != ' '){
+                        name[ind] = name[i]; ind++;
+                    }
+                }name[ind] = '\0';
+                
                 if (name[0] != '\0') {
                     parameters[std::string(name)] = std::string(value);
                 }
@@ -160,7 +168,6 @@ std::vector<double> ConfigParser::parseSubVector( const std::string & vec ) cons
 
 std::vector<double> ConfigParser::getVectorFromString( const std::string & vec ) const{
     std::queue<std::string> substrings;
-    printf("%s\n",vec.c_str());
     std::vector<double> output;
     char c;
     char temp[64];
