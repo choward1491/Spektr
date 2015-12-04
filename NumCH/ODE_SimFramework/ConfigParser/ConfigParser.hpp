@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <map>
 #include <string>
+#include <vector>
+#include <queue>
 
 /*!
  * Class to read inputs from a file and put them into
@@ -49,10 +51,19 @@ public:
     // # Here's another comment
     // variable1: 104.3
     //
+    // # Here's some vector
+    // vec: [12.5, 1.5, 12:2:24]
+    //
     void parse( const char* filename );
     
 private:
     
+    enum StringType{ Number, Vector, Word };
+    enum StringType getStringType( const std::string & str );
+    
+    std::vector<double> getVectorFromString( const std::string & vec ) const;
+    std::vector<double> parseSubVector( const std::string & vec ) const;
+    std::vector<double> increment( double start, double end, double incr ) const;
     
     bool isOnlyNumbers( const std::string & str);
     
