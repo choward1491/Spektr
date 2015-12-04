@@ -38,8 +38,8 @@ void ConfigParser::parse( const char* filename ){
         // Loop through the file and read in the file values
         //
         while ( fscanf(fptr, " %[^\n]\n", str) != EOF ){
-            if ( str[0] != '#' && str[0] != '/' && str[0] != '\0' ) {
-                sscanf(str, "%[^:]: %[^/#]", name, value);
+            if ( str[0] != '#' && str[0] != '\0' ) {
+                sscanf(str, "%[^:]: %[^#]", name, value);
                 
                 int ind = 0;
                 for (int i = 0; name[i] != '\0'; i++) {
