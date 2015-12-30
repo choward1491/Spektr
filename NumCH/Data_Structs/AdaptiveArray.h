@@ -15,7 +15,8 @@
 template<typename T>
 class AdaptiveArray {
 public:
-    AdaptiveArray(int _numElements = 1);
+    AdaptiveArray();
+    AdaptiveArray(int _numElements);
     AdaptiveArray( const AdaptiveArray<T> & arr );
     ~AdaptiveArray();
     AdaptiveArray<T> & operator=( const AdaptiveArray<T> & arr );

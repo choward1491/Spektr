@@ -9,22 +9,26 @@
 #ifndef ExplicitEuler_cpp
 #define ExplicitEuler_cpp
 
-#include "GenIntegrator.hpp"
+
+#include "DynamicModel.hpp"
+#include "AdaptiveArray.h"
 
 
-
-class ExplicitEuler : public GenIntegrator {
+class ExplicitEuler  {
     
 public:
-    ExplicitEuler() : GenIntegrator() {}
-    virtual ~ExplicitEuler();
-    virtual void setNumDimensions( int numDimensions );
-    virtual void integrate( double time, double dt , double* inOutState, DiffeqList & list );
+    typedef AdaptiveArray<DynamicModel*> DiffeqList;
+    
+    ExplicitEuler():numDims(-1),tmp(0){}
+    ~ExplicitEuler();
+    void setNumDimensions( int numDimensions );
+    void integrate( double time, double dt , double* inOutState, DiffeqList & list);
 
 private:
     void clear();
     void create( int totalNumber );
     double* tmp;
+    int numDims;
     
 };
 

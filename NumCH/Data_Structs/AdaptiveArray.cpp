@@ -12,6 +12,14 @@
 #define _adaptivearray_cpp_
 
 template<typename T>
+AdaptiveArray<T>::AdaptiveArray(){
+    totalCount = 5;
+    usedCount = 0;
+    data = new T[totalCount];
+}
+
+
+template<typename T>
 AdaptiveArray<T>::AdaptiveArray(int _numElements ){
     totalCount = _numElements;
     usedCount = 0;

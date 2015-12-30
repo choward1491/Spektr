@@ -9,16 +9,18 @@
 #ifndef ExplicitTrapezoidal_hpp
 #define ExplicitTrapezoidal_hpp
 
-#include "GenIntegrator.hpp"
-#include "Simulator.hpp"
+#include "DynamicModel.hpp"
+#include "AdaptiveArray.h"
 
-class ExplicitTrapezoidal : public GenIntegrator {
+class ExplicitTrapezoidal {
     
 public:
-    ExplicitTrapezoidal() : GenIntegrator() {}
-    virtual ~ExplicitTrapezoidal();
-    virtual void setNumDimensions( int numDimensions );
-    virtual void integrate( double time, double dt , double* inOutState, DiffeqList & list );
+    typedef AdaptiveArray<DynamicModel*> DiffeqList;
+    
+    ExplicitTrapezoidal():numDims(-1),k1(0),k2(0){}
+    ~ExplicitTrapezoidal();
+    void setNumDimensions( int numDimensions );
+    void integrate( double time, double dt , double* inOutState, DiffeqList & list );
     
 private:
     void clear();
@@ -28,6 +30,8 @@ private:
     double* k1;
     double* k2;
     double* tmp;
+    
+    int numDims;
     
 };
 

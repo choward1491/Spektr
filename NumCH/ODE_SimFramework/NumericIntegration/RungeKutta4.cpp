@@ -11,12 +11,11 @@
 void RungeKutta4::integrate( double time, double dt , double* inOutState, DiffeqList & list ){
     
     if( list.size() > 0 ){
-        Simulator* sim = list[0]->parent;
         double * dqdt = &k1[0];
-        double * tmpState = sim->state;
+        double * tmpState = inOutState;
         
         for (int i = 0; i < numDims; i++) {
-            tmp[i] = sim->state[i];
+            tmp[i] = inOutState[i];
         }
         
         
@@ -44,9 +43,9 @@ void RungeKutta4::integrate( double time, double dt , double* inOutState, Diffeq
         
         // reassign correct state
         for (int i = 0; i < numDims; i++) {
-            sim->state[i] = tmp[i];
+            inOutState[i] = tmp[i];
         }
-        tmpState = 0; sim = 0;
+        tmpState = 0;
         
         // compute resulting integration step
         double weight = dt/6.0;

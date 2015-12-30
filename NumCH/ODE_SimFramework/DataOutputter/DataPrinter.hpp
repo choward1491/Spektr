@@ -24,7 +24,7 @@ class DataPrinter : public DiscreteModel {
 public:
     
     
-    DataPrinter():hasHeader(false),outFile("history.txt"){}
+    DataPrinter():hasHeader(false),outFile("history.txt"),printList(),printNames(){}
     
     
     
@@ -61,9 +61,10 @@ public:
     virtual void update();
     
     
-    void addData( const double * address, const std::string & name );
-    void setFileName( std::string & filename );
+    void addVariableToPrint( const double * address, const std::string & name );
+    void setSimHistoryFileName( std::string & filename );
     void newMonteCarlo() const;
+    void reset();
     
     
 private:

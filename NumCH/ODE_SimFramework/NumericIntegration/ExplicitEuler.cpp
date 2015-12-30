@@ -8,7 +8,7 @@
 
 #include "ExplicitEuler.hpp"
 
-void ExplicitEuler::integrate( double time, double dt , double* inOutState, DiffeqList & list ){
+void ExplicitEuler::integrate( double time, double dt , double* inOutState, DiffeqList & list){
     double * dqdt = &tmp[0];
     
     if( list.size() > 0 ){

@@ -12,10 +12,10 @@
 #include <stdio.h>
 #include "PreciseTime.h"
 #include "RandomNumberGenerator.hpp"
+
 typedef RandomNumberGenerator Rand;
+class SimState;
 
-
-class Simulator;
 
 /*!
  * This is a class built to represent
@@ -139,29 +139,16 @@ public:
     Time   getFracDt() const { return incrementTime; }
     
     
-    
-    
-protected:
-    
-    
-    friend class Simulator;
-    friend class RungeKutta4;
-    friend class ExplicitTrapezoidal;
-    
-    
     //
     // Method used by simulation to assign the part of the state vector
     // that this model uses
     //
     void assignStateAddress( double* address ) { state = address; }
-    
-    
-    // method to assign the random number generator
     void assignRandomGenerator( Rand & gen ){ generator = &gen; }
+    void assignSimState( SimState & simState_ ){ simState = &simState_; }
     
     
-    void assignParentSimulator( Simulator* p ){ parent = p; }
-    
+protected:
     
 
     
@@ -175,9 +162,7 @@ protected:
     // Pointer to state
     //
     double* state;
-    
-    
-    Simulator* parent;
+    SimState * simState;
     
     
     // Random number generator

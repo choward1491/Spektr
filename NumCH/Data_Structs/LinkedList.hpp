@@ -25,6 +25,30 @@ public:
         Node* next;
     };
     
+    struct Iter {
+        Node* n;
+        void operator++(){
+            if( n != 0 ){
+                n = n->next;
+            }
+        }
+        void operator++(int){
+            if( n != 0 ){
+                n = n->next;
+            }
+        }
+        
+        bool atEnd(){
+            return n == 0;
+        }
+    };
+    
+    Iter begin(){
+        Iter it;
+        it.n = head;
+        return it;
+    }
+    
     
     LinkedList():head(0),size_(0){}
     ~LinkedList(){ clear(); }

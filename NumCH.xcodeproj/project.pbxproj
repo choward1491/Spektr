@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AD4768061B76EAF100E6B11D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768051B76EAF100E6B11D /* main.cpp */; };
-		AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
 		AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
 		AD7867C51BFD943500A6FE07 /* AdaptiveArray.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */; };
 		AD7867C61BFD943500A6FE07 /* avl_tree.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86951BDA04E300D84DB6 /* avl_tree.h */; };
@@ -51,26 +50,6 @@
 		AD84DC5A1C04300000C4CFFA /* PNGImages.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBEC1C042FFF00C4CFFA /* PNGImages.h */; };
 		AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBED1C042FFF00C4CFFA /* pnglibconf.h */; };
 		AD84DC5C1C04300000C4CFFA /* LinearAlgebra.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBEF1C042FFF00C4CFFA /* LinearAlgebra.h */; };
-		AD84DC631C04300000C4CFFA /* ClassificationCost.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF51C042FFF00C4CFFA /* ClassificationCost.h */; };
-		AD84DC641C04300000C4CFFA /* ClassificationLearning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */; };
-		AD84DC651C04300000C4CFFA /* ClassificationLearning.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */; };
-		AD84DC661C04300000C4CFFA /* ClassificationLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF71C042FFF00C4CFFA /* ClassificationLearning.h */; };
-		AD84DC671C04300000C4CFFA /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF81C042FFF00C4CFFA /* LinearFunc.cpp */; };
-		AD84DC681C04300000C4CFFA /* LinearFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBF81C042FFF00C4CFFA /* LinearFunc.cpp */; };
-		AD84DC691C04300000C4CFFA /* LinearFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBF91C042FFF00C4CFFA /* LinearFunc.h */; };
-		AD84DC6A1C04300000C4CFFA /* MachineLearning.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBFA1C042FFF00C4CFFA /* MachineLearning.h */; };
-		AD84DC6B1C04300000C4CFFA /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFB1C042FFF00C4CFFA /* NeuralNetwork.cpp */; };
-		AD84DC6C1C04300000C4CFFA /* NeuralNetwork.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFB1C042FFF00C4CFFA /* NeuralNetwork.cpp */; };
-		AD84DC6D1C04300000C4CFFA /* NeuralNetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBFC1C042FFF00C4CFFA /* NeuralNetwork.h */; };
-		AD84DC6E1C04300000C4CFFA /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFD1C042FFF00C4CFFA /* NodeFunc.cpp */; };
-		AD84DC6F1C04300000C4CFFA /* NodeFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFD1C042FFF00C4CFFA /* NodeFunc.cpp */; };
-		AD84DC701C04300000C4CFFA /* NodeFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DBFE1C042FFF00C4CFFA /* NodeFunc.h */; };
-		AD84DC711C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFF1C042FFF00C4CFFA /* RadialBasisFunc.cpp */; };
-		AD84DC721C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DBFF1C042FFF00C4CFFA /* RadialBasisFunc.cpp */; };
-		AD84DC731C04300000C4CFFA /* RadialBasisFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC001C042FFF00C4CFFA /* RadialBasisFunc.h */; };
-		AD84DC741C04300000C4CFFA /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC011C042FFF00C4CFFA /* Sigmoid.cpp */; };
-		AD84DC751C04300000C4CFFA /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC011C042FFF00C4CFFA /* Sigmoid.cpp */; };
-		AD84DC761C04300000C4CFFA /* Sigmoid.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC021C042FFF00C4CFFA /* Sigmoid.h */; };
 		AD84DC771C04300000C4CFFA /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC041C042FFF00C4CFFA /* Fraction.cpp */; };
 		AD84DC781C04300000C4CFFA /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC041C042FFF00C4CFFA /* Fraction.cpp */; };
 		AD84DC791C04300000C4CFFA /* Fraction.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC051C042FFF00C4CFFA /* Fraction.h */; };
@@ -112,9 +91,6 @@
 		AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */; };
 		AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */; };
 		AD84DC9F1C04300000C4CFFA /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */; };
-		AD84DCA01C04300000C4CFFA /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2B1C042FFF00C4CFFA /* Simulator.cpp */; };
-		AD84DCA11C04300000C4CFFA /* Simulator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2B1C042FFF00C4CFFA /* Simulator.cpp */; };
-		AD84DCA21C04300000C4CFFA /* Simulator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC2C1C042FFF00C4CFFA /* Simulator.hpp */; };
 		AD84DCA31C04300000C4CFFA /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */; };
 		AD84DCA41C04300000C4CFFA /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */; };
 		AD84DCA51C04300000C4CFFA /* CostFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */; };
@@ -150,8 +126,24 @@
 		AD84DD601C06CBC300C4CFFA /* Vec3D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */; };
 		AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD621C06CBDD00C4CFFA /* Vector.cpp */; };
 		AD84DD661C06CBDD00C4CFFA /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD631C06CBDD00C4CFFA /* Vector.hpp */; };
-		ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB0ABCA1BDCB66900049605 /* Accelerate.framework */; };
 		ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
+		ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8051C2E243300D4C3DE /* ModelList.cpp */; };
+		ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8081C2E244900D4C3DE /* SimState.cpp */; };
+		ADFAD80E1C2E28C200D4C3DE /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */; };
+		ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8111C2E582900D4C3DE /* ExampleSim.cpp */; };
+		ADFAD8161C2E668200D4C3DE /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8141C2E668200D4C3DE /* Pendulum.cpp */; };
+		ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8181C30781A00D4C3DE /* Timer.cpp */; };
+		ADFAD81D1C31796200D4C3DE /* ANN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD81B1C31796200D4C3DE /* ANN.cpp */; };
+		ADFAD8261C3185EB00D4C3DE /* Neighbors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */; };
+		ADFAD8291C318CF000D4C3DE /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8271C318CF000D4C3DE /* Node.cpp */; };
+		ADFAD82C1C318D3500D4C3DE /* ActivationFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */; };
+		ADFAD82F1C31900A00D4C3DE /* ActivationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */; };
+		ADFAD8331C31939B00D4C3DE /* Linear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8311C31939B00D4C3DE /* Linear.cpp */; };
+		ADFAD8361C319DBA00D4C3DE /* Weights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8341C319DBA00D4C3DE /* Weights.cpp */; };
+		ADFAD8391C31F37500D4C3DE /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */; };
+		ADFAD83C1C31F51500D4C3DE /* GaussRBF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */; };
+		ADFAD83F1C321C1800D4C3DE /* Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD83D1C321C1800D4C3DE /* Builder.cpp */; };
+		ADFAD8421C32EAEC00D4C3DE /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */; };
 		ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */; };
 		ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86981BDA04E300D84DB6 /* Coordinate.cpp */; };
 		ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE869A1BDA04E300D84DB6 /* Graph.cpp */; };
@@ -208,20 +200,6 @@
 		AD84DBEC1C042FFF00C4CFFA /* PNGImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PNGImages.h; sourceTree = "<group>"; };
 		AD84DBED1C042FFF00C4CFFA /* pnglibconf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pnglibconf.h; sourceTree = "<group>"; };
 		AD84DBEF1C042FFF00C4CFFA /* LinearAlgebra.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearAlgebra.h; sourceTree = "<group>"; };
-		AD84DBF51C042FFF00C4CFFA /* ClassificationCost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationCost.h; sourceTree = "<group>"; };
-		AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ClassificationLearning.cpp; sourceTree = "<group>"; };
-		AD84DBF71C042FFF00C4CFFA /* ClassificationLearning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClassificationLearning.h; sourceTree = "<group>"; };
-		AD84DBF81C042FFF00C4CFFA /* LinearFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LinearFunc.cpp; sourceTree = "<group>"; };
-		AD84DBF91C042FFF00C4CFFA /* LinearFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearFunc.h; sourceTree = "<group>"; };
-		AD84DBFA1C042FFF00C4CFFA /* MachineLearning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MachineLearning.h; sourceTree = "<group>"; };
-		AD84DBFB1C042FFF00C4CFFA /* NeuralNetwork.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralNetwork.cpp; sourceTree = "<group>"; };
-		AD84DBFC1C042FFF00C4CFFA /* NeuralNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeuralNetwork.h; sourceTree = "<group>"; };
-		AD84DBFD1C042FFF00C4CFFA /* NodeFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NodeFunc.cpp; sourceTree = "<group>"; };
-		AD84DBFE1C042FFF00C4CFFA /* NodeFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NodeFunc.h; sourceTree = "<group>"; };
-		AD84DBFF1C042FFF00C4CFFA /* RadialBasisFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RadialBasisFunc.cpp; sourceTree = "<group>"; };
-		AD84DC001C042FFF00C4CFFA /* RadialBasisFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadialBasisFunc.h; sourceTree = "<group>"; };
-		AD84DC011C042FFF00C4CFFA /* Sigmoid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sigmoid.cpp; sourceTree = "<group>"; };
-		AD84DC021C042FFF00C4CFFA /* Sigmoid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sigmoid.h; sourceTree = "<group>"; };
 		AD84DC041C042FFF00C4CFFA /* Fraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fraction.cpp; sourceTree = "<group>"; };
 		AD84DC051C042FFF00C4CFFA /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		AD84DC061C042FFF00C4CFFA /* Malloc2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Malloc2D.hpp; sourceTree = "<group>"; };
@@ -251,8 +229,6 @@
 		AD84DC261C042FFF00C4CFFA /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
 		AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
 		AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scheduler.hpp; sourceTree = "<group>"; };
-		AD84DC2B1C042FFF00C4CFFA /* Simulator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Simulator.cpp; sourceTree = "<group>"; };
-		AD84DC2C1C042FFF00C4CFFA /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Simulator.hpp; sourceTree = "<group>"; };
 		AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CostFunc.cpp; sourceTree = "<group>"; };
 		AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostFunc.h; sourceTree = "<group>"; };
 		AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradientDescent.cpp; sourceTree = "<group>"; };
@@ -278,8 +254,42 @@
 		AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec3D.hpp; sourceTree = "<group>"; };
 		AD84DD621C06CBDD00C4CFFA /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		AD84DD631C06CBDD00C4CFFA /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
-		ADB0ABCA1BDCB66900049605 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
+		ADFAD8041C2E1AE200D4C3DE /* TemplateSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSimulator.h; sourceTree = "<group>"; };
+		ADFAD8051C2E243300D4C3DE /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelList.cpp; sourceTree = "<group>"; };
+		ADFAD8061C2E243300D4C3DE /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelList.hpp; sourceTree = "<group>"; };
+		ADFAD8081C2E244900D4C3DE /* SimState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimState.cpp; sourceTree = "<group>"; };
+		ADFAD8091C2E244900D4C3DE /* SimState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimState.hpp; sourceTree = "<group>"; };
+		ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimTime.cpp; sourceTree = "<group>"; };
+		ADFAD80D1C2E28C200D4C3DE /* SimTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimTime.hpp; sourceTree = "<group>"; };
+		ADFAD8111C2E582900D4C3DE /* ExampleSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExampleSim.cpp; sourceTree = "<group>"; };
+		ADFAD8121C2E582900D4C3DE /* ExampleSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExampleSim.hpp; sourceTree = "<group>"; };
+		ADFAD8141C2E668200D4C3DE /* Pendulum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pendulum.cpp; sourceTree = "<group>"; };
+		ADFAD8151C2E668200D4C3DE /* Pendulum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pendulum.hpp; sourceTree = "<group>"; };
+		ADFAD8181C30781A00D4C3DE /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
+		ADFAD8191C30781A00D4C3DE /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
+		ADFAD81B1C31796200D4C3DE /* ANN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ANN.cpp; sourceTree = "<group>"; };
+		ADFAD81C1C31796200D4C3DE /* ANN.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ANN.hpp; sourceTree = "<group>"; };
+		ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Neighbors.cpp; sourceTree = "<group>"; };
+		ADFAD8251C3185EB00D4C3DE /* Neighbors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Neighbors.hpp; sourceTree = "<group>"; };
+		ADFAD8271C318CF000D4C3DE /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		ADFAD8281C318CF000D4C3DE /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFunc.cpp; sourceTree = "<group>"; };
+		ADFAD82B1C318D3500D4C3DE /* ActivationFunc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFunc.hpp; sourceTree = "<group>"; };
+		ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFactory.cpp; sourceTree = "<group>"; };
+		ADFAD82E1C31900A00D4C3DE /* ActivationFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFactory.hpp; sourceTree = "<group>"; };
+		ADFAD8311C31939B00D4C3DE /* Linear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Linear.cpp; sourceTree = "<group>"; };
+		ADFAD8321C31939B00D4C3DE /* Linear.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Linear.hpp; sourceTree = "<group>"; };
+		ADFAD8341C319DBA00D4C3DE /* Weights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Weights.cpp; sourceTree = "<group>"; };
+		ADFAD8351C319DBA00D4C3DE /* Weights.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Weights.hpp; sourceTree = "<group>"; };
+		ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sigmoid.cpp; sourceTree = "<group>"; };
+		ADFAD8381C31F37500D4C3DE /* Sigmoid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sigmoid.hpp; sourceTree = "<group>"; };
+		ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GaussRBF.cpp; sourceTree = "<group>"; };
+		ADFAD83B1C31F51500D4C3DE /* GaussRBF.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GaussRBF.hpp; sourceTree = "<group>"; };
+		ADFAD83D1C321C1800D4C3DE /* Builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Builder.cpp; sourceTree = "<group>"; };
+		ADFAD83E1C321C1800D4C3DE /* Builder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Builder.hpp; sourceTree = "<group>"; };
+		ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
+		ADFAD8411C32EAEC00D4C3DE /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdaptiveArray.cpp; sourceTree = "<group>"; };
 		ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveArray.h; sourceTree = "<group>"; };
 		ADFE86951BDA04E300D84DB6 /* avl_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avl_tree.h; sourceTree = "<group>"; };
@@ -311,7 +321,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADB0ABCB1BDCB66900049605 /* Accelerate.framework in Frameworks */,
 				ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */,
-				AD5B196F1BE455CE003E0233 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +347,6 @@
 			isa = PBXGroup;
 			children = (
 				ADB85D961B815E27002879D2 /* libpng16.16.dylib */,
-				ADB0ABCA1BDCB66900049605 /* Accelerate.framework */,
 				AD4768041B76EAF100E6B11D /* NumCH */,
 				AD4768031B76EAF100E6B11D /* Products */,
 			);
@@ -358,6 +365,7 @@
 		AD4768041B76EAF100E6B11D /* NumCH */ = {
 			isa = PBXGroup;
 			children = (
+				ADFAD8171C30780800D4C3DE /* Timer */,
 				AD84DBD41C042FFF00C4CFFA /* Filters */,
 				AD84DBD61C042FFF00C4CFFA /* Function */,
 				AD84DBD91C042FFF00C4CFFA /* Geometry */,
@@ -437,20 +445,23 @@
 		AD84DBF41C042FFF00C4CFFA /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
-				AD84DBF51C042FFF00C4CFFA /* ClassificationCost.h */,
-				AD84DBF61C042FFF00C4CFFA /* ClassificationLearning.cpp */,
-				AD84DBF71C042FFF00C4CFFA /* ClassificationLearning.h */,
-				AD84DBF81C042FFF00C4CFFA /* LinearFunc.cpp */,
-				AD84DBF91C042FFF00C4CFFA /* LinearFunc.h */,
-				AD84DBFA1C042FFF00C4CFFA /* MachineLearning.h */,
-				AD84DBFB1C042FFF00C4CFFA /* NeuralNetwork.cpp */,
-				AD84DBFC1C042FFF00C4CFFA /* NeuralNetwork.h */,
-				AD84DBFD1C042FFF00C4CFFA /* NodeFunc.cpp */,
-				AD84DBFE1C042FFF00C4CFFA /* NodeFunc.h */,
-				AD84DBFF1C042FFF00C4CFFA /* RadialBasisFunc.cpp */,
-				AD84DC001C042FFF00C4CFFA /* RadialBasisFunc.h */,
-				AD84DC011C042FFF00C4CFFA /* Sigmoid.cpp */,
-				AD84DC021C042FFF00C4CFFA /* Sigmoid.h */,
+				ADFAD8301C31938700D4C3DE /* ActivFuncs */,
+				ADFAD81B1C31796200D4C3DE /* ANN.cpp */,
+				ADFAD81C1C31796200D4C3DE /* ANN.hpp */,
+				ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */,
+				ADFAD8251C3185EB00D4C3DE /* Neighbors.hpp */,
+				ADFAD8271C318CF000D4C3DE /* Node.cpp */,
+				ADFAD8281C318CF000D4C3DE /* Node.hpp */,
+				ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */,
+				ADFAD82B1C318D3500D4C3DE /* ActivationFunc.hpp */,
+				ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */,
+				ADFAD82E1C31900A00D4C3DE /* ActivationFactory.hpp */,
+				ADFAD8341C319DBA00D4C3DE /* Weights.cpp */,
+				ADFAD8351C319DBA00D4C3DE /* Weights.hpp */,
+				ADFAD83D1C321C1800D4C3DE /* Builder.cpp */,
+				ADFAD83E1C321C1800D4C3DE /* Builder.hpp */,
+				ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */,
+				ADFAD8411C32EAEC00D4C3DE /* Trainer.hpp */,
 			);
 			path = MachineLearning;
 			sourceTree = "<group>";
@@ -471,6 +482,7 @@
 		AD84DC0B1C042FFF00C4CFFA /* ODE_SimFramework */ = {
 			isa = PBXGroup;
 			children = (
+				ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */,
 				AD84DC0C1C042FFF00C4CFFA /* ConfigParser */,
 				AD84DC0F1C042FFF00C4CFFA /* Constants */,
 				AD84DC121C042FFF00C4CFFA /* DataOutputter */,
@@ -480,7 +492,6 @@
 				AD84DC241C042FFF00C4CFFA /* ODESim.h */,
 				AD84DC251C042FFF00C4CFFA /* PreciseTime */,
 				AD84DC271C042FFF00C4CFFA /* Scheduler */,
-				AD84DC2A1C042FFF00C4CFFA /* Simulator */,
 			);
 			path = ODE_SimFramework;
 			sourceTree = "<group>";
@@ -560,15 +571,6 @@
 				AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */,
 			);
 			path = Scheduler;
-			sourceTree = "<group>";
-		};
-		AD84DC2A1C042FFF00C4CFFA /* Simulator */ = {
-			isa = PBXGroup;
-			children = (
-				AD84DC2B1C042FFF00C4CFFA /* Simulator.cpp */,
-				AD84DC2C1C042FFF00C4CFFA /* Simulator.hpp */,
-			);
-			path = Simulator;
 			sourceTree = "<group>";
 		};
 		AD84DC2D1C042FFF00C4CFFA /* Optimization */ = {
@@ -655,6 +657,54 @@
 			name = Vec3D;
 			sourceTree = "<group>";
 		};
+		ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */ = {
+			isa = PBXGroup;
+			children = (
+				ADFAD8101C2E581700D4C3DE /* Example */,
+				ADFAD8041C2E1AE200D4C3DE /* TemplateSimulator.h */,
+				ADFAD8051C2E243300D4C3DE /* ModelList.cpp */,
+				ADFAD8061C2E243300D4C3DE /* ModelList.hpp */,
+				ADFAD8081C2E244900D4C3DE /* SimState.cpp */,
+				ADFAD8091C2E244900D4C3DE /* SimState.hpp */,
+				ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */,
+				ADFAD80D1C2E28C200D4C3DE /* SimTime.hpp */,
+			);
+			name = TemplateSimulator;
+			sourceTree = "<group>";
+		};
+		ADFAD8101C2E581700D4C3DE /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				ADFAD8111C2E582900D4C3DE /* ExampleSim.cpp */,
+				ADFAD8121C2E582900D4C3DE /* ExampleSim.hpp */,
+				ADFAD8141C2E668200D4C3DE /* Pendulum.cpp */,
+				ADFAD8151C2E668200D4C3DE /* Pendulum.hpp */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		ADFAD8171C30780800D4C3DE /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				ADFAD8181C30781A00D4C3DE /* Timer.cpp */,
+				ADFAD8191C30781A00D4C3DE /* Timer.hpp */,
+			);
+			name = Timer;
+			sourceTree = "<group>";
+		};
+		ADFAD8301C31938700D4C3DE /* ActivFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				ADFAD8311C31939B00D4C3DE /* Linear.cpp */,
+				ADFAD8321C31939B00D4C3DE /* Linear.hpp */,
+				ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */,
+				ADFAD8381C31F37500D4C3DE /* Sigmoid.hpp */,
+				ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */,
+				ADFAD83B1C31F51500D4C3DE /* GaussRBF.hpp */,
+			);
+			name = ActivFuncs;
+			sourceTree = "<group>";
+		};
 		ADFE86921BDA04E300D84DB6 /* Data_Structs */ = {
 			isa = PBXGroup;
 			children = (
@@ -693,10 +743,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD84DC731C04300000C4CFFA /* RadialBasisFunc.h in Headers */,
 				AD84DC581C04300000C4CFFA /* png.h in Headers */,
 				AD84DC791C04300000C4CFFA /* Fraction.h in Headers */,
-				AD84DCA21C04300000C4CFFA /* Simulator.hpp in Headers */,
 				AD84DC9A1C04300000C4CFFA /* RungeKutta4.hpp in Headers */,
 				AD84DC461C042FFF00C4CFFA /* Geometry.h in Headers */,
 				AD84DC8E1C04300000C4CFFA /* DynamicModel.hpp in Headers */,
@@ -716,13 +764,11 @@
 				AD84DC421C042FFF00C4CFFA /* DataFilter.h in Headers */,
 				AD7867CB1BFD943500A6FE07 /* hash_table.h in Headers */,
 				AD84DC7A1C04300000C4CFFA /* Malloc2D.hpp in Headers */,
-				AD84DC6A1C04300000C4CFFA /* MachineLearning.h in Headers */,
 				AD84DC8B1C04300000C4CFFA /* DiscreteModel.hpp in Headers */,
 				AD84DCB21C04300100C4CFFA /* ParticleDistributor.h in Headers */,
 				AD84DC9C1C04300000C4CFFA /* PreciseTime.h in Headers */,
 				AD84DC561C04300000C4CFFA /* graphics_objs.h in Headers */,
 				AD7867CC1BFD943500A6FE07 /* heap.h in Headers */,
-				AD84DC701C04300000C4CFFA /* NodeFunc.h in Headers */,
 				AD84DCA81C04300000C4CFFA /* GradientDescent.hpp in Headers */,
 				AD84DC531C04300000C4CFFA /* Figure.h in Headers */,
 				AD84DC4C1C04300000C4CFFA /* cpixel.h in Headers */,
@@ -736,7 +782,6 @@
 				AD7867D11BFD943500A6FE07 /* LinkedList.hpp in Headers */,
 				AD7867D21BFD943500A6FE07 /* PopArray.h in Headers */,
 				AD84DC481C042FFF00C4CFFA /* camera.h in Headers */,
-				AD84DC631C04300000C4CFFA /* ClassificationCost.h in Headers */,
 				AD84DC4F1C04300000C4CFFA /* cpng.h in Headers */,
 				AD84DCBC1C04300100C4CFFA /* SwarmParticle.h in Headers */,
 				AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */,
@@ -751,23 +796,19 @@
 				AD84DC881C04300000C4CFFA /* DataPrinter.hpp in Headers */,
 				AD84DCAF1C04300000C4CFFA /* Optimization.h in Headers */,
 				AD84DC551C04300000C4CFFA /* Graphics.h in Headers */,
-				AD84DC661C04300000C4CFFA /* ClassificationLearning.h in Headers */,
 				AD84DCB31C04300100C4CFFA /* PSO.h in Headers */,
 				AD7867D41BFD943500A6FE07 /* stack.h in Headers */,
 				AD84DC7B1C04300000C4CFFA /* Numbers.h in Headers */,
 				AD84DCBD1C04300100C4CFFA /* PDESim.h in Headers */,
-				AD84DC761C04300000C4CFFA /* Sigmoid.h in Headers */,
 				AD7867D51BFD943500A6FE07 /* Vec.h in Headers */,
 				AD84DC9B1C04300000C4CFFA /* ODESim.h in Headers */,
 				AD84DCA51C04300000C4CFFA /* CostFunc.h in Headers */,
-				AD84DC6D1C04300000C4CFFA /* NeuralNetwork.h in Headers */,
 				AD84DCB91C04300100C4CFFA /* Swarm.h in Headers */,
 				AD84DC571C04300000C4CFFA /* PhotoRealImages.h in Headers */,
 				AD84DC5C1C04300000C4CFFA /* LinearAlgebra.h in Headers */,
 				AD84DC7F1C04300000C4CFFA /* NumCH.h in Headers */,
 				AD84DC521C04300000C4CFFA /* FigData.h in Headers */,
 				AD84DD601C06CBC300C4CFFA /* Vec3D.hpp in Headers */,
-				AD84DC691C04300000C4CFFA /* LinearFunc.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -869,28 +910,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADFAD80E1C2E28C200D4C3DE /* SimTime.cpp in Sources */,
 				AD84DC771C04300000C4CFFA /* Fraction.cpp in Sources */,
-				AD84DC641C04300000C4CFFA /* ClassificationLearning.cpp in Sources */,
+				ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */,
 				ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */,
+				ADFAD8161C2E668200D4C3DE /* Pendulum.cpp in Sources */,
+				ADFAD8261C3185EB00D4C3DE /* Neighbors.cpp in Sources */,
+				ADFAD81D1C31796200D4C3DE /* ANN.cpp in Sources */,
+				ADFAD8361C319DBA00D4C3DE /* Weights.cpp in Sources */,
 				AD84DC4D1C04300000C4CFFA /* cpng.cpp in Sources */,
-				AD84DC6E1C04300000C4CFFA /* NodeFunc.cpp in Sources */,
-				AD84DC6B1C04300000C4CFFA /* NeuralNetwork.cpp in Sources */,
 				AD84DC891C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
 				AD84DC8F1C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC8C1C04300000C4CFFA /* DynamicModel.cpp in Sources */,
 				ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */,
 				AD84DC7C1C04300000C4CFFA /* RandomNumberGenerator.cpp in Sources */,
 				AD84DC951C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
+				ADFAD83F1C321C1800D4C3DE /* Builder.cpp in Sources */,
 				AD84DC831C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
+				ADFAD82F1C31900A00D4C3DE /* ActivationFactory.cpp in Sources */,
 				AD84DC801C04300000C4CFFA /* ConfigParser.cpp in Sources */,
-				AD84DC671C04300000C4CFFA /* LinearFunc.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
 				AD4768061B76EAF100E6B11D /* main.cpp in Sources */,
 				ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */,
 				AD84DC861C04300000C4CFFA /* DataPrinter.cpp in Sources */,
-				AD84DC741C04300000C4CFFA /* Sigmoid.cpp in Sources */,
 				AD84DC981C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */,
+				ADFAD8391C31F37500D4C3DE /* Sigmoid.cpp in Sources */,
+				ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */,
 				AD84DCBA1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
 				AD84DCA31C04300000C4CFFA /* CostFunc.cpp in Sources */,
 				AD84DC501C04300000C4CFFA /* FigData.cpp in Sources */,
@@ -898,17 +944,22 @@
 				AD84DC4A1C04300000C4CFFA /* cpixel.cpp in Sources */,
 				AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 				AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
-				AD84DC711C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */,
 				AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
+				ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */,
 				AD84DCAC1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
-				AD84DCA01C04300000C4CFFA /* Simulator.cpp in Sources */,
+				ADFAD8331C31939B00D4C3DE /* Linear.cpp in Sources */,
 				AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */,
+				ADFAD8421C32EAEC00D4C3DE /* Trainer.cpp in Sources */,
+				ADFAD8291C318CF000D4C3DE /* Node.cpp in Sources */,
 				AD84DCB01C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
+				ADFAD82C1C318D3500D4C3DE /* ActivationFunc.cpp in Sources */,
 				AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
+				ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */,
 				AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */,
 				AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */,
+				ADFAD83C1C31F51500D4C3DE /* GaussRBF.cpp in Sources */,
 				AD84DD5E1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -924,7 +975,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD84DC751C04300000C4CFFA /* Sigmoid.cpp in Sources */,
 				AD84DC901C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC511C04300000C4CFFA /* FigData.cpp in Sources */,
 				AD84DC4B1C04300000C4CFFA /* cpixel.cpp in Sources */,
@@ -936,25 +986,19 @@
 				AD84DC931C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
 				AD84DCBB1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
 				AD84DCA41C04300000C4CFFA /* CostFunc.cpp in Sources */,
-				AD84DC6F1C04300000C4CFFA /* NodeFunc.cpp in Sources */,
 				AD84DCAD1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
-				AD84DC721C04300000C4CFFA /* RadialBasisFunc.cpp in Sources */,
 				AD84DD5F1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
 				AD84DCA71C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				AD84DC8A1C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
-				AD84DC651C04300000C4CFFA /* ClassificationLearning.cpp in Sources */,
 				AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DC991C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				AD84DC841C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
 				AD84DCB51C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
-				AD84DC6C1C04300000C4CFFA /* NeuralNetwork.cpp in Sources */,
 				AD84DC961C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
 				AD84DC871C04300000C4CFFA /* DataPrinter.cpp in Sources */,
 				AD84DC4E1C04300000C4CFFA /* cpng.cpp in Sources */,
 				AD84DC8D1C04300000C4CFFA /* DynamicModel.cpp in Sources */,
 				AD84DC811C04300000C4CFFA /* ConfigParser.cpp in Sources */,
-				AD84DC681C04300000C4CFFA /* LinearFunc.cpp in Sources */,
-				AD84DCA11C04300000C4CFFA /* Simulator.cpp in Sources */,
 				AD84DD241C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1042,10 +1086,7 @@
 		AD47680A1B76EAF100E6B11D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					/usr/include/armadillo,
-					/usr/include/armadillo_bits/,
-				);
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NumCH",
@@ -1059,10 +1100,8 @@
 		AD47680B1B76EAF100E6B11D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				HEADER_SEARCH_PATHS = (
-					/usr/include/armadillo,
-					/usr/include/armadillo_bits/,
-				);
+				GCC_OPTIMIZATION_LEVEL = fast;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/**";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/NumCH",

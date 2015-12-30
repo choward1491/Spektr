@@ -9,7 +9,7 @@
 #include "DataPrinter.hpp"
 
 
-void DataPrinter::addData( const double * address, const std::string & name ){
+void DataPrinter::addVariableToPrint( const double * address, const std::string & name ){
     printList.push(address);
     printNames.push(name);
 }
@@ -52,8 +52,12 @@ void DataPrinter::writeNameHeader( FILE* file) const{
 
 
 
-void DataPrinter::setFileName( std::string & filename ){
+void DataPrinter::setSimHistoryFileName( std::string & filename ){
     outFile = filename;
+}
+
+void DataPrinter::reset(){
+    hasHeader = false;
 }
 
 void DataPrinter::newMonteCarlo() const {

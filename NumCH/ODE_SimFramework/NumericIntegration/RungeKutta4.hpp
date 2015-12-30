@@ -9,17 +9,18 @@
 #ifndef RungeKutta4_hpp
 #define RungeKutta4_hpp
 
-#include <stdio.h>
-#include "GenIntegrator.hpp"
-#include "Simulator.hpp"
+#include "DynamicModel.hpp"
+#include "AdaptiveArray.h"
 
-class RungeKutta4 : public GenIntegrator {
+class RungeKutta4  {
     
 public:
-    RungeKutta4() : GenIntegrator() {}
-    virtual ~RungeKutta4();
-    virtual void setNumDimensions( int numDimensions );
-    virtual void integrate( double time, double dt , double* inOutState, DiffeqList & list );
+    typedef AdaptiveArray<DynamicModel*> DiffeqList;
+    
+    RungeKutta4():numDims(-1),k1(0),k2(0),k3(0),k4(0),tmp(0){}
+    ~RungeKutta4();
+    void setNumDimensions( int numDimensions );
+    void integrate( double time, double dt , double* inOutState, DiffeqList & list );
     
 private:
     void clear();
@@ -31,6 +32,7 @@ private:
     double* k3;
     double* k4;
     double* tmp;
+    int numDims;
     
 };
 

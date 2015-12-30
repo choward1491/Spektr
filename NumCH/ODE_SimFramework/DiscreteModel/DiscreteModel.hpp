@@ -12,9 +12,9 @@
 #include <stdio.h>
 #include "PreciseTime.h"
 #include "RandomNumberGenerator.hpp"
-typedef RandomNumberGenerator Rand;
 
-class Simulator;
+typedef RandomNumberGenerator Rand;
+class SimState;
 
 /*!
  * This is a class built to represent
@@ -88,30 +88,22 @@ public:
     double getDt() const { return incrementTime.convert<double>(); }
     Time   getFracDt() const { return incrementTime; }
     
-    
+    // method to assign the random number generator
+    void assignRandomGenerator( Rand & gen ){ generator = &gen; }
+    void assignSimState( SimState & simState_ ){ simState = &simState_; }
     
     
 protected:
     
-    friend class Simulator;
-    
-    // method to assign the random number generator
-    void assignRandomGenerator( Rand & gen ){ generator = &gen; }
-    void assignParentSimulator( Simulator* p ){ parent = p; }
-    
-    
-    
-    
-
     
     //
     // Time between updates
     //
     Time incrementTime;
     
-    Simulator* parent;
-    
     Rand * generator;
+    
+    SimState * simState;
     
     
 };
