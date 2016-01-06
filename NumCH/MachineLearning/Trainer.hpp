@@ -14,6 +14,7 @@
 
 namespace ANN {
     
+    template< class CostFunc >
     class Trainer {
     public:
         enum Type { StochGradientDescent = 0, GA, PSO, UKF };

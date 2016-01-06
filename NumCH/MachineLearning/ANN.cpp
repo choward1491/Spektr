@@ -100,7 +100,6 @@ namespace ANN {
         if( setInput( input ) ){
             Neighbors::Iter it;
             ActivationFunc::Output out;
-            w.print();
             for (int i = layerSizes[0]; i < funcs.size(); i++) {
                 it = nbrs[i].beginBackward();
                 if( !nodes[i].isBias() ){

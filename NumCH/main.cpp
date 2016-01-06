@@ -15,7 +15,7 @@
 int main(int argc, const char * argv[]) {
     std::vector<int> vec;
     vec.push_back(1);
-    vec.push_back(1);
+    vec.push_back(5);
     vec.push_back(1);
     
     ANN::Network net(vec);
@@ -25,7 +25,6 @@ int main(int argc, const char * argv[]) {
     std::vector<double> x(1);
     x[0] = 1.0;
     
-    net.randomizeWeights();
     std::vector<double> y = net(x);
     printf("y = %lf\n",y[0]);
     

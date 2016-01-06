@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD1F24C41C33A21900E7FABF /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD1F24C21C33A21900E7FABF /* FileObject.cpp */; };
 		AD4768061B76EAF100E6B11D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4768051B76EAF100E6B11D /* main.cpp */; };
 		AD7867691BFD8AEF00A6FE07 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
 		AD7867C51BFD943500A6FE07 /* AdaptiveArray.h in Headers */ = {isa = PBXBuildFile; fileRef = ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */; };
@@ -127,6 +128,10 @@
 		AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD621C06CBDD00C4CFFA /* Vector.cpp */; };
 		AD84DD661C06CBDD00C4CFFA /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD631C06CBDD00C4CFFA /* Vector.hpp */; };
 		ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
+		ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */; };
+		ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B531C38DFD100296D10 /* Element.cpp */; };
+		ADCE7B581C38DFE000296D10 /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */; };
+		ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */; };
 		ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8051C2E243300D4C3DE /* ModelList.cpp */; };
 		ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8081C2E244900D4C3DE /* SimState.cpp */; };
 		ADFAD80E1C2E28C200D4C3DE /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */; };
@@ -175,6 +180,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD1F24C21C33A21900E7FABF /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
+		AD1F24C31C33A21900E7FABF /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* NumCH */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NumCH; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4768051B76EAF100E6B11D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +262,14 @@
 		AD84DD621C06CBDD00C4CFFA /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		AD84DD631C06CBDD00C4CFFA /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
 		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
+		ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteDifference.cpp; sourceTree = "<group>"; };
+		ADCE7B511C38DD4C00296D10 /* FiniteDifference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteDifference.hpp; sourceTree = "<group>"; };
+		ADCE7B531C38DFD100296D10 /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
+		ADCE7B541C38DFD100296D10 /* Element.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Element.hpp; sourceTree = "<group>"; };
+		ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteVolume.cpp; sourceTree = "<group>"; };
+		ADCE7B571C38DFE000296D10 /* FiniteVolume.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteVolume.hpp; sourceTree = "<group>"; };
+		ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteElement.cpp; sourceTree = "<group>"; };
+		ADCE7B5A1C38DFFB00296D10 /* FiniteElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteElement.hpp; sourceTree = "<group>"; };
 		ADFAD8041C2E1AE200D4C3DE /* TemplateSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSimulator.h; sourceTree = "<group>"; };
 		ADFAD8051C2E243300D4C3DE /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelList.cpp; sourceTree = "<group>"; };
 		ADFAD8061C2E243300D4C3DE /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelList.hpp; sourceTree = "<group>"; };
@@ -343,6 +358,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD1F24C11C33A1A800E7FABF /* FileIO */ = {
+			isa = PBXGroup;
+			children = (
+				AD1F24C21C33A21900E7FABF /* FileObject.cpp */,
+				AD1F24C31C33A21900E7FABF /* FileObject.hpp */,
+			);
+			name = FileIO;
+			sourceTree = "<group>";
+		};
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
@@ -365,6 +389,7 @@
 		AD4768041B76EAF100E6B11D /* NumCH */ = {
 			isa = PBXGroup;
 			children = (
+				AD1F24C11C33A1A800E7FABF /* FileIO */,
 				ADFAD8171C30780800D4C3DE /* Timer */,
 				AD84DBD41C042FFF00C4CFFA /* Filters */,
 				AD84DBD61C042FFF00C4CFFA /* Function */,
@@ -587,6 +612,9 @@
 		AD84DC401C042FFF00C4CFFA /* PDE_Sim */ = {
 			isa = PBXGroup;
 			children = (
+				ADCE7B5E1C38E07900296D10 /* FiniteDifference */,
+				ADCE7B5D1C38E06A00296D10 /* FiniteVolume */,
+				ADCE7B5C1C38E04B00296D10 /* FiniteElement */,
 				AD84DC411C042FFF00C4CFFA /* PDESim.h */,
 			);
 			path = PDE_Sim;
@@ -655,6 +683,35 @@
 				AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */,
 			);
 			name = Vec3D;
+			sourceTree = "<group>";
+		};
+		ADCE7B5C1C38E04B00296D10 /* FiniteElement */ = {
+			isa = PBXGroup;
+			children = (
+				ADCE7B531C38DFD100296D10 /* Element.cpp */,
+				ADCE7B541C38DFD100296D10 /* Element.hpp */,
+				ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */,
+				ADCE7B5A1C38DFFB00296D10 /* FiniteElement.hpp */,
+			);
+			name = FiniteElement;
+			sourceTree = "<group>";
+		};
+		ADCE7B5D1C38E06A00296D10 /* FiniteVolume */ = {
+			isa = PBXGroup;
+			children = (
+				ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */,
+				ADCE7B571C38DFE000296D10 /* FiniteVolume.hpp */,
+			);
+			name = FiniteVolume;
+			sourceTree = "<group>";
+		};
+		ADCE7B5E1C38E07900296D10 /* FiniteDifference */ = {
+			isa = PBXGroup;
+			children = (
+				ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */,
+				ADCE7B511C38DD4C00296D10 /* FiniteDifference.hpp */,
+			);
+			name = FiniteDifference;
 			sourceTree = "<group>";
 		};
 		ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */ = {
@@ -910,6 +967,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADCE7B581C38DFE000296D10 /* FiniteVolume.cpp in Sources */,
 				ADFAD80E1C2E28C200D4C3DE /* SimTime.cpp in Sources */,
 				AD84DC771C04300000C4CFFA /* Fraction.cpp in Sources */,
 				ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */,
@@ -928,6 +986,8 @@
 				ADFAD83F1C321C1800D4C3DE /* Builder.cpp in Sources */,
 				AD84DC831C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
 				ADFAD82F1C31900A00D4C3DE /* ActivationFactory.cpp in Sources */,
+				AD1F24C41C33A21900E7FABF /* FileObject.cpp in Sources */,
+				ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */,
 				AD84DC801C04300000C4CFFA /* ConfigParser.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
 				AD4768061B76EAF100E6B11D /* main.cpp in Sources */,
@@ -942,6 +1002,7 @@
 				AD84DC501C04300000C4CFFA /* FigData.cpp in Sources */,
 				ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */,
 				AD84DC4A1C04300000C4CFFA /* cpixel.cpp in Sources */,
+				ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */,
 				AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 				AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
 				AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
@@ -956,6 +1017,7 @@
 				ADFAD82C1C318D3500D4C3DE /* ActivationFunc.cpp in Sources */,
 				AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
 				ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */,
+				ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */,
 				AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */,
 				AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */,
