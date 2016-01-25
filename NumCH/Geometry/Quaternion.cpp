@@ -81,7 +81,7 @@ Quaternion  Quaternion::operator*( const Quaternion & q ) const{
     double s2 = q.getScalarPart();
     Vec3D v2 = q.getVectorPart();
     double sn = s*s2 - v.dot(v2);
-    Vec3D vn = v2*s + v*s2 + cross(v, v2);
+    Vec3D vn = v2*s + v*s2 + Vec3Dns::cross(v, v2);
     Quaternion out;
     out.s = sn;
     out.v = vn;

@@ -2,8 +2,8 @@
 //  Node.cpp
 //  NumCH
 //
-//  Created by Christian J Howard on 12/28/15.
-//  Copyright © 2015 Christian Howard. All rights reserved.
+//  Created by Christian J Howard on 1/23/16.
+//  Copyright © 2016 Christian Howard. All rights reserved.
 //
 
 #include "Node.hpp"
@@ -11,49 +11,32 @@
 namespace ANN {
     
     Node::Node(){
-        
-    }
-    void Node::setNetInput( double z ){
-        this->z = z;
+        setActivationFunc(sigmoid);
     }
     
-    double Node::getNetInput() const{
-        return z;
+    Node::Node( Activation (*func)(double z) ){
+        setActivationFunc(func);
     }
-    
-    void Node::setNetOutput( double o ){
-        this->o = o;
+    void Node::setActivationFunc( Activation (*func)(double z) ){
+        a = func;
     }
-    double Node::getNetOutput() const{
-        return o;
-    }
-    void Node::setDerivative( double d ){
-        deriv = d;
+    void Node::operator()( double z ){
+        currentActivation = a(z);
     }
     double Node::getDerivative() const{
-        return deriv;
+        return currentActivation.d;
     }
-    void Node::setLayer( unsigned int l){
-        layer = l;
-    }
-    unsigned int Node::getLayer() const{
-        return layer;
-    }
-    void Node::makeBias(){
-        isBias_ = true;
-        z = 1.0;
-        o = 1.0;
-        deriv = 0.0;
-    }
-    bool Node::isBias() const{
-        return isBias_;
+    double Node::getActivation() const{
+        return currentActivation.o;
     }
     
-/*
-    double z;
-    double o;
-    double deriv;
-    unsigned int layer;
-    bool isBias_;
- */
+    void Node::computeBackPropErr( double dEdo ){
+        backPropError = dEdo * currentActivation.d;
+    }
+    double Node::getBackPropErr() const{
+        return backPropError;
+    }
+    
+    
+    
 }

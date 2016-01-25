@@ -127,28 +127,31 @@
 		AD84DD601C06CBC300C4CFFA /* Vec3D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */; };
 		AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD621C06CBDD00C4CFFA /* Vector.cpp */; };
 		AD84DD661C06CBDD00C4CFFA /* Vector.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DD631C06CBDD00C4CFFA /* Vector.hpp */; };
+		ADA93AAF1C51F1C80028F939 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADA93AAD1C51F1C80028F939 /* Network.cpp */; };
+		ADAF706E1C407EC400C5AE73 /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD1F24C21C33A21900E7FABF /* FileObject.cpp */; };
+		ADAF706F1C407EC400C5AE73 /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8181C30781A00D4C3DE /* Timer.cpp */; };
+		ADAF70701C407EC400C5AE73 /* Vector.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD621C06CBDD00C4CFFA /* Vector.cpp */; };
+		ADAF707C1C407EC400C5AE73 /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8051C2E243300D4C3DE /* ModelList.cpp */; };
+		ADAF707D1C407EC400C5AE73 /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8081C2E244900D4C3DE /* SimState.cpp */; };
+		ADAF707E1C407EC400C5AE73 /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */; };
+		ADAF707F1C407EC400C5AE73 /* FiniteDifference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */; };
+		ADAF70801C407EC400C5AE73 /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */; };
+		ADAF70811C407EC400C5AE73 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B531C38DFD100296D10 /* Element.cpp */; };
+		ADAF70821C407EC400C5AE73 /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */; };
 		ADB85DA21B816019002879D2 /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADB85D961B815E27002879D2 /* libpng16.16.dylib */; };
 		ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */; };
 		ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B531C38DFD100296D10 /* Element.cpp */; };
 		ADCE7B581C38DFE000296D10 /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */; };
 		ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */; };
+		ADE3CDBD1C55C08100A3601A /* DataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE3CDBB1C55C08000A3601A /* DataSet.cpp */; };
+		ADE4FC7C1C54886100E17F51 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE4FC7A1C54886100E17F51 /* Node.cpp */; };
+		ADE4FC801C548A1B00E17F51 /* ActivationFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */; };
 		ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8051C2E243300D4C3DE /* ModelList.cpp */; };
 		ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8081C2E244900D4C3DE /* SimState.cpp */; };
 		ADFAD80E1C2E28C200D4C3DE /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD80C1C2E28C200D4C3DE /* SimTime.cpp */; };
 		ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8111C2E582900D4C3DE /* ExampleSim.cpp */; };
 		ADFAD8161C2E668200D4C3DE /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8141C2E668200D4C3DE /* Pendulum.cpp */; };
 		ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8181C30781A00D4C3DE /* Timer.cpp */; };
-		ADFAD81D1C31796200D4C3DE /* ANN.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD81B1C31796200D4C3DE /* ANN.cpp */; };
-		ADFAD8261C3185EB00D4C3DE /* Neighbors.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */; };
-		ADFAD8291C318CF000D4C3DE /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8271C318CF000D4C3DE /* Node.cpp */; };
-		ADFAD82C1C318D3500D4C3DE /* ActivationFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */; };
-		ADFAD82F1C31900A00D4C3DE /* ActivationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */; };
-		ADFAD8331C31939B00D4C3DE /* Linear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8311C31939B00D4C3DE /* Linear.cpp */; };
-		ADFAD8361C319DBA00D4C3DE /* Weights.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8341C319DBA00D4C3DE /* Weights.cpp */; };
-		ADFAD8391C31F37500D4C3DE /* Sigmoid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */; };
-		ADFAD83C1C31F51500D4C3DE /* GaussRBF.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */; };
-		ADFAD83F1C321C1800D4C3DE /* Builder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD83D1C321C1800D4C3DE /* Builder.cpp */; };
-		ADFAD8421C32EAEC00D4C3DE /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */; };
 		ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */; };
 		ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE86981BDA04E300D84DB6 /* Coordinate.cpp */; };
 		ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFE869A1BDA04E300D84DB6 /* Graph.cpp */; };
@@ -261,6 +264,9 @@
 		AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec3D.hpp; sourceTree = "<group>"; };
 		AD84DD621C06CBDD00C4CFFA /* Vector.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vector.cpp; sourceTree = "<group>"; };
 		AD84DD631C06CBDD00C4CFFA /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
+		ADA93AAD1C51F1C80028F939 /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Network.cpp; sourceTree = "<group>"; };
+		ADA93AAE1C51F1C80028F939 /* Network.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Network.hpp; sourceTree = "<group>"; };
+		ADAF706D1C407B3700C5AE73 /* NumericIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumericIntegration.h; sourceTree = "<group>"; };
 		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteDifference.cpp; sourceTree = "<group>"; };
 		ADCE7B511C38DD4C00296D10 /* FiniteDifference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteDifference.hpp; sourceTree = "<group>"; };
@@ -270,6 +276,18 @@
 		ADCE7B571C38DFE000296D10 /* FiniteVolume.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteVolume.hpp; sourceTree = "<group>"; };
 		ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteElement.cpp; sourceTree = "<group>"; };
 		ADCE7B5A1C38DFFB00296D10 /* FiniteElement.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteElement.hpp; sourceTree = "<group>"; };
+		ADE3CDB91C55BFAB00A3601A /* GDTrainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GDTrainer.hpp; sourceTree = "<group>"; };
+		ADE3CDBB1C55C08000A3601A /* DataSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataSet.cpp; sourceTree = "<group>"; };
+		ADE3CDBC1C55C08100A3601A /* DataSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataSet.hpp; sourceTree = "<group>"; };
+		ADE3CDC01C55EA3A00A3601A /* GDTrainerImpl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GDTrainerImpl.hpp; sourceTree = "<group>"; };
+		ADE3CDC11C55ED6900A3601A /* ConstantStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstantStep.hpp; sourceTree = "<group>"; };
+		ADE3CDC31C55F10300A3601A /* DefaultMaps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DefaultMaps.hpp; sourceTree = "<group>"; };
+		ADE3CDC51C55F27F00A3601A /* L2Cost.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = L2Cost.hpp; sourceTree = "<group>"; };
+		ADE4FC7A1C54886100E17F51 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
+		ADE4FC7B1C54886100E17F51 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
+		ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFuncs.cpp; sourceTree = "<group>"; };
+		ADE4FC7F1C548A1B00E17F51 /* ActivationFuncs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFuncs.hpp; sourceTree = "<group>"; };
+		ADE4FC821C55B6C100E17F51 /* Trainer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		ADFAD8041C2E1AE200D4C3DE /* TemplateSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSimulator.h; sourceTree = "<group>"; };
 		ADFAD8051C2E243300D4C3DE /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelList.cpp; sourceTree = "<group>"; };
 		ADFAD8061C2E243300D4C3DE /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelList.hpp; sourceTree = "<group>"; };
@@ -283,28 +301,6 @@
 		ADFAD8151C2E668200D4C3DE /* Pendulum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pendulum.hpp; sourceTree = "<group>"; };
 		ADFAD8181C30781A00D4C3DE /* Timer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Timer.cpp; sourceTree = "<group>"; };
 		ADFAD8191C30781A00D4C3DE /* Timer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
-		ADFAD81B1C31796200D4C3DE /* ANN.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ANN.cpp; sourceTree = "<group>"; };
-		ADFAD81C1C31796200D4C3DE /* ANN.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ANN.hpp; sourceTree = "<group>"; };
-		ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Neighbors.cpp; sourceTree = "<group>"; };
-		ADFAD8251C3185EB00D4C3DE /* Neighbors.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Neighbors.hpp; sourceTree = "<group>"; };
-		ADFAD8271C318CF000D4C3DE /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
-		ADFAD8281C318CF000D4C3DE /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
-		ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFunc.cpp; sourceTree = "<group>"; };
-		ADFAD82B1C318D3500D4C3DE /* ActivationFunc.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFunc.hpp; sourceTree = "<group>"; };
-		ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFactory.cpp; sourceTree = "<group>"; };
-		ADFAD82E1C31900A00D4C3DE /* ActivationFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFactory.hpp; sourceTree = "<group>"; };
-		ADFAD8311C31939B00D4C3DE /* Linear.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Linear.cpp; sourceTree = "<group>"; };
-		ADFAD8321C31939B00D4C3DE /* Linear.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Linear.hpp; sourceTree = "<group>"; };
-		ADFAD8341C319DBA00D4C3DE /* Weights.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Weights.cpp; sourceTree = "<group>"; };
-		ADFAD8351C319DBA00D4C3DE /* Weights.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Weights.hpp; sourceTree = "<group>"; };
-		ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sigmoid.cpp; sourceTree = "<group>"; };
-		ADFAD8381C31F37500D4C3DE /* Sigmoid.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Sigmoid.hpp; sourceTree = "<group>"; };
-		ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GaussRBF.cpp; sourceTree = "<group>"; };
-		ADFAD83B1C31F51500D4C3DE /* GaussRBF.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GaussRBF.hpp; sourceTree = "<group>"; };
-		ADFAD83D1C321C1800D4C3DE /* Builder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Builder.cpp; sourceTree = "<group>"; };
-		ADFAD83E1C321C1800D4C3DE /* Builder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Builder.hpp; sourceTree = "<group>"; };
-		ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
-		ADFAD8411C32EAEC00D4C3DE /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		ADFE86931BDA04E300D84DB6 /* AdaptiveArray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AdaptiveArray.cpp; sourceTree = "<group>"; };
 		ADFE86941BDA04E300D84DB6 /* AdaptiveArray.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdaptiveArray.h; sourceTree = "<group>"; };
 		ADFE86951BDA04E300D84DB6 /* avl_tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = avl_tree.h; sourceTree = "<group>"; };
@@ -389,6 +385,7 @@
 		AD4768041B76EAF100E6B11D /* NumCH */ = {
 			isa = PBXGroup;
 			children = (
+				AD84DC0C1C042FFF00C4CFFA /* ConfigParser */,
 				AD1F24C11C33A1A800E7FABF /* FileIO */,
 				ADFAD8171C30780800D4C3DE /* Timer */,
 				AD84DBD41C042FFF00C4CFFA /* Filters */,
@@ -470,23 +467,7 @@
 		AD84DBF41C042FFF00C4CFFA /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
-				ADFAD8301C31938700D4C3DE /* ActivFuncs */,
-				ADFAD81B1C31796200D4C3DE /* ANN.cpp */,
-				ADFAD81C1C31796200D4C3DE /* ANN.hpp */,
-				ADFAD8241C3185EB00D4C3DE /* Neighbors.cpp */,
-				ADFAD8251C3185EB00D4C3DE /* Neighbors.hpp */,
-				ADFAD8271C318CF000D4C3DE /* Node.cpp */,
-				ADFAD8281C318CF000D4C3DE /* Node.hpp */,
-				ADFAD82A1C318D3500D4C3DE /* ActivationFunc.cpp */,
-				ADFAD82B1C318D3500D4C3DE /* ActivationFunc.hpp */,
-				ADFAD82D1C31900A00D4C3DE /* ActivationFactory.cpp */,
-				ADFAD82E1C31900A00D4C3DE /* ActivationFactory.hpp */,
-				ADFAD8341C319DBA00D4C3DE /* Weights.cpp */,
-				ADFAD8351C319DBA00D4C3DE /* Weights.hpp */,
-				ADFAD83D1C321C1800D4C3DE /* Builder.cpp */,
-				ADFAD83E1C321C1800D4C3DE /* Builder.hpp */,
-				ADFAD8401C32EAEC00D4C3DE /* Trainer.cpp */,
-				ADFAD8411C32EAEC00D4C3DE /* Trainer.hpp */,
+				ADE4FC811C553B0100E17F51 /* ANN */,
 			);
 			path = MachineLearning;
 			sourceTree = "<group>";
@@ -508,7 +489,6 @@
 			isa = PBXGroup;
 			children = (
 				ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */,
-				AD84DC0C1C042FFF00C4CFFA /* ConfigParser */,
 				AD84DC0F1C042FFF00C4CFFA /* Constants */,
 				AD84DC121C042FFF00C4CFFA /* DataOutputter */,
 				AD84DC151C042FFF00C4CFFA /* DiscreteModel */,
@@ -527,7 +507,8 @@
 				AD84DC0D1C042FFF00C4CFFA /* ConfigParser.cpp */,
 				AD84DC0E1C042FFF00C4CFFA /* ConfigParser.hpp */,
 			);
-			path = ConfigParser;
+			name = ConfigParser;
+			path = ODE_SimFramework/ConfigParser;
 			sourceTree = "<group>";
 		};
 		AD84DC0F1C042FFF00C4CFFA /* Constants */ = {
@@ -577,6 +558,7 @@
 				AD84DC211C042FFF00C4CFFA /* GenIntegrator.hpp */,
 				AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */,
 				AD84DC231C042FFF00C4CFFA /* RungeKutta4.hpp */,
+				ADAF706D1C407B3700C5AE73 /* NumericIntegration.h */,
 			);
 			path = NumericIntegration;
 			sourceTree = "<group>";
@@ -714,6 +696,74 @@
 			name = FiniteDifference;
 			sourceTree = "<group>";
 		};
+		ADE3CDBE1C55E63E00A3601A /* CostFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDC51C55F27F00A3601A /* L2Cost.hpp */,
+			);
+			name = CostFuncs;
+			sourceTree = "<group>";
+		};
+		ADE3CDBF1C55E64600A3601A /* StepFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDC11C55ED6900A3601A /* ConstantStep.hpp */,
+			);
+			name = StepFuncs;
+			sourceTree = "<group>";
+		};
+		ADE3CDC21C55F0F400A3601A /* Net IO Maps */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDC31C55F10300A3601A /* DefaultMaps.hpp */,
+			);
+			name = "Net IO Maps";
+			sourceTree = "<group>";
+		};
+		ADE3CDC61C55F4B100A3601A /* Topography */ = {
+			isa = PBXGroup;
+			children = (
+				ADA93AAD1C51F1C80028F939 /* Network.cpp */,
+				ADA93AAE1C51F1C80028F939 /* Network.hpp */,
+				ADE4FC7A1C54886100E17F51 /* Node.cpp */,
+				ADE4FC7B1C54886100E17F51 /* Node.hpp */,
+			);
+			name = Topography;
+			sourceTree = "<group>";
+		};
+		ADE3CDC71C55F4C100A3601A /* Training */ = {
+			isa = PBXGroup;
+			children = (
+				ADE4FC821C55B6C100E17F51 /* Trainer.hpp */,
+				ADE3CDC01C55EA3A00A3601A /* GDTrainerImpl.hpp */,
+				ADE3CDB91C55BFAB00A3601A /* GDTrainer.hpp */,
+			);
+			name = Training;
+			sourceTree = "<group>";
+		};
+		ADE3CDC81C55F4CF00A3601A /* Data Sets */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDBB1C55C08000A3601A /* DataSet.cpp */,
+				ADE3CDBC1C55C08100A3601A /* DataSet.hpp */,
+			);
+			name = "Data Sets";
+			sourceTree = "<group>";
+		};
+		ADE4FC811C553B0100E17F51 /* ANN */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDC81C55F4CF00A3601A /* Data Sets */,
+				ADE3CDC71C55F4C100A3601A /* Training */,
+				ADE3CDC61C55F4B100A3601A /* Topography */,
+				ADE3CDC21C55F0F400A3601A /* Net IO Maps */,
+				ADE3CDBF1C55E64600A3601A /* StepFuncs */,
+				ADE3CDBE1C55E63E00A3601A /* CostFuncs */,
+				ADFAD8301C31938700D4C3DE /* ActivFuncs */,
+			);
+			name = ANN;
+			sourceTree = "<group>";
+		};
 		ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */ = {
 			isa = PBXGroup;
 			children = (
@@ -752,12 +802,8 @@
 		ADFAD8301C31938700D4C3DE /* ActivFuncs */ = {
 			isa = PBXGroup;
 			children = (
-				ADFAD8311C31939B00D4C3DE /* Linear.cpp */,
-				ADFAD8321C31939B00D4C3DE /* Linear.hpp */,
-				ADFAD8371C31F37500D4C3DE /* Sigmoid.cpp */,
-				ADFAD8381C31F37500D4C3DE /* Sigmoid.hpp */,
-				ADFAD83A1C31F51500D4C3DE /* GaussRBF.cpp */,
-				ADFAD83B1C31F51500D4C3DE /* GaussRBF.hpp */,
+				ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */,
+				ADE4FC7F1C548A1B00E17F51 /* ActivationFuncs.hpp */,
 			);
 			name = ActivFuncs;
 			sourceTree = "<group>";
@@ -972,30 +1018,27 @@
 				AD84DC771C04300000C4CFFA /* Fraction.cpp in Sources */,
 				ADFAD80A1C2E244900D4C3DE /* SimState.cpp in Sources */,
 				ADFE86B31BDA04E300D84DB6 /* Vec.cpp in Sources */,
+				ADE4FC801C548A1B00E17F51 /* ActivationFuncs.cpp in Sources */,
 				ADFAD8161C2E668200D4C3DE /* Pendulum.cpp in Sources */,
-				ADFAD8261C3185EB00D4C3DE /* Neighbors.cpp in Sources */,
-				ADFAD81D1C31796200D4C3DE /* ANN.cpp in Sources */,
-				ADFAD8361C319DBA00D4C3DE /* Weights.cpp in Sources */,
 				AD84DC4D1C04300000C4CFFA /* cpng.cpp in Sources */,
 				AD84DC891C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
 				AD84DC8F1C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC8C1C04300000C4CFFA /* DynamicModel.cpp in Sources */,
 				ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */,
 				AD84DC7C1C04300000C4CFFA /* RandomNumberGenerator.cpp in Sources */,
+				ADA93AAF1C51F1C80028F939 /* Network.cpp in Sources */,
 				AD84DC951C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
-				ADFAD83F1C321C1800D4C3DE /* Builder.cpp in Sources */,
 				AD84DC831C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
-				ADFAD82F1C31900A00D4C3DE /* ActivationFactory.cpp in Sources */,
 				AD1F24C41C33A21900E7FABF /* FileObject.cpp in Sources */,
 				ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */,
 				AD84DC801C04300000C4CFFA /* ConfigParser.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
 				AD4768061B76EAF100E6B11D /* main.cpp in Sources */,
 				ADFE86AD1BDA04E300D84DB6 /* Coordinate.cpp in Sources */,
+				ADE3CDBD1C55C08100A3601A /* DataSet.cpp in Sources */,
 				AD84DC861C04300000C4CFFA /* DataPrinter.cpp in Sources */,
 				AD84DC981C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */,
-				ADFAD8391C31F37500D4C3DE /* Sigmoid.cpp in Sources */,
 				ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */,
 				AD84DCBA1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
 				AD84DCA31C04300000C4CFFA /* CostFunc.cpp in Sources */,
@@ -1008,21 +1051,17 @@
 				AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
 				ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */,
 				AD84DCAC1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
-				ADFAD8331C31939B00D4C3DE /* Linear.cpp in Sources */,
 				AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */,
-				ADFAD8421C32EAEC00D4C3DE /* Trainer.cpp in Sources */,
-				ADFAD8291C318CF000D4C3DE /* Node.cpp in Sources */,
 				AD84DCB01C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
-				ADFAD82C1C318D3500D4C3DE /* ActivationFunc.cpp in Sources */,
 				AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
 				ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */,
 				ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */,
 				AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */,
 				AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */,
-				ADFAD83C1C31F51500D4C3DE /* GaussRBF.cpp in Sources */,
 				AD84DD5E1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
+				ADE4FC7C1C54886100E17F51 /* Node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1037,6 +1076,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADAF706E1C407EC400C5AE73 /* FileObject.cpp in Sources */,
+				ADAF706F1C407EC400C5AE73 /* Timer.cpp in Sources */,
+				ADAF70701C407EC400C5AE73 /* Vector.cpp in Sources */,
+				ADAF707C1C407EC400C5AE73 /* ModelList.cpp in Sources */,
+				ADAF707D1C407EC400C5AE73 /* SimState.cpp in Sources */,
+				ADAF707E1C407EC400C5AE73 /* SimTime.cpp in Sources */,
+				ADAF707F1C407EC400C5AE73 /* FiniteDifference.cpp in Sources */,
+				ADAF70801C407EC400C5AE73 /* FiniteVolume.cpp in Sources */,
+				ADAF70811C407EC400C5AE73 /* Element.cpp in Sources */,
+				ADAF70821C407EC400C5AE73 /* FiniteElement.cpp in Sources */,
 				AD84DC901C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC511C04300000C4CFFA /* FigData.cpp in Sources */,
 				AD84DC4B1C04300000C4CFFA /* cpixel.cpp in Sources */,

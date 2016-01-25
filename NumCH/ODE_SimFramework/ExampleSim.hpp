@@ -10,10 +10,7 @@
 #define ExampleSim_hpp
 
 #include "TemplateSimulator.h"
-#include "RungeKutta4.hpp"
 #include "Pendulum.hpp"
-
-class TimeStep : public DiscreteModel {};
 
 
 class ExampleSim : public Simulator<ExampleSim,RungeKutta4> {

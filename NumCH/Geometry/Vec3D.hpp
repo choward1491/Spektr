@@ -12,6 +12,8 @@
 #include "Vector.hpp"
 
 typedef Vector<3> Vec3D;
+namespace Vec3Dns {
 Vector<3> cross( const Vector<3> & v, const Vector<3> & vec );
+}
 
 #endif /* Vec3D_hpp */

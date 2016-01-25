@@ -2,34 +2,30 @@
 //  Trainer.hpp
 //  NumCH
 //
-//  Created by Christian J Howard on 12/29/15.
-//  Copyright © 2015 Christian Howard. All rights reserved.
+//  Created by Christian J Howard on 1/24/16.
+//  Copyright © 2016 Christian Howard. All rights reserved.
 //
 
-#ifndef Trainer_hpp
-#define Trainer_hpp
+#ifndef Trainer_h
+#define Trainer_h
 
-#include <stdio.h>
-#include "ANN.hpp"
+#include "Network.hpp"
+#include "DataSet.hpp"
 
 namespace ANN {
     
-    template< class CostFunc >
+    template<class Train>
     class Trainer {
     public:
-        enum Type { StochGradientDescent = 0, GA, PSO, UKF };
         
-        Trainer();
-        void operator()( Network & net , Trainer::Type type );
-        void setMaxIter( size_t miter );
-        void train( Network & net, Trainer::Type type );
         
-    private:
-        void stochasticGradientDescent( Network & net );
-        void geneticAlgorithm( Network & net );
-        void particleSwarmOptimization( Network & net );
-        void unscentedKalmanFilter( Network & net );
-        size_t maxiter;
+        void train( Network & net, DataSet & dset ){
+            static_cast<Train*>(this)->init(net);
+            while( !static_cast<Train*>(this)->doneTraining() ){
+                static_cast<Train*>(this)->updateNet( net, dset );
+            }
+        }
+        
         
     };
     
@@ -38,4 +34,4 @@ namespace ANN {
 
 
 
-#endif /* Trainer_hpp */
+#endif /* Trainer_h */

@@ -12,8 +12,11 @@
 #include "ModelList.hpp"
 #include "SimState.hpp"
 #include "SimTime.hpp"
+#include "NumericIntegration.h"
 
-template<class Sim, class Integrator>
+class TimeStep : public DiscreteModel {};
+
+template<class Sim, class Integrator = ExplicitEuler >
 class Simulator {
 public:
     

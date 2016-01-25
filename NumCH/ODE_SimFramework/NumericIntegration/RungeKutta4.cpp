@@ -63,7 +63,7 @@ void RungeKutta4::computeNewStep( double * y0, double* dydt, double dt, double *
 
 void RungeKutta4::computeDerivatives( double time, double * & dqdt, DiffeqList & list ){
     for (int i = 0; i < list.size(); i++) {
-        (*list[i])(time, dqdt);
+        list[i]->operator()(time, dqdt);
         dqdt = dqdt+list[i]->numDims();
     }
 }
