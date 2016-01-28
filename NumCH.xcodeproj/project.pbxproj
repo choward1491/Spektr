@@ -92,32 +92,7 @@
 		AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */; };
 		AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */; };
 		AD84DC9F1C04300000C4CFFA /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */; };
-		AD84DCA31C04300000C4CFFA /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */; };
-		AD84DCA41C04300000C4CFFA /* CostFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */; };
-		AD84DCA51C04300000C4CFFA /* CostFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */; };
-		AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */; };
-		AD84DCA71C04300000C4CFFA /* GradientDescent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */; };
-		AD84DCA81C04300000C4CFFA /* GradientDescent.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC311C042FFF00C4CFFA /* GradientDescent.hpp */; };
-		AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */; };
-		AD84DCAA1C04300000C4CFFA /* GradientDescentStep.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */; };
-		AD84DCAB1C04300000C4CFFA /* GradientDescentStep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC331C042FFF00C4CFFA /* GradientDescentStep.hpp */; };
-		AD84DCAC1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */; };
-		AD84DCAD1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */; };
-		AD84DCAE1C04300000C4CFFA /* LatinHypercubeDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC351C042FFF00C4CFFA /* LatinHypercubeDistributor.h */; };
 		AD84DCAF1C04300000C4CFFA /* Optimization.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC361C042FFF00C4CFFA /* Optimization.h */; };
-		AD84DCB01C04300000C4CFFA /* ParticleDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */; };
-		AD84DCB11C04300000C4CFFA /* ParticleDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */; };
-		AD84DCB21C04300100C4CFFA /* ParticleDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC381C042FFF00C4CFFA /* ParticleDistributor.h */; };
-		AD84DCB31C04300100C4CFFA /* PSO.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC391C042FFF00C4CFFA /* PSO.h */; };
-		AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */; };
-		AD84DCB51C04300100C4CFFA /* RandomDistributor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */; };
-		AD84DCB61C04300100C4CFFA /* RandomDistributor.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC3B1C042FFF00C4CFFA /* RandomDistributor.h */; };
-		AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */; };
-		AD84DCB81C04300100C4CFFA /* Swarm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */; };
-		AD84DCB91C04300100C4CFFA /* Swarm.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC3D1C042FFF00C4CFFA /* Swarm.h */; };
-		AD84DCBA1C04300100C4CFFA /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */; };
-		AD84DCBB1C04300100C4CFFA /* SwarmParticle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */; };
-		AD84DCBC1C04300100C4CFFA /* SwarmParticle.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */; };
 		AD84DCBD1C04300100C4CFFA /* PDESim.h in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC411C042FFF00C4CFFA /* PDESim.h */; };
 		AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD211C057E8000C4CFFA /* Quaternion.cpp */; };
 		AD84DD241C057E8000C4CFFA /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DD211C057E8000C4CFFA /* Quaternion.cpp */; };
@@ -144,6 +119,7 @@
 		ADCE7B581C38DFE000296D10 /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */; };
 		ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */; };
 		ADE3CDBD1C55C08100A3601A /* DataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE3CDBB1C55C08000A3601A /* DataSet.cpp */; };
+		ADE3CDD31C59E21400A3601A /* RandomInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE3CDD21C59E21400A3601A /* RandomInit.cpp */; };
 		ADE4FC7C1C54886100E17F51 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE4FC7A1C54886100E17F51 /* Node.cpp */; };
 		ADE4FC801C548A1B00E17F51 /* ActivationFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */; };
 		ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADFAD8051C2E243300D4C3DE /* ModelList.cpp */; };
@@ -239,24 +215,7 @@
 		AD84DC261C042FFF00C4CFFA /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
 		AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
 		AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scheduler.hpp; sourceTree = "<group>"; };
-		AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CostFunc.cpp; sourceTree = "<group>"; };
-		AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CostFunc.h; sourceTree = "<group>"; };
-		AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradientDescent.cpp; sourceTree = "<group>"; };
-		AD84DC311C042FFF00C4CFFA /* GradientDescent.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GradientDescent.hpp; sourceTree = "<group>"; };
-		AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GradientDescentStep.cpp; sourceTree = "<group>"; };
-		AD84DC331C042FFF00C4CFFA /* GradientDescentStep.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GradientDescentStep.hpp; sourceTree = "<group>"; };
-		AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LatinHypercubeDistributor.cpp; sourceTree = "<group>"; };
-		AD84DC351C042FFF00C4CFFA /* LatinHypercubeDistributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LatinHypercubeDistributor.h; sourceTree = "<group>"; };
 		AD84DC361C042FFF00C4CFFA /* Optimization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Optimization.h; sourceTree = "<group>"; };
-		AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ParticleDistributor.cpp; sourceTree = "<group>"; };
-		AD84DC381C042FFF00C4CFFA /* ParticleDistributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticleDistributor.h; sourceTree = "<group>"; };
-		AD84DC391C042FFF00C4CFFA /* PSO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSO.h; sourceTree = "<group>"; };
-		AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomDistributor.cpp; sourceTree = "<group>"; };
-		AD84DC3B1C042FFF00C4CFFA /* RandomDistributor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomDistributor.h; sourceTree = "<group>"; };
-		AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Swarm.cpp; sourceTree = "<group>"; };
-		AD84DC3D1C042FFF00C4CFFA /* Swarm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Swarm.h; sourceTree = "<group>"; };
-		AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SwarmParticle.cpp; sourceTree = "<group>"; };
-		AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwarmParticle.h; sourceTree = "<group>"; };
 		AD84DC411C042FFF00C4CFFA /* PDESim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDESim.h; sourceTree = "<group>"; };
 		AD84DD211C057E8000C4CFFA /* Quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quaternion.cpp; sourceTree = "<group>"; };
 		AD84DD221C057E8000C4CFFA /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
@@ -283,6 +242,13 @@
 		ADE3CDC11C55ED6900A3601A /* ConstantStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstantStep.hpp; sourceTree = "<group>"; };
 		ADE3CDC31C55F10300A3601A /* DefaultMaps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DefaultMaps.hpp; sourceTree = "<group>"; };
 		ADE3CDC51C55F27F00A3601A /* L2Cost.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = L2Cost.hpp; sourceTree = "<group>"; };
+		ADE3CDCA1C59C07400A3601A /* Optimizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Optimizer.hpp; sourceTree = "<group>"; };
+		ADE3CDCD1C59C6D300A3601A /* PSO.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PSO.hpp; sourceTree = "<group>"; };
+		ADE3CDCE1C59CAAC00A3601A /* Particle.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
+		ADE3CDCF1C59CDB500A3601A /* Swarm.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Swarm.hpp; sourceTree = "<group>"; };
+		ADE3CDD11C59DF2D00A3601A /* RandomInit.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RandomInit.hpp; sourceTree = "<group>"; };
+		ADE3CDD21C59E21400A3601A /* RandomInit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomInit.cpp; sourceTree = "<group>"; };
+		ADE3CDD61C59E3BB00A3601A /* Rosenbrock.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Rosenbrock.hpp; sourceTree = "<group>"; };
 		ADE4FC7A1C54886100E17F51 /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		ADE4FC7B1C54886100E17F51 /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFuncs.cpp; sourceTree = "<group>"; };
@@ -583,9 +549,10 @@
 		AD84DC2D1C042FFF00C4CFFA /* Optimization */ = {
 			isa = PBXGroup;
 			children = (
-				AD84DCC41C05773600C4CFFA /* CostFunction */,
-				AD84DCC31C05772500C4CFFA /* PSO */,
-				AD84DCC21C05771100C4CFFA /* GradientDescent */,
+				ADE3CDD41C59E30200A3601A /* TestFuncs */,
+				ADE3CDCC1C59C68700A3601A /* Gradient */,
+				ADE3CDCB1C59C67900A3601A /* PSO */,
+				ADE3CDC91C59C05B00A3601A /* Optimizer */,
 				AD84DC361C042FFF00C4CFFA /* Optimization.h */,
 			);
 			path = Optimization;
@@ -600,44 +567,6 @@
 				AD84DC411C042FFF00C4CFFA /* PDESim.h */,
 			);
 			path = PDE_Sim;
-			sourceTree = "<group>";
-		};
-		AD84DCC21C05771100C4CFFA /* GradientDescent */ = {
-			isa = PBXGroup;
-			children = (
-				AD84DC301C042FFF00C4CFFA /* GradientDescent.cpp */,
-				AD84DC311C042FFF00C4CFFA /* GradientDescent.hpp */,
-				AD84DC321C042FFF00C4CFFA /* GradientDescentStep.cpp */,
-				AD84DC331C042FFF00C4CFFA /* GradientDescentStep.hpp */,
-			);
-			name = GradientDescent;
-			sourceTree = "<group>";
-		};
-		AD84DCC31C05772500C4CFFA /* PSO */ = {
-			isa = PBXGroup;
-			children = (
-				AD84DC341C042FFF00C4CFFA /* LatinHypercubeDistributor.cpp */,
-				AD84DC351C042FFF00C4CFFA /* LatinHypercubeDistributor.h */,
-				AD84DC371C042FFF00C4CFFA /* ParticleDistributor.cpp */,
-				AD84DC381C042FFF00C4CFFA /* ParticleDistributor.h */,
-				AD84DC391C042FFF00C4CFFA /* PSO.h */,
-				AD84DC3A1C042FFF00C4CFFA /* RandomDistributor.cpp */,
-				AD84DC3B1C042FFF00C4CFFA /* RandomDistributor.h */,
-				AD84DC3C1C042FFF00C4CFFA /* Swarm.cpp */,
-				AD84DC3D1C042FFF00C4CFFA /* Swarm.h */,
-				AD84DC3E1C042FFF00C4CFFA /* SwarmParticle.cpp */,
-				AD84DC3F1C042FFF00C4CFFA /* SwarmParticle.h */,
-			);
-			name = PSO;
-			sourceTree = "<group>";
-		};
-		AD84DCC41C05773600C4CFFA /* CostFunction */ = {
-			isa = PBXGroup;
-			children = (
-				AD84DC2E1C042FFF00C4CFFA /* CostFunc.cpp */,
-				AD84DC2F1C042FFF00C4CFFA /* CostFunc.h */,
-			);
-			name = CostFunction;
 			sourceTree = "<group>";
 		};
 		AD84DD191C057DFC00C4CFFA /* Quaternion */ = {
@@ -748,6 +677,49 @@
 				ADE3CDBC1C55C08100A3601A /* DataSet.hpp */,
 			);
 			name = "Data Sets";
+			sourceTree = "<group>";
+		};
+		ADE3CDC91C59C05B00A3601A /* Optimizer */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDCA1C59C07400A3601A /* Optimizer.hpp */,
+			);
+			name = Optimizer;
+			sourceTree = "<group>";
+		};
+		ADE3CDCB1C59C67900A3601A /* PSO */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDD01C59DF0500A3601A /* Initializers */,
+				ADE3CDCD1C59C6D300A3601A /* PSO.hpp */,
+				ADE3CDCE1C59CAAC00A3601A /* Particle.hpp */,
+				ADE3CDCF1C59CDB500A3601A /* Swarm.hpp */,
+			);
+			name = PSO;
+			sourceTree = "<group>";
+		};
+		ADE3CDCC1C59C68700A3601A /* Gradient */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Gradient;
+			sourceTree = "<group>";
+		};
+		ADE3CDD01C59DF0500A3601A /* Initializers */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDD11C59DF2D00A3601A /* RandomInit.hpp */,
+				ADE3CDD21C59E21400A3601A /* RandomInit.cpp */,
+			);
+			name = Initializers;
+			sourceTree = "<group>";
+		};
+		ADE3CDD41C59E30200A3601A /* TestFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDD61C59E3BB00A3601A /* Rosenbrock.hpp */,
+			);
+			name = TestFuncs;
 			sourceTree = "<group>";
 		};
 		ADE4FC811C553B0100E17F51 /* ANN */ = {
@@ -868,11 +840,9 @@
 				AD7867CB1BFD943500A6FE07 /* hash_table.h in Headers */,
 				AD84DC7A1C04300000C4CFFA /* Malloc2D.hpp in Headers */,
 				AD84DC8B1C04300000C4CFFA /* DiscreteModel.hpp in Headers */,
-				AD84DCB21C04300100C4CFFA /* ParticleDistributor.h in Headers */,
 				AD84DC9C1C04300000C4CFFA /* PreciseTime.h in Headers */,
 				AD84DC561C04300000C4CFFA /* graphics_objs.h in Headers */,
 				AD7867CC1BFD943500A6FE07 /* heap.h in Headers */,
-				AD84DCA81C04300000C4CFFA /* GradientDescent.hpp in Headers */,
 				AD84DC531C04300000C4CFFA /* Figure.h in Headers */,
 				AD84DC4C1C04300000C4CFFA /* cpixel.h in Headers */,
 				AD7867CD1BFD943500A6FE07 /* kd_tree.h in Headers */,
@@ -886,27 +856,20 @@
 				AD7867D21BFD943500A6FE07 /* PopArray.h in Headers */,
 				AD84DC481C042FFF00C4CFFA /* camera.h in Headers */,
 				AD84DC4F1C04300000C4CFFA /* cpng.h in Headers */,
-				AD84DCBC1C04300100C4CFFA /* SwarmParticle.h in Headers */,
 				AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */,
 				AD7867D31BFD943500A6FE07 /* queue.h in Headers */,
 				AD84DC971C04300000C4CFFA /* GenIntegrator.hpp in Headers */,
 				AD84DC471C042FFF00C4CFFA /* point.h in Headers */,
 				AD84DC7E1C04300000C4CFFA /* RandomNumberGenerator.hpp in Headers */,
 				AD84DC911C04300000C4CFFA /* ExplicitEuler.hpp in Headers */,
-				AD84DCAE1C04300000C4CFFA /* LatinHypercubeDistributor.h in Headers */,
-				AD84DCB61C04300100C4CFFA /* RandomDistributor.h in Headers */,
-				AD84DCAB1C04300000C4CFFA /* GradientDescentStep.hpp in Headers */,
 				AD84DC881C04300000C4CFFA /* DataPrinter.hpp in Headers */,
 				AD84DCAF1C04300000C4CFFA /* Optimization.h in Headers */,
 				AD84DC551C04300000C4CFFA /* Graphics.h in Headers */,
-				AD84DCB31C04300100C4CFFA /* PSO.h in Headers */,
 				AD7867D41BFD943500A6FE07 /* stack.h in Headers */,
 				AD84DC7B1C04300000C4CFFA /* Numbers.h in Headers */,
 				AD84DCBD1C04300100C4CFFA /* PDESim.h in Headers */,
 				AD7867D51BFD943500A6FE07 /* Vec.h in Headers */,
 				AD84DC9B1C04300000C4CFFA /* ODESim.h in Headers */,
-				AD84DCA51C04300000C4CFFA /* CostFunc.h in Headers */,
-				AD84DCB91C04300100C4CFFA /* Swarm.h in Headers */,
 				AD84DC571C04300000C4CFFA /* PhotoRealImages.h in Headers */,
 				AD84DC5C1C04300000C4CFFA /* LinearAlgebra.h in Headers */,
 				AD84DC7F1C04300000C4CFFA /* NumCH.h in Headers */,
@@ -1031,6 +994,7 @@
 				AD84DC831C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
 				AD1F24C41C33A21900E7FABF /* FileObject.cpp in Sources */,
 				ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */,
+				ADE3CDD31C59E21400A3601A /* RandomInit.cpp in Sources */,
 				AD84DC801C04300000C4CFFA /* ConfigParser.cpp in Sources */,
 				ADFE86AE1BDA04E300D84DB6 /* Graph.cpp in Sources */,
 				AD4768061B76EAF100E6B11D /* main.cpp in Sources */,
@@ -1040,25 +1004,17 @@
 				AD84DC981C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */,
 				ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */,
-				AD84DCBA1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
-				AD84DCA31C04300000C4CFFA /* CostFunc.cpp in Sources */,
 				AD84DC501C04300000C4CFFA /* FigData.cpp in Sources */,
 				ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */,
 				AD84DC4A1C04300000C4CFFA /* cpixel.cpp in Sources */,
 				ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */,
 				AD84DD231C057E8000C4CFFA /* Quaternion.cpp in Sources */,
 				AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
-				AD84DCB41C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
 				ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */,
-				AD84DCAC1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
 				AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */,
-				AD84DCB01C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
-				AD84DCA91C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
 				ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */,
 				ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */,
-				AD84DCB71C04300100C4CFFA /* Swarm.cpp in Sources */,
-				AD84DCA61C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				ADFE86B21BDA04E300D84DB6 /* PopArray.cpp in Sources */,
 				AD84DD5E1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
 				ADE4FC7C1C54886100E17F51 /* Node.cpp in Sources */,
@@ -1089,22 +1045,14 @@
 				AD84DC901C04300000C4CFFA /* ExplicitEuler.cpp in Sources */,
 				AD84DC511C04300000C4CFFA /* FigData.cpp in Sources */,
 				AD84DC4B1C04300000C4CFFA /* cpixel.cpp in Sources */,
-				AD84DCB81C04300100C4CFFA /* Swarm.cpp in Sources */,
-				AD84DCAA1C04300000C4CFFA /* GradientDescentStep.cpp in Sources */,
 				AD84DC7D1C04300000C4CFFA /* RandomNumberGenerator.cpp in Sources */,
 				AD84DC781C04300000C4CFFA /* Fraction.cpp in Sources */,
-				AD84DCB11C04300000C4CFFA /* ParticleDistributor.cpp in Sources */,
 				AD84DC931C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
-				AD84DCBB1C04300100C4CFFA /* SwarmParticle.cpp in Sources */,
-				AD84DCA41C04300000C4CFFA /* CostFunc.cpp in Sources */,
-				AD84DCAD1C04300000C4CFFA /* LatinHypercubeDistributor.cpp in Sources */,
 				AD84DD5F1C06CBC300C4CFFA /* Vec3D.cpp in Sources */,
-				AD84DCA71C04300000C4CFFA /* GradientDescent.cpp in Sources */,
 				AD84DC8A1C04300000C4CFFA /* DiscreteModel.cpp in Sources */,
 				AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DC991C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				AD84DC841C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
-				AD84DCB51C04300100C4CFFA /* RandomDistributor.cpp in Sources */,
 				AD84DC961C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
 				AD84DC871C04300000C4CFFA /* DataPrinter.cpp in Sources */,
 				AD84DC4E1C04300000C4CFFA /* cpng.cpp in Sources */,
