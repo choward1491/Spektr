@@ -48,6 +48,8 @@ namespace opt {
         }
         
         
+    protected:
+        
         void init_(){
             swarm.setFunc( &func );
             swarm.initialize();
@@ -68,6 +70,7 @@ namespace opt {
         
         
     private:
+        template<class T> friend class optimizer;
         Function func;
         
         int numIter;
