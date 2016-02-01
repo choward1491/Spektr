@@ -93,7 +93,7 @@ namespace la {
         }
         
         template<MatType S>
-        Matrix<T,S> & operator=( const Matrix<T,Type> & m ){
+        Matrix<T,Type> & operator=( const Matrix<T,S> & m ){
             if( this != & m ){
                 
                 if( !(data.size() == m.size()) ){
