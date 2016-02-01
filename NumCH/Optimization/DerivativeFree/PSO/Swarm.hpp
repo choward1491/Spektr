@@ -60,8 +60,8 @@ namespace opt {
         std::vector<vec> set;
         init(set,lb,ub,(int)particles.size());
         for (int i = 0; i < particles.size(); i++) {
-            particles[i].setNumDimensions(lb.size());
-            for (int j = 0; j < set[i].size(); j++) {
+            particles[i].setNumDimensions(lb.size().cols);
+            for (int j = 0; j < set[i].size().rows; j++) {
                 particles[i].pose[j] = set[i][j];
                 particles[i].pbest[j] = set[i][j];
             }
@@ -89,7 +89,7 @@ namespace opt {
             
             if( cost < particles[i].cbest ){
                 particles[i].cbest = cost;
-                for (int j = 0; j < particles[i].pose.size(); j++) {
+                for (int j = 0; j < particles[i].pose.size().cols; j++) {
                     particles[i].pbest[j] = particles[i].pose[j];
                 }
             }
@@ -110,7 +110,7 @@ namespace opt {
             if( gbest != &particles[i].pbest ){
                 particles[i].update();
             }else{
-                for (int j = 0; j < particles[i].pose.size(); j++) {
+                for (int j = 0; j < particles[i].pose.size().cols; j++) {
                     s = rng.rand();
                     particles[i].pose[j] += 1e-4*(lb[j]*s + ub[j]*(1-s));
                 }

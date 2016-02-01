@@ -11,12 +11,13 @@
 
 #include <vector>
 #include "RandomNumberGenerator.hpp"
+#include "Matrix.hpp"
 
 namespace opt {
     
     class RandomInit {
     private:
-        typedef std::vector<double> vec;
+        typedef la::Matrix<double, General> vec;
     public:
         void operator()( std::vector<vec> & set, const vec & lb, const vec & rb, int size );
     };

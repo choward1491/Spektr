@@ -18,7 +18,7 @@ void RandomInit::operator()( std::vector<RandomInit::vec> & set,
     double s = 0;
     for (int i = 0; i < size; i++) {
         if( set[i].size() != lb.size() ){ set[i].resize( lb.size() ); }
-        for (int j = 0; j < set[i].size(); j++) {
+        for (int j = 0; j < set[i].size().cols; j++) {
             s = rng.rand();
             set[i][j] = lb[j]*s + rb[j]*(1-s);
         }

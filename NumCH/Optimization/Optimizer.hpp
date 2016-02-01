@@ -11,10 +11,10 @@
 
 #include <vector>
 #include <stdio.h>
+#include "Matrix.hpp"
 
 
 namespace opt {
-    typedef std::vector<double> vec;
 
     #define ops static_cast<Specific*>(this)
 

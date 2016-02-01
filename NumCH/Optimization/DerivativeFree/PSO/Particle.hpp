@@ -14,6 +14,7 @@
 
 namespace opt {
     
+    typedef la::Matrix<double, General> vec;
     
     struct particle {
         vec pose;       // position
@@ -29,15 +30,15 @@ namespace opt {
         particle():lstep(0),gstep(0),gbest(0),cbest(1e10){}
         
         void setNumDimensions( int ndim ){
-            if( pose.size()  != ndim ){ pose.resize(ndim); }
-            if( vel .size()  != ndim ){ vel.resize(ndim); }
-            if( pbest.size() != ndim ){ pbest.resize(ndim); }
+            if( pose.size().rows  != ndim ){ pose.resize(ndim,1); }
+            if( vel .size().rows  != ndim ){ vel.resize(ndim,1); }
+            if( pbest.size().rows != ndim ){ pbest.resize(ndim,1); }
         }
         
         void update(){
-            for(int i = 0; i < pose.size(); i++ ){
-                vel[i]  += ( (*lstep)*( pbest[i] - pose[i] ) + (*gstep)*( (*gbest)[i] - pose[i] ) );
-                pose[i] += vel[i];
+            for(int i = 0; i < pose.size().rows; i++ ){
+                vel(i)  += ( (*lstep)*( pbest - pose ) + (*gstep)*( (*gbest) - pose ) )(i,0);
+                pose(i) += vel(i);
             }
         }
         

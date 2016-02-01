@@ -9,8 +9,7 @@
 #ifndef LinearAlgebra_h
 #define LinearAlgebra_h
 
-//#include "Vect.hpp"
-//#include "Matrix.h"
+#include "Matrix.hpp"
 
 
 #endif /* LinearAlgebra_h */

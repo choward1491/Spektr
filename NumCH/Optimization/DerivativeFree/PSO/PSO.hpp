@@ -15,7 +15,7 @@
 
 namespace opt {
     
-    
+    typedef la::Matrix<double, General> vec;
     
     template< class Function, class Initializer>
     class pso : public optimizer<pso<Function,Initializer> > {
