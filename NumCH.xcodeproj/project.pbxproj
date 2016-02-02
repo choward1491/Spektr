@@ -251,6 +251,13 @@
 		ADBF6B0C1C5F2A81006B1222 /* MatSumExpr.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MatSumExpr.hpp; path = MatExpressions/MatSumExpr.hpp; sourceTree = "<group>"; };
 		ADBF6B0D1C5F2A8E006B1222 /* MatHashes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MatHashes.cpp; path = MatHashes/MatHashes.cpp; sourceTree = "<group>"; };
 		ADBF6B0E1C5F2A8E006B1222 /* MatHashes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = MatHashes.hpp; path = MatHashes/MatHashes.hpp; sourceTree = "<group>"; };
+		ADBF6B181C6089CB006B1222 /* Special_Diag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Diag.hpp; sourceTree = "<group>"; };
+		ADBF6B191C6089CB006B1222 /* Special_General.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_General.hpp; sourceTree = "<group>"; };
+		ADBF6B1A1C6089CB006B1222 /* Special_Lower.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Lower.hpp; sourceTree = "<group>"; };
+		ADBF6B1B1C6089CB006B1222 /* Special_Sparse.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Sparse.hpp; sourceTree = "<group>"; };
+		ADBF6B1C1C6089CB006B1222 /* Special_Symmetric.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Symmetric.hpp; sourceTree = "<group>"; };
+		ADBF6B1D1C6089CB006B1222 /* Special_Tridiag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Tridiag.hpp; sourceTree = "<group>"; };
+		ADBF6B1E1C6089CB006B1222 /* Special_Upper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Upper.hpp; sourceTree = "<group>"; };
 		ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteDifference.cpp; sourceTree = "<group>"; };
 		ADCE7B511C38DD4C00296D10 /* FiniteDifference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteDifference.hpp; sourceTree = "<group>"; };
 		ADCE7B531C38DFD100296D10 /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
@@ -657,6 +664,13 @@
 		ADBF6AE61C5D7B04006B1222 /* Matrix */ = {
 			isa = PBXGroup;
 			children = (
+				ADBF6B181C6089CB006B1222 /* Special_Diag.hpp */,
+				ADBF6B191C6089CB006B1222 /* Special_General.hpp */,
+				ADBF6B1A1C6089CB006B1222 /* Special_Lower.hpp */,
+				ADBF6B1B1C6089CB006B1222 /* Special_Sparse.hpp */,
+				ADBF6B1C1C6089CB006B1222 /* Special_Symmetric.hpp */,
+				ADBF6B1D1C6089CB006B1222 /* Special_Tridiag.hpp */,
+				ADBF6B1E1C6089CB006B1222 /* Special_Upper.hpp */,
 				ADBF6AFF1C5F2A73006B1222 /* Dims.hpp */,
 				ADBF6B001C5F2A73006B1222 /* Matrix.cpp */,
 				ADBF6B011C5F2A73006B1222 /* Matrix.hpp */,

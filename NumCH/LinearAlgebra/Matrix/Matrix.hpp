@@ -18,11 +18,14 @@
 namespace la {
     
     
-    template<typename T , MatType Type , class Storage = MatStorage<T,Type> >
+    template<typename T , class Type, MatType MT = MType<T,Type>::Type, class Storage = MatStorage<T,MT> >
     class Matrix : public MatExpression<T, Matrix<T,Type> >{
+    
+    /*
+    template<typename T , MatType Type, class Storage = MatStorage<T,Type> >
+    class Matrix : public MatExpression<T, Matrix<T,Type> >{*/
     public:
-        static const enum MatType type = Type;
-        
+        //static MatType Type;
         
         Matrix():data(){}
         Matrix(int numr, int numc, T dval = T() ):data(numr,numc,dval){}
@@ -38,6 +41,8 @@ namespace la {
                 }
             }
         }
+        
+        
         
         void resize( int numr, int numc ){ data.resize(numr,numc); }
         void resize( Dims & d ){ data.resize(d.rows,d.cols); }
@@ -60,8 +65,9 @@ namespace la {
         bool isSquare() const { return data.size().rows == data.size().cols; }
         
         
-        template<MatType S>
-        void convertTo( Matrix<T,S> & m ) const{
+        //template<MatType C>
+        template<class C>
+        void convertTo( Matrix<T,C> & m ) const{
             Dims dims = data.size();
             if( !( dims == m.size() ) ){ m.resize(dims.rows,dims.cols); }
             for (size_t ir=0; ir < dims.rows; ir++) {
@@ -92,8 +98,8 @@ namespace la {
             }
         }
         
-        template<MatType S>
-        Matrix<T,Type> & operator=( const Matrix<T,S> & m ){
+        
+        Matrix<T,Type> & operator=( const Matrix<T,Type> & m ){
             if( this != & m ){
                 
                 if( !(data.size() == m.size()) ){
@@ -110,6 +116,23 @@ namespace la {
             return *this;
         }
         
+        //template<MatType C>
+        template<class C>
+        Matrix<T,Type> & operator=( const Matrix<T,C> & m ){
+                
+            if( !(data.size() == m.size()) ){
+                resize(m.size().rows, m.size().cols);
+            }
+            
+            for (int i = 0; i < data.size().rows; i++) {
+                for (int j = 0; j < data.size().cols; j++ ){
+                    data(i,j) = m(i,j);
+                }
+            }
+            
+            return *this;
+        }
+        
         
     private:
         Storage data;
@@ -118,5 +141,18 @@ namespace la {
     
     
 }
+
+
+
+
+#include "Special_General.hpp"
+#include "Special_Lower.hpp"
+#include "Special_Upper.hpp"
+#include "Special_Diag.hpp"
+#include "Special_Tridiag.hpp"
+#include "Special_Sparse.hpp"
+#include "Special_Symmetric.hpp"
+
+
 
 #endif /* Matrix_hpp */

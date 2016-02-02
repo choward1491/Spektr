@@ -14,8 +14,10 @@
 
 namespace la {
 
-template<class T, MatType Type>
-void cholesky( const Matrix<T,Type> & m, Matrix<T,Lower> & L ){
+
+//template<class T, MatType C>
+template<class T, class C>
+void cholesky( const Matrix<T,C> & m, LMat<T> & L ){
     if( !m.isSquare() ){
         printf("Error: Input matrix not square.\n");
         return;
@@ -54,10 +56,11 @@ void cholesky( const Matrix<T,Type> & m, Matrix<T,Lower> & L ){
 }
 
 
-template<class T, MatType Type>
-Matrix<T,Lower> cholesky( const Matrix<T,Type> & m ){
-    Matrix<T,Lower> L(m.size());
-    cholesky<T,Type>( m, L);
+//template<class T, MatType C>
+template<class T, class C>
+LMat<T> cholesky( const Matrix<T,C> & m ){
+    LMat<T> L(m.size());
+    cholesky<T,C>( m, L);
     return L;
 }
 

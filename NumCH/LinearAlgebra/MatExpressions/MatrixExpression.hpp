@@ -23,8 +23,7 @@ public:
     const T & operator()(int r, int c) const { return static_cast<E const&>(*this)(r,c);     }
     Dims size()               const { return static_cast<E const&>(*this).size(); }
     
-    // The following overload conversions to E, the template argument type;
-    // e.g., for VecExpression<VecSum>, this is a conversion to VecSum.
+    
     operator E&()             { return static_cast<      E&>(*this); }
     operator E const&() const { return static_cast<const E&>(*this); }
 };

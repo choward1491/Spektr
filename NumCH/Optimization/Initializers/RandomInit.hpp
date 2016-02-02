@@ -17,7 +17,7 @@ namespace opt {
     
     class RandomInit {
     private:
-        typedef la::Matrix<double, General> vec;
+        typedef la::Mat<double> vec;
     public:
         void operator()( std::vector<vec> & set, const vec & lb, const vec & rb, int size );
     };

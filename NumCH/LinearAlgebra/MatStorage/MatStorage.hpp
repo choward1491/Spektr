@@ -15,6 +15,9 @@
 #include "MatHashes.hpp"
 #include "Dims.hpp"
 
+//namespace la {
+
+
 template< typename T, MatType Type, class Hash = Hasher<Type>  >
 class MatStorage {
 public:
@@ -144,6 +147,8 @@ private:
 };
 
 
+    
+//}
 
 
 #endif /* MatHashes_h */

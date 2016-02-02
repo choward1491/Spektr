@@ -13,8 +13,9 @@
 
 namespace la {
 
-template<class T, MatType Type>
-void LDL( const Matrix<T,Type> & m, Matrix<T,Lower> & L, Matrix<T,Diagonal> & D ){
+//template<class T, MatType C>
+template<class T, class C>
+void LDL( const Matrix<T,C> & m, LMat<T> & L, DMat<double> & D ){
     
     if( !m.isSquare() ){
         printf("Error: Input matrix not square.\n");

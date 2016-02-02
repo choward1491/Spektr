@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include "MatTypes.hpp"
 
+//namespace la {
+
 template< MatType T >
 class Hasher {
 public:
@@ -25,6 +27,7 @@ public:
 };
 
 
+//}
 
 
 

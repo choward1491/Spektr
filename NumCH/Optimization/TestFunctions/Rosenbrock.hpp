@@ -14,7 +14,7 @@
 
 namespace opt {
     
-    typedef la::Matrix<double, General> vec;
+    typedef la::Mat<double> vec;
     
     class Rosenbrock {
         

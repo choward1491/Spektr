@@ -8,6 +8,9 @@
 
 #include "MatHashes.hpp"
 
+
+//namespace la {
+
 // template specialization for diagonal matrix
 template<>
 size_t Hasher<MatType::Diagonal>::hash(int i, int j, int nc, int nt){
@@ -98,5 +101,8 @@ template<>
 size_t Hasher<MatType::Sparse>::netSize(int r, int c){
     return 0;
 }
+    
+    
+//}
 
 
