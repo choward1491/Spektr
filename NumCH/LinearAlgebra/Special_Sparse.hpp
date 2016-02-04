@@ -22,14 +22,20 @@ namespace la {
         SpMat(Dims dims, T dval = T() ):Matrix<T,SpMat<T>>(dims,dval){}
         ~SpMat(){}
         
-        /*template<class S>
-        SpMat<T> & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,SpMat<T>>::operator=(m);
+        SpMat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
         
-        SpMat<T> & operator=( const SpMat & m ){
-            return Matrix<T,SpMat<T>>::operator=(m);
-        }*/
+        SpMat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        SpMat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         template <typename E>
         SpMat( MatExpression<T,E> const& mat):Matrix<T,SpMat<T>>(mat){}

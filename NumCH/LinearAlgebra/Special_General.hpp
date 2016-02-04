@@ -23,15 +23,21 @@ namespace la {
         ~Mat(){}
         
         
-        /*template<class S>
-        Mat<T> & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,Mat<T>>::operator=(m);
-        }*/
-        
-       /* Mat<T> & operator=( const Mat & m ){
-            return Matrix<T,Mat<T>>::operator=(m);
+
+        Mat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
-        */
+        
+        Mat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        Mat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         
         template <typename E>

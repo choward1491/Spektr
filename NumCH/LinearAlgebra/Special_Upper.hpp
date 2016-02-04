@@ -22,14 +22,20 @@ namespace la {
         UMat(Dims dims, T dval = T() ):Matrix<T,UMat<T>>(dims,dval){}
         ~UMat(){}
         
-        /*template<class S>
-        UMat<T> & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,UMat<T>>::operator=(m);
+        UMat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
         
-        UMat<T> & operator=( const UMat & m ){
-            return Matrix<T,UMat<T>>::operator=(m);
-        }*/
+        UMat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        UMat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         template <typename E>
         UMat( MatExpression<T,E> const& mat):Matrix<T,UMat<T>>(mat){}

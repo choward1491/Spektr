@@ -22,15 +22,20 @@ namespace la {
         DMat(Dims dims, T dval = T() ):Matrix<T,DMat<T>>(dims,dval){}
         ~DMat(){}
         
-        /*
-        template<class S>
-        DMat & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,DMat<T>>::operator=(m);
+        DMat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
         
-        DMat & operator=( const DMat & m ){
-            return Matrix<T,DMat<T>>::operator=(m);
-        }*/
+        DMat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        DMat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         template <typename E>
         DMat( MatExpression<T,E> const& mat):Matrix<T,DMat<T>>(mat){}

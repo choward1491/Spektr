@@ -21,8 +21,8 @@ public:
         assert(u.size() == v.size());
     }
     
-    const T & operator()(int r, int c)  const { return _u(r,c) - _v(r,c); }
-    Dims size()                         const { return _v.size(); }
+    const T & operator()(int r, int c) const { return _u(r,c) - _v(r,c); }
+    Dims size()               const { return _v.size(); }
 };
 
 
@@ -31,5 +31,7 @@ MatMinus<T,E1,E2> const
 operator-(MatExpression<T, E1> const& u, MatExpression<T, E2> const& v) {
     return MatMinus<T, E1, E2>(u, v);
 }
+
+
 
 #endif /* MatMinusExpr_h */

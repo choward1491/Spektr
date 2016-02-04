@@ -23,14 +23,20 @@ namespace la {
         TDMat(Dims dims, T dval = T() ):Matrix<T,TDMat<T>>(dims,dval){}
         ~TDMat(){}
         
-        /*template<class S>
-        TDMat<T> & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,TDMat<T>>::operator=(m);
+        TDMat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
         
-        TDMat<T> & operator=( const TDMat & m ){
-            return Matrix<T,TDMat<T>>::operator=(m);
-        }*/
+        TDMat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        TDMat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         template <typename E>
         TDMat( MatExpression<T,E> const& mat):Matrix<T,TDMat<T>>(mat){}

@@ -26,14 +26,20 @@ namespace la {
         LMat( MatExpression<T,E> const& mat):Matrix<T,LMat<T>>(mat){}
         
         
-        /*template<class S>
-        LMat<T> & operator=( const Matrix<T,S> & m ){
-            return Matrix<T,LMat<T>>::operator=(m);
+        LMat & operator=( const double v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
         }
         
-        LMat<T> & operator=( const LMat & m ){
-            return Matrix<T,LMat<T>>::operator=(m);
-        }*/
+        LMat & operator=( const int v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
+        
+        LMat & operator=( const float v ){
+            for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
+            return *this;
+        }
         
         
         template<class C>

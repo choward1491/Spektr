@@ -20,12 +20,7 @@ namespace la {
     
     template<typename T , class Type, MatType MT = MType<T,Type>::Type, class Storage = MatStorage<T,MT> >
     class Matrix : public MatExpression<T, Matrix<T,Type> >{
-    
-    /*
-    template<typename T , MatType Type, class Storage = MatStorage<T,Type> >
-    class Matrix : public MatExpression<T, Matrix<T,Type> >{*/
     public:
-        //static MatType Type;
         
         Matrix():data(){}
         Matrix(int numr, int numc, T dval = T() ):data(numr,numc,dval){}
@@ -45,7 +40,6 @@ namespace la {
         
         
         void resize( int numr, int numc ){ data.resize(numr,numc); }
-        void resize( Dims & d ){ data.resize(d.rows,d.cols); }
         void resize( Dims d ){ data.resize(d.rows,d.cols); }
         
         
@@ -62,6 +56,7 @@ namespace la {
         
         
         Dims size() const{return data.size();}
+        size_t total() const { return data.total(); }
         bool isSquare() const { return data.size().rows == data.size().cols; }
         
         
@@ -92,13 +87,6 @@ namespace la {
         }
         
         
-        void operator=( const T & val ){
-            for (int i = 0; i < data.total(); i++) {
-                data(i) = val;
-            }
-        }
-        
-        
         Matrix<T,Type> & operator=( const Matrix<T,Type> & m ){
             if( this != & m ){
                 
@@ -118,7 +106,7 @@ namespace la {
         
         //template<MatType C>
         template<class C>
-        Matrix<T,Type> & operator=( const Matrix<T,C> & m ){
+        Matrix<T,Type> & operator=( const MatExpression<T,C> & m ){
                 
             if( !(data.size() == m.size()) ){
                 resize(m.size().rows, m.size().cols);
@@ -134,13 +122,27 @@ namespace la {
         }
         
         
+        
     private:
         Storage data;
         
     };
     
     
+    /*
+        template<typename T, class Type, typename S>
+        void operator=( Matrix<T,Type> & m, const S & val ){
+            for (int i = 0; i < m.total(); i++) {
+                m(i) = static_cast<T>(val);
+            }
+        }
+    */
+    
+    
 }
+
+
+
 
 
 
