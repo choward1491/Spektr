@@ -29,24 +29,27 @@ int main(int argc, const char * argv[]) {
     
     Timer timer;
     RandomNumberGenerator rng;
-    
     timer.start();
     
-    LMat A(3,3,1);
-    for (int i = 0; i < 3; i++) {
-        for (int j = 0; j < 3; j++) {
-            A(i,j) = 40*rng.rand();
-        }
-    }
     
-    Diag I(3,3,1);
-    Mat Ainv(3,3);
-    la::solve(A, A, Ainv);
+    Sym A(3,3,2.0);
+    A(0,0) = 1; A(0,1) = 7; A(0,2) = 3;
+    A(1,1) = 4; A(1,2) = -5;
+    A(2,2) = 6;
+    Mat b(3,1,4);
+    b(0) = -1; b(2) = 11;
+    Mat x(3,1);
     
     A.print();
-    Ainv.print();
-    Mat I2 = A*Ainv;
-    I2.print();
+    solve(A,b,x);
+    
+    
+    x.print();
+    b.print();
+    
+    Mat c = A*x;
+    c.print();
+    
     
     
     /*

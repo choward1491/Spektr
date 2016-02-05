@@ -22,23 +22,39 @@ template< typename T, MatType Type, class Hash = Hasher<Type>  >
 class MatStorage {
 public:
     
-    MatStorage():table(0),nt(0),dims(0,0),dummy(T()){}
-    MatStorage(int r, int c, T dval):nt(Hash::netSize(r,c)),table(nt,dval),dims(r,c),dummy(T()){}
-    MatStorage(Dims d, T dval):nt(Hash::netSize(d.rows,d.cols)),table(nt,dval),dims(d),dummy(T()){}
+    MatStorage():table(0),nt(0),dims(0,0),dummy(T()),isT(false){}
+    MatStorage(int r, int c, T dval):nt(Hash::netSize(r,c)),
+                                     table(nt,dval),dims(r,c),dummy(T()),isT(false){}
+    MatStorage(Dims d, T dval):nt(Hash::netSize(d.rows,d.cols)),
+                               table(nt,dval),dims(d),dummy(T()),isT(false){}
     
     void resize(int r, int c){
         nt = r*c;
         dims = Dims(r,c);
         table.resize(nt);
+        isT = false;
     }
     
+    void transpose(){ isT = !isT; }
+    bool isTransposed() const { return isT; }
+    
     T & operator()(int r, int c){
-        size_t k = Hash::hash(r,c,dims.cols,nt);
+        size_t k = 0;
+        if( isT ){
+            k = Hash::hash(c,r,dims.cols,nt);
+        }else{
+            k = Hash::hash(r,c,dims.cols,nt);
+        }
         if( k < nt ){ return table[k]; }
         else{ dummy = cdummy; return dummy; }
     }
     const T & operator()(int r, int c) const{
-        size_t k = Hash::hash(r,c,dims.cols,nt);
+        size_t k = 0;
+        if( isT ){
+            k = Hash::hash(c,r,dims.cols,nt);
+        }else{
+            k = Hash::hash(r,c,dims.cols,nt);
+        }
         if( k < nt ){ return table[k]; }
         else{ return cdummy; }
     }
@@ -60,6 +76,7 @@ private:
     Dims dims;
     int nt;
     T dummy;
+    bool isT;
     const T cdummy = T();
     std::vector<T> table;
 };
@@ -75,17 +92,26 @@ template< typename T>
 class MatStorage<T,MatType::Sparse,Hasher<MatType::Sparse>> {
 public:
     typedef Hasher<MatType::Sparse> Hash;
-    MatStorage():table(),nt(0),dims(0,0),dummy(T()){}
-    MatStorage(int r, int c, T dval):nt(0),table(),dims(r,c),dummy(T()){}
-    MatStorage(Dims d, T dval):nt(0),table(),dims(d),dummy(T()){}
+    MatStorage():table(),nt(0),dims(0,0),dummy(T()),isT(false){}
+    MatStorage(int r, int c, T dval):nt(0),table(),dims(r,c),dummy(T()),isT(false){}
+    MatStorage(Dims d, T dval):nt(0),table(),dims(d),dummy(T()),isT(false){}
     
     void resize(int r, int c){
         nt = 0;
         dims = Dims(r,c);
         table = std::map<int,std::map<int,T>>();
+        isT = false;
     }
     
+    void transpose(){ isT = !isT; }
+    bool isTransposed() const { return isT; }
+    
     T & operator()(int r, int c){
+        if( isT ){
+            int tmp = c;
+            c = r;
+            r = tmp;
+        }
         it1 row = table.find(r);
         if( row != table.end() ){
             it2 col = row->second.find(c);
@@ -103,6 +129,11 @@ public:
         dummy = cdummy; return dummy;
     }
     const T & operator()(int r, int c) const{
+        if( isT ){
+            int tmp = c;
+            c = r;
+            r = tmp;
+        }
         cit1 row = table.find(r);
         if( row != table.end() ){
             cit2 col = row->second.find(c);
@@ -114,12 +145,20 @@ public:
     }
     T & operator()(int k){
         int r,c;
-        getRowAndColumn(k, r, c);
+        if( isT ){
+            getRowAndColumn(k, c, r);
+        }else{
+            getRowAndColumn(k, r, c);
+        }
         return this->operator()(r,c);
     }
     const T & operator()(int k) const{
         int r,c;
-        getRowAndColumn(k, r, c);
+        if( isT ){
+            getRowAndColumn(k, c, r);
+        }else{
+            getRowAndColumn(k, r, c);
+        }
         return this->operator()(r,c);
     }
     
@@ -137,7 +176,7 @@ private:
     int nt;
     T dummy;
     const T cdummy = T();
-    
+    bool isT;
     void getRowAndColumn(int k, int & r, int & c ){
         r = k/dims.cols;
         c = k-r*dims.cols;

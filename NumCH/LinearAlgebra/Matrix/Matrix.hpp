@@ -18,17 +18,25 @@
 namespace la {
     
     
-    template<typename T , class Type, MatType MT = MType<T,Type>::Type, class Storage = MatStorage<T,MT> >
-    class Matrix : public MatExpression<T, Matrix<T,Type> >{
+    template<typename S , class Type, MatType MT = MType<S,Type>::Type, class Storage = MatStorage<S,MT> >
+    class Matrix : public MatExpression<S, Matrix<S,Type> >{
     public:
         
         Matrix():data(){}
-        Matrix(int numr, int numc, T dval = T() ):data(numr,numc,dval){}
-        Matrix(Dims dims, T dval = T() ):data(dims,dval){}
+        Matrix(int numr, int numc, S dval = S() ):data(numr,numc,dval){}
+        Matrix(Dims dims, S dval = S() ):data(dims,dval){}
         ~Matrix(){}
         
+        void T(){
+            data.transpose();
+        }
+        
+        bool isTransposed() const {
+            return data.isTransposed();
+        }
+        
         template <typename E>
-        Matrix( MatExpression<T,E> const& mat) : data(mat.size().rows,mat.size().cols,0.0) {
+        Matrix( MatExpression<S,E> const& mat) : data(mat.size().rows,mat.size().cols,0.0) {
             Dims dims = data.size();
             for (size_t ir = 0; ir < dims.rows; ir++) {
                 for (size_t ic=0; ic < dims.cols; ic++) {
@@ -43,14 +51,14 @@ namespace la {
         void resize( Dims d ){ data.resize(d.rows,d.cols); }
         
         
-        T & operator()(int r, int c){return data(r,c);}
-        const T & operator()(int r, int c) const{return data(r,c);}
+        S & operator()(int r, int c){return data(r,c);}
+        const S & operator()(int r, int c) const{return data(r,c);}
         
-        T & operator()(int k){return data(k);}
-        const T & operator()(int k) const{return data(k);}
+        S & operator()(int k){return data(k);}
+        const S & operator()(int k) const{return data(k);}
         
-        T & operator[](int k){return data(k);}
-        const T & operator[](int k) const{return data(k);}
+        S & operator[](int k){return data(k);}
+        const S & operator[](int k) const{return data(k);}
         
         
         
@@ -62,7 +70,7 @@ namespace la {
         
         //template<MatType C>
         template<class C>
-        void convertTo( Matrix<T,C> & m ) const{
+        void convertTo( Matrix<S,C> & m ) const{
             Dims dims = data.size();
             if( !( dims == m.size() ) ){ m.resize(dims.rows,dims.cols); }
             for (size_t ir=0; ir < dims.rows; ir++) {
@@ -87,7 +95,7 @@ namespace la {
         }
         
         
-        Matrix<T,Type> & operator=( const Matrix<T,Type> & m ){
+        Matrix<S,Type> & operator=( const Matrix<S,Type> & m ){
             if( this != & m ){
                 
                 if( !(data.size() == m.size()) ){
@@ -106,7 +114,7 @@ namespace la {
         
         //template<MatType C>
         template<class C>
-        Matrix<T,Type> & operator=( const MatExpression<T,C> & m ){
+        Matrix<S,Type> & operator=( const MatExpression<S,C> & m ){
                 
             if( !(data.size() == m.size()) ){
                 resize(m.size().rows, m.size().cols);
@@ -130,10 +138,10 @@ namespace la {
     
     
     /*
-        template<typename T, class Type, typename S>
-        void operator=( Matrix<T,Type> & m, const S & val ){
+        template<typename S, class Type, typename S>
+        void operator=( Matrix<S,Type> & m, const S & val ){
             for (int i = 0; i < m.total(); i++) {
-                m(i) = static_cast<T>(val);
+                m(i) = static_cast<S>(val);
             }
         }
     */
