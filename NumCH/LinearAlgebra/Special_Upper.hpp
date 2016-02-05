@@ -10,6 +10,7 @@
 #define Special_Upper_h
 
 #include "Matrix.hpp"
+#include "UpperSolver.hpp"
 
 namespace la {
     
@@ -39,6 +40,8 @@ namespace la {
         
         template <typename E>
         UMat( MatExpression<T,E> const& mat):Matrix<T,UMat<T>>(mat){}
+        
+        
         
     };
 }

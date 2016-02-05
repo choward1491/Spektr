@@ -10,6 +10,7 @@
 #define Special_Symmetric_h
 
 #include "Matrix.hpp"
+#include "SymmetricSolver.hpp"
 
 namespace la {
     
@@ -36,6 +37,7 @@ namespace la {
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
+        
         
         template <typename E>
         SMat( MatExpression<T,E> const& mat):Matrix<T,SMat<T>>(mat){}

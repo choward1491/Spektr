@@ -259,6 +259,11 @@
 		ADBF6B1D1C6089CB006B1222 /* Special_Tridiag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Tridiag.hpp; sourceTree = "<group>"; };
 		ADBF6B1E1C6089CB006B1222 /* Special_Upper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Upper.hpp; sourceTree = "<group>"; };
 		ADBF6B1F1C61D735006B1222 /* ScalarTypes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		ADBF6B221C646733006B1222 /* ConjGrad.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConjGrad.hpp; sourceTree = "<group>"; };
+		ADBF6B231C646757006B1222 /* LowerSolver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LowerSolver.hpp; sourceTree = "<group>"; };
+		ADBF6B241C6469FB006B1222 /* UpperSolver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UpperSolver.hpp; sourceTree = "<group>"; };
+		ADBF6B251C646A4C006B1222 /* DiagonalSolver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DiagonalSolver.hpp; sourceTree = "<group>"; };
+		ADBF6B271C646AC6006B1222 /* SymmetricSolver.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SymmetricSolver.hpp; sourceTree = "<group>"; };
 		ADCE7B501C38DD4C00296D10 /* FiniteDifference.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FiniteDifference.cpp; sourceTree = "<group>"; };
 		ADCE7B511C38DD4C00296D10 /* FiniteDifference.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FiniteDifference.hpp; sourceTree = "<group>"; };
 		ADCE7B531C38DFD100296D10 /* Element.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Element.cpp; sourceTree = "<group>"; };
@@ -695,6 +700,11 @@
 			isa = PBXGroup;
 			children = (
 				ADBF6AFB1C5F2A56006B1222 /* Solver.hpp */,
+				ADBF6B221C646733006B1222 /* ConjGrad.hpp */,
+				ADBF6B231C646757006B1222 /* LowerSolver.hpp */,
+				ADBF6B241C6469FB006B1222 /* UpperSolver.hpp */,
+				ADBF6B251C646A4C006B1222 /* DiagonalSolver.hpp */,
+				ADBF6B271C646AC6006B1222 /* SymmetricSolver.hpp */,
 			);
 			name = Solve;
 			sourceTree = "<group>";

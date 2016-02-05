@@ -10,8 +10,6 @@
 #include "RandomInit.hpp"
 #include "PSO.hpp"
 #include "Matrix.hpp"
-#include "Cholesky.hpp"
-#include "LDL.hpp"
 #include "Timer.hpp"
 #include "RandomNumberGenerator.hpp"
 #include "Solver.hpp"
@@ -36,20 +34,12 @@ int main(int argc, const char * argv[]) {
     A(0,0) = 1; A(0,1) = 7; A(0,2) = 3;
     A(1,1) = 4; A(1,2) = -5;
     A(2,2) = 6;
+    
     Mat b(3,1,4);
     b(0) = -1; b(2) = 11;
-    Mat x(3,1);
     
     A.print();
-    solve(A,b,x);
-    
-    
-    x.print();
     b.print();
-    
-    Mat c = A*x;
-    c.print();
-    
     
     
     /*

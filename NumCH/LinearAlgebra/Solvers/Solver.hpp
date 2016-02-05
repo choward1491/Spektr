@@ -9,8 +9,11 @@
 #ifndef Solver_h
 #define Solver_h
 
-#include <stdio.h>
-#include "Matrix.hpp"
+#include "LowerSolver.hpp"
+#include "UpperSolver.hpp"
+#include "DiagonalSolver.hpp"
+#include "SymmetricSolver.hpp"
+#include "ConjGrad.hpp"
 
 namespace la {
     
@@ -22,126 +25,51 @@ namespace la {
     template<class T> class DMat;
     template<class T> class SpMat;
     
-
-
-template<class T, class C, class O>
-void solve( const LMat<T> & A, const MatExpression<T,C> & b, Matrix<T,O> & x ){
-    assert(A.isSquare());
-    assert(A.size().cols == b.size().rows);
-    Dims dim = b.size();
-    if( x.size() != dim ){
-        x.resize(dim);
+    template<class T, class E>
+    Mat<T> operator/( const MatExpression<T, E> & b, const LMat<T> & A){
+        Mat<T> x;
+        conjgradSoln(A, b, x);
+        return x;
     }
     
-    T sum;
-    T zero = T();
-    
-    if( !A.isTransposed() ){
-        for (int k = 0; k < dim.cols; k++) {
-            for (int i = 0; i < dim.rows; i++) {
-                sum = zero;
-                for (int j = 0; j < i; j++) {
-                    sum += A(i,j)*x(j,k);
-                }
-                x(i,k) = (b(i,k)-sum)/A(i,i);
-            }
-        }
-    }else{
-        int tmp = 0;
-        for (int k = 0; k < dim.cols; k++) {
-            for (int i = (int)dim.rows-1; i >= 0; i--) {
-                sum = zero;
-                tmp = (int)dim.rows-1;
-                for (int j = tmp; j > i; j--) {
-                    sum += A(i,j)*x(j,k);
-                }
-                x(i,k) = (b(i,k)-sum)/A(i,i);
-            }
-        }
-    }
-}
-    
-    
-template<class T, class C, class O>
-void solve( const UMat<T> & A, const MatExpression<T,C> & b, Matrix<T,O> & x ){
-    assert(A.isSquare());
-    assert(A.size().cols == b.size().rows);
-    Dims dim = b.size();
-    if( x.size() != dim ){
-        x.resize(dim);
+    template<class T, class E>
+    Mat<T> operator/( const MatExpression<T, E> & b, const UMat<T> & A){
+        Mat<T> x;
+        solve(A, b, x);
+        return x;
     }
     
-    T sum;
-    T zero = T();
-    
-    if( A.isTransposed() ){
-        for (int k = 0; k < dim.cols; k++) {
-            for (int i = 0; i < dim.rows; i++) {
-                sum = zero;
-                for (int j = 0; j < i; j++) {
-                    sum += A(i,j)*x(j,k);
-                }
-                x(i,k) = (b(i,k)-sum)/A(i,i);
-            }
-        }
-    }else{
-        int tmp = 0;
-        for (int k = 0; k < dim.cols; k++) {
-            for (int i = (int)dim.rows-1; i >= 0; i--) {
-                sum = zero;
-                tmp = (int)dim.rows-1;
-                for (int j = tmp; j > i; j--) {
-                    sum += A(i,j)*x(j,k);
-                }
-                x(i,k) = (b(i,k)-sum)/A(i,i);
-            }
-        }
-    }
-}
-    
-    
-    
-template<class T, class C, class O>
-void solve( const DMat<T> & A, const MatExpression<T,C> & b, Matrix<T,O> & x ){
-    assert(A.isSquare());
-    assert(A.size().cols == b.size().rows);
-    Dims dim = b.size();
-    if( x.size() != dim ){
-        x.resize(dim);
+    template<class T, class E>
+    Mat<T> operator/( const MatExpression<T, E> & b, const DMat<T> & A){
+        Mat<T> x;
+        solve(A, b, x);
+        return x;
     }
     
-    T sum;
-    T zero = T();
-    
-    for (int k = 0; k < dim.cols; k++) {
-        for (int i = 0; i < dim.rows; i++) {
-            x(i,k) = b(i,k)/A(i,i);
-        }
-    }
-}
-    
-    
-#include "LDL.hpp"
-    
-template<class T, class C, class O>
-void solve( const SMat<T> & A, const MatExpression<T,C> & b, Matrix<T,O> & x ){
-    assert(A.isSquare());
-    assert(A.size().cols == b.size().rows);
-    Dims dim = b.size();
-    if( x.size() != dim ){
-        x.resize(dim);
+    template<class T, class E>
+    Mat<T> operator/( const MatExpression<T, E> & b, const SMat<T> & A){
+        Mat<T> x;
+        solve(A, b, x);
+        return x;
     }
     
-    LMat<T> L; DMat<T> D;
-    Mat<T> y(x),z(x);
-    LDL(A, L, D);
-    solve(L, b, y);
-    solve(D, y, y);
-    L.T();
-    solve(L, y, x);
+    template<class T, class E>
+    Mat<T> operator/( const MatExpression<T, E> & b, const Mat<T> & A){
+        Mat<T> x;
+        conjgradSoln(A, b, x);
+        return x;
+    }
+    
+    template<class T, class E>
+    SpMat<T> operator/( const MatExpression<T, E> & b, const SpMat<T> & A){
+        SpMat<T> x;
+        conjgradSoln(A, b, x);
+        return x;
+    }
+    
+    
+    
 }
 
-
-}
 
 #endif /* Solver_h */

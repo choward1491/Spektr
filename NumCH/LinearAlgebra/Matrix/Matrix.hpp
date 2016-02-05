@@ -47,6 +47,32 @@ namespace la {
         
         
         
+        S innerProduct( int col = 0 ){
+            S sum = S(), tmp;
+            for (int i = 0; i < data.size().rows; i++) {
+                tmp = data(i,col);
+                sum += tmp*tmp;
+            }
+            return sum;
+        }
+        
+        template <typename E>
+        S innerProduct( const MatExpression<S,E> & A, int col = 0 ){
+            Dims dim = data.size();
+            assert(A.size().rows == A.size().cols);
+            assert(A.size().cols == dim.rows);
+            
+            S sum = S();
+            for (int i = 0; i < dim.rows; i++) {
+                for (int j = 0; j < dim.rows; j++) {
+                    sum += (data(i,col)*data(j,col)*A(i,j));
+                }
+            }
+            
+            return sum;
+        }
+        
+        
         void resize( int numr, int numc ){ data.resize(numr,numc); }
         void resize( Dims d ){ data.resize(d.rows,d.cols); }
         

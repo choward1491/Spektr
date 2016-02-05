@@ -10,6 +10,7 @@
 #define Special_Diag_h
 
 #include "Matrix.hpp"
+#include "DiagonalSolver.hpp"
 
 namespace la {
     
@@ -36,6 +37,7 @@ namespace la {
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
+        
         
         template <typename E>
         DMat( MatExpression<T,E> const& mat):Matrix<T,DMat<T>>(mat){}

@@ -10,6 +10,7 @@
 #define Special_Lower_h
 
 #include "Matrix.hpp"
+#include "LowerSolver.hpp"
 
 namespace la {
     
@@ -40,6 +41,7 @@ namespace la {
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
+        
         
         
         template<class C>
