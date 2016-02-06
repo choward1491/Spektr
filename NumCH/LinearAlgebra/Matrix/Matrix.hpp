@@ -46,6 +46,24 @@ namespace la {
         }
         
         
+        template <typename E>
+        void setColumn( MatExpression<S,E> const& mat, int col = 0 ){
+            if( mat.size().rows == data.size().rows ){
+                for (int i = 0; i < data.size().rows; i++) {
+                    data(i,col) = mat(i,0);
+                }
+            }
+        }
+        
+        template <typename E>
+        void getColumn( Matrix<S,E> & mat, int col = 0 ){
+            if( mat.size().rows == data.size().rows ){
+                for (int i = 0; i < data.size().rows; i++) {
+                    mat(i,0) = data(i,col);
+                }
+            }
+        }
+        
         
         S innerProduct( int col = 0 ){
             S sum = S(), tmp;
@@ -113,7 +131,7 @@ namespace la {
                 printf("| ");
                 for (size_t ic=0; ic < dims.cols; ic++) {
                     if( ic != 0 ){ printf(", "); }
-                    printf("%6.3lf",(double)(*this)(ir,ic));
+                    printf("%6.6lf",(double)(*this)(ir,ic));
                 }
                 printf(" |\n");
             }

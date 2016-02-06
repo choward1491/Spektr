@@ -67,7 +67,7 @@ public:
         else{ return cdummy; }
     }
     
-    Dims size() const { return dims; }
+    Dims size() const { if( isT ){ return Dims(dims.cols,dims.rows); } else{ return dims; } }
     int total() const { return nt; }
     
     
@@ -162,7 +162,7 @@ public:
         return this->operator()(r,c);
     }
     
-    Dims size() const { return dims; }
+    Dims size() const { if( isT ){ return Dims(dims.cols,dims.rows); } else{ return dims; } }
     int total() const { return nt; }
     
     

@@ -1,13 +1,13 @@
 //
-//  DerivativeFree.hpp
+//  PSO.hpp
 //  NumCH
 //
 //  Created by Christian J Howard on 1/27/16.
 //  Copyright © 2016 Christian Howard. All rights reserved.
 //
 
-#ifndef DerivativeFree_h
-#define DerivativeFree_h
+#ifndef PSO_h
+#define PSO_h
 
 #include "Optimizer.hpp"
 #include "Swarm.hpp"
