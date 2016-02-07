@@ -13,7 +13,10 @@
 #include "MatrixExpression.hpp"
 
 
-
+/*!
+ * This is a class representing multiplication
+ * of matrix expressions
+ */
 template <typename T, typename E1, typename E2>
 class MatMult : public MatExpression<T, MatMult<T, E1,E2> > {
     E1 const& _u;

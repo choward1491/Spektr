@@ -6,15 +6,9 @@
 //  Copyright © 2015 Christian Howard. All rights reserved.
 //
 
-#include "Rosenbrock.hpp"
-#include "RandomInit.hpp"
-#include "PSO.hpp"
 #include "Matrix.hpp"
 #include "Timer.hpp"
 #include "RandomNumberGenerator.hpp"
-#include "Solver.hpp"
-
-typedef opt::pso<opt::Rosenbrock, opt::RandomInit> PSO;
 
 typedef la::SMat<double>    Sym;
 typedef la::Mat<double>     Mat;
@@ -39,12 +33,6 @@ int main(int argc, const char * argv[]) {
     
     timer.stop();
     printf("Time was %lf\n",timer.getDuration());
-    
-    
-    
-    
-    
-    
     
     
     return 0;

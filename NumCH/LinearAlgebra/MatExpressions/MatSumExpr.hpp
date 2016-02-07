@@ -11,6 +11,12 @@
 
 #include "MatrixExpression.hpp"
 
+
+/*!
+ * This is a class representing the addition
+ * of matrix expressions. 
+ *
+ */
 template <typename T, typename E1, typename E2>
 class MatSum : public MatExpression<T, MatSum<T, E1, E2> > {
     E1 const& _u;

@@ -11,6 +11,10 @@
 
 #include "MatrixExpression.hpp"
 
+/*!
+ * This is a class representing subtraction
+ * of matrix expressions
+ */
 template <typename T, typename E1, typename E2>
 class MatMinus : public MatExpression<T, MatMinus<T, E1, E2> > {
     E1 const& _u;

@@ -11,6 +11,15 @@
 
 #include "MatrixExpression.hpp"
 
+
+
+/*!
+ * This is a class representing the multiplication
+ * of scalars with matrices. This is built to handle
+ * using different types of numbers, ints, floats, doubles,
+ * and having their use still work even if the matrix
+ * uses doubles
+ */
 template <typename T, typename E1,typename S>
 class MatScalarMult : public MatExpression<T, MatScalarMult<T, E1, S> > {
     E1 const& _u;

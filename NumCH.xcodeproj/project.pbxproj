@@ -81,9 +81,6 @@
 		AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC1E1C042FFF00C4CFFA /* ExplicitTrapezoidal.cpp */; };
 		AD84DC931C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC1E1C042FFF00C4CFFA /* ExplicitTrapezoidal.cpp */; };
 		AD84DC941C04300000C4CFFA /* ExplicitTrapezoidal.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC1F1C042FFF00C4CFFA /* ExplicitTrapezoidal.hpp */; };
-		AD84DC951C04300000C4CFFA /* GenIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC201C042FFF00C4CFFA /* GenIntegrator.cpp */; };
-		AD84DC961C04300000C4CFFA /* GenIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC201C042FFF00C4CFFA /* GenIntegrator.cpp */; };
-		AD84DC971C04300000C4CFFA /* GenIntegrator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC211C042FFF00C4CFFA /* GenIntegrator.hpp */; };
 		AD84DC981C04300000C4CFFA /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */; };
 		AD84DC991C04300000C4CFFA /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */; };
 		AD84DC9A1C04300000C4CFFA /* RungeKutta4.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD84DC231C042FFF00C4CFFA /* RungeKutta4.hpp */; };
@@ -210,8 +207,6 @@
 		AD84DC1D1C042FFF00C4CFFA /* ExplicitEuler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitEuler.hpp; sourceTree = "<group>"; };
 		AD84DC1E1C042FFF00C4CFFA /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
 		AD84DC1F1C042FFF00C4CFFA /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
-		AD84DC201C042FFF00C4CFFA /* GenIntegrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GenIntegrator.cpp; sourceTree = "<group>"; };
-		AD84DC211C042FFF00C4CFFA /* GenIntegrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GenIntegrator.hpp; sourceTree = "<group>"; };
 		AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RungeKutta4.cpp; sourceTree = "<group>"; };
 		AD84DC231C042FFF00C4CFFA /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RungeKutta4.hpp; sourceTree = "<group>"; };
 		AD84DC241C042FFF00C4CFFA /* ODESim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODESim.h; sourceTree = "<group>"; };
@@ -404,12 +399,12 @@
 				AD84DBEE1C042FFF00C4CFFA /* LinearAlgebra */,
 				AD84DBF41C042FFF00C4CFFA /* MachineLearning */,
 				AD84DC031C042FFF00C4CFFA /* Numbers */,
-				AD84DC0A1C042FFF00C4CFFA /* NumCH.h */,
 				AD84DC0B1C042FFF00C4CFFA /* ODE_SimFramework */,
 				AD84DC2D1C042FFF00C4CFFA /* Optimization */,
 				AD84DC401C042FFF00C4CFFA /* PDE_Sim */,
 				ADFE86921BDA04E300D84DB6 /* Data_Structs */,
 				AD4768051B76EAF100E6B11D /* main.cpp */,
+				AD84DC0A1C042FFF00C4CFFA /* NumCH.h */,
 			);
 			path = NumCH;
 			sourceTree = "<group>";
@@ -571,8 +566,6 @@
 				AD84DC1D1C042FFF00C4CFFA /* ExplicitEuler.hpp */,
 				AD84DC1E1C042FFF00C4CFFA /* ExplicitTrapezoidal.cpp */,
 				AD84DC1F1C042FFF00C4CFFA /* ExplicitTrapezoidal.hpp */,
-				AD84DC201C042FFF00C4CFFA /* GenIntegrator.cpp */,
-				AD84DC211C042FFF00C4CFFA /* GenIntegrator.hpp */,
 				AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */,
 				AD84DC231C042FFF00C4CFFA /* RungeKutta4.hpp */,
 				ADAF706D1C407B3700C5AE73 /* NumericIntegration.h */,
@@ -1013,7 +1006,6 @@
 				AD84DC4F1C04300000C4CFFA /* cpng.h in Headers */,
 				AD84DC5B1C04300000C4CFFA /* pnglibconf.h in Headers */,
 				AD7867D31BFD943500A6FE07 /* queue.h in Headers */,
-				AD84DC971C04300000C4CFFA /* GenIntegrator.hpp in Headers */,
 				AD84DC471C042FFF00C4CFFA /* point.h in Headers */,
 				AD84DC7E1C04300000C4CFFA /* RandomNumberGenerator.hpp in Headers */,
 				AD84DC911C04300000C4CFFA /* ExplicitEuler.hpp in Headers */,
@@ -1145,7 +1137,6 @@
 				ADFE86AC1BDA04E300D84DB6 /* AdaptiveArray.cpp in Sources */,
 				AD84DC7C1C04300000C4CFFA /* RandomNumberGenerator.cpp in Sources */,
 				ADA93AAF1C51F1C80028F939 /* Network.cpp in Sources */,
-				AD84DC951C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
 				AD84DC831C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
 				AD1F24C41C33A21900E7FABF /* FileObject.cpp in Sources */,
 				ADCE7B521C38DD4C00296D10 /* FiniteDifference.cpp in Sources */,
@@ -1211,7 +1202,6 @@
 				AD84DC9E1C04300000C4CFFA /* Scheduler.cpp in Sources */,
 				AD84DC991C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				AD84DC841C04300000C4CFFA /* ConstantsSet.cpp in Sources */,
-				AD84DC961C04300000C4CFFA /* GenIntegrator.cpp in Sources */,
 				AD84DC871C04300000C4CFFA /* DataPrinter.cpp in Sources */,
 				AD84DC4E1C04300000C4CFFA /* cpng.cpp in Sources */,
 				AD84DC8D1C04300000C4CFFA /* DynamicModel.cpp in Sources */,

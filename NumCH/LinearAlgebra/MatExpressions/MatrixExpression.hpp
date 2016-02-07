@@ -15,15 +15,15 @@
 #include <cassert>
 
 
-// A CRTP base class for Vecs with a size and indexing.
-// The template parameter is named 'E' for 'Expression'.
+/*!
+ * This is a CRTP class used to create
+ * new matrix expression types
+ */
 template <typename T, typename E>
 class MatExpression {
 public:
     const T & operator()(int r, int c) const { return static_cast<E const&>(*this)(r,c);     }
     Dims size()               const { return static_cast<E const&>(*this).size(); }
-    
-    
     operator E&()             { return static_cast<      E&>(*this); }
     operator E const&() const { return static_cast<const E&>(*this); }
 };
