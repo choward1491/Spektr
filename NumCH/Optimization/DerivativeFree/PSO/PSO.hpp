@@ -40,10 +40,12 @@ namespace opt {
     template< class Function, class Initializer>
     class pso : public optimizer<pso<Function,Initializer> > {
     public:
-        pso():swarm(20),numIter(0),maxIter(200){}
+        pso():swarm(20),numIter(0),maxIter(200),displayStatus(true){}
         ~pso(){}
         
-        void setdims( const vec & lb, const vec & ub ){
+        void showStatus(){ displayStatus = true; }
+        void dontShowStatus(){ displayStatus = false; }
+        void setdims( const Mat & lb, const Mat & ub ){
             swarm.setdims(lb,ub);
         }
         void setNumParticles( int np ){
@@ -60,10 +62,10 @@ namespace opt {
         }
         
         
-        const vec & soln() const{
+        const Mat & soln() const{
             return swarm.getBestSoln();
         }
-        vec & soln() {
+        Mat & soln() {
             return swarm.getBestSoln();
         }
         
@@ -82,7 +84,9 @@ namespace opt {
             numIter++;
         }
         void giveStatus_(){
-            printf("Iteration Count: %i, Best Cost: %0.8lf\n",numIter,swarm.bestCost());
+            if( displayStatus ){
+                printf("Iteration Count: %i, Best Cost: %0.8lf\n",numIter,swarm.bestCost());
+            }
         }
         
         virtual void finalize_(){}
@@ -95,6 +99,7 @@ namespace opt {
         
         int numIter;
         int maxIter;
+        bool displayStatus;
         
         swarm<Function,Initializer> swarm;
         

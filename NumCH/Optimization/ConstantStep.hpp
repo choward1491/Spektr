@@ -1,11 +1,11 @@
 //
-//  GDTrainer.hpp
+//  ConstantStep.hpp
 //  NumCH
 //
-//  Created by Christian J Howard on 1/24/16.
+//  Created by Christian J Howard on 2/7/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,41 +27,30 @@
 //
 //
 
-#ifndef GDTrainer_hpp
-#define GDTrainer_hpp
+#ifndef ConstantStep_h
+#define ConstantStep_h
 
-#include <stdio.h>
-#include "Trainer.hpp"
 
-namespace ANN {
+namespace opt {
+
+template<class Function>
+class ConstantStep {
+public:
+    ConstantStep():stepsize(0.01){}
+    void setStepSize(double sz){ stepsize = sz; }
     
-    template<class Cost, class Step>
-    class GDTrainer : public Trainer<GDTrainer<Cost,Step>> {
-    private:
-        typedef std::vector<double> vec;
-        
-        int iter, maxiter;
-        vec momentum, dw, y, dE;
-        double dstep;
-        double mcoef;
-        
-        
-
-    public:
-        GDTrainer();
-        Cost cfunc;
-        Step sfunc;
-        void setMomentumCoef( double mcoef_ );
-        void setMaxIterations( int maxiter_ );
-        void setDefaultStep( double dstep );
-        void init( Network & net);
-        bool doneTraining();
-        void updateNet( Network & net, DataSet & dset );
-    };
-
+    double operator()(int iterationCount){
+        return stepsize;
+    }
+    
+    void setFunc( Function * func ){}
+    
+    
+private:
+    double stepsize;
+};
     
 }
 
-#include "GDTrainerImpl.hpp"
 
-#endif /* GDTrainer_hpp */
+#endif /* ConstantStep_h */

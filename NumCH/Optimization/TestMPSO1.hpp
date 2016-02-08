@@ -1,11 +1,11 @@
 //
-//  Optimizer.hpp
+//  TestMPSO1.hpp
 //  NumCH
 //
-//  Created by Christian J Howard on 1/27/16.
+//  Created by Christian J Howard on 2/7/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,49 +27,27 @@
 //
 //
 
-#ifndef Optimizer_h
-#define Optimizer_h
+#ifndef TestMPSO1_h
+#define TestMPSO1_h
 
-#include <vector>
-#include <stdio.h>
-#include "Matrix.hpp"
+#include "Rosenbrock.hpp"
+#include "Parabola2D.hpp"
+#include "RandomInit.hpp"
+#include "MultiPSO.hpp"
+typedef opt::mpso<4, opt::Rosenbrock, opt::RandomInit> mpso;
 
 
-namespace opt {
-    
-    typedef la::Mat<double>     Mat;
-    typedef la::SMat<double>    Sym;
-    
-
-    #define ops static_cast<Specific*>(this)
-
-    template<class Specific>
-    class optimizer {
-    public:
-        
-        void init(){
-            ops->init_();
-        }
-        void solve(){
-            while( !ops->isComplete_() ){
-                ops->update_();
-                ops->giveStatus_();
-            }
-            ops->finalize_();
-        }
-        
-        
-        
-    protected:
-        
-        
-    private:
-        
-        
-    };
-
-    #undef ops
-
+void testMPSO_Rosenbrock_RandInit(){
+    mpso test;
+    opt::vec lb(2,1,-10), rb(2,1,10);
+    test.setGlobalStep(0.5);
+    test.setLocalStep(3);
+    test.setMaxIter(100);
+    test.setNumParticles(5);
+    test.setdims(lb, rb);
+    test.init();
+    test.solve();
+    test.soln().print();
 }
 
-#endif /* Optimizer_h */
+#endif /* TestMPSO1_h */

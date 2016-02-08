@@ -132,11 +132,12 @@ namespace filter {
     
     template<class D1, class M1>
     void UnscentedKF<D1,M1>::operator()( double t_, const Mat & meas ){
+        static Mat ut(x), xt(x.size(),0), zt(meas.size(),0), dx(x),dxt(x);
+        static std::vector<Mat> fx(1+2*nx);
+        static std::vector<Mat> hx(1+2*nx);
+        
         double dt = t_ - t; t = t_;
         Lower D;
-        Mat ut(x), xt(x.size(),0), zt(meas.size(),0), dx(x),dxt(x);
-        std::vector<Mat> fx(1+2*nx);
-        std::vector<Mat> hx(1+2*nx);
         la::cholesky( Pxx, D );
         
         // Compute initial sigma points

@@ -118,6 +118,8 @@
 		ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B531C38DFD100296D10 /* Element.cpp */; };
 		ADCE7B581C38DFE000296D10 /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B561C38DFE000296D10 /* FiniteVolume.cpp */; };
 		ADCE7B5B1C38DFFB00296D10 /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADCE7B591C38DFFB00296D10 /* FiniteElement.cpp */; };
+		ADDBBDA01C67E9EF0079E210 /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBD9E1C67E9EF0079E210 /* MultiPSO.cpp */; };
+		ADDBBDA41C67F1680079E210 /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADDBBDA21C67F1680079E210 /* Particle.cpp */; };
 		ADE3CDBD1C55C08100A3601A /* DataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE3CDBB1C55C08000A3601A /* DataSet.cpp */; };
 		ADE3CDE01C5B346B00A3601A /* RandomInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE3CDDE1C5B346B00A3601A /* RandomInit.cpp */; };
 		ADE4FC7C1C54886100E17F51 /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE4FC7A1C54886100E17F51 /* Node.cpp */; };
@@ -209,7 +211,7 @@
 		AD84DC1F1C042FFF00C4CFFA /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
 		AD84DC221C042FFF00C4CFFA /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RungeKutta4.cpp; sourceTree = "<group>"; };
 		AD84DC231C042FFF00C4CFFA /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RungeKutta4.hpp; sourceTree = "<group>"; };
-		AD84DC241C042FFF00C4CFFA /* ODESim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODESim.h; sourceTree = "<group>"; };
+		AD84DC241C042FFF00C4CFFA /* ODESim.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ODESim.h; path = ODE_SimFramework/ODESim.h; sourceTree = "<group>"; };
 		AD84DC261C042FFF00C4CFFA /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
 		AD84DC281C042FFF00C4CFFA /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
 		AD84DC291C042FFF00C4CFFA /* Scheduler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scheduler.hpp; sourceTree = "<group>"; };
@@ -272,11 +274,12 @@
 		ADDBBD921C65061D0079E210 /* TargetMeas.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TargetMeas.hpp; sourceTree = "<group>"; };
 		ADDBBD931C66B45A0079E210 /* TestExample1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestExample1.hpp; sourceTree = "<group>"; };
 		ADDBBD941C66B5E10079E210 /* TestPSO1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPSO1.hpp; sourceTree = "<group>"; };
-		ADE3CDB91C55BFAB00A3601A /* GDTrainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GDTrainer.hpp; sourceTree = "<group>"; };
+		ADDBBD9E1C67E9EF0079E210 /* MultiPSO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiPSO.cpp; sourceTree = "<group>"; };
+		ADDBBD9F1C67E9EF0079E210 /* MultiPSO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiPSO.hpp; sourceTree = "<group>"; };
+		ADDBBDA11C67ED0A0079E210 /* TestMPSO1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestMPSO1.hpp; sourceTree = "<group>"; };
+		ADDBBDA21C67F1680079E210 /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		ADE3CDBB1C55C08000A3601A /* DataSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataSet.cpp; sourceTree = "<group>"; };
 		ADE3CDBC1C55C08100A3601A /* DataSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataSet.hpp; sourceTree = "<group>"; };
-		ADE3CDC01C55EA3A00A3601A /* GDTrainerImpl.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GDTrainerImpl.hpp; sourceTree = "<group>"; };
-		ADE3CDC11C55ED6900A3601A /* ConstantStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstantStep.hpp; sourceTree = "<group>"; };
 		ADE3CDC31C55F10300A3601A /* DefaultMaps.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DefaultMaps.hpp; sourceTree = "<group>"; };
 		ADE3CDC51C55F27F00A3601A /* L2Cost.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = L2Cost.hpp; sourceTree = "<group>"; };
 		ADE3CDCA1C59C07400A3601A /* Optimizer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Optimizer.hpp; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 		ADE4FC7E1C548A1B00E17F51 /* ActivationFuncs.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ActivationFuncs.cpp; sourceTree = "<group>"; };
 		ADE4FC7F1C548A1B00E17F51 /* ActivationFuncs.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ActivationFuncs.hpp; sourceTree = "<group>"; };
 		ADE4FC821C55B6C100E17F51 /* Trainer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
+		ADF84AA01C685CC300288FFD /* ConstantStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConstantStep.hpp; sourceTree = "<group>"; };
+		ADF84AA11C68689A00288FFD /* Parabola2D.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parabola2D.hpp; sourceTree = "<group>"; };
 		ADFAD8041C2E1AE200D4C3DE /* TemplateSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSimulator.h; sourceTree = "<group>"; };
 		ADFAD8051C2E243300D4C3DE /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelList.cpp; sourceTree = "<group>"; };
 		ADFAD8061C2E243300D4C3DE /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelList.hpp; sourceTree = "<group>"; };
@@ -400,6 +405,7 @@
 				AD84DBF41C042FFF00C4CFFA /* MachineLearning */,
 				AD84DC031C042FFF00C4CFFA /* Numbers */,
 				AD84DC0B1C042FFF00C4CFFA /* ODE_SimFramework */,
+				AD84DC241C042FFF00C4CFFA /* ODESim.h */,
 				AD84DC2D1C042FFF00C4CFFA /* Optimization */,
 				AD84DC401C042FFF00C4CFFA /* PDE_Sim */,
 				ADFE86921BDA04E300D84DB6 /* Data_Structs */,
@@ -506,7 +512,6 @@
 				AD84DC151C042FFF00C4CFFA /* DiscreteModel */,
 				AD84DC181C042FFF00C4CFFA /* DynamicModel */,
 				AD84DC1B1C042FFF00C4CFFA /* NumericIntegration */,
-				AD84DC241C042FFF00C4CFFA /* ODESim.h */,
 				AD84DC251C042FFF00C4CFFA /* PreciseTime */,
 				AD84DC271C042FFF00C4CFFA /* Scheduler */,
 			);
@@ -757,20 +762,48 @@
 			name = TestExample;
 			sourceTree = "<group>";
 		};
+		ADDBBD9B1C67E9B20079E210 /* SingleSwarm */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDDA1C5B343B00A3601A /* PSO.hpp */,
+			);
+			name = SingleSwarm;
+			sourceTree = "<group>";
+		};
+		ADDBBD9C1C67E9BA0079E210 /* MultiSwarm */ = {
+			isa = PBXGroup;
+			children = (
+				ADDBBD9E1C67E9EF0079E210 /* MultiPSO.cpp */,
+				ADDBBD9F1C67E9EF0079E210 /* MultiPSO.hpp */,
+			);
+			name = MultiSwarm;
+			sourceTree = "<group>";
+		};
+		ADDBBD9D1C67E9C70079E210 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ADDBBD941C66B5E10079E210 /* TestPSO1.hpp */,
+				ADDBBDA11C67ED0A0079E210 /* TestMPSO1.hpp */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		ADDBBDA51C67F5F10079E210 /* SwarmImpl */ = {
+			isa = PBXGroup;
+			children = (
+				ADE3CDD91C5B343B00A3601A /* Particle.hpp */,
+				ADDBBDA21C67F1680079E210 /* Particle.cpp */,
+				ADE3CDDB1C5B343B00A3601A /* Swarm.hpp */,
+			);
+			name = SwarmImpl;
+			sourceTree = "<group>";
+		};
 		ADE3CDBE1C55E63E00A3601A /* CostFuncs */ = {
 			isa = PBXGroup;
 			children = (
 				ADE3CDC51C55F27F00A3601A /* L2Cost.hpp */,
 			);
 			name = CostFuncs;
-			sourceTree = "<group>";
-		};
-		ADE3CDBF1C55E64600A3601A /* StepFuncs */ = {
-			isa = PBXGroup;
-			children = (
-				ADE3CDC11C55ED6900A3601A /* ConstantStep.hpp */,
-			);
-			name = StepFuncs;
 			sourceTree = "<group>";
 		};
 		ADE3CDC21C55F0F400A3601A /* Net IO Maps */ = {
@@ -796,8 +829,6 @@
 			isa = PBXGroup;
 			children = (
 				ADE4FC821C55B6C100E17F51 /* Trainer.hpp */,
-				ADE3CDC01C55EA3A00A3601A /* GDTrainerImpl.hpp */,
-				ADE3CDB91C55BFAB00A3601A /* GDTrainer.hpp */,
 			);
 			name = Training;
 			sourceTree = "<group>";
@@ -822,10 +853,10 @@
 		ADE3CDCB1C59C67900A3601A /* PSO */ = {
 			isa = PBXGroup;
 			children = (
-				ADE3CDD91C5B343B00A3601A /* Particle.hpp */,
-				ADE3CDDA1C5B343B00A3601A /* PSO.hpp */,
-				ADE3CDDB1C5B343B00A3601A /* Swarm.hpp */,
-				ADDBBD941C66B5E10079E210 /* TestPSO1.hpp */,
+				ADDBBD9D1C67E9C70079E210 /* Tests */,
+				ADDBBDA51C67F5F10079E210 /* SwarmImpl */,
+				ADDBBD9C1C67E9BA0079E210 /* MultiSwarm */,
+				ADDBBD9B1C67E9B20079E210 /* SingleSwarm */,
 			);
 			name = PSO;
 			sourceTree = "<group>";
@@ -833,6 +864,7 @@
 		ADE3CDCC1C59C68700A3601A /* Gradient */ = {
 			isa = PBXGroup;
 			children = (
+				ADF84A9E1C685AAC00288FFD /* Steps */,
 				ADE3CDE11C5B34E100A3601A /* GradientBase.hpp */,
 			);
 			name = Gradient;
@@ -842,6 +874,7 @@
 			isa = PBXGroup;
 			children = (
 				ADE3CDDC1C5B344900A3601A /* Rosenbrock.hpp */,
+				ADF84AA11C68689A00288FFD /* Parabola2D.hpp */,
 			);
 			name = TestFuncs;
 			sourceTree = "<group>";
@@ -877,11 +910,18 @@
 				ADE3CDC71C55F4C100A3601A /* Training */,
 				ADE3CDC61C55F4B100A3601A /* Topography */,
 				ADE3CDC21C55F0F400A3601A /* Net IO Maps */,
-				ADE3CDBF1C55E64600A3601A /* StepFuncs */,
 				ADE3CDBE1C55E63E00A3601A /* CostFuncs */,
 				ADFAD8301C31938700D4C3DE /* ActivFuncs */,
 			);
 			name = ANN;
+			sourceTree = "<group>";
+		};
+		ADF84A9E1C685AAC00288FFD /* Steps */ = {
+			isa = PBXGroup;
+			children = (
+				ADF84AA01C685CC300288FFD /* ConstantStep.hpp */,
+			);
+			name = Steps;
 			sourceTree = "<group>";
 		};
 		ADFAD8001C2E1A6500D4C3DE /* TemplateSimulator */ = {
@@ -1152,6 +1192,7 @@
 				AD84DC861C04300000C4CFFA /* DataPrinter.cpp in Sources */,
 				AD84DC981C04300000C4CFFA /* RungeKutta4.cpp in Sources */,
 				ADFE86AF1BDA04E300D84DB6 /* kdtree.cpp in Sources */,
+				ADDBBDA41C67F1680079E210 /* Particle.cpp in Sources */,
 				ADFAD8131C2E582900D4C3DE /* ExampleSim.cpp in Sources */,
 				AD84DC501C04300000C4CFFA /* FigData.cpp in Sources */,
 				ADFE86B01BDA04E300D84DB6 /* LinkedList.cpp in Sources */,
@@ -1161,6 +1202,7 @@
 				AD84DC921C04300000C4CFFA /* ExplicitTrapezoidal.cpp in Sources */,
 				ADFAD81A1C30781A00D4C3DE /* Timer.cpp in Sources */,
 				AD84DC9D1C04300000C4CFFA /* Scheduler.cpp in Sources */,
+				ADDBBDA01C67E9EF0079E210 /* MultiPSO.cpp in Sources */,
 				AD84DD641C06CBDD00C4CFFA /* Vector.cpp in Sources */,
 				ADFAD8071C2E243300D4C3DE /* ModelList.cpp in Sources */,
 				ADCE7B551C38DFD100296D10 /* Element.cpp in Sources */,

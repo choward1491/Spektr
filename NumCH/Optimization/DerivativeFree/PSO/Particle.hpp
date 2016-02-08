@@ -31,21 +31,23 @@
 #define Particle_h
 
 #include "Optimizer.hpp"
+#include "RandomNumberGenerator.hpp"
 
 
 namespace opt {
     
-    typedef la::Mat<double> vec;
+    typedef la::Mat<double> Mat;
     
     struct particle {
-        vec pose;       // position
-        vec vel;   //momentum
-        vec pbest;      //personal best
+    public:
+        Mat pose;       // position
+        Mat vel;   //momentum
+        Mat pbest;      //personal best
         double cbest;   // best cost
         
         double* lstep;
         double* gstep;
-        vec* gbest;
+        Mat* gbest;
         
         
         particle():lstep(0),gstep(0),gbest(0),cbest(1e10){}
@@ -57,13 +59,18 @@ namespace opt {
         }
         
         void update(){
-            for(int i = 0; i < pose.size().rows; i++ ){
-                vel(i)  += ( (*lstep)*( pbest - pose ) + (*gstep)*( (*gbest) - pose ) )(i,0);
-                pose(i) += vel(i);
-            }
+            double u1 = rng.rand();
+            double u2 = rng.rand();
+            vel = vel + ( u1*(*lstep)*( pbest - pose ) + u2*(*gstep)*( (*gbest) - pose ) );
+            pose = pose + vel;
         }
         
+    private:
+        static RandomNumberGenerator rng;
+        
     };
+    
+    
     
     
     

@@ -35,47 +35,67 @@
 namespace opt {
     
     template< class Function, class Step >
-    class gradient  : public optimizer< gradient > {
+    class gradient  : public optimizer< gradient<Function,Step> > {
     public:
         
+        gradient():numIter(0),maxIter(100),cost(1e100),bcost(1e100),
+                   tol(1e-2),err(1e10),mom_coef(0.1){}
         
+        void setGuess( const Mat & m ){ x = m; }
         void setMaxIter( int mi ){ maxIter = mi; }
         void setTolerance( double eps ){ tol = eps; }
         void setMomentumCoef( double mc ){ mom_coef = mc; }
         
-        double getBestResult( std::vector<double> & best );
+        Mat & soln(){ return xbest; }
+        const Mat & soln() const { return xbest; }
+        double bestCost() const { return bcost; }
         
+        Step step;
+        Function func;
         
     protected:
+        
         void init_(){
-            if( )
+            step.setFunc(&func);
+            initStateSize();
         }
         virtual bool isComplete_(){
             return (numIter >= maxIter || err < tol );
         }
         void update_(){
-            gradientUpdate();
+            update();
             numIter++;
         }
         void giveStatus_(){
-            printf("Iteration Count: %i, Best Cost: %0.8lf\n",numIter,);
+            printf("Iteration Count: %i, Best Cost: %0.8lf\n",numIter,bcost);
         }
         
         virtual void finalize_(){}
     private:
+        template<class T> friend class optimizer;
         
-        
-        void gradientUpdate(){
-            
+        void update(){
+            cost = func(x);
+            if( cost < bcost ){
+                xbest = x;
+                bcost = cost;
+            }
+            double s = step(numIter);
+            dx = mom_coef*dx - s*func.gradient();
+            x = x + dx;
         }
         
         void initStateSize(){
-            if( func.numDims())
+            int Nx = func.numDims();
+            if( x.size() != Dims(Nx,1) ){
+                x.resize(Nx,1);
+            }
+            xbest.resize(Nx,1);
+            dx.resize(Nx,1);
         }
         
         
-        Function func;
-        Step step;
+        
         
         int numIter;
         int maxIter;
@@ -86,12 +106,11 @@ namespace opt {
         double err;
         double mom_coef;
         
-        std::vector<double> x;
-        std::vector<double> xbest;
-        std::vector<double> momentum;
+        Mat x;
+        Mat xbest;
+        Mat dx;
         
-        
-    }
+    };
     
     
     

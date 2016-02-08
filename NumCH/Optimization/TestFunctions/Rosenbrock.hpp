@@ -30,7 +30,7 @@
 #ifndef Rosenbrock_h
 #define Rosenbrock_h
 
-#include <vector>
+
 #include "Matrix.hpp"
 
 namespace opt {
@@ -40,25 +40,24 @@ namespace opt {
     class Rosenbrock {
         
     public:
-        //f(x,y) = (a-x)^2 + b*(y-x^2)^2
+        //f(x,y) = (x-a)^2 + b*(y-x^2)^2
+        
+        Rosenbrock():grad(numDims(),1,0){}
+        
         double operator()( const vec & in ){
             double x = in[0], y = in[1];
             double d1 = x-a, d2 = y - x*x;
-            return d1*d1 + b*d2*d2;
-        }
-        
-        double operator()( const vec & in, vec & grad ){
-            double x = in[0], y = in[1];
-            double d1 = x-a, d2 = y - x*x;
-            grad[0] = 2.0*(d1 - 2.0*x*b*d2);
+            grad[0] = 2.0*d1 - 4.0*x*b*d2;
             grad[1] = 2.0*b*d2;
             return d1*d1 + b*d2*d2;
         }
         
+        const Mat & gradient() const { return grad; }
         int numDims() const { return 2; }
         
         
     private:
+        Mat grad;
         const double a = 1;
         const double b = 100;
     };
