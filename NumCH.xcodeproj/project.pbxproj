@@ -225,6 +225,8 @@
 		AD84DD631C06CBDD00C4CFFA /* Vector.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vector.hpp; sourceTree = "<group>"; };
 		ADA93AAD1C51F1C80028F939 /* Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Network.cpp; sourceTree = "<group>"; };
 		ADA93AAE1C51F1C80028F939 /* Network.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Network.hpp; sourceTree = "<group>"; };
+		ADAD9E461C6C38DF00DC2421 /* LogisticRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LogisticRegression.hpp; sourceTree = "<group>"; };
+		ADAD9E481C6C41D200DC2421 /* RBF_Poly.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RBF_Poly.hpp; sourceTree = "<group>"; };
 		ADAF706D1C407B3700C5AE73 /* NumericIntegration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NumericIntegration.h; sourceTree = "<group>"; };
 		ADB85D961B815E27002879D2 /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = NumCH/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADBF6AF81C5F2A4B006B1222 /* MatStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = MatStorage.cpp; path = MatStorage/MatStorage.cpp; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 		AD84DBF41C042FFF00C4CFFA /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
+				ADAD9E441C6C38C600DC2421 /* CostFuncs */,
 				ADE4FC811C553B0100E17F51 /* ANN */,
 			);
 			path = MachineLearning;
@@ -645,6 +648,31 @@
 				AD84DD5D1C06CBC300C4CFFA /* Vec3D.hpp */,
 			);
 			name = Vec3D;
+			sourceTree = "<group>";
+		};
+		ADAD9E441C6C38C600DC2421 /* CostFuncs */ = {
+			isa = PBXGroup;
+			children = (
+				ADAD9E451C6C38CD00DC2421 /* LogisticReg */,
+			);
+			name = CostFuncs;
+			sourceTree = "<group>";
+		};
+		ADAD9E451C6C38CD00DC2421 /* LogisticReg */ = {
+			isa = PBXGroup;
+			children = (
+				ADAD9E471C6C41B200DC2421 /* Basis */,
+				ADAD9E461C6C38DF00DC2421 /* LogisticRegression.hpp */,
+			);
+			name = LogisticReg;
+			sourceTree = "<group>";
+		};
+		ADAD9E471C6C41B200DC2421 /* Basis */ = {
+			isa = PBXGroup;
+			children = (
+				ADAD9E481C6C41D200DC2421 /* RBF_Poly.hpp */,
+			);
+			name = Basis;
 			sourceTree = "<group>";
 		};
 		ADBF6AE41C5D7AE8006B1222 /* Hashes */ = {
