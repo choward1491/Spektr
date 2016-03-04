@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DE3CD2327D617BD0A3F32A930F636CA1A64B3492",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "DE3CD2327D617BD0A3F32A930F636CA1A64B3492" : 0,
+    "4243EAF92C599029FE186FBAD741554A7AD5453D" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C6425B22-D657-4469-801D-461B41E1B2D4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "DE3CD2327D617BD0A3F32A930F636CA1A64B3492" : "NumCH\/",
+    "4243EAF92C599029FE186FBAD741554A7AD5453D" : "Data_Structs\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Spektr",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "build\/xcode\/Spektr.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/choward1491\/Data_Structures.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4243EAF92C599029FE186FBAD741554A7AD5453D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/choward1491\/NumCH.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DE3CD2327D617BD0A3F32A930F636CA1A64B3492"
+    }
+  ]
+}
