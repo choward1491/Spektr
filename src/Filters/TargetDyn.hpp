@@ -11,6 +11,8 @@
 
 #include "Matrix.hpp"
 
+namespace spektr {
+
 class TargetDyn {
 public:
     typedef la::Mat<double> Mat;
@@ -29,5 +31,6 @@ public:
     
 };
 
+}
 
 #endif /* TargetDyn_h */

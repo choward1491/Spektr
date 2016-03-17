@@ -33,6 +33,8 @@
 #include <stdio.h>
 #include "PreciseTime.h"
 #include "RandomNumberGenerator.hpp"
+#include <string>
+#include "SimExceptions.hpp"
 
 typedef RandomNumberGenerator Rand;
 class SimState;
@@ -48,6 +50,9 @@ class DiscreteModel {
 public:
     
     
+    DiscreteModel():model_name("dscrt_model"){}
+    
+    
     /*!
      * This method is used to do any
      * other initialization for a model
@@ -61,6 +66,7 @@ public:
     virtual void initialize(){}
     
     
+    
     virtual void setupPrintData(){}
     
     
@@ -69,6 +75,15 @@ public:
     // Destructor
     virtual ~DiscreteModel(){}
     
+    
+    
+    /*!
+     * Method to return model name
+     *
+     * \params None
+     * \returns Reference to model name
+     */
+    virtual const std::string & modelName() const { return model_name; }
     
     
     
@@ -93,7 +108,16 @@ public:
      * \params updateRateInHz The update rate in Hz
      * \returns None
      */
-    void assignUpdateRate( int updateRateInHz ){ incrementTime = Time(1, updateRateInHz); }
+    void assignUpdateRate( int updateRateInHz ){
+        try {
+            if( updateRateInHz == 0 ){
+                throw sim::exception("Invalid Update Rate: Must be Greater than 0.");
+            }
+            incrementTime = Time(1, updateRateInHz);
+        } catch ( std::exception & e ){
+            printf("Error in %s.\nMsg = '%s'\n",model_name.c_str(),e.what());
+        }
+    }
     
     
     
@@ -109,6 +133,7 @@ public:
     double getDt() const { return incrementTime.convert<double>(); }
     Time   getFracDt() const { return incrementTime; }
     
+    
     // method to assign the random number generator
     void assignRandomGenerator( Rand & gen ){ generator = &gen; }
     void assignSimState( SimState & simState_ ){ simState = &simState_; }
@@ -116,14 +141,16 @@ public:
     
 protected:
     
+    //
+    // Discrete model name
+    //
+    std::string model_name;
     
     //
     // Time between updates
     //
     Time incrementTime;
-    
     Rand * generator;
-    
     SimState * simState;
     
     

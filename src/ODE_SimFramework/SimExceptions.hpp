@@ -1,11 +1,11 @@
 //
-//  ODESim.h
-//  NumCH
+//  SimExceptions.hpp
+//  Spektr
 //
-//  Created by Christian J Howard on 10/24/15.
+//  Created by Christian J Howard on 3/15/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,15 +27,20 @@
 //
 //
 
-#ifndef ODESim_h
-#define ODESim_h
+#ifndef SimExceptions_h
+#define SimExceptions_h
 
-#include "ConfigParser.hpp"
-#include "ConstantsSet.hpp"
-#include "Scheduler.hpp"
-#include "Simulator.hpp"
-#include "GenIntegrator.hpp"
-#include "Model.hpp"
+#include <exception>
+#include <string>
 
+namespace sim {
+    struct exception : public std::exception {
+        std::string msg;
+        exception(const std::string & s):msg(s){}
+        exception(const char* s):msg(s){}
+        ~exception() throw() {}
+        const char * what() const throw() { return msg.c_str(); }
+    };
+}
 
-#endif /* ODESim_h */
+#endif /* SimExceptions_h */

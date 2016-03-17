@@ -35,7 +35,9 @@ public:
     bool _finishedSimulation( SimState & state ) const{
         return getTime() > 5;
     }
-    void _finalizeMonteCarloRun(){}
+    void _finalizeMonteCarloRun(){
+        
+    }
     void _finalize(){
         printf("Finished!\n");
     }

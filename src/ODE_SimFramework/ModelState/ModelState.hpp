@@ -1,11 +1,11 @@
 //
-//  NumCH.h
-//  NumCH
+//  ModelState.hpp
+//  Spektr
 //
-//  Created by Christian J Howard on 10/24/15.
+//  Created by Christian J Howard on 3/15/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,24 +27,26 @@
 //
 //
 
-#ifndef NumCH_h
-#define NumCH_h
+#ifndef ModelState_hpp
+#define ModelState_hpp
 
-//namespace NumCH {
-    
-#include "Numbers.h"
-    
-#include "Graphics.h"
-#include "Function.hpp"
-#include "Geometry.h"
-#include "PDESim.h"
-    
-#include "LinearAlgebra.h"
-#include "Optimization.h"
-#include "MachineLearning.h"
-#include "ODESim.h"
-    
-//}
+#include <stdio.h>
 
 
-#endif /* NumCH_h */
+class ModelState {
+public:
+    ModelState();
+    ModelState(double * address, size_t numDims );
+    double & operator[](size_t i);
+    const double & operator[](size_t i) const;
+    void setAddress( double * address );
+    void setNumDims( size_t numDims );
+    double * reference(){ return ref; }
+private:
+    double * ref;
+    size_t ndim;
+    
+};
+
+
+#endif /* ModelState_hpp */

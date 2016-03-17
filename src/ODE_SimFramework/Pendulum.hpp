@@ -36,6 +36,12 @@ class PendulumModel : public DynamicModel {
     
 public:
     
+    
+    PendulumModel():didSetupPrint(false){
+        model_name = "pendulum";
+    }
+    
+    
     /*!
      * This method is used to do initialization
      * that needs to be done every time a sim is run
@@ -66,8 +72,11 @@ public:
      *
      */
     virtual void setupPrintData(){
-        simState->dataPrinter.addVariableToPrint(&state[0], "Theta");
-        simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
+        if( !didSetupPrint ){
+            simState->dataPrinter.addVariableToPrint(&state[0], "Theta");
+            simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
+            didSetupPrint = true;
+        }
     }
     
     
@@ -81,7 +90,7 @@ public:
      * \params None
      * \returns Number of Dimensions in System of ODEs
      */
-    virtual int numDims(){ return 2; }
+    virtual int numDims() const { return 2; }
     
     
     
@@ -98,7 +107,7 @@ public:
      turn make this input also the output
      * \returns None
      */
-    virtual void operator()( double time , double* dqdt ){
+    virtual void operator()( double time , ModelState & dqdt ){
         double theta    = state[0];
         if( theta > 180 ){ theta -= 180; }
         if( theta < -180 ){ theta += 180; }
@@ -111,6 +120,7 @@ public:
     
     
 private:
+    bool didSetupPrint;
     double mass;            // in kg
     double dampening;       //
     double gravity;         // m/s^2

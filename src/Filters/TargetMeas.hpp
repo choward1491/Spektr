@@ -11,6 +11,8 @@
 
 #include "Matrix.hpp"
 
+namespace spektr {
+
 class TargetMeas {
 public:
     typedef la::Mat<double> Mat;
@@ -25,5 +27,7 @@ public:
     }
     
 };
+    
+}
 
 #endif /* TargetMeas_h */

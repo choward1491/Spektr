@@ -19,13 +19,14 @@ template <typename T, typename E1, typename E2>
 class MatMinus : public MatExpression<T, MatMinus<T, E1, E2> > {
     E1 const& _u;
     E2 const& _v;
+    mutable T tmp;
     
 public:
     MatMinus(MatExpression<T,E1> const& u, MatExpression<T,E2> const& v) : _u(u), _v(v) {
         assert(u.size() == v.size());
     }
     
-    const T & operator()(int r, int c) const { return _u(r,c) - _v(r,c); }
+    const T & operator()(int r, int c) const { tmp = _u(r,c) - _v(r,c); return tmp; }
     Dims size()               const { return _v.size(); }
 };
 

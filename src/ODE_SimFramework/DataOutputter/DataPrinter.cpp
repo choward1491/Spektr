@@ -9,6 +9,7 @@
 #include "DataPrinter.hpp"
 
 
+
 void DataPrinter::addVariableToPrint( const double * address, const std::string & name ){
     printList.push_back(address);
     printNames.push_back(name);
@@ -17,24 +18,22 @@ void DataPrinter::addVariableToPrint( const double * address, const std::string 
 
 void DataPrinter::update(){
     
-    FILE * file = 0;
+    if( !file.isOpen() ){ file.openFile(outFile, FileObject::AccessMode::Write); }
     
     if( not hasHeader ){
-        file = fopen(outFile.c_str(), "w");
-        if( file != 0 ){
-            writeNameHeader(file);
-            writeDataToFile( file );
+        
+        if( file.isOpen() ){
+            writeNameHeader( file.ref() );
+            writeDataToFile( file.ref() );
             hasHeader = true;
         }
         
     }else{
-        file = fopen(outFile.c_str(), "a");
-        if( file != 0 ){
-            writeDataToFile( file );
+        
+        if( file.isOpen() ){
+            writeDataToFile( file.ref() );
         }
     }
-
-    if( file != 0 ){ fclose(file); }
     
 }
 
@@ -61,12 +60,12 @@ void DataPrinter::reset(){
 }
 
 void DataPrinter::newMonteCarlo() const {
-    FILE * file = fopen(outFile.c_str(), "a");
-    if( file != 0 ){
+    
+    if( file.isOpen() ){
         
         // print variable values
-        fprintf(file, "\n");
-        
-        fclose(file);
+        fprintf(file.ref(), "\n");
     }
 }
+    
+

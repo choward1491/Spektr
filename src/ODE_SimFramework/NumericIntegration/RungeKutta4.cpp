@@ -7,6 +7,7 @@
 //
 
 #include "RungeKutta4.hpp"
+#include "ModelState.hpp"
 
 void RungeKutta4::integrate( double time, double dt , double* inOutState, DiffeqList & list ){
     
@@ -62,9 +63,14 @@ void RungeKutta4::computeNewStep( double * y0, double* dydt, double dt, double *
 }
 
 void RungeKutta4::computeDerivatives( double time, double * & dqdt, DiffeqList & list ){
+    ModelState dqdt_;
+    size_t ndim;
     for (int i = 0; i < list.size(); i++) {
-        list[i]->operator()(time, dqdt);
-        dqdt = dqdt+list[i]->numDims();
+        ndim = list[i]->numDims();
+        dqdt_.setAddress(dqdt);
+        dqdt_.setNumDims(ndim);
+        (*list[i])(time, dqdt_);
+        dqdt = dqdt+ndim;
     }
 }
 

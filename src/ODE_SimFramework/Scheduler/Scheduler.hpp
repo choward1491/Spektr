@@ -30,7 +30,7 @@
 #ifndef Scheduler_cpp
 #define Scheduler_cpp
 
-#include "heap.h"
+#include "Heap.hpp"
 #include "DiscreteModel.hpp"
 #include "PreciseTime.h"
 

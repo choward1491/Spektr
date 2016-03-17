@@ -32,8 +32,12 @@
 #define DynamicModel_hpp
 
 #include <stdio.h>
+#include "SimExceptions.hpp"
+#include <string>
 #include "PreciseTime.h"
 #include "RandomNumberGenerator.hpp"
+#include "ModelState.hpp"
+
 
 typedef RandomNumberGenerator Rand;
 class SimState;
@@ -50,7 +54,7 @@ class DynamicModel {
 public:
     
     
-    
+    DynamicModel():model_name("dyn_model"){}
     virtual ~DynamicModel(){}
     
     
@@ -85,7 +89,16 @@ public:
      * \params None
      * \returns Number of Dimensions in System of ODEs
      */
-    virtual int numDims(){ return 0; }
+    virtual int numDims() const { return 0; }
+    
+    
+    /*!
+     * Method to return model name
+     *
+     * \params None
+     * \returns Reference to model name
+     */
+    virtual const std::string & modelName() const { return model_name; }
     
     
     
@@ -102,7 +115,7 @@ public:
      turn make this input also the output
      * \returns None
      */
-    virtual void operator()( double time , double* dqdt ) = 0;
+    virtual void operator()( double time , ModelState & dqdt ) = 0;
     
     
     
@@ -116,7 +129,7 @@ public:
      * \returns Reference Double value for the state variable
      associated with the input index
      */
-    double & operator[](int index) const { return state[index]; }
+    const double & operator[](int index) const { return state[index]; }
     
     
     
@@ -144,7 +157,16 @@ public:
      * \params updateRateInHz The update rate in Hz
      * \returns None
      */
-    void assignUpdateRate( int updateRateInHz ){ incrementTime = Time(1, updateRateInHz); }
+    void assignUpdateRate( int updateRateInHz ){
+        try {
+            if( updateRateInHz == 0 ){
+                throw sim::exception("Invalid Update Rate: Must be Greater than 0.");
+            }
+            incrementTime = Time(1, updateRateInHz);
+        } catch ( std::exception & e ){
+            printf("Error in %s.\nMsg = '%s'\n",model_name.c_str(),e.what());
+        }
+    }
     
     
     
@@ -165,29 +187,36 @@ public:
     // Method used by simulation to assign the part of the state vector
     // that this model uses
     //
-    void assignStateAddress( double* address ) { state = address; }
+    void assignStateAddress( double* address ) { state = ModelState(address,numDims()); }
     void assignRandomGenerator( Rand & gen ){ generator = &gen; }
     void assignSimState( SimState & simState_ ){ simState = &simState_; }
     
     
 protected:
     
-
+    //
+    // Dynamic model name
+    //
+    std::string model_name;
     
     //
     // Time between updates
     //
     Time incrementTime;
     
+    //
+    // Model's unique state
+    //
+    ModelState state;
     
     //
-    // Pointer to state
+    // Reference to net Sim State
     //
-    double* state;
     SimState * simState;
     
-    
-    // Random number generator
+    //
+    // Reference to Random number generator
+    //
     Rand * generator;
     
 };

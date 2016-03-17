@@ -30,12 +30,13 @@
 #ifndef SimState_hpp
 #define SimState_hpp
 
-#include <stdio.h>
 
-#include "SimTime.hpp"
-#include "ConfigParser.hpp"
 #include "DataPrinter.hpp"
 #include "ModelList.hpp"
+#include "ModelState.hpp"
+#include "SimTime.hpp"
+#include "Parser.hpp"
+
 
 class SimState {
 public:
@@ -46,7 +47,7 @@ public:
     void buildState();              // method to build the complete state
                                     // after all models have been added
     
-    double* & getStateReference();  // get reference to start of state array
+    double * getStateReference();  // get reference to start of state array
     
     int size() const;               // method to get size of state
     
@@ -59,6 +60,7 @@ public:
     DataPrinter dataPrinter;
     int printFrequency; // frequency the data printer will print to file
     
+    
     // list of all the models
     // and interface to access them
     ModelList mlist;
@@ -67,7 +69,7 @@ public:
     SimTime time;
     
     // Config file parser
-    ConfigParser parser;
+    Parser parser;
     
     
 private:

@@ -36,6 +36,7 @@
 #include "Cholesky.hpp"
 #include <vector>
 
+namespace spektr {
 
 namespace filter {
     
@@ -255,6 +256,6 @@ namespace filter {
     
 }
 
-
+}
 
 #endif /* UKF_h */

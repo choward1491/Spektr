@@ -7,15 +7,21 @@
 //
 
 #include "ExplicitEuler.hpp"
+#include "ModelState.hpp"
 
 void ExplicitEuler::integrate( double time, double dt , double* inOutState, DiffeqList & list){
     double * dqdt = &tmp[0];
+    ModelState dqdt_;
+    size_t ndim;
     
     if( list.size() > 0 ){
         // compute dqdt
         for (int i = 0; i < list.size(); i++) {
-            (*list[i])(time, dqdt);
-            dqdt = dqdt+list[i]->numDims();
+            ndim = list[i]->numDims();
+            dqdt_.setAddress(dqdt);
+            dqdt_.setNumDims(ndim);
+            (*list[i])(time, dqdt_);
+            dqdt = dqdt+ndim;
         }
         
         // clear dqdt pointer

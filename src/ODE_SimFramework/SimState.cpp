@@ -7,8 +7,7 @@
 //
 
 #include "SimState.hpp"
-#include "DataPrinter.hpp"
-#include "ModelList.hpp"
+
 
 SimState::SimState(){
     state = 0;
@@ -34,7 +33,7 @@ void SimState::buildState(){
         ptr = ptr + mlist.diffeqList[i]->numDims();
     }
 }
-double* & SimState::getStateReference(){
+double * SimState::getStateReference(){
     return state;
 }
 int SimState::size() const{

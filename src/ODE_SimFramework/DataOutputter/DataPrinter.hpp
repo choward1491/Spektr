@@ -34,6 +34,7 @@
 #include "DiscreteModel.hpp"
 #include <vector>
 #include <string>
+#include "FileObject.hpp"
 
 typedef std::vector<const double*> PrintValueList;
 typedef std::vector<std::string> PrintNames;
@@ -93,7 +94,7 @@ private:
     
     // write data values
     void writeDataToFile( FILE* file ) const;
-    void writeNameHeader( FILE* file) const;
+    void writeNameHeader( FILE* file ) const;
     
     
     
@@ -103,6 +104,7 @@ private:
     //
     PrintValueList  printList;
     PrintNames      printNames;
+    FileObject      file;
     std::string     outFile;
     bool hasHeader;
     

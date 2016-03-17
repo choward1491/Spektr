@@ -24,11 +24,12 @@ template <typename T, typename E1,typename S>
 class MatScalarMult : public MatExpression<T, MatScalarMult<T, E1, S> > {
     E1 const& _u;
     S const& _v;
+    mutable T tmp;
     
 public:
     MatScalarMult(MatExpression<T,E1> const& u, S const& v) : _u(u), _v(v) {}
     
-    const T & operator()(int r, int c)  const { return _u(r,c)*static_cast<T>(_v); }
+    const T & operator()(int r, int c)  const { tmp = _u(r,c)*static_cast<T>(_v); return tmp; }
     Dims size()                         const { return _u.size(); }
 };
 
