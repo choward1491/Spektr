@@ -53,9 +53,6 @@ namespace la {
             x.resize(dim);
         }
         
-        T sum;
-        T zero = T();
-        
         for (int k = 0; k < dim.cols; k++) {
             for (int i = 0; i < dim.rows; i++) {
                 x(i,k) = b(i,k)/A(i,i);

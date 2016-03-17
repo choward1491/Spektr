@@ -7,15 +7,8 @@
 //
 
 #include <string>
-#include "ExampleSim.hpp"
-#include "Matrix.hpp"
-
-typedef la::Mat<double> Mat;
 
 int main(int argc, const char * argv[]) {
-    
-    ExampleSim sim;
-    sim.runSim();
     
     // exit
     return 0;

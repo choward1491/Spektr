@@ -46,6 +46,7 @@ namespace filter {
         typedef la::SMat<double>    Sym;
         typedef la::Mat<double>     Mat;
         typedef la::LMat<double>    Lower;
+        typedef la::DMat<double>    Diag;
         
         
         UnscentedKF();
@@ -229,12 +230,12 @@ namespace filter {
     }
     
     template<class D, class M>
-    const Mat & UnscentedKF<D,M>::state() const{
+    const typename UnscentedKF<D,M>::Mat & UnscentedKF<D,M>::state() const{
         return x;
     }
     
     template<class D, class M>
-    const Sym & UnscentedKF<D,M>::stateCov() const{
+    const typename UnscentedKF<D,M>::Sym & UnscentedKF<D,M>::stateCov() const{
         return Pxx;
     }
     

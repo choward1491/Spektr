@@ -98,7 +98,7 @@ namespace opt {
     template<class F, class I>
     void swarm<F,I>::update(){
         double cost = 0;
-        int ibest = -1;
+        //int ibest = -1;
         
         // compute cost for each particle
         // and the global best

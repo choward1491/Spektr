@@ -39,7 +39,7 @@ typedef opt::mpso<4, opt::Rosenbrock, opt::RandomInit> mpso;
 
 void testMPSO_Rosenbrock_RandInit(){
     mpso test;
-    opt::vec lb(2,1,-10), rb(2,1,10);
+    opt::Mat lb(2,1,-10), rb(2,1,10);
     test.setGlobalStep(0.5);
     test.setLocalStep(3);
     test.setMaxIter(100);

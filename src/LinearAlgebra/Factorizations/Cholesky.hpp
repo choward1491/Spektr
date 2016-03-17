@@ -47,7 +47,7 @@ void cholesky( const Matrix<T,C> & m, LMat<T> & L ){
     if (m.size() != L.size() ) {
         L.resize(m.size());
     }
-    const int numr = L.size().rows;
+    const int numr = static_cast<int>(L.size().rows);
     
     double sum = T();
     for (int i = 0; i < numr; i++) {

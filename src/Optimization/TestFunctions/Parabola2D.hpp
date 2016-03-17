@@ -34,7 +34,7 @@
 
 namespace opt {
     
-    typedef la::Mat<double> vec;
+    typedef la::Mat<double> Mat;
     
     class Parabola2D {
         
@@ -43,7 +43,7 @@ namespace opt {
         
         Parabola2D():grad(numDims(),1,0){}
         
-        double operator()( const vec & in ){
+        double operator()( const Mat & in ){
             double x = in[0], y = in[1];
             double d1 = x-a, d2 = y - b;
             grad[0] = 2.0*d1;

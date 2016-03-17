@@ -366,9 +366,9 @@
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
-				ADF8DC7F1C895BAB004C682C /* src */,
+				AD5CE1C41C9A690400E6CC2A /* libs */,
 				ADF8DD391C895BAB004C682C /* tests */,
-				ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */,
+				ADF8DC7F1C895BAB004C682C /* src */,
 				AD4768031B76EAF100E6B11D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -464,6 +464,14 @@
 				ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */,
 			);
 			name = RandomNumberGenerator;
+			sourceTree = "<group>";
+		};
+		AD5CE1C41C9A690400E6CC2A /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */,
+			);
+			name = libs;
 			sourceTree = "<group>";
 		};
 		ADF8DC7F1C895BAB004C682C /* src */ = {

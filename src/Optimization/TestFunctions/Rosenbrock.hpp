@@ -35,7 +35,7 @@
 
 namespace opt {
     
-    typedef la::Mat<double> vec;
+    typedef la::Mat<double> Mat;
     
     class Rosenbrock {
         
@@ -44,7 +44,7 @@ namespace opt {
         
         Rosenbrock():grad(numDims(),1,0){}
         
-        double operator()( const vec & in ){
+        double operator()( const Mat & in ){
             double x = in[0], y = in[1];
             double d1 = x-a, d2 = y - x*x;
             grad[0] = 2.0*d1 - 4.0*x*b*d2;

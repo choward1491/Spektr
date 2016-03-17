@@ -49,7 +49,7 @@ void LDL( const Matrix<T,C> & m, LMat<T> & L, DMat<double> & D ){
     if (m.size() != D.size() ){
         D.resize(m.size());
     }
-    const int numr = L.size().rows;
+    const int numr = static_cast<int>(L.size().rows);
     
     double sum = T();
     for (int i = 0; i < numr; i++) {
