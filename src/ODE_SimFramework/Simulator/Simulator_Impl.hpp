@@ -46,25 +46,31 @@ double Simulator<Sim,Integrator>::getTime() const{
 
 template<class Sim, class Integrator>
 void Simulator<Sim,Integrator>::runSim(){
+    initialize();
     runMonteCarloSim(); // run all the monte carlo sim
     finalize();         // finalize overall simulation
 }
 
 template<class Sim, class Integrator>
 void Simulator<Sim,Integrator>::initialize(){
+    static bool didSetup = false;
     
-    if ( writeSimHistory ){     // add printer model if writing history
-        state.mlist.addDiscrete( &state.dataPrinter, state.printFrequency);
-        state.dataPrinter.addVariableToPrint( state.time.refNewTime(), "Time");
+    if( !didSetup ){
+        
+        if ( writeSimHistory ){     // add printer model if writing history
+            state.mlist.addDiscrete( &state.dataPrinter, state.printFrequency);
+            state.dataPrinter.addVariableToPrint( state.time.refNewTime(), "Time");
+        }
+        
+        linkModelsToSim();          // add other models to sim
+        buildTotalDynamicState();   // build dynamic state array
+        integrator.setNumDimensions(state.size()); // initialize integrator
+        state.mlist.addParentData(state, generator); // add state and RNG to models
+        setupSimHistory();          // add variables that will be printed
+        connectModelsTogether();    // connect models together if needed
+        didSetup = true;
     }
-    
-    
-    linkModelsToSim();          // add other models to sim
-    buildTotalDynamicState();   // build dynamic state array
-    integrator.setNumDimensions(state.size()); // initialize integrator
-    state.mlist.addParentData(state, generator); // add state and RNG to models
-    setupSimHistory();          // add variables that will be printed
-    connectModelsTogether();    // connect models together if needed
+
 }
 
 template<class Sim, class Integrator>
@@ -120,7 +126,9 @@ void Simulator<Sim,Integrator>::finalize() {
 
 template<class Sim, class Integrator>
 void Simulator<Sim,Integrator>::setupSimHistory(){
-    state.mlist.setupSimHistory();  // Setup the sim history files
+    if( writeSimHistory ){
+        state.mlist.setupSimHistory();  // Setup the sim history files
+    }
 }
 
 
@@ -217,6 +225,23 @@ void Simulator<Sim,Integrator>::runMonteCarloSim(){
 template<class Sim, class Integrator>
 size_t Simulator<Sim,Integrator>::getCompletedMC() const{
     return completedMC;
+}
+
+template<class Sim, class Integrator>
+void Simulator<Sim,Integrator>::setSimHistoryPath( const std::string & filepath ){
+    state.dataPrinter.setSimHistoryFileName(filepath);
+}
+
+// interface method to add dynamics model
+template<class Sim, class Integrator>
+void Simulator<Sim,Integrator>::addDynamics( DynamicModel * model ){
+    state.mlist.addDynamics(model);
+}
+
+// interface method to add discrete model
+template<class Sim, class Integrator>
+void Simulator<Sim,Integrator>::addDiscrete( DiscreteModel * model , int computationFrequency ){
+    state.mlist.addDiscrete(model, computationFrequency);
 }
 
 /*!

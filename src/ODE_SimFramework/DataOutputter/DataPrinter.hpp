@@ -84,7 +84,7 @@ public:
     
     
     void addVariableToPrint( const double * address, const std::string & name );
-    void setSimHistoryFileName( std::string & filename );
+    void setSimHistoryFileName( const std::string & filename );
     void newMonteCarlo() const;
     void reset();
     

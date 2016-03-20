@@ -63,6 +63,7 @@ int ModelList::getNumStates() const{
 }
 
 void ModelList::setupSimHistory(){
+    
     for (int i = 0; i < diffeqList.size(); i++) {
         diffeqList[i]->setupPrintData();
     }

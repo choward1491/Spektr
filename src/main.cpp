@@ -7,12 +7,11 @@
 //
 
 #include <string>
-#include "PendulumSim.hpp"
+#include "TestPendulumSim.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    PendulumSim psim;
-    psim.runSim();
+    testPendulumSim("/Users/christianjhoward/simhistory.txt");
     
     // exit
     return 0;

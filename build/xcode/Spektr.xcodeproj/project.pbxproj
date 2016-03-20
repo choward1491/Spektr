@@ -206,6 +206,7 @@
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
 		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
 		ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Simulator_Impl.hpp; path = Simulator/Simulator_Impl.hpp; sourceTree = "<group>"; };
+		ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPendulumSim.hpp; sourceTree = "<group>"; };
 		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
@@ -879,6 +880,7 @@
 				ADF8DD3B1C895BAB004C682C /* TestExample1.hpp */,
 				ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */,
 				ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */,
+				ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */,
 			);
 			name = tests;
 			path = ../../tests;
@@ -1259,6 +1261,7 @@
 				HEADER_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/**",
 					"../../../Data_Structs/src/**",
+					"$(PROJECT_DIR)/tests",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

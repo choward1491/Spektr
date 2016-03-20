@@ -51,8 +51,9 @@ void DataPrinter::writeNameHeader( FILE* file) const{
 
 
 
-void DataPrinter::setSimHistoryFileName( std::string & filename ){
+void DataPrinter::setSimHistoryFileName( const std::string & filename ){
     outFile = filename;
+    file.openFile(outFile, FileObject::AccessMode::Write);
 }
 
 void DataPrinter::reset(){

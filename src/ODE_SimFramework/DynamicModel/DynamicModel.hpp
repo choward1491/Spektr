@@ -152,26 +152,6 @@ public:
     
     
     /*!
-     * This method is to set the rate at which this model will be updated
-     *
-     * \params updateRateInHz The update rate in Hz
-     * \returns None
-     */
-    void assignUpdateRate( int updateRateInHz ){
-        try {
-            if( updateRateInHz <= 0 ){
-                throw sim::exception("Invalid Update Rate: Must be Greater than 0.");
-            }
-            incrementTime = Time(1, updateRateInHz);
-        } catch ( std::exception & e ){
-            printf("Error in %s.\nMsg = '%s'\n",model_name.c_str(),e.what());
-        }
-    }
-    
-    
-    
-    
-    /*!
      * This method returns the time step between each
      * update of this model
      *

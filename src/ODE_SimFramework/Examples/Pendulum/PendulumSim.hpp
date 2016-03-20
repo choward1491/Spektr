@@ -18,17 +18,16 @@ public:
     
     PendulumSim(){
         std::string historyFile("history.txt");
-        state.dataPrinter.setSimHistoryFileName(historyFile);
+        setSimHistoryPath(historyFile);
         state.printFrequency = 30;
         numMC = 10;
         writeSimHistory = true;
-        initialize();
     }
    
     
     void _linkModelsToSim( SimState & state ){
-        state.mlist.addDiscrete(&tstep, 100);
-        state.mlist.addDynamics(&pendulum);
+        addDiscrete(&tstep, 100);
+        addDynamics(&pendulum);
     }
     void _connectModelsTogether(){
         

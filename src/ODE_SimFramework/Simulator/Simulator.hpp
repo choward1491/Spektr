@@ -52,9 +52,6 @@ template<class Sim, class Integrator = ExplicitEuler >
 class Simulator {
 public:
     
-    // Method to initialize everything before running a simulation
-    void initialize();
-    
     // Method to run the actual simulation
     void runSim();
     
@@ -68,17 +65,35 @@ public:
     // get number of completed Monte Carlo runs
     size_t getCompletedMC() const;
     
+    // method to grab values from config files
+    template<typename T>
+    T get(const std::string & param){
+        return state.parser.getValueFrom<T>(param);
+    }
+    
+    // set the sim history file
+    void setSimHistoryPath( const std::string & filepath );
+    
+    // interface method to add dynamics model
+    void addDynamics( DynamicModel * model );
+    
+    // interface method to add discrete model
+    void addDiscrete( DiscreteModel * model , int computationFrequency );
+    
+    
 protected:
-
+    
     SimState state;        // data structure holding main sim states
     Rand generator;        // centralized random number generator
-    size_t numMC;             // the total number of monte carlo runs
-    size_t completedMC;       // the completed number of monte carlo runs
+    size_t numMC;          // the total number of monte carlo runs
+    size_t completedMC;    // the completed number of monte carlo runs
     bool writeSimHistory;  // flag used to decide whether to write results
     Integrator integrator; // Integrator class
     
 private:
     
+    
+    void initialize();              // Method to initialize everything before running a simulation
     void initializeModels();        // method to initialize models
     void setupSimHistory();         // method to setup sim history
     void linkModelsToSim();         // method to link models to sim

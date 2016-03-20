@@ -27,7 +27,7 @@ class PendulumModel : public DynamicModel {
 public:
     
     
-    PendulumModel():didSetupPrint(false){
+    PendulumModel(){
         model_name = "pendulum";
     }
     
@@ -50,8 +50,8 @@ public:
         dampening       = generator->rand() * 15;
         lengthPendulum  = generator->rand() * 10;
         gravity         = 9.81;
-        state[0]        = generator->rand() * 180 - 180;
-        state[1]        = generator->rand() * 5 - 10.0;
+        state[0]        = Constants::pi/3;
+        state[1]        = Constants::pi/12;
     }
     
     
@@ -62,11 +62,8 @@ public:
      *
      */
     virtual void setupPrintData(){
-        if( !didSetupPrint ){
-            simState->dataPrinter.addVariableToPrint(&state[0], "Theta");
-            simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
-            didSetupPrint = true;
-        }
+        simState->dataPrinter.addVariableToPrint(&state[0], "Theta");
+        simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
     }
     
     
@@ -110,7 +107,6 @@ public:
     
     
 private:
-    bool didSetupPrint;
     double mass;            // in kg
     double dampening;       //
     double gravity;         // m/s^2

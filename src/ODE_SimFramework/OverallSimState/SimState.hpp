@@ -68,6 +68,13 @@ public:
     // Simulation time
     SimTime time;
     
+    
+    // method to grab values from config files
+    template<typename T>
+    T get(const std::string & param){
+        return parser.getValueFrom<T>(param);
+    }
+    
     // Config file parser
     Parser parser;
     
