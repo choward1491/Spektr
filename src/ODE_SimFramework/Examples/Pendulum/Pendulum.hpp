@@ -13,24 +13,14 @@
 #include "DynamicModel.hpp"
 #include <math.h>
 #include "SimState.hpp"
-#include "ConstantsSet.hpp"
+#include "Constants.hpp"
 
 
 
 
 
 /*!
- * These dynamics represent the
- * following model diffeq equation:
- *
- * dxdt = lambda*x
- *
- * The exact solution to this is:
- * x(t) = x(t0) * exp( lambda * t )
- *
- * Note| This equation will blow up if lambda
- * is greater than 0. It is numerically unstable
- * no matter what integration method is used
+ * These dynamics represent a simple 1D nonlinear Pendulum model
  */
 class PendulumModel : public DynamicModel {
     

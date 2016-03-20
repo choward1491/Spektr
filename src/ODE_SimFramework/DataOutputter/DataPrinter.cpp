@@ -20,7 +20,7 @@ void DataPrinter::update(){
     
     if( !file.isOpen() ){ file.openFile(outFile, FileObject::AccessMode::Write); }
     
-    if( not hasHeader ){
+    if( !hasHeader ){
         
         if( file.isOpen() ){
             writeNameHeader( file.ref() );

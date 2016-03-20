@@ -91,9 +91,9 @@
 		ADF8DDA81C895BAB004C682C /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE91C895BAB004C682C /* Parser.cpp */; };
 		ADF8DDA91C895BAB004C682C /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE91C895BAB004C682C /* Parser.cpp */; };
 		ADF8DDAA1C895BAB004C682C /* Parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; };
-		ADF8DDAB1C895BAB004C682C /* ConstantsSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* ConstantsSet.cpp */; };
-		ADF8DDAC1C895BAB004C682C /* ConstantsSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* ConstantsSet.cpp */; };
-		ADF8DDAD1C895BAB004C682C /* ConstantsSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCED1C895BAB004C682C /* ConstantsSet.hpp */; };
+		ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* Constants.cpp */; };
+		ADF8DDAC1C895BAB004C682C /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* Constants.cpp */; };
+		ADF8DDAD1C895BAB004C682C /* Constants.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCED1C895BAB004C682C /* Constants.hpp */; };
 		ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEF1C895BAB004C682C /* DataPrinter.cpp */; };
 		ADF8DDAF1C895BAB004C682C /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEF1C895BAB004C682C /* DataPrinter.cpp */; };
 		ADF8DDB01C895BAB004C682C /* DataPrinter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF01C895BAB004C682C /* DataPrinter.hpp */; };
@@ -103,9 +103,9 @@
 		ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF51C895BAB004C682C /* DynamicModel.cpp */; };
 		ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF51C895BAB004C682C /* DynamicModel.cpp */; };
 		ADF8DDB61C895BAB004C682C /* DynamicModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF61C895BAB004C682C /* DynamicModel.hpp */; };
-		ADF8DDB71C895BAB004C682C /* ExampleSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* ExampleSim.cpp */; };
-		ADF8DDB81C895BAB004C682C /* ExampleSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* ExampleSim.cpp */; };
-		ADF8DDB91C895BAB004C682C /* ExampleSim.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF81C895BAB004C682C /* ExampleSim.hpp */; };
+		ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */; };
+		ADF8DDB81C895BAB004C682C /* PendulumSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */; };
+		ADF8DDB91C895BAB004C682C /* PendulumSim.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */; };
 		ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
 		ADF8DDBB1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
 		ADF8DDBC1C895BAB004C682C /* ModelList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFA1C895BAB004C682C /* ModelList.hpp */; };
@@ -126,13 +126,12 @@
 		ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD091C895BAB004C682C /* Scheduler.cpp */; };
 		ADF8DDCD1C895BAB004C682C /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD091C895BAB004C682C /* Scheduler.cpp */; };
 		ADF8DDCE1C895BAB004C682C /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */; };
-		ADF8DDCF1C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimState.cpp */; };
-		ADF8DDD01C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimState.cpp */; };
-		ADF8DDD11C895BAB004C682C /* SimState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0C1C895BAB004C682C /* SimState.hpp */; };
-		ADF8DDD21C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimTime.cpp */; };
-		ADF8DDD31C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimTime.cpp */; };
-		ADF8DDD41C895BAB004C682C /* SimTime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimTime.hpp */; };
-		ADF8DDD81C895BAB004C682C /* TemplateSimulator.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD121C895BAB004C682C /* TemplateSimulator.h */; };
+		ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimTime.cpp */; };
+		ADF8DDD01C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimTime.cpp */; };
+		ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0C1C895BAB004C682C /* SimTime.hpp */; };
+		ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
+		ADF8DDD31C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
+		ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimState.hpp */; };
 		ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
 		ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
 		ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; };
@@ -203,8 +202,10 @@
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelState.cpp; path = ModelState/ModelState.cpp; sourceTree = "<group>"; };
 		AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelState.hpp; path = ModelState/ModelState.hpp; sourceTree = "<group>"; };
-		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SimExceptions.hpp; sourceTree = "<group>"; };
+		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
+		ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Simulator_Impl.hpp; path = Simulator/Simulator_Impl.hpp; sourceTree = "<group>"; };
 		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
@@ -271,20 +272,20 @@
 		ADF8DCE11C895BAB004C682C /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomNumberGenerator.cpp; sourceTree = "<group>"; };
 		ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RandomNumberGenerator.hpp; sourceTree = "<group>"; };
-		ADF8DCE91C895BAB004C682C /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Parser.cpp; path = ODE_SimFramework/ConfigParser/Parser.cpp; sourceTree = "<group>"; };
-		ADF8DCEA1C895BAB004C682C /* Parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Parser.hpp; path = ODE_SimFramework/ConfigParser/Parser.hpp; sourceTree = "<group>"; };
-		ADF8DCEC1C895BAB004C682C /* ConstantsSet.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ConstantsSet.cpp; sourceTree = "<group>"; };
-		ADF8DCED1C895BAB004C682C /* ConstantsSet.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConstantsSet.hpp; sourceTree = "<group>"; };
+		ADF8DCE91C895BAB004C682C /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Parser.cpp; path = Parser/Parser.cpp; sourceTree = "<group>"; };
+		ADF8DCEA1C895BAB004C682C /* Parser.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Parser.hpp; path = Parser/Parser.hpp; sourceTree = "<group>"; };
+		ADF8DCEC1C895BAB004C682C /* Constants.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Constants.cpp; sourceTree = "<group>"; };
+		ADF8DCED1C895BAB004C682C /* Constants.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Constants.hpp; sourceTree = "<group>"; };
 		ADF8DCEF1C895BAB004C682C /* DataPrinter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DataPrinter.cpp; sourceTree = "<group>"; };
 		ADF8DCF01C895BAB004C682C /* DataPrinter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DataPrinter.hpp; sourceTree = "<group>"; };
 		ADF8DCF21C895BAB004C682C /* DiscreteModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DiscreteModel.cpp; sourceTree = "<group>"; };
 		ADF8DCF31C895BAB004C682C /* DiscreteModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DiscreteModel.hpp; sourceTree = "<group>"; };
 		ADF8DCF51C895BAB004C682C /* DynamicModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DynamicModel.cpp; sourceTree = "<group>"; };
 		ADF8DCF61C895BAB004C682C /* DynamicModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DynamicModel.hpp; sourceTree = "<group>"; };
-		ADF8DCF71C895BAB004C682C /* ExampleSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExampleSim.cpp; sourceTree = "<group>"; };
-		ADF8DCF81C895BAB004C682C /* ExampleSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExampleSim.hpp; sourceTree = "<group>"; };
-		ADF8DCF91C895BAB004C682C /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModelList.cpp; sourceTree = "<group>"; };
-		ADF8DCFA1C895BAB004C682C /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ModelList.hpp; sourceTree = "<group>"; };
+		ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PendulumSim.cpp; path = Examples/Pendulum/PendulumSim.cpp; sourceTree = "<group>"; };
+		ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PendulumSim.hpp; path = Examples/Pendulum/PendulumSim.hpp; sourceTree = "<group>"; };
+		ADF8DCF91C895BAB004C682C /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelList.cpp; path = ModelList/ModelList.cpp; sourceTree = "<group>"; };
+		ADF8DCFA1C895BAB004C682C /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelList.hpp; path = ModelList/ModelList.hpp; sourceTree = "<group>"; };
 		ADF8DCFC1C895BAB004C682C /* ExplicitEuler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitEuler.cpp; sourceTree = "<group>"; };
 		ADF8DCFD1C895BAB004C682C /* ExplicitEuler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitEuler.hpp; sourceTree = "<group>"; };
 		ADF8DCFE1C895BAB004C682C /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
@@ -292,16 +293,15 @@
 		ADF8DD001C895BAB004C682C /* NumericIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericIntegration.h; sourceTree = "<group>"; };
 		ADF8DD011C895BAB004C682C /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RungeKutta4.cpp; sourceTree = "<group>"; };
 		ADF8DD021C895BAB004C682C /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RungeKutta4.hpp; sourceTree = "<group>"; };
-		ADF8DD041C895BAB004C682C /* Pendulum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pendulum.cpp; sourceTree = "<group>"; };
-		ADF8DD051C895BAB004C682C /* Pendulum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Pendulum.hpp; sourceTree = "<group>"; };
+		ADF8DD041C895BAB004C682C /* Pendulum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pendulum.cpp; path = Examples/Pendulum/Pendulum.cpp; sourceTree = "<group>"; };
+		ADF8DD051C895BAB004C682C /* Pendulum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Pendulum.hpp; path = Examples/Pendulum/Pendulum.hpp; sourceTree = "<group>"; };
 		ADF8DD071C895BAB004C682C /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
 		ADF8DD091C895BAB004C682C /* Scheduler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Scheduler.cpp; sourceTree = "<group>"; };
 		ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Scheduler.hpp; sourceTree = "<group>"; };
-		ADF8DD0B1C895BAB004C682C /* SimState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimState.cpp; sourceTree = "<group>"; };
-		ADF8DD0C1C895BAB004C682C /* SimState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimState.hpp; sourceTree = "<group>"; };
-		ADF8DD0D1C895BAB004C682C /* SimTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SimTime.cpp; sourceTree = "<group>"; };
-		ADF8DD0E1C895BAB004C682C /* SimTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SimTime.hpp; sourceTree = "<group>"; };
-		ADF8DD121C895BAB004C682C /* TemplateSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TemplateSimulator.h; sourceTree = "<group>"; };
+		ADF8DD0B1C895BAB004C682C /* SimTime.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimTime.cpp; path = OverallSimState/SimTime.cpp; sourceTree = "<group>"; };
+		ADF8DD0C1C895BAB004C682C /* SimTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimTime.hpp; path = OverallSimState/SimTime.hpp; sourceTree = "<group>"; };
+		ADF8DD0D1C895BAB004C682C /* SimState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimState.cpp; path = OverallSimState/SimState.cpp; sourceTree = "<group>"; };
+		ADF8DD0E1C895BAB004C682C /* SimState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimState.hpp; path = OverallSimState/SimState.hpp; sourceTree = "<group>"; };
 		ADF8DD161C895BAB004C682C /* MultiPSO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiPSO.cpp; sourceTree = "<group>"; };
 		ADF8DD171C895BAB004C682C /* MultiPSO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiPSO.hpp; sourceTree = "<group>"; };
 		ADF8DD181C895BAB004C682C /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
@@ -422,8 +422,8 @@
 			children = (
 				ADF8DD041C895BAB004C682C /* Pendulum.cpp */,
 				ADF8DD051C895BAB004C682C /* Pendulum.hpp */,
-				ADF8DCF71C895BAB004C682C /* ExampleSim.cpp */,
-				ADF8DCF81C895BAB004C682C /* ExampleSim.hpp */,
+				ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */,
+				ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */,
 			);
 			name = Pendulum;
 			sourceTree = "<group>";
@@ -440,10 +440,10 @@
 		AD5CE1C01C9A557100E6CC2A /* OverallSimState */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DD0D1C895BAB004C682C /* SimTime.cpp */,
-				ADF8DD0E1C895BAB004C682C /* SimTime.hpp */,
-				ADF8DD0B1C895BAB004C682C /* SimState.cpp */,
-				ADF8DD0C1C895BAB004C682C /* SimState.hpp */,
+				ADF8DD0D1C895BAB004C682C /* SimState.cpp */,
+				ADF8DD0E1C895BAB004C682C /* SimState.hpp */,
+				ADF8DD0B1C895BAB004C682C /* SimTime.cpp */,
+				ADF8DD0C1C895BAB004C682C /* SimTime.hpp */,
 			);
 			name = OverallSimState;
 			sourceTree = "<group>";
@@ -472,6 +472,15 @@
 				ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */,
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		ADB461251C9F35280088FF7C /* Simulator */ = {
+			isa = PBXGroup;
+			children = (
+				ADB461231C9F34FE0088FF7C /* Simulator.hpp */,
+				ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */,
+			);
+			name = Simulator;
 			sourceTree = "<group>";
 		};
 		ADF8DC7F1C895BAB004C682C /* src */ = {
@@ -675,6 +684,7 @@
 		ADF8DCE71C895BAB004C682C /* ODE_SimFramework */ = {
 			isa = PBXGroup;
 			children = (
+				ADB461251C9F35280088FF7C /* Simulator */,
 				AD5CE1BD1C9A551C00E6CC2A /* Examples */,
 				AD5CE1C01C9A557100E6CC2A /* OverallSimState */,
 				AD5CE1BF1C9A553F00E6CC2A /* ModelList */,
@@ -687,7 +697,6 @@
 				ADF8DCFB1C895BAB004C682C /* NumericIntegration */,
 				ADF8DD061C895BAB004C682C /* PreciseTime */,
 				ADF8DD081C895BAB004C682C /* Scheduler */,
-				ADF8DD121C895BAB004C682C /* TemplateSimulator.h */,
 			);
 			path = ODE_SimFramework;
 			sourceTree = "<group>";
@@ -695,8 +704,8 @@
 		ADF8DCEB1C895BAB004C682C /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DCEC1C895BAB004C682C /* ConstantsSet.cpp */,
-				ADF8DCED1C895BAB004C682C /* ConstantsSet.hpp */,
+				ADF8DCEC1C895BAB004C682C /* Constants.cpp */,
+				ADF8DCED1C895BAB004C682C /* Constants.hpp */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -911,11 +920,10 @@
 				ADF8DDEC1C895BAB004C682C /* Element.hpp in Headers */,
 				ADF8DDE51C895BAB004C682C /* RandomInit.hpp in Headers */,
 				ADF8DD501C895BAB004C682C /* Vec3D.hpp in Headers */,
-				ADF8DDB91C895BAB004C682C /* ExampleSim.hpp in Headers */,
-				ADF8DDD81C895BAB004C682C /* TemplateSimulator.h in Headers */,
-				ADF8DDD41C895BAB004C682C /* SimTime.hpp in Headers */,
+				ADF8DDB91C895BAB004C682C /* PendulumSim.hpp in Headers */,
+				ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */,
 				ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */,
-				ADF8DDAD1C895BAB004C682C /* ConstantsSet.hpp in Headers */,
+				ADF8DDAD1C895BAB004C682C /* Constants.hpp in Headers */,
 				ADF8DD7D1C895BAB004C682C /* Special_Sparse.hpp in Headers */,
 				ADF8DD7A1C895BAB004C682C /* Special_Diag.hpp in Headers */,
 				ADF8DD4D1C895BAB004C682C /* Quaternion.hpp in Headers */,
@@ -950,7 +958,7 @@
 				ADF8DDA11C895BAB004C682C /* Fraction.h in Headers */,
 				ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */,
 				ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */,
-				ADF8DDD11C895BAB004C682C /* SimState.hpp in Headers */,
+				ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */,
 				ADF8DD8E1C895BAB004C682C /* ActivationFuncs.hpp in Headers */,
 				ADF8DDB61C895BAB004C682C /* DynamicModel.hpp in Headers */,
 				ADF8DD6F1C895BAB004C682C /* MatScalarMinusExpr.hpp in Headers */,
@@ -1082,14 +1090,14 @@
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */,
-				ADF8DDD21C895BAB004C682C /* SimTime.cpp in Sources */,
+				ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */,
 				ADF8DDF01C895BAB004C682C /* FiniteElement.cpp in Sources */,
 				ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF31C895BAB004C682C /* FiniteVolume.cpp in Sources */,
 				ADF8DDBD1C895BAB004C682C /* ExplicitEuler.cpp in Sources */,
 				ADF8DD8F1C895BAB004C682C /* DataSet.cpp in Sources */,
-				ADF8DDCF1C895BAB004C682C /* SimState.cpp in Sources */,
+				ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */,
 				ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
@@ -1103,8 +1111,8 @@
 				ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */,
 				AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */,
 				ADF8DDA81C895BAB004C682C /* Parser.cpp in Sources */,
-				ADF8DDB71C895BAB004C682C /* ExampleSim.cpp in Sources */,
-				ADF8DDAB1C895BAB004C682C /* ConstantsSet.cpp in Sources */,
+				ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */,
+				ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */,
 				ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */,
 				ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */,
 				ADF8DDED1C895BAB004C682C /* FiniteDifference.cpp in Sources */,
@@ -1133,14 +1141,14 @@
 				ADF8DDC91C895BAB004C682C /* Pendulum.cpp in Sources */,
 				ADF8DDE41C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DDA01C895BAB004C682C /* Fraction.cpp in Sources */,
-				ADF8DDD31C895BAB004C682C /* SimTime.cpp in Sources */,
+				ADF8DDD31C895BAB004C682C /* SimState.cpp in Sources */,
 				ADF8DDF11C895BAB004C682C /* FiniteElement.cpp in Sources */,
 				ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF41C895BAB004C682C /* FiniteVolume.cpp in Sources */,
 				ADF8DDBE1C895BAB004C682C /* ExplicitEuler.cpp in Sources */,
 				ADF8DD901C895BAB004C682C /* DataSet.cpp in Sources */,
-				ADF8DDD01C895BAB004C682C /* SimState.cpp in Sources */,
+				ADF8DDD01C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAF1C895BAB004C682C /* DataPrinter.cpp in Sources */,
 				ADF8DDA51C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDD1C895BAB004C682C /* Particle.cpp in Sources */,
@@ -1153,8 +1161,8 @@
 				ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				ADF8DD9E1C895BAB004C682C /* main.cpp in Sources */,
 				ADF8DDA91C895BAB004C682C /* Parser.cpp in Sources */,
-				ADF8DDB81C895BAB004C682C /* ExampleSim.cpp in Sources */,
-				ADF8DDAC1C895BAB004C682C /* ConstantsSet.cpp in Sources */,
+				ADF8DDB81C895BAB004C682C /* PendulumSim.cpp in Sources */,
+				ADF8DDAC1C895BAB004C682C /* Constants.cpp in Sources */,
 				ADF8DD731C895BAB004C682C /* MatHashes.cpp in Sources */,
 				ADF8DDBB1C895BAB004C682C /* ModelList.cpp in Sources */,
 				ADF8DDEE1C895BAB004C682C /* FiniteDifference.cpp in Sources */,

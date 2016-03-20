@@ -1,11 +1,11 @@
 //
-//  TemplateSimulator.h
-//  NumCH
+//  Simulator_Impl.hpp
+//  Spektr
 //
-//  Created by Christian J Howard on 12/25/15.
+//  Created by Christian J Howard on 3/20/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,51 +27,10 @@
 //
 //
 
-#ifndef TemplateSimulator_h
-#define TemplateSimulator_h
+#ifndef Simulator_Impl_h
+#define Simulator_Impl_h
 
-#include "ModelList.hpp"
-#include "SimState.hpp"
-#include "SimTime.hpp"
-#include "NumericIntegration.h"
-
-class TimeStep : public DiscreteModel {};
-
-template<class Sim, class Integrator = ExplicitEuler >
-class Simulator {
-public:
-    
-    void initialize();
-    void runSim();
-    void addConfigFile( const char * filename );
-    void addConfigFile( const std::string & filename );
-    double getTime() const;
-    
-protected:
-    
-    SimState state;
-    Rand generator;
-    int numMC;
-    bool writeSimHistory;
-    Integrator integrator;
-    
-private:
-    
-    void initializeModels();
-    void setupSimHistory();
-    void linkModelsToSim();
-    void connectModelsTogether();
-    bool finishedSimulation();
-    void finalizeMonteCarloRun();
-    void finalize();
-    void buildTotalDynamicState();
-    void MonteCarloSetup( int monteCarloCount );
-    void runIndividualSim();
-    void runMonteCarloSim();
-};
-
-
-
+#include "Simulator.hpp"
 
 /*!
  *
@@ -84,7 +43,7 @@ double Simulator<Sim,Integrator>::getTime() const{
     return state.time.getPreciseTime(); // get precise latest sim time
 }
 
-    
+
 template<class Sim, class Integrator>
 void Simulator<Sim,Integrator>::runSim(){
     runMonteCarloSim(); // run all the monte carlo sim
@@ -219,7 +178,7 @@ void Simulator<Sim,Integrator>::runIndividualSim(){
     Scheduler* scheduler = &state.mlist.scheduler;  // reference scheduler
     t->setPreciseTime(scheduler->getNextTime());    // set latest time to first nonzero start time
     
-    while ( not finishedSimulation() ){     // loop through sim
+    while ( !finishedSimulation() ){     // loop through sim
         tn          = t->getPreciseTime();  // obtain t_{i+1}
         model       = scheduler->pop();     // get model to run
         
@@ -247,11 +206,17 @@ void Simulator<Sim,Integrator>::runIndividualSim(){
 
 template<class Sim, class Integrator>
 void Simulator<Sim,Integrator>::runMonteCarloSim(){
-    for (int iMC = 0; iMC < numMC; iMC++) { // loop through all monte carlo draws
+    completedMC = 1;
+    for (int iMC = 0; iMC < numMC; iMC++, completedMC++) { // loop through all monte carlo draws
         MonteCarloSetup(iMC);               // setup iMCth monte carlo sim
         runIndividualSim();                 // run an individual sim
         finalizeMonteCarloRun();            // finalize latest individual sim
     }
+}
+
+template<class Sim, class Integrator>
+size_t Simulator<Sim,Integrator>::getCompletedMC() const{
+    return completedMC;
 }
 
 /*!
@@ -261,5 +226,4 @@ void Simulator<Sim,Integrator>::runMonteCarloSim(){
  */
 
 
-
-#endif /* TemplateSimulator_h */
+#endif /* Simulator_Impl_h */

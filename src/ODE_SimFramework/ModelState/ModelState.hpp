@@ -35,12 +35,19 @@
 
 class ModelState {
 public:
+    // Constructors
     ModelState();
     ModelState(double * address, size_t numDims );
+    
+    // Methods to access data
     double & operator[](size_t i);
     const double & operator[](size_t i) const;
+    
+    // methods to update state
     void setAddress( double * address );
     void setNumDims( size_t numDims );
+    
+    // Method to get reference to state pointer
     double * reference(){ return ref; }
 private:
     double * ref;

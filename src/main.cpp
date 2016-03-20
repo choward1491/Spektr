@@ -7,8 +7,12 @@
 //
 
 #include <string>
+#include "PendulumSim.hpp"
 
 int main(int argc, const char * argv[]) {
+    
+    PendulumSim psim;
+    psim.runSim();
     
     // exit
     return 0;

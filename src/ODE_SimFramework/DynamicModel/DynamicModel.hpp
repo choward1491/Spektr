@@ -159,7 +159,7 @@ public:
      */
     void assignUpdateRate( int updateRateInHz ){
         try {
-            if( updateRateInHz == 0 ){
+            if( updateRateInHz <= 0 ){
                 throw sim::exception("Invalid Update Rate: Must be Greater than 0.");
             }
             incrementTime = Time(1, updateRateInHz);

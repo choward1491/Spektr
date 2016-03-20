@@ -47,7 +47,6 @@ namespace quad {
             for (int i = 0; i < N ; i++) {
                 t = -ta + i*h;
                 o = computeWeightAbscissa(t);
-                //result += o.weight* (func(S(o.abscissa,a,b)) + func(S(-o.abscissa,a,b)));
                 result += o.weight* func(S(o.abscissa,a,b));
             }
             return result * c;

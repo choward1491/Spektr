@@ -35,27 +35,27 @@
 #include <string>
 
 
-    class FileObject {
-    public:
-        
-        enum AccessMode { Read=0, Write, Append, ReadUpdate, WriteUpdate, AppendUpdate };
-        
-        FileObject();
-        FileObject( const char* filename , AccessMode mode );
-        FileObject( const std::string & filename, AccessMode mode );
-        ~FileObject();
-        
-        bool isOpen() const;
-        void openFile( const char* filename, AccessMode mode );
-        void openFile( const std::string & filename, AccessMode mode );
-        void resetFile();
-        FILE* ref() const;
-        
-    private:
-        void clear();
-        FILE* file;
-        
-    };
+class FileObject {
+public:
+    
+    enum AccessMode { Read=0, Write, Append, ReadUpdate, WriteUpdate, AppendUpdate };
+    
+    FileObject();
+    FileObject( const char* filename , AccessMode mode );
+    FileObject( const std::string & filename, AccessMode mode );
+    ~FileObject();
+    
+    bool isOpen() const;
+    void openFile( const char* filename, AccessMode mode );
+    void openFile( const std::string & filename, AccessMode mode );
+    void resetFile();
+    FILE* ref() const;
+    
+private:
+    void clear();
+    FILE* file;
+    
+};
 
 
 

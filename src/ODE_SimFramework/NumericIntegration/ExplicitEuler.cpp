@@ -15,6 +15,7 @@ void ExplicitEuler::integrate( double time, double dt , double* inOutState, Diff
     size_t ndim;
     
     if( list.size() > 0 ){
+        
         // compute dqdt
         for (int i = 0; i < list.size(); i++) {
             ndim = list[i]->numDims();
