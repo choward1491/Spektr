@@ -37,12 +37,19 @@ class Fraction {
 public:
     Fraction();
     Fraction(int num, int denom );
+    Fraction(int complete, int rem_num, int rem_denom );
+    template<typename T>
+    Fraction( const T & val ){
+        *this = val;
+    }
     
     Fraction operator*( const Fraction& ) const;
     Fraction operator+( const Fraction& ) const;
     Fraction operator/( const Fraction& ) const;
     Fraction operator-( const Fraction& ) const;
     Fraction operator-() const;
+    void operator+=( const Fraction & ) ;
+    void operator-=( const Fraction & ) ;
     void operator-(){ positive = !positive; }
     bool operator==( const Fraction & ) const;
     bool operator<( const Fraction & ) const;
@@ -51,9 +58,23 @@ public:
     bool operator>=( const Fraction & ) const;
     bool operator!=( const Fraction & ) const;
     
+    template<typename T>
+    void operator=( const T & val ){
+        *this = Fraction(static_cast<int>(val),1);
+    }
+    
+    template<typename T>
+    operator T() const {
+        return convert<T>();
+    }
+    
     
     template< class T>
-    T convert() const;
+    T convert() const{
+        T output = static_cast<T>(complete) + (static_cast<T>(numerator) / static_cast<T>(denominator));
+        if( positive ){ return output; }
+        return -output;
+    }
     
     void print() const {
         if( positive ){

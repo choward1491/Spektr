@@ -29,7 +29,7 @@ public:
     }
     
     const T & operator()(int r, int c)  const {
-        sum = T(0);
+        sum = static_cast<T>(0);
         
         for (int ic = 0; ic < _u.size().cols; ic++) {
             sum += _u(r,ic)*_v(ic,c);

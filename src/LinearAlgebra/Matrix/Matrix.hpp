@@ -40,7 +40,7 @@
 namespace la {
     
     
-    template<typename S , class Type, MatType MT = MType<S,Type>::Type, class Storage = MatStorage<S,MT> >
+    template<typename S , class Type, class Storage = MatStorage<S,MType<S,Type>::Type> >
     class Matrix : public MatExpression<S, Matrix<S,Type> >{
     public:
         
@@ -153,7 +153,7 @@ namespace la {
                 printf("| ");
                 for (size_t ic=0; ic < dims.cols; ic++) {
                     if( ic != 0 ){ printf(", "); }
-                    printf("%6.6lf",(double)(*this)(ir,ic));
+                    printf("%6.6lf",static_cast<double>((*this)(ir,ic)));
                 }
                 printf(" |\n");
             }

@@ -53,8 +53,6 @@
 		ADF8DD7E1C895BAB004C682C /* Special_Symmetric.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */; };
 		ADF8DD7F1C895BAB004C682C /* Special_Tridiag.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */; };
 		ADF8DD801C895BAB004C682C /* Special_Upper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */; };
-		ADF8DD811C895BAB004C682C /* MatStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC41C895BAB004C682C /* MatStorage.cpp */; };
-		ADF8DD821C895BAB004C682C /* MatStorage.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC41C895BAB004C682C /* MatStorage.cpp */; };
 		ADF8DD831C895BAB004C682C /* MatStorage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC51C895BAB004C682C /* MatStorage.hpp */; };
 		ADF8DD851C895BAB004C682C /* ConjGrad.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC81C895BAB004C682C /* ConjGrad.hpp */; };
 		ADF8DD861C895BAB004C682C /* DiagonalSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC91C895BAB004C682C /* DiagonalSolver.hpp */; };
@@ -210,6 +208,8 @@
 		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
 		ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Simulator_Impl.hpp; path = Simulator/Simulator_Impl.hpp; sourceTree = "<group>"; };
 		ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPendulumSim.hpp; sourceTree = "<group>"; };
+		ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatStorage_Impl.hpp; sourceTree = "<group>"; };
+		ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatStorage_Sparse.hpp; sourceTree = "<group>"; };
 		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
@@ -249,7 +249,6 @@
 		ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Symmetric.hpp; sourceTree = "<group>"; };
 		ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Tridiag.hpp; sourceTree = "<group>"; };
 		ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Special_Upper.hpp; sourceTree = "<group>"; };
-		ADF8DCC41C895BAB004C682C /* MatStorage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatStorage.cpp; sourceTree = "<group>"; };
 		ADF8DCC51C895BAB004C682C /* MatStorage.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MatStorage.hpp; sourceTree = "<group>"; };
 		ADF8DCC81C895BAB004C682C /* ConjGrad.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ConjGrad.hpp; sourceTree = "<group>"; };
 		ADF8DCC91C895BAB004C682C /* DiagonalSolver.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DiagonalSolver.hpp; sourceTree = "<group>"; };
@@ -646,8 +645,9 @@
 		ADF8DCC31C895BAB004C682C /* MatStorage */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DCC41C895BAB004C682C /* MatStorage.cpp */,
 				ADF8DCC51C895BAB004C682C /* MatStorage.hpp */,
+				ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */,
+				ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */,
 			);
 			path = MatStorage;
 			sourceTree = "<group>";
@@ -1143,7 +1143,6 @@
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */,
 				ADF8DD4E1C895BAB004C682C /* Vec3D.cpp in Sources */,
-				ADF8DD811C895BAB004C682C /* MatStorage.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1193,7 +1192,6 @@
 				ADF8DDEB1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF91C895BAB004C682C /* TanhSinh.cpp in Sources */,
 				ADF8DD4F1C895BAB004C682C /* Vec3D.cpp in Sources */,
-				ADF8DD821C895BAB004C682C /* MatStorage.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

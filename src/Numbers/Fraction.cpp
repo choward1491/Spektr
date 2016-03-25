@@ -9,14 +9,18 @@
 
 #include "Fraction.h"
 
-
-template<class T>
-T Fraction::convert() const {
-    T output = (T)complete + ((T)numerator / (T)denominator);
-    if( positive ){ return output; }
-    return -output;
+template<>
+void Fraction::operator=( const double & val ){
+    const int scale = 60000;
+    int rnd = static_cast<int>(val);
+    int rem = scale*(val - static_cast<double>(rnd));
+    *this = Fraction(rnd,rem,scale);
 }
 
+template<>
+void Fraction::operator=( const int & val ){
+    *this = Fraction(val,1);
+}
 
 template<>
 double Fraction::convert() const {
@@ -66,6 +70,17 @@ Fraction::Fraction(int num, int denom ){
     
 }
 
+Fraction::Fraction(int complete_, int rem_num, int rem_denom ){
+    int odd = (complete_ < 0) + ( rem_num < 0 ) + (rem_denom < 0);
+    if (odd%2==1) {
+        positive = false;
+    }else{ positive = true; }
+    unsigned int gc = gcd(rem_num, rem_denom);
+    complete = complete_;
+    numerator = rem_num / gc;
+    denominator = rem_denom / gc;
+}
+
 
 
 Fraction Fraction::operator*( const Fraction& frac ) const{
@@ -79,7 +94,7 @@ Fraction Fraction::operator*( const Fraction& frac ) const{
     unsigned int denom = this->denominator * frac.denominator;
     unsigned int gc = gcd(num, denom);
     num /= gc;
-    denom /= denom;
+    denom /= gc;
     unsigned int comp = 0;
     
     bool pos = this->positive == frac.positive;
@@ -96,6 +111,14 @@ Fraction Fraction::operator*( const Fraction& frac ) const{
     
     return output;
 }
+
+void Fraction::operator+=( const Fraction & f ) {
+    *this = *this + f;
+}
+void Fraction::operator-=( const Fraction & f ) {
+    *this = *this - f;
+}
+
 
 /*
  (a + c/b)*(e + g/h) = a*e + e*c/b + a*g/h + c*g/(b*h)
