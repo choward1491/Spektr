@@ -1,0 +1,3 @@
+[submodule "external/Bones"]
+	path = external/Bones
+	url = git://github.com/choward1491/Bones.git

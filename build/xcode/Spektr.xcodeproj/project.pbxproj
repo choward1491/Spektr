@@ -204,6 +204,9 @@
 		AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelState.hpp; path = ModelState/ModelState.hpp; sourceTree = "<group>"; };
 		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression.hpp; path = LocalRegression/LocalRegression.hpp; sourceTree = "<group>"; };
+		ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression_Impl.hpp; path = LocalRegression/LocalRegression_Impl.hpp; sourceTree = "<group>"; };
+		ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalFitter.hpp; path = LocalRegression/LocalFitter/LocalFitter.hpp; sourceTree = "<group>"; };
 		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
 		ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Simulator_Impl.hpp; path = Simulator/Simulator_Impl.hpp; sourceTree = "<group>"; };
 		ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPendulumSim.hpp; sourceTree = "<group>"; };
@@ -475,6 +478,24 @@
 			name = libs;
 			sourceTree = "<group>";
 		};
+		ADB28FC41CA3802A00E738F2 /* LocalRegression */ = {
+			isa = PBXGroup;
+			children = (
+				ADB28FC71CA38CCA00E738F2 /* LocalFitter */,
+				ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */,
+				ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */,
+			);
+			name = LocalRegression;
+			sourceTree = "<group>";
+		};
+		ADB28FC71CA38CCA00E738F2 /* LocalFitter */ = {
+			isa = PBXGroup;
+			children = (
+				ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */,
+			);
+			name = LocalFitter;
+			sourceTree = "<group>";
+		};
 		ADB461251C9F35280088FF7C /* Simulator */ = {
 			isa = PBXGroup;
 			children = (
@@ -648,6 +669,7 @@
 		ADF8DCCF1C895BAB004C682C /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
+				ADB28FC41CA3802A00E738F2 /* LocalRegression */,
 				ADF8DCD01C895BAB004C682C /* ANN */,
 			);
 			path = MachineLearning;

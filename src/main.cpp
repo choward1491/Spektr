@@ -11,8 +11,6 @@
 
 int main(int argc, const char * argv[]) {
     
-    testPendulumSim("simhistory.txt");
-    
     // exit
     return 0;
 }
