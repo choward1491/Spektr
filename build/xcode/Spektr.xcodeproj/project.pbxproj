@@ -271,7 +271,7 @@
 		ADF8DCDB1C895BAB004C682C /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
 		ADF8DCDC1C895BAB004C682C /* RBF_Poly.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RBF_Poly.hpp; sourceTree = "<group>"; };
 		ADF8DCDD1C895BAB004C682C /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
-		ADF8DCDE1C895BAB004C682C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		ADF8DCDE1C895BAB004C682C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../src/main.cpp; sourceTree = "<group>"; };
 		ADF8DCE01C895BAB004C682C /* Fraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fraction.cpp; sourceTree = "<group>"; };
 		ADF8DCE11C895BAB004C682C /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
 		ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomNumberGenerator.cpp; sourceTree = "<group>"; };
@@ -373,6 +373,7 @@
 				AD5CE1C41C9A690400E6CC2A /* libs */,
 				ADF8DD391C895BAB004C682C /* tests */,
 				ADF8DC7F1C895BAB004C682C /* src */,
+				ADF8DCDE1C895BAB004C682C /* main.cpp */,
 				AD4768031B76EAF100E6B11D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -521,7 +522,6 @@
 				ADF8DD281C895BAB004C682C /* PDE_Sim */,
 				ADF8DD321C895BAB004C682C /* Quadrature */,
 				ADF8DD361C895BAB004C682C /* Timer */,
-				ADF8DCDE1C895BAB004C682C /* main.cpp */,
 			);
 			name = src;
 			path = ../../src;
@@ -1281,9 +1281,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/**",
-					"../../../Data_Structs/src/**",
-					"$(PROJECT_DIR)/tests",
+					"<Multiple",
+					"values>",
+					"../../external/Bones/src/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1300,8 +1300,9 @@
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = fast;
 				HEADER_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/**",
-					"../../../Data_Structs/src/**",
+					"<Multiple",
+					"values>",
+					"../../external/Bones/src/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
