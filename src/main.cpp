@@ -8,6 +8,7 @@
 
 #include <string>
 #include "TestPendulumSim.hpp"
+#include "AVL_Tree.hpp"
 
 int main(int argc, const char * argv[]) {
     
