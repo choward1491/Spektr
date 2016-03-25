@@ -4,13 +4,17 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4243EAF92C599029FE186FBAD741554A7AD5453D" : 0,
+    "7B543E6FA73F03DFD3090359CC0FC6F36C605142" : 0,
     "DE3CD2327D617BD0A3F32A930F636CA1A64B3492" : 0,
-    "4243EAF92C599029FE186FBAD741554A7AD5453D" : 0
+    "71F15AF99D4B242B8605DCC464692A8A93D6FD1C" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C6425B22-D657-4469-801D-461B41E1B2D4",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4243EAF92C599029FE186FBAD741554A7AD5453D" : "Data_Structs\/",
+    "7B543E6FA73F03DFD3090359CC0FC6F36C605142" : "..\/iOS_Apps\/FunctionalLib",
     "DE3CD2327D617BD0A3F32A930F636CA1A64B3492" : "NumCH\/",
-    "4243EAF92C599029FE186FBAD741554A7AD5453D" : "Data_Structs\/"
+    "71F15AF99D4B242B8605DCC464692A8A93D6FD1C" : "..\/iOS_Apps\/Swift_CompLib"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Spektr",
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
@@ -20,6 +24,16 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/choward1491\/Data_Structures.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4243EAF92C599029FE186FBAD741554A7AD5453D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:choward1491\/Swift_Computations.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "71F15AF99D4B242B8605DCC464692A8A93D6FD1C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/choward1491\/FunctionalLib.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7B543E6FA73F03DFD3090359CC0FC6F36C605142"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/choward1491\/NumCH.git",
