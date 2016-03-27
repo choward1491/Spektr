@@ -195,6 +195,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD39480A1CA7338300797BB3 /* Complex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex.hpp; sourceTree = "<group>"; };
+		AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex_Impl.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -210,6 +212,9 @@
 		ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPendulumSim.hpp; sourceTree = "<group>"; };
 		ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatStorage_Impl.hpp; sourceTree = "<group>"; };
 		ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatStorage_Sparse.hpp; sourceTree = "<group>"; };
+		ADE02CB91CA644D500A3D736 /* FastStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastStorage.hpp; sourceTree = "<group>"; };
+		ADE02CBA1CA6460300A3D736 /* FastStorage_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastStorage_Impl.hpp; sourceTree = "<group>"; };
+		ADE02CBB1CA64A2F00A3D736 /* Special_FastMat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Special_FastMat.hpp; sourceTree = "<group>"; };
 		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
@@ -366,6 +371,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD3948091CA7336C00797BB3 /* complex */ = {
+			isa = PBXGroup;
+			children = (
+				AD39480A1CA7338300797BB3 /* Complex.hpp */,
+				AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */,
+			);
+			name = complex;
+			sourceTree = "<group>";
+		};
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +519,25 @@
 			name = Simulator;
 			sourceTree = "<group>";
 		};
+		ADE02CB71CA644B100A3D736 /* DynamicStorage */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DCC51C895BAB004C682C /* MatStorage.hpp */,
+				ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */,
+				ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */,
+			);
+			name = DynamicStorage;
+			sourceTree = "<group>";
+		};
+		ADE02CB81CA644C100A3D736 /* FastStorage */ = {
+			isa = PBXGroup;
+			children = (
+				ADE02CB91CA644D500A3D736 /* FastStorage.hpp */,
+				ADE02CBA1CA6460300A3D736 /* FastStorage_Impl.hpp */,
+			);
+			name = FastStorage;
+			sourceTree = "<group>";
+		};
 		ADF8DC7F1C895BAB004C682C /* src */ = {
 			isa = PBXGroup;
 			children = (
@@ -638,6 +671,7 @@
 				ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */,
 				ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */,
 				ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */,
+				ADE02CBB1CA64A2F00A3D736 /* Special_FastMat.hpp */,
 			);
 			path = Special;
 			sourceTree = "<group>";
@@ -645,9 +679,8 @@
 		ADF8DCC31C895BAB004C682C /* MatStorage */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DCC51C895BAB004C682C /* MatStorage.hpp */,
-				ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */,
-				ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */,
+				ADE02CB81CA644C100A3D736 /* FastStorage */,
+				ADE02CB71CA644B100A3D736 /* DynamicStorage */,
 			);
 			path = MatStorage;
 			sourceTree = "<group>";
@@ -698,6 +731,7 @@
 		ADF8DCDF1C895BAB004C682C /* Numbers */ = {
 			isa = PBXGroup;
 			children = (
+				AD3948091CA7336C00797BB3 /* complex */,
 				AD5CE1C31C9A672700E6CC2A /* RandomNumberGenerator */,
 				AD5CE1C21C9A671F00E6CC2A /* Fraction */,
 			);
@@ -1279,8 +1313,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-					"<Multiple",
-					"values>",
+					"../../src/**",
 					"../../external/Bones/src/**",
 				);
 				LIBRARY_SEARCH_PATHS = (
@@ -1298,8 +1331,7 @@
 			buildSettings = {
 				GCC_OPTIMIZATION_LEVEL = fast;
 				HEADER_SEARCH_PATHS = (
-					"<Multiple",
-					"values>",
+					"../../src/**",
 					"../../external/Bones/src/**",
 				);
 				LIBRARY_SEARCH_PATHS = (

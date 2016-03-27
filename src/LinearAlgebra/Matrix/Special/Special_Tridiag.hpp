@@ -39,10 +39,13 @@ namespace la {
     class TDMat : public Matrix<T, TDMat<T> >{
     public:
         
-        
-        TDMat():Matrix<T,TDMat<T>>(){}
-        TDMat(int numr, int numc, T dval = T() ):Matrix<T,TDMat<T>>(numr,numc,dval){}
-        TDMat(Dims dims, T dval = T() ):Matrix<T,TDMat<T>>(dims,dval){}
+        TDMat():Matrix<T,TDMat<T> >(){}
+        TDMat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        TDMat(Dims dims, T dval = T() ){
+            this->data.resize(dims,dval);
+        }
         ~TDMat(){}
         
         TDMat & operator=( const double v ){

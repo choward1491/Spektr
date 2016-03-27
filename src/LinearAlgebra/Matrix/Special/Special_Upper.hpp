@@ -41,8 +41,12 @@ namespace la {
     public:
         
         UMat():Matrix<T,UMat<T>>(){}
-        UMat(int numr, int numc, T dval = T() ):Matrix<T,UMat<T>>(numr,numc,dval){}
-        UMat(Dims dims, T dval = T() ):Matrix<T,UMat<T>>(dims,dval){}
+        UMat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        UMat(Dims dims, T dval = T() ){
+            this->data.resize(dims,dval);
+        }
         ~UMat(){}
         
         UMat & operator=( const double v ){

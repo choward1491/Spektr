@@ -40,8 +40,12 @@ namespace la {
     public:
         
         SpMat():Matrix<T,SpMat<T>>(){}
-        SpMat(int numr, int numc, T dval = T() ):Matrix<T,SpMat<T>>(numr,numc,dval){}
-        SpMat(Dims dims, T dval = T() ):Matrix<T,SpMat<T>>(dims,dval){}
+        SpMat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        SpMat(Dims dims, T dval = T() ){
+            this->data.resize(dims.rows,dims.cols,dval);
+        }
         ~SpMat(){}
         
         SpMat & operator=( const double v ){

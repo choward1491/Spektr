@@ -7,7 +7,7 @@
 //
 
 #include "Quaternion.hpp"
-/*
+
 
 Quaternion::Quaternion(){
     s = 0.0;
@@ -25,8 +25,8 @@ Quaternion::Quaternion( double angle, const Vec3D & axis ){
     s = cos(angle*0.5);
     double t = sin(angle*0.5);
     v = axis;
-    v.normalize();
-    v *= t;
+    Vec3DOps::normalize(v);
+    v = v * t;
 }
 
 
@@ -43,7 +43,7 @@ Quaternion  Quaternion::getInverse() const{
 Quaternion  Quaternion::getConjugate() const{
     Quaternion q;
     q.s = s;
-    q.v = -v;
+    q.v = -1*v;
     return q;
 }
 
@@ -67,21 +67,21 @@ void        Quaternion::setVectorPart( const Vec3D & vec ){ v = vec; }
 
 
 double      Quaternion::getMagnitude() const{
-    return sqrt(s*s + v.dot(v));
+    return sqrt(s*s + Vec3DOps::dot(v,v));
 }
 
 
 void        Quaternion::normalize(){
     double mag = getMagnitude();
     s /= mag;
-    v /= mag;
+    v = v / mag;
 }
 
 Quaternion  Quaternion::operator*( const Quaternion & q ) const{
     double s2 = q.getScalarPart();
     Vec3D v2 = q.getVectorPart();
-    double sn = s*s2 - v.dot(v2);
-    Vec3D vn = v2*s + v*s2 + Vec3Dns::cross(v, v2);
+    double sn = s*s2 - Vec3DOps::dot(v,v2);
+    Vec3D vn = v2*s + v*s2 + Vec3DOps::cross(v,v2);
     Quaternion out;
     out.s = sn;
     out.v = vn;
@@ -138,4 +138,3 @@ void Quaternion::print() const{
     printf("%lf + %lfi + %lfj + %lfk\n",s,v[0],v[1],v[2]);
 }
 
-*/

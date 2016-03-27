@@ -37,12 +37,16 @@
 namespace la {
     
     template<typename T>
-    class SMat : public Matrix<T, SMat<T>>{
+    class SMat : public Matrix<T, SMat<T> >{
     public:
         
         SMat():Matrix<T,SMat<T>>(){}
-        SMat(int numr, int numc, T dval = T() ):Matrix<T,SMat<T>>(numr,numc,dval){}
-        SMat(Dims dims, T dval = T() ):Matrix<T,SMat<T>>(dims,dval){}
+        SMat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        SMat(Dims dims, T dval = T() ){
+            this->data.resize(dims,dval);
+        }
         ~SMat(){}
         
         SMat & operator=( const double v ){

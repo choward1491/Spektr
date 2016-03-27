@@ -32,7 +32,9 @@ public:
         sum = static_cast<T>(0);
         
         for (int ic = 0; ic < _u.size().cols; ic++) {
-            sum += _u(r,ic)*_v(ic,c);
+            T val1 = _u(r,ic);
+            T val2 = _v(ic,c);
+            sum += val1*val2;
         }
         
         return sum;

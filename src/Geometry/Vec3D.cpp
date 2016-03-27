@@ -8,12 +8,27 @@
 
 #include "Vec3D.hpp"
 
-
-/*
-Vector<3> Vec3Dns::cross( const Vector<3> & v, const Vector<3> & vec ) {
-    Vector<3> out;
-    out[0] = v[1]*vec[2] - v[2]*vec[1];
-    out[1] = v[2]*vec[0] - v[0]*vec[2];
-    out[2] = v[0]*vec[1] - v[1]*vec[0];
-    return out;
-}*/
+namespace Vec3DOps {
+    
+    
+    Vec3D cross( const Vec3D & v1, const Vec3D & v2 ) {
+        Vec3D out;
+        out[0] = v1[1]*v2[2] - v1[2]*v2[1];
+        out[1] = v1[2]*v2[0] - v1[0]*v2[2];
+        out[2] = v1[0]*v2[1] - v1[1]*v2[0];
+        return out;
+    }
+    double dot( const Vec3D & v1, const Vec3D & v2 )  {
+        return v1(0)*v2(0) + v1(1)*v2(1) + v1(2)*v2(2);
+    }
+    double magnitude(const Vec3D & v1) {
+        return sqrt( dot(v1, v1) );
+    }
+    
+    void normalize( Vec3D & v1){
+        double mag = magnitude(v1);
+        v1(0) /= mag;
+        v1(1) /= mag;
+        v1(2) /= mag;
+    }
+}

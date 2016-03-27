@@ -1,12 +1,11 @@
 //
-//  Special_Diag.hpp
-//  NumCH
+//  Special_FastMat.hpp
+//  Spektr
 //
-//  Created by Christian J Howard on 2/1/16.
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//  Created by Christian J Howard on 3/25/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -28,48 +27,46 @@
 //
 //
 
-#ifndef Special_Diag_h
-#define Special_Diag_h
+#ifndef Special_FastMat_h
+#define Special_FastMat_h
 
 #include "Matrix.hpp"
-#include "DiagonalSolver.hpp"
+#include "FastStorage.hpp"
 
 namespace la {
     
-    template<typename T>
-    class DMat : public Matrix<T, DMat<T> >{
+    template<typename T, int Rows, int Cols>
+    class FastMat : public Matrix<T, FastMat<T,Rows,Cols>, FastStorage<T,Rows,Cols> >{
     public:
         
-        DMat():Matrix<T,DMat<T>>(){}
-        DMat(int numr, int numc, T dval = T() ){
-            this->data.resize(numr,numc,dval);
+        FastMat():Matrix<T, FastMat<T,Rows,Cols>, FastStorage<T,Rows,Cols> >(){}
+        FastMat(T dval ){
+            for (int i = 0; i < this->data.total(); i++) {
+                this->data(i) = dval;
+            }
         }
-        DMat(Dims dims, T dval = T() ){
-            this->data.resize(dims,dval);
-        }
-        ~DMat(){}
+        ~FastMat(){}
         
-        DMat & operator=( const double v ){
+        FastMat & operator=( const double v ){
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
         
-        DMat & operator=( const int v ){
+        FastMat & operator=( const int v ){
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
         
-        DMat & operator=( const float v ){
+        FastMat & operator=( const float v ){
             for (int i = 0; i < this->total(); i++) { (*this)(i) = static_cast<T>(v); }
             return *this;
         }
         
         
         template <typename E>
-        DMat( MatExpression<T,E> const& mat):Matrix<T,DMat<T>>(mat){}
+        FastMat( MatExpression<T,E> const& mat):Matrix<T, FastMat<T,Rows,Cols>, FastStorage<T,Rows,Cols> >(mat){}
         
     };
 }
 
-
-#endif /* Special_Diag_h */
+#endif /* Special_FastMat_h */

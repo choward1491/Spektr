@@ -34,6 +34,7 @@
 #include "MatrixExpression.hpp"
 #include "MatStorage.hpp"
 #include "AllMatExprs.hpp"
+#include "Complex.hpp"
 
 
 
@@ -41,13 +42,15 @@ namespace la {
     
     
     template<typename S , class Type, class Storage = MatStorage<S,MType<S,Type>::Type> >
-    class Matrix : public MatExpression<S, Matrix<S,Type> >{
+    class Matrix : public MatExpression<S, Matrix<S,Type,Storage> >{
     public:
         
+        
+        
         Matrix():data(){}
-        Matrix(int numr, int numc, S dval = S() ):data(numr,numc,dval){}
-        Matrix(Dims dims, S dval = S() ):data(dims,dval){}
         ~Matrix(){}
+        
+        
         
         void T(){
             data.transpose();
@@ -134,7 +137,7 @@ namespace la {
         bool isSquare() const { return data.size().rows == data.size().cols; }
         
         
-        //template<MatType C>
+
         template<class C>
         void convertTo( Matrix<S,C> & m ) const{
             Dims dims = data.size();
@@ -153,7 +156,8 @@ namespace la {
                 printf("| ");
                 for (size_t ic=0; ic < dims.cols; ic++) {
                     if( ic != 0 ){ printf(", "); }
-                    printf("%6.6lf",static_cast<double>((*this)(ir,ic)));
+                    //printf("%6.6lf",static_cast<double>((*this)(ir,ic)));
+                    (*this)(ir,ic).print();
                 }
                 printf(" |\n");
             }
@@ -178,7 +182,7 @@ namespace la {
             return *this;
         }
         
-        //template<MatType C>
+
         template<class C>
         Matrix<S,Type> & operator=( const MatExpression<S,C> & m ){
                 
@@ -196,29 +200,15 @@ namespace la {
         }
         
         
-        
-    private:
+    protected:
         Storage data;
+        
         
     };
     
     
-    /*
-        template<typename S, class Type, typename S>
-        void operator=( Matrix<S,Type> & m, const S & val ){
-            for (int i = 0; i < m.total(); i++) {
-                m(i) = static_cast<S>(val);
-            }
-        }
-    */
-    
-    
+
 }
-
-
-
-
-
 
 
 #include "Special_General.hpp"
@@ -228,6 +218,7 @@ namespace la {
 #include "Special_Tridiag.hpp"
 #include "Special_Sparse.hpp"
 #include "Special_Symmetric.hpp"
+#include "Special_FastMat.hpp"
 
 
 

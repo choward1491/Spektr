@@ -41,8 +41,12 @@ namespace la {
     public:
         
         LMat():Matrix<T,LMat<T>>(){}
-        LMat(int numr, int numc, T dval = T() ):Matrix<T,LMat<T>>(numr,numc,dval){}
-        LMat(Dims dims, T dval = T() ):Matrix<T,LMat<T>>(dims,dval){}
+        LMat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        LMat(Dims dims, T dval = T() ){
+            this->data.resize(dims,dval);
+        }
         ~LMat(){}
         
         template <typename E>

@@ -31,9 +31,9 @@
 #ifndef Quaternion_hpp
 #define Quaternion_hpp
 
-/*
+
 #include "Vec3D.hpp"
-#include "ConstantsSet.hpp"
+#include "Constants.hpp"
 
 class Quaternion {
 public:
@@ -88,5 +88,4 @@ private:
     
 };
 
- */
 #endif /* Quaternion_hpp */

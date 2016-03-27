@@ -1,8 +1,8 @@
 //
-//  MatStorage_Impl.hpp
+//  FastStorage_Impl.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 3/24/16.
+//  Created by Christian J Howard on 3/25/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,90 +27,84 @@
 //
 //
 
-#ifndef MatStorage_Impl_h
-#define MatStorage_Impl_h
+#ifndef FastStorage_Impl_h
+#define FastStorage_Impl_h
 
-#include "MatStorage_Impl.hpp"
-
-#define TEMPLATE_HEADER template< typename T, MatType Type, class Hash >
-#define STORAGE MatStorage<T,Type,Hash>
-
+#define TEMPLATE_HEADER template< typename T, int Rows, int Cols  >
+#define STORAGE FastStorage<T,Rows,Cols>
 
 TEMPLATE_HEADER
-STORAGE::MatStorage():table(0),nt(0),dims(0,0),isT(false){}
-
-TEMPLATE_HEADER
-STORAGE::MatStorage(int r, int c, T dval):nt(Hash::netSize(r,c)),
-table(nt,dval),dims(r,c),isT(false){}
-
-TEMPLATE_HEADER
-STORAGE::MatStorage(Dims d, T dval):nt(Hash::netSize(d.rows,d.cols)),
-table(nt,dval),dims(d),isT(false){}
-
-TEMPLATE_HEADER
-void STORAGE::resize(int r, int c, T dval){
-    nt = Hash::netSize(r,c);
-    dims = Dims(r,c);
-    table.resize(nt,dval);
+STORAGE::FastStorage(T dval):dims(Rows,Cols){
+    nt = Rows*Cols+1;
     isT = false;
+    for (int i = 0; i < nt; i++) {
+        data[i] = dval;
+    }
 }
 
 TEMPLATE_HEADER
-void STORAGE::resize(Dims d, T dval){
-    nt = Hash::netSize(d.rows,d.cols);
-    dims = Dims(d.rows,d.cols);
-    table.resize(nt,dval);
+STORAGE::FastStorage(int dummyRows, int dummyCols, T dval ):dims(Rows,Cols){
+    nt = Rows*Cols+1;
     isT = false;
+    for (int i = 0; i < nt; i++) {
+        data[i] = dval;
+    }
 }
 
+TEMPLATE_HEADER
+void STORAGE::transpose(){
+    isT = !isT;
+}
 
 TEMPLATE_HEADER
-void STORAGE::transpose(){ isT = !isT; }
-
-TEMPLATE_HEADER
-bool STORAGE::isTransposed() const { return isT; }
+bool STORAGE::isTransposed() const{
+    return isT;
+}
 
 TEMPLATE_HEADER
 T & STORAGE::operator()(int r, int c){
-    size_t k = 0;
+    int k = 0;
     if( isT ){
-        k = Hash::hash(c,r,dims.cols,nt);
+        k = Hash::hash(c,r,Cols,nt);
     }else{
-        k = Hash::hash(r,c,dims.cols,nt);
+        k = Hash::hash(r,c,Cols,nt);
     }
-    return table[k%nt];
+    return data[k%nt];
 }
-
 TEMPLATE_HEADER
 const T & STORAGE::operator()(int r, int c) const{
-    size_t k = 0;
+    int k = 0;
     if( isT ){
-        k = Hash::hash(c,r,dims.cols,nt);
+        k = Hash::hash(c,r,Cols,nt);
     }else{
-        k = Hash::hash(r,c,dims.cols,nt);
+        k = Hash::hash(r,c,Cols,nt);
     }
-    return table[k%nt];
+    return data[k%nt];
 }
-
 TEMPLATE_HEADER
 T & STORAGE::operator()(int k){
-    return table[k%nt];
+    return data[k%nt];
 }
-
 TEMPLATE_HEADER
 const T & STORAGE::operator()(int k) const{
-    return table[k%nt];
+    return data[k%nt];
 }
 
 TEMPLATE_HEADER
-Dims STORAGE::size() const { if( isT ){ return Dims(dims.cols,dims.rows); } else{ return dims; } }
+Dims STORAGE::size() const{
+    if( isT ){ return Dims(Cols,Rows); }
+    return dims;
+}
 
 TEMPLATE_HEADER
-int STORAGE::total() const { return nt; }
+int STORAGE::total() const{
+    return nt;
+}
+    
 
 
 #undef TEMPLATE_HEADER
 #undef STORAGE
 
 
-#endif /* MatStorage_Impl_h */
+#endif /* FastStorage_Impl_h */

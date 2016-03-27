@@ -40,8 +40,12 @@ namespace la {
     public:
         
         Mat():Matrix<T,Mat<T>>(){}
-        Mat(int numr, int numc, T dval = T() ):Matrix<T,Mat<T>>(numr,numc,dval){}
-        Mat(Dims dims, T dval = T() ):Matrix<T,Mat<T>>(dims,dval){}
+        Mat(int numr, int numc, T dval = T() ){
+            this->data.resize(numr,numc,dval);
+        }
+        Mat(Dims dims, T dval = T() ){
+            this->data.resize(dims,dval);
+        }
         ~Mat(){}
         
         

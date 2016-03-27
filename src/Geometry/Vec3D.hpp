@@ -9,11 +9,16 @@
 #ifndef Vec3D_hpp
 #define Vec3D_hpp
 
-/*#include "Vector.hpp"
+#include "Matrix.hpp"
 
-typedef Vector<3> Vec3D;
-namespace Vec3Dns {
-Vector<3> cross( const Vector<3> & v, const Vector<3> & vec );
-}*/
+typedef la::FastMat<double, 3, 1> Vec3D;
+
+namespace Vec3DOps {
+    
+    Vec3D cross( const Vec3D & v1, const Vec3D & v2 );
+    double dot( const Vec3D & v1, const Vec3D & v2 );
+    double magnitude(const Vec3D & v1);
+    void normalize( Vec3D & v1);
+}
 
 #endif /* Vec3D_hpp */
