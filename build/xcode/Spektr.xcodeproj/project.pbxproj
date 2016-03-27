@@ -197,6 +197,8 @@
 /* Begin PBXFileReference section */
 		AD39480A1CA7338300797BB3 /* Complex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex.hpp; sourceTree = "<group>"; };
 		AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex_Impl.hpp; sourceTree = "<group>"; };
+		AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexFastStorage.hpp; sourceTree = "<group>"; };
+		AD39480E1CA83DE800797BB3 /* ComplexMatStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexMatStorage.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -525,6 +527,7 @@
 				ADF8DCC51C895BAB004C682C /* MatStorage.hpp */,
 				ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */,
 				ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */,
+				AD39480E1CA83DE800797BB3 /* ComplexMatStorage.hpp */,
 			);
 			name = DynamicStorage;
 			sourceTree = "<group>";
@@ -534,6 +537,7 @@
 			children = (
 				ADE02CB91CA644D500A3D736 /* FastStorage.hpp */,
 				ADE02CBA1CA6460300A3D736 /* FastStorage_Impl.hpp */,
+				AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */,
 			);
 			name = FastStorage;
 			sourceTree = "<group>";

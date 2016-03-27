@@ -52,7 +52,7 @@ namespace la {
         
         
         
-        void T(){
+        void t(){
             data.transpose();
         }
         
@@ -151,17 +151,7 @@ namespace la {
         
         
         void print() const{
-            Dims dims = data.size();
-            for (size_t ir=0; ir < dims.rows; ir++) {
-                printf("| ");
-                for (size_t ic=0; ic < dims.cols; ic++) {
-                    if( ic != 0 ){ printf(", "); }
-                    //printf("%6.6lf",static_cast<double>((*this)(ir,ic)));
-                    (*this)(ir,ic).print();
-                }
-                printf(" |\n");
-            }
-            printf("\n");
+            data.print();
         }
         
         

@@ -62,6 +62,8 @@ public:
     Dims size() const;
     int total() const;
     
+    void print() const;
+    
     
 private:
     
@@ -73,7 +75,7 @@ private:
 
 #include "MatStorage_Impl.hpp"
 #include "MatStorage_Sparse.hpp"
-
+#include "ComplexMatStorage.hpp"
     
 //}
 

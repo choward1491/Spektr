@@ -108,6 +108,20 @@ Dims STORAGE::size() const { if( isT ){ return Dims(dims.cols,dims.rows); } else
 TEMPLATE_HEADER
 int STORAGE::total() const { return nt; }
 
+TEMPLATE_HEADER
+void STORAGE::print() const {
+    for (size_t ir=0; ir < dims.rows; ir++) {
+        printf("| ");
+        for (size_t ic=0; ic < dims.cols; ic++) {
+            if( ic != 0 ){ printf(", "); }
+            printf("%lf",static_cast<double>((*this)(ir,ic)));
+            
+        }
+        printf(" |\n");
+    }
+    printf("\n");
+}
+
 
 #undef TEMPLATE_HEADER
 #undef STORAGE

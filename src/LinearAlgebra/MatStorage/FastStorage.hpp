@@ -51,6 +51,8 @@ public:
     Dims size() const;
     int total() const;
     
+    void print() const;
+    
     
 private:
     
@@ -62,6 +64,7 @@ private:
 };
 
 #include "FastStorage_Impl.hpp"
+#include "ComplexFastStorage.hpp"
 
 
 #endif /* FastStorage_h */

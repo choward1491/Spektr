@@ -166,23 +166,19 @@ void COMPLEX::conj(){
 
 HEADER
 void COMPLEX::print() const{
-    if( im_ > 0 ){
+    if( im_ >= 0 ){
         printf("%lf + %lfi",static_cast<double>(re_),fabs(static_cast<double>(im_)));
-    }else if( im_ < 0 ){
-        printf("%lf - %lfi",static_cast<double>(re_),fabs(static_cast<double>(im_)));
     }else{
-        printf("%lf",static_cast<double>(re_));
+        printf("%lf - %lfi",static_cast<double>(re_),fabs(static_cast<double>(im_)));
     }
 }
 
 HEADER
 void COMPLEX::println() const{
-    if( im_ > 1e-8 ){
+    if( im_ >= 0 ){
         printf("%lf + %lfi\n",static_cast<double>(re_),fabs(static_cast<double>(im_)));
-    }else if( im_ < -1e-8 ){
-        printf("%lf - %lfi\n",static_cast<double>(re_),fabs(static_cast<double>(im_)));
     }else{
-        printf("%lf\n",static_cast<double>(re_));
+        printf("%lf - %lfi\n",static_cast<double>(re_),fabs(static_cast<double>(im_)));
     }
 }
     
