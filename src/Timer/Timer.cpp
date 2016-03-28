@@ -7,3 +7,15 @@
 //
 
 #include "Timer.hpp"
+
+void Timer::start(){
+    start_ = std::clock();
+}
+
+void Timer::stop(){
+    end_ = std::clock();
+}
+
+double Timer::getDuration() const {
+    return ( end_ - start_) / (double) CLOCKS_PER_SEC;
+}

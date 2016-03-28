@@ -32,7 +32,7 @@
 #define Quaternion_hpp
 
 
-#include "Vec3D.hpp"
+#include "vec3.hpp"
 #include "Constants.hpp"
 
 class Quaternion {
@@ -40,24 +40,22 @@ public:
     
     Quaternion();
     Quaternion( double roll, double pitch, double yaw ); // Assumes Euler Rotation Order of X -> Y -> Z
-    Quaternion( double angleRadians, const Vec3D & axis );
+    Quaternion( double angleRadians, const vec3 & axis );
     
-    
-    
-    Vec3D rotate( const Vec3D & vec) const;
+    vec3 rotate( const vec3 & vec) const;
     
     void        normalize();
     Quaternion  getInverse() const;
     Quaternion  getConjugate() const;
-    Vec3D       getAxis() const;
+    vec3       getAxis() const;
     double      getAmountRotated() const;
     
     double      getScalarPart() const;
-    Vec3D       getVectorPart() const;
+    vec3       getVectorPart() const;
     void        setScalarPart( double scalar );
-    void        setVectorPart( const Vec3D & vec );
+    void        setVectorPart( const vec3 & vec );
     
-    Quaternion  getDerivative( const Vec3D & omega ) const;
+    Quaternion  getDerivative( const vec3 & omega ) const;
     
     
     double      getMagnitude() const;
@@ -83,7 +81,7 @@ private:
     // where s is scalar part
     // and v is vector part
     double s;
-    Vec3D v;
+    vec3 v;
     
     
 };

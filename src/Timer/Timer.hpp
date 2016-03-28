@@ -39,17 +39,9 @@
 class Timer{
     
 public:
-    void start(){
-        start_ = std::clock();
-    }
-    
-    void stop(){
-        end_ = std::clock();
-    }
-    
-    double getDuration(){
-        return ( end_ - start_) / (double) CLOCKS_PER_SEC;
-    }
+    void start();
+    void stop();
+    double getDuration() const;
     
 private:
     std::clock_t start_;

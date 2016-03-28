@@ -24,9 +24,9 @@
 		ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */; };
 		ADF8DD4C1C895BAB004C682C /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */; };
 		ADF8DD4D1C895BAB004C682C /* Quaternion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */; };
-		ADF8DD4E1C895BAB004C682C /* Vec3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* Vec3D.cpp */; };
-		ADF8DD4F1C895BAB004C682C /* Vec3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* Vec3D.cpp */; };
-		ADF8DD501C895BAB004C682C /* Vec3D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC901C895BAB004C682C /* Vec3D.hpp */; };
+		ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* vec3.cpp */; };
+		ADF8DD4F1C895BAB004C682C /* vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* vec3.cpp */; };
+		ADF8DD501C895BAB004C682C /* vec3.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC901C895BAB004C682C /* vec3.hpp */; };
 		ADF8DD651C895BAB004C682C /* Cholesky.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA51C895BAB004C682C /* Cholesky.hpp */; };
 		ADF8DD661C895BAB004C682C /* LDL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA61C895BAB004C682C /* LDL.hpp */; };
 		ADF8DD671C895BAB004C682C /* QR.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA71C895BAB004C682C /* QR.hpp */; };
@@ -82,7 +82,7 @@
 		ADF8DD9E1C895BAB004C682C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDE1C895BAB004C682C /* main.cpp */; };
 		ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE01C895BAB004C682C /* Fraction.cpp */; };
 		ADF8DDA01C895BAB004C682C /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE01C895BAB004C682C /* Fraction.cpp */; };
-		ADF8DDA11C895BAB004C682C /* Fraction.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE11C895BAB004C682C /* Fraction.h */; };
+		ADF8DDA11C895BAB004C682C /* Fraction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE11C895BAB004C682C /* Fraction.hpp */; };
 		ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */; };
 		ADF8DDA51C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */; };
 		ADF8DDA61C895BAB004C682C /* RandomNumberGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */; };
@@ -229,8 +229,8 @@
 		ADF8DC8C1C895BAB004C682C /* Geometry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Geometry.h; sourceTree = "<group>"; };
 		ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Quaternion.cpp; sourceTree = "<group>"; };
 		ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Quaternion.hpp; sourceTree = "<group>"; };
-		ADF8DC8F1C895BAB004C682C /* Vec3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Vec3D.cpp; sourceTree = "<group>"; };
-		ADF8DC901C895BAB004C682C /* Vec3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Vec3D.hpp; sourceTree = "<group>"; };
+		ADF8DC8F1C895BAB004C682C /* vec3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vec3.cpp; sourceTree = "<group>"; };
+		ADF8DC901C895BAB004C682C /* vec3.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = vec3.hpp; sourceTree = "<group>"; };
 		ADF8DCA51C895BAB004C682C /* Cholesky.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Cholesky.hpp; sourceTree = "<group>"; };
 		ADF8DCA61C895BAB004C682C /* LDL.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LDL.hpp; sourceTree = "<group>"; };
 		ADF8DCA71C895BAB004C682C /* QR.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = QR.hpp; sourceTree = "<group>"; };
@@ -279,7 +279,7 @@
 		ADF8DCDD1C895BAB004C682C /* Trainer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		ADF8DCDE1C895BAB004C682C /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../../src/main.cpp; sourceTree = "<group>"; };
 		ADF8DCE01C895BAB004C682C /* Fraction.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Fraction.cpp; sourceTree = "<group>"; };
-		ADF8DCE11C895BAB004C682C /* Fraction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fraction.h; sourceTree = "<group>"; };
+		ADF8DCE11C895BAB004C682C /* Fraction.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Fraction.hpp; sourceTree = "<group>"; };
 		ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RandomNumberGenerator.cpp; sourceTree = "<group>"; };
 		ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RandomNumberGenerator.hpp; sourceTree = "<group>"; };
 		ADF8DCE91C895BAB004C682C /* Parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Parser.cpp; path = Parser/Parser.cpp; sourceTree = "<group>"; };
@@ -472,7 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				ADF8DCE01C895BAB004C682C /* Fraction.cpp */,
-				ADF8DCE11C895BAB004C682C /* Fraction.h */,
+				ADF8DCE11C895BAB004C682C /* Fraction.hpp */,
 			);
 			name = Fraction;
 			sourceTree = "<group>";
@@ -598,8 +598,8 @@
 				ADF8DC8C1C895BAB004C682C /* Geometry.h */,
 				ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */,
 				ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */,
-				ADF8DC8F1C895BAB004C682C /* Vec3D.cpp */,
-				ADF8DC901C895BAB004C682C /* Vec3D.hpp */,
+				ADF8DC8F1C895BAB004C682C /* vec3.cpp */,
+				ADF8DC901C895BAB004C682C /* vec3.hpp */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -981,7 +981,7 @@
 				ADF8DD7C1C895BAB004C682C /* Special_Lower.hpp in Headers */,
 				ADF8DDEC1C895BAB004C682C /* Element.hpp in Headers */,
 				ADF8DDE51C895BAB004C682C /* RandomInit.hpp in Headers */,
-				ADF8DD501C895BAB004C682C /* Vec3D.hpp in Headers */,
+				ADF8DD501C895BAB004C682C /* vec3.hpp in Headers */,
 				ADF8DDB91C895BAB004C682C /* PendulumSim.hpp in Headers */,
 				ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */,
 				ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */,
@@ -1017,7 +1017,7 @@
 				ADF8DD451C895BAB004C682C /* TargetMeas.hpp in Headers */,
 				ADF8DDFF1C895BAB004C682C /* TestExample1.hpp in Headers */,
 				ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */,
-				ADF8DDA11C895BAB004C682C /* Fraction.h in Headers */,
+				ADF8DDA11C895BAB004C682C /* Fraction.hpp in Headers */,
 				ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */,
 				ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */,
 				ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */,
@@ -1180,7 +1180,7 @@
 				ADF8DDED1C895BAB004C682C /* FiniteDifference.cpp in Sources */,
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */,
-				ADF8DD4E1C895BAB004C682C /* Vec3D.cpp in Sources */,
+				ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1229,7 +1229,7 @@
 				ADF8DDEE1C895BAB004C682C /* FiniteDifference.cpp in Sources */,
 				ADF8DDEB1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF91C895BAB004C682C /* TanhSinh.cpp in Sources */,
-				ADF8DD4F1C895BAB004C682C /* Vec3D.cpp in Sources */,
+				ADF8DD4F1C895BAB004C682C /* vec3.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,6 +1316,8 @@
 		AD47680A1B76EAF100E6B11D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CURRENT_PROJECT_VERSION = 0.1;
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
@@ -1326,13 +1328,17 @@
 					/usr/lib/,
 					../../libs,
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = Spektr;
+				USER_HEADER_SEARCH_PATHS = "../../src/** ../../external/Bones/src/**";
 			};
 			name = Debug;
 		};
 		AD47680B1B76EAF100E6B11D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				CURRENT_PROJECT_VERSION = 0.1;
 				GCC_OPTIMIZATION_LEVEL = fast;
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
@@ -1344,7 +1350,9 @@
 					/usr/lib/,
 					../../libs,
 				);
+				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = Spektr;
+				USER_HEADER_SEARCH_PATHS = "../../src/** ../../external/Bones/src/**";
 			};
 			name = Release;
 		};

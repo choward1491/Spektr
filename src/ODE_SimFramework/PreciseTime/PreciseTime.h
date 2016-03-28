@@ -30,7 +30,7 @@
 #ifndef PreciseTime_h
 #define PreciseTime_h
 
-#include "Fraction.h"
+#include "Fraction.hpp"
 typedef Fraction Time;
 
 #endif /* Time_h */

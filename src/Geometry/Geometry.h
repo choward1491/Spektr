@@ -9,7 +9,6 @@
 #ifndef Geometry_h
 #define Geometry_h
 
-#include "point.h"
-#include "Vec3D.hpp"
+#include "vec3.hpp"
 
 #endif /* Geometry_h */

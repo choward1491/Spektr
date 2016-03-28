@@ -33,6 +33,10 @@
 #include "Matrix.hpp"
 #include "FastStorage.hpp"
 
+#if __cplusplus >= 201103L
+#include <initializer_list>
+#endif
+
 namespace la {
     
     template<typename T, int Rows, int Cols>
@@ -45,6 +49,17 @@ namespace la {
                 this->data(i) = dval;
             }
         }
+        
+        #if __cplusplus >= 201103L
+        FastMat( std::initializer_list<T> l){
+            int i = 0;
+            for (const T* it = begin(l); it != end(l) && i < Rows*Cols ; ++it,i++) {
+                this->data(i) = *it;
+            }
+            
+        }
+        #endif
+        
         ~FastMat(){}
         
         FastMat & operator=( const double v ){

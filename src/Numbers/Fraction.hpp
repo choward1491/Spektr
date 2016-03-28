@@ -35,6 +35,11 @@
 
 class Fraction {
 public:
+    
+    
+    static Fraction decimal2fraction( double val );
+    
+    
     Fraction();
     Fraction(int num, int denom );
     Fraction(int complete, int rem_num, int rem_denom );
@@ -87,6 +92,9 @@ public:
     
 private:
     friend Fraction;
+    
+    static void methodOfContinuousFractions( double val, Fraction & frac, double thresh = 0.005 );
+    static void MCF_helper( double val, Fraction & frac, double thresh = 0.005 );
     
     int abs(int a){ if( a >= 0 ){ return a; }else{ return -a; } }
     bool sign( int a ){ return a>=0; }

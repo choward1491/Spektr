@@ -11,7 +11,7 @@
 
 Quaternion::Quaternion(){
     s = 0.0;
-    v = Vec3D();
+    v = vec3();
 }
 Quaternion::Quaternion( double roll, double pitch, double yaw ){
     double c1 = cos(roll);
@@ -21,16 +21,16 @@ Quaternion::Quaternion( double roll, double pitch, double yaw ){
     double s2 = sin(pitch);
     double s3 = sin(yaw);
 }
-Quaternion::Quaternion( double angle, const Vec3D & axis ){
+Quaternion::Quaternion( double angle, const vec3 & axis ){
     s = cos(angle*0.5);
     double t = sin(angle*0.5);
     v = axis;
-    Vec3DOps::normalize(v);
+    vec3_ops::normalize(v);
     v = v * t;
 }
 
 
-Vec3D Quaternion::rotate( const Vec3D & vec) const{
+vec3 Quaternion::rotate( const vec3 & vec) const{
     Quaternion P;
     P.v = vec;
     Quaternion q = (*this) * P * (*this).getInverse();
@@ -47,27 +47,27 @@ Quaternion  Quaternion::getConjugate() const{
     return q;
 }
 
-Quaternion  Quaternion::getDerivative( const Vec3D & omega ) const{
+Quaternion  Quaternion::getDerivative( const vec3 & omega ) const{
     Quaternion w;
     w.s = 0; w.v = omega/2.0;
     
     return (*this)*w;
 }
 
-Vec3D       Quaternion::getAxis() const{
+vec3       Quaternion::getAxis() const{
     double t = sqrt(1.0 - s*s);
     return v / t;
 }
 double      Quaternion::getAmountRotated() const{ return 2.0*acos(s); }
 
 double      Quaternion::getScalarPart() const{ return s; }
-Vec3D       Quaternion::getVectorPart() const{ return v; }
+vec3       Quaternion::getVectorPart() const{ return v; }
 void        Quaternion::setScalarPart( double scalar ){ s = scalar; }
-void        Quaternion::setVectorPart( const Vec3D & vec ){ v = vec; }
+void        Quaternion::setVectorPart( const vec3 & vec ){ v = vec; }
 
 
 double      Quaternion::getMagnitude() const{
-    return sqrt(s*s + Vec3DOps::dot(v,v));
+    return sqrt(s*s + vec3_ops::dot(v,v));
 }
 
 
@@ -79,9 +79,9 @@ void        Quaternion::normalize(){
 
 Quaternion  Quaternion::operator*( const Quaternion & q ) const{
     double s2 = q.getScalarPart();
-    Vec3D v2 = q.getVectorPart();
-    double sn = s*s2 - Vec3DOps::dot(v,v2);
-    Vec3D vn = v2*s + v*s2 + Vec3DOps::cross(v,v2);
+    vec3 v2 = q.getVectorPart();
+    double sn = s*s2 - vec3_ops::dot(v,v2);
+    vec3 vn = v2*s + v*s2 + vec3_ops::cross(v,v2);
     Quaternion out;
     out.s = sn;
     out.v = vn;

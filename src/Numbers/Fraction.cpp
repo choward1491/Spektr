@@ -7,14 +7,16 @@
 //
 
 
-#include "Fraction.h"
+#include "Fraction.hpp"
 
 template<>
 void Fraction::operator=( const double & val ){
-    const int scale = 60000;
-    int rnd = static_cast<int>(val);
-    int rem = scale*(val - static_cast<double>(rnd));
-    *this = Fraction(rnd,rem,scale);
+    *this = Fraction::decimal2fraction(val);
+}
+
+template<>
+void Fraction::operator=( const float & val ){
+    *this = Fraction::decimal2fraction(val);
 }
 
 template<>
@@ -81,7 +83,33 @@ Fraction::Fraction(int complete_, int rem_num, int rem_denom ){
     denominator = rem_denom / gc;
 }
 
+Fraction Fraction::decimal2fraction( double val ){
+    Fraction f;
+    methodOfContinuousFractions(val, f);
+    return f;
+}
 
+void Fraction::methodOfContinuousFractions( double val, Fraction & frac, double thresh ){
+    double mag = val;
+    if( mag < 0 ){ mag = -mag; }
+    int w = (int)mag;
+    double rem = mag-w;
+    Fraction r;
+    MCF_helper(rem, r, thresh);
+    frac = r + Fraction(w,1);
+    frac.positive = (val >= 0);
+}
+
+void Fraction::MCF_helper( double val, Fraction & frac, double thresh ){
+    if( val > thresh ){
+        double inv = 1.0/val;
+        int w = (int)inv;
+        double rem = inv-w;
+        Fraction r;
+        MCF_helper(rem, r);
+        frac = Fraction(1,1)/(Fraction(w,1) + r);
+    }else{ frac = Fraction(); }
+}
 
 Fraction Fraction::operator*( const Fraction& frac ) const{
     Fraction output;
