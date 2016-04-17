@@ -32,6 +32,12 @@ void ModelList::addParentData( SimState & s, Rand & gen){
     }
 }
 
+void ModelList::updateDynamicModels(){
+    for( int i = 0; i < diffeqList.size(); i++ ){
+        diffeqList[i]->update();
+    }
+}
+
 void ModelList::addDynamics( DynamicModel * model ){
     diffeqList.push_back(model);
     numStates += model->numDims();

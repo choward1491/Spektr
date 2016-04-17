@@ -1,11 +1,11 @@
 //
-//  NumericIntegration.h
-//  NumCH
+//  ExplicitTrapezoidal.hpp
+//  Spektr
 //
-//  Created by Christian J Howard on 1/8/16.
+//  Created by Christian J Howard on 4/16/16.
 //
 //  The MIT License (MIT)
-//  Copyright © 2016 Christian Howard. All rights reserved.
+//    Copyright © 2016 Christian Howard. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -27,12 +27,14 @@
 //
 //
 
-#ifndef NumericIntegration_h
-#define NumericIntegration_h
+#ifndef ExplicitTrapezoidal_hpp
+#define ExplicitTrapezoidal_hpp
 
+#include "ButcherIntegrator.hpp"
 
-#include "ExplicitEuler.hpp"
-#include "ExplicitTrapezoidal.hpp"
-#include "RungeKutta4.hpp"
+class ExplicitTrapezoidal : public ButcherIntegrator {
+public:
+    ExplicitTrapezoidal();
+};
 
-#endif /* NumericIntegration_h */
+#endif /* ExplicitTrapezoidal_hpp */

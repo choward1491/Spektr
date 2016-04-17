@@ -35,46 +35,71 @@
 #include "vec3.hpp"
 #include "Constants.hpp"
 
+/*!
+ *
+ * Quaternion Class
+ * Assume the form is: q = s + v
+ * where s = scalar component
+ * and   v = vector component
+ *
+ */
 class Quaternion {
 public:
     
+    // Constructor
     Quaternion();
     Quaternion( double roll, double pitch, double yaw ); // Assumes Euler Rotation Order of X -> Y -> Z
     Quaternion( double angleRadians, const vec3 & axis );
     
+    // Method to rotate vector based on quaternion
     vec3 rotate( const vec3 & vec) const;
     
+    // Method to normalize quaternion
     void        normalize();
+    
+    // get quaternion inverse
     Quaternion  getInverse() const;
+    
+    // get quaternion conjugate
     Quaternion  getConjugate() const;
+    
+    // get axis quaternion is based on
     vec3       getAxis() const;
+    
+    // get the angle the quaternion rotates
+    // about the axis
     double      getAmountRotated() const;
     
+    
+    
+    // get/set scalar/vector parts of quaternion
     double      getScalarPart() const;
-    vec3       getVectorPart() const;
+    vec3        getVectorPart() const;
     void        setScalarPart( double scalar );
     void        setVectorPart( const vec3 & vec );
     
+    // get quaternion derivative based on
+    // input angular rate
     Quaternion  getDerivative( const vec3 & omega ) const;
     
-    
+    // Get Quaternion Magnitude
     double      getMagnitude() const;
     
-    
+    // Math operators for Quaternion
     Quaternion  operator*( const Quaternion & q ) const;
     Quaternion  operator+( const Quaternion & q ) const;
     Quaternion  operator-( const Quaternion & q ) const;
+    Quaternion operator*( double c ) const; // scalar
+    Quaternion operator/( double c ) const; // scalar
     
-    Quaternion operator*( double c ) const;
-    Quaternion operator/( double c ) const;
-    
+    // Method to access components of quaternion
     double      operator[](int index) const;
     double &    operator[](int index);
     
+    // print quaternion value
     void print() const;
     
 private:
-    friend Quaternion;
     
     // quaternion defined by:
     // q = s + v

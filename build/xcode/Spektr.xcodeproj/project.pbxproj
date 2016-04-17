@@ -7,7 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
+		ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
+		ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */; };
+		ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */; };
 		ADF8DC7D1C895B6C004C682C /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */; };
 		ADF8DC7E1C895B6C004C682C /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */; };
 		ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
@@ -107,16 +112,6 @@
 		ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
 		ADF8DDBB1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
 		ADF8DDBC1C895BAB004C682C /* ModelList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFA1C895BAB004C682C /* ModelList.hpp */; };
-		ADF8DDBD1C895BAB004C682C /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCFC1C895BAB004C682C /* ExplicitEuler.cpp */; };
-		ADF8DDBE1C895BAB004C682C /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCFC1C895BAB004C682C /* ExplicitEuler.cpp */; };
-		ADF8DDBF1C895BAB004C682C /* ExplicitEuler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFD1C895BAB004C682C /* ExplicitEuler.hpp */; };
-		ADF8DDC01C895BAB004C682C /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCFE1C895BAB004C682C /* ExplicitTrapezoidal.cpp */; };
-		ADF8DDC11C895BAB004C682C /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCFE1C895BAB004C682C /* ExplicitTrapezoidal.cpp */; };
-		ADF8DDC21C895BAB004C682C /* ExplicitTrapezoidal.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFF1C895BAB004C682C /* ExplicitTrapezoidal.hpp */; };
-		ADF8DDC31C895BAB004C682C /* NumericIntegration.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD001C895BAB004C682C /* NumericIntegration.h */; };
-		ADF8DDC41C895BAB004C682C /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD011C895BAB004C682C /* RungeKutta4.cpp */; };
-		ADF8DDC51C895BAB004C682C /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD011C895BAB004C682C /* RungeKutta4.cpp */; };
-		ADF8DDC61C895BAB004C682C /* RungeKutta4.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD021C895BAB004C682C /* RungeKutta4.hpp */; };
 		ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD041C895BAB004C682C /* Pendulum.cpp */; };
 		ADF8DDC91C895BAB004C682C /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD041C895BAB004C682C /* Pendulum.cpp */; };
 		ADF8DDCA1C895BAB004C682C /* Pendulum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD051C895BAB004C682C /* Pendulum.hpp */; };
@@ -199,6 +194,9 @@
 		AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex_Impl.hpp; sourceTree = "<group>"; };
 		AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexFastStorage.hpp; sourceTree = "<group>"; };
 		AD39480E1CA83DE800797BB3 /* ComplexMatStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexMatStorage.hpp; sourceTree = "<group>"; };
+		AD4061901CC3643A0000D18A /* NumericIntegration.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NumericIntegration.hpp; sourceTree = "<group>"; };
+		AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExplicitTrapezoidal.cpp; path = ButcherIntegrator/ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
+		AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExplicitTrapezoidal.hpp; path = ButcherIntegrator/ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -217,6 +215,14 @@
 		ADE02CB91CA644D500A3D736 /* FastStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastStorage.hpp; sourceTree = "<group>"; };
 		ADE02CBA1CA6460300A3D736 /* FastStorage_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FastStorage_Impl.hpp; sourceTree = "<group>"; };
 		ADE02CBB1CA64A2F00A3D736 /* Special_FastMat.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Special_FastMat.hpp; sourceTree = "<group>"; };
+		ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ButcherTable.cpp; path = ButcherTable/ButcherTable.cpp; sourceTree = "<group>"; };
+		ADF75E9E1CC203BE00092A38 /* ButcherTable.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ButcherTable.hpp; path = ButcherTable/ButcherTable.hpp; sourceTree = "<group>"; };
+		ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ButcherIntegrator.cpp; path = ButcherIntegrator/ButcherIntegrator.cpp; sourceTree = "<group>"; };
+		ADF75EA21CC20C9F00092A38 /* ButcherIntegrator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ButcherIntegrator.hpp; path = ButcherIntegrator/ButcherIntegrator.hpp; sourceTree = "<group>"; };
+		ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExplicitEuler.cpp; path = ButcherIntegrator/ExplicitEuler.cpp; sourceTree = "<group>"; };
+		ADF75EA51CC2160A00092A38 /* ExplicitEuler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExplicitEuler.hpp; path = ButcherIntegrator/ExplicitEuler.hpp; sourceTree = "<group>"; };
+		ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RungeKutta4.cpp; path = ButcherIntegrator/RungeKutta4.cpp; sourceTree = "<group>"; };
+		ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RungeKutta4.hpp; path = ButcherIntegrator/RungeKutta4.hpp; sourceTree = "<group>"; };
 		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
@@ -296,13 +302,6 @@
 		ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PendulumSim.hpp; path = Examples/Pendulum/PendulumSim.hpp; sourceTree = "<group>"; };
 		ADF8DCF91C895BAB004C682C /* ModelList.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelList.cpp; path = ModelList/ModelList.cpp; sourceTree = "<group>"; };
 		ADF8DCFA1C895BAB004C682C /* ModelList.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelList.hpp; path = ModelList/ModelList.hpp; sourceTree = "<group>"; };
-		ADF8DCFC1C895BAB004C682C /* ExplicitEuler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitEuler.cpp; sourceTree = "<group>"; };
-		ADF8DCFD1C895BAB004C682C /* ExplicitEuler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitEuler.hpp; sourceTree = "<group>"; };
-		ADF8DCFE1C895BAB004C682C /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
-		ADF8DCFF1C895BAB004C682C /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
-		ADF8DD001C895BAB004C682C /* NumericIntegration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumericIntegration.h; sourceTree = "<group>"; };
-		ADF8DD011C895BAB004C682C /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RungeKutta4.cpp; sourceTree = "<group>"; };
-		ADF8DD021C895BAB004C682C /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RungeKutta4.hpp; sourceTree = "<group>"; };
 		ADF8DD041C895BAB004C682C /* Pendulum.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Pendulum.cpp; path = Examples/Pendulum/Pendulum.cpp; sourceTree = "<group>"; };
 		ADF8DD051C895BAB004C682C /* Pendulum.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Pendulum.hpp; path = Examples/Pendulum/Pendulum.hpp; sourceTree = "<group>"; };
 		ADF8DD071C895BAB004C682C /* PreciseTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreciseTime.h; sourceTree = "<group>"; };
@@ -540,6 +539,30 @@
 				AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */,
 			);
 			name = FastStorage;
+			sourceTree = "<group>";
+		};
+		ADF75E9C1CC2033F00092A38 /* ButcherTable */ = {
+			isa = PBXGroup;
+			children = (
+				ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */,
+				ADF75E9E1CC203BE00092A38 /* ButcherTable.hpp */,
+			);
+			name = ButcherTable;
+			sourceTree = "<group>";
+		};
+		ADF75EA01CC20C7B00092A38 /* ButcherIntegrator */ = {
+			isa = PBXGroup;
+			children = (
+				ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */,
+				ADF75EA21CC20C9F00092A38 /* ButcherIntegrator.hpp */,
+				ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */,
+				ADF75EA51CC2160A00092A38 /* ExplicitEuler.hpp */,
+				ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */,
+				ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */,
+				AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */,
+				AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */,
+			);
+			name = ButcherIntegrator;
 			sourceTree = "<group>";
 		};
 		ADF8DC7F1C895BAB004C682C /* src */ = {
@@ -801,13 +824,9 @@
 		ADF8DCFB1C895BAB004C682C /* NumericIntegration */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DCFC1C895BAB004C682C /* ExplicitEuler.cpp */,
-				ADF8DCFD1C895BAB004C682C /* ExplicitEuler.hpp */,
-				ADF8DCFE1C895BAB004C682C /* ExplicitTrapezoidal.cpp */,
-				ADF8DCFF1C895BAB004C682C /* ExplicitTrapezoidal.hpp */,
-				ADF8DD001C895BAB004C682C /* NumericIntegration.h */,
-				ADF8DD011C895BAB004C682C /* RungeKutta4.cpp */,
-				ADF8DD021C895BAB004C682C /* RungeKutta4.hpp */,
+				ADF75EA01CC20C7B00092A38 /* ButcherIntegrator */,
+				ADF75E9C1CC2033F00092A38 /* ButcherTable */,
+				AD4061901CC3643A0000D18A /* NumericIntegration.hpp */,
 			);
 			path = NumericIntegration;
 			sourceTree = "<group>";
@@ -974,7 +993,6 @@
 				ADF8DD801C895BAB004C682C /* Special_Upper.hpp in Headers */,
 				ADF8DDFD1C895BAB004C682C /* Timer.hpp in Headers */,
 				ADF8DDFA1C895BAB004C682C /* TanhSinh.hpp in Headers */,
-				ADF8DDC31C895BAB004C682C /* NumericIntegration.h in Headers */,
 				ADF8DD6D1C895BAB004C682C /* MatScalarAddExpr.hpp in Headers */,
 				ADF8DDE81C895BAB004C682C /* Parabola2D.hpp in Headers */,
 				ADF8DD431C895BAB004C682C /* DataFilter.h in Headers */,
@@ -1001,7 +1019,6 @@
 				ADF8DDFE1C895BAB004C682C /* TestCostFunc.h in Headers */,
 				ADF8DD9A1C895BAB004C682C /* Node.hpp in Headers */,
 				ADF8DD681C895BAB004C682C /* LinearAlgebra.h in Headers */,
-				ADF8DDBF1C895BAB004C682C /* ExplicitEuler.hpp in Headers */,
 				ADF8DD921C895BAB004C682C /* DefaultMaps.hpp in Headers */,
 				ADF8DD851C895BAB004C682C /* ConjGrad.hpp in Headers */,
 				ADF8DD911C895BAB004C682C /* DataSet.hpp in Headers */,
@@ -1013,7 +1030,6 @@
 				ADF8DD781C895BAB004C682C /* Matrix.hpp in Headers */,
 				ADF8DDCE1C895BAB004C682C /* Scheduler.hpp in Headers */,
 				ADF8DDE01C895BAB004C682C /* Swarm.hpp in Headers */,
-				ADF8DDC61C895BAB004C682C /* RungeKutta4.hpp in Headers */,
 				ADF8DD451C895BAB004C682C /* TargetMeas.hpp in Headers */,
 				ADF8DDFF1C895BAB004C682C /* TestExample1.hpp in Headers */,
 				ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */,
@@ -1032,7 +1048,6 @@
 				ADF8DDE61C895BAB004C682C /* Optimization.h in Headers */,
 				ADF8DDB31C895BAB004C682C /* DiscreteModel.hpp in Headers */,
 				ADF8DD791C895BAB004C682C /* MatTypes.hpp in Headers */,
-				ADF8DDC21C895BAB004C682C /* ExplicitTrapezoidal.hpp in Headers */,
 				ADF8DD931C895BAB004C682C /* L2Cost.hpp in Headers */,
 				ADF8DD941C895BAB004C682C /* LogisticRegression.hpp in Headers */,
 				ADF8DD881C895BAB004C682C /* Solver.hpp in Headers */,
@@ -1153,22 +1168,23 @@
 				ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */,
 				ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */,
+				ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */,
 				ADF8DDF01C895BAB004C682C /* FiniteElement.cpp in Sources */,
 				ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF31C895BAB004C682C /* FiniteVolume.cpp in Sources */,
-				ADF8DDBD1C895BAB004C682C /* ExplicitEuler.cpp in Sources */,
 				ADF8DD8F1C895BAB004C682C /* DataSet.cpp in Sources */,
 				ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */,
+				ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */,
 				ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
 				ADF8DDB11C895BAB004C682C /* DiscreteModel.cpp in Sources */,
 				ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD471C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */,
-				ADF8DDC01C895BAB004C682C /* ExplicitTrapezoidal.cpp in Sources */,
-				ADF8DDC41C895BAB004C682C /* RungeKutta4.cpp in Sources */,
+				AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */,
+				ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */,
 				ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */,
 				AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */,
@@ -1181,6 +1197,7 @@
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */,
 				ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */,
+				ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1207,7 +1224,6 @@
 				ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF41C895BAB004C682C /* FiniteVolume.cpp in Sources */,
-				ADF8DDBE1C895BAB004C682C /* ExplicitEuler.cpp in Sources */,
 				ADF8DD901C895BAB004C682C /* DataSet.cpp in Sources */,
 				ADF8DDD01C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAF1C895BAB004C682C /* DataPrinter.cpp in Sources */,
@@ -1217,8 +1233,6 @@
 				ADF8DDCD1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD481C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4C1C895BAB004C682C /* Quaternion.cpp in Sources */,
-				ADF8DDC11C895BAB004C682C /* ExplicitTrapezoidal.cpp in Sources */,
-				ADF8DDC51C895BAB004C682C /* RungeKutta4.cpp in Sources */,
 				ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				ADF8DD9E1C895BAB004C682C /* main.cpp in Sources */,
 				ADF8DDA91C895BAB004C682C /* Parser.cpp in Sources */,

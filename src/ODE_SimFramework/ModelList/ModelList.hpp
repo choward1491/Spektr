@@ -56,6 +56,9 @@ public:
     // generator to each model
     void addParentData( SimState & s, Rand & gen);
     
+    // update dynamic models
+    void updateDynamicModels();
+    
     // Methods to retrieve references to a dynamic or discrete model
     DynamicModel* getDynamicsAt(int index);
     DiscreteModel* getDiscreteAt(int index);

@@ -118,7 +118,20 @@ public:
     virtual void operator()( double time , ModelState & dqdt ) = 0;
     
     
-    
+    /*!
+     * This method will be used to update
+     * any variables or states within the
+     * dynamic object that aren't explicitly
+     * time integrated. It could be as simple
+     * as updating a variable that is a unit
+     * conversion different than the one being
+     * integrated. This happens right after the
+     * time integration is complete.
+     *
+     * \params None
+     * \returns None
+     */
+    virtual void update(){}
     
     
     /*!
@@ -167,7 +180,7 @@ public:
     // Method used by simulation to assign the part of the state vector
     // that this model uses
     //
-    void assignStateAddress( double* address ) { state = ModelState(address,numDims()); }
+    void assignStateAddress( double** address, size_t offset ) { state = ModelState(address,numDims(), offset); }
     void assignRandomGenerator( Rand & gen ){ generator = &gen; }
     void assignSimState( SimState & simState_ ){ simState = &simState_; }
     

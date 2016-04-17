@@ -11,22 +11,25 @@
 
 #include "Simulator.hpp"
 #include "Pendulum.hpp"
+#include "ExplicitEuler.hpp"
+#include "RungeKutta4.hpp"
+#include "ExplicitTrapezoidal.hpp"
 
 
-class PendulumSim : public Simulator<PendulumSim,RungeKutta4> {
+class PendulumSim : public Simulator<PendulumSim,ExplicitTrapezoidal> {
 public:
     
     PendulumSim(){
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 30;
-        numMC = 10;
+        state.printFrequency = 10;
+        numMC = 1;
         writeSimHistory = true;
     }
    
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 100);
+        addDiscrete(&tstep, 1000);
         addDynamics(&pendulum);
     }
     void _connectModelsTogether(){

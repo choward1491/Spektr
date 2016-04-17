@@ -52,6 +52,8 @@ public:
         gravity         = 9.81;
         state[0]        = Constants::pi/3;
         state[1]        = Constants::pi/12;
+        theta           = state[0];
+        thetaDot        = state[1];
     }
     
     
@@ -62,8 +64,8 @@ public:
      *
      */
     virtual void setupPrintData(){
-        simState->dataPrinter.addVariableToPrint(&state[0], "Theta");
-        simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
+        simState->dataPrinter.addVariableToPrint(&theta,    "Theta");
+        simState->dataPrinter.addVariableToPrint(&thetaDot, "ThetaDot");
     }
     
     
@@ -95,18 +97,15 @@ public:
      * \returns None
      */
     virtual void operator()( double time , ModelState & dqdt ){
-        double theta    = state[0];
-        if( theta > 180 ){ theta -= 180; }
-        if( theta < -180 ){ theta += 180; }
-        state[0] = theta;
-        theta *= Constants::deg2rad;
-        double thetaDot = state[1];
+        theta    = state[0];
+        thetaDot = state[1];
         dqdt[0] = thetaDot;
         dqdt[1] = -( dampening*thetaDot/mass + gravity * sin(theta)/ lengthPendulum);
     }
     
     
 private:
+    double theta, thetaDot;
     double mass;            // in kg
     double dampening;       //
     double gravity;         // m/s^2

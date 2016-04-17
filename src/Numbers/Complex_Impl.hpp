@@ -39,8 +39,8 @@ HEADER
 void COMPLEX::polar2rect( const T & mag, const T & arg ){
     double m = static_cast<double>(mag);
     double a = static_cast<double>(arg);
-    re_ = static_cast<T>(m*cos(arg));
-    im_ = static_cast<T>(m*sin(arg));
+    re_ = static_cast<T>(m*cos(a));
+    im_ = static_cast<T>(m*sin(a));
 }
 
 HEADER

@@ -33,7 +33,7 @@
 #include "ModelList.hpp"
 #include "SimState.hpp"
 #include "SimTime.hpp"
-#include "NumericIntegration.h"
+#include "NumericIntegration.hpp"
 
 class TimeStep : public DiscreteModel {};
 
@@ -51,6 +51,8 @@ class TimeStep : public DiscreteModel {};
 template<class Sim, class Integrator = ExplicitEuler >
 class Simulator {
 public:
+    
+    Simulator();
     
     // Method to run the actual simulation
     void runSim();
@@ -92,7 +94,7 @@ protected:
     
 private:
     
-    
+    std::vector<DiscreteModel*> queue;
     void initialize();              // Method to initialize everything before running a simulation
     void initializeModels();        // method to initialize models
     void setupSimHistory();         // method to setup sim history

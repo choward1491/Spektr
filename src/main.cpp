@@ -6,8 +6,11 @@
 //
 
 #include <string>
+#include "TestPendulumSim.hpp"
 
 int main(int argc, const char * argv[]) {
+    
+    testPendulumSim("/Users/christianjhoward/history0.txt");
     
     // exit
     return 0;

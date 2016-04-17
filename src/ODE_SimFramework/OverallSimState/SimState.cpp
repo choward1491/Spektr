@@ -25,15 +25,15 @@ void SimState::buildState(){
     state = new double[numStates];
     
     // create new pointer to reference along the state array
-    double* ptr = &state[0];
+    size_t offset = 0;
     
     // assign the starting address for the state of each dynamic model
     for (int i = 0; i < mlist.diffeqList.size(); i++) {
-        mlist.diffeqList[i]->assignStateAddress(ptr);
-        ptr = ptr + mlist.diffeqList[i]->numDims();
+        mlist.diffeqList[i]->assignStateAddress( &state, offset );
+        offset += mlist.diffeqList[i]->numDims();
     }
 }
-double * SimState::getStateReference(){
+double *& SimState::getStateReference(){
     return state;
 }
 int SimState::size() const{

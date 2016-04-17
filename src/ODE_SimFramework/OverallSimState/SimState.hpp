@@ -47,7 +47,7 @@ public:
     void buildState();              // method to build the complete state
                                     // after all models have been added
     
-    double * getStateReference();  // get reference to start of state array
+    double *& getStateReference();  // get reference to start of state array
     
     int size() const;               // method to get size of state
     
