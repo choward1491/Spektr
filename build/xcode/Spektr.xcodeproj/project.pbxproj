@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */; };
+		AD4061971CC405D00000D18A /* HeatEquation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061951CC405D00000D18A /* HeatEquation.cpp */; };
+		AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */; };
+		AD40619F1CC450230000D18A /* AdvectionEqn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD40619D1CC450230000D18A /* AdvectionEqn.cpp */; };
+		AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
 		ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
 		ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
@@ -197,6 +201,16 @@
 		AD4061901CC3643A0000D18A /* NumericIntegration.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NumericIntegration.hpp; sourceTree = "<group>"; };
 		AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExplicitTrapezoidal.cpp; path = ButcherIntegrator/ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
 		AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExplicitTrapezoidal.hpp; path = ButcherIntegrator/ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
+		AD4061951CC405D00000D18A /* HeatEquation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeatEquation.cpp; path = Examples/HeatEquation/HeatEquation.cpp; sourceTree = "<group>"; };
+		AD4061961CC405D00000D18A /* HeatEquation.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeatEquation.hpp; path = Examples/HeatEquation/HeatEquation.hpp; sourceTree = "<group>"; };
+		AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HeatEquationSim.cpp; path = Examples/HeatEquation/HeatEquationSim.cpp; sourceTree = "<group>"; };
+		AD4061991CC40DCE0000D18A /* HeatEquationSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HeatEquationSim.hpp; path = Examples/HeatEquation/HeatEquationSim.hpp; sourceTree = "<group>"; };
+		AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestHeatEquationSim.hpp; sourceTree = "<group>"; };
+		AD40619D1CC450230000D18A /* AdvectionEqn.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdvectionEqn.cpp; path = Examples/AdvectionEqn/AdvectionEqn.cpp; sourceTree = "<group>"; };
+		AD40619E1CC450230000D18A /* AdvectionEqn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AdvectionEqn.hpp; path = Examples/AdvectionEqn/AdvectionEqn.hpp; sourceTree = "<group>"; };
+		AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdvectionEqnSim.cpp; path = Examples/AdvectionEqn/AdvectionEqnSim.cpp; sourceTree = "<group>"; };
+		AD4061A11CC455C20000D18A /* AdvectionEqnSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AdvectionEqnSim.hpp; path = Examples/AdvectionEqn/AdvectionEqnSim.hpp; sourceTree = "<group>"; };
+		AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestAdvectionEqn.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -381,6 +395,28 @@
 			name = complex;
 			sourceTree = "<group>";
 		};
+		AD4061941CC405970000D18A /* HeatEquation */ = {
+			isa = PBXGroup;
+			children = (
+				AD4061951CC405D00000D18A /* HeatEquation.cpp */,
+				AD4061961CC405D00000D18A /* HeatEquation.hpp */,
+				AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */,
+				AD4061991CC40DCE0000D18A /* HeatEquationSim.hpp */,
+			);
+			name = HeatEquation;
+			sourceTree = "<group>";
+		};
+		AD40619C1CC450050000D18A /* AdvectionEqn */ = {
+			isa = PBXGroup;
+			children = (
+				AD40619D1CC450230000D18A /* AdvectionEqn.cpp */,
+				AD40619E1CC450230000D18A /* AdvectionEqn.hpp */,
+				AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */,
+				AD4061A11CC455C20000D18A /* AdvectionEqnSim.hpp */,
+			);
+			name = AdvectionEqn;
+			sourceTree = "<group>";
+		};
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
@@ -431,6 +467,8 @@
 		AD5CE1BD1C9A551C00E6CC2A /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				AD40619C1CC450050000D18A /* AdvectionEqn */,
+				AD4061941CC405970000D18A /* HeatEquation */,
 				AD5CE1BE1C9A552200E6CC2A /* Pendulum */,
 			);
 			name = Examples;
@@ -960,6 +998,8 @@
 				ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */,
 				ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */,
 				ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */,
+				AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */,
+				AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */,
 			);
 			name = tests;
 			path = ../../tests;
@@ -1165,6 +1205,7 @@
 				ADF8DD981C895BAB004C682C /* Node.cpp in Sources */,
 				ADF8DD951C895BAB004C682C /* Network.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
+				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
 				ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */,
 				ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */,
@@ -1179,6 +1220,7 @@
 				ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */,
 				ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
+				AD40619F1CC450230000D18A /* AdvectionEqn.cpp in Sources */,
 				ADF8DDB11C895BAB004C682C /* DiscreteModel.cpp in Sources */,
 				ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD471C895BAB004C682C /* Function.cpp in Sources */,
@@ -1189,8 +1231,10 @@
 				ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */,
 				AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */,
 				ADF8DDA81C895BAB004C682C /* Parser.cpp in Sources */,
+				AD4061971CC405D00000D18A /* HeatEquation.cpp in Sources */,
 				ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */,
 				ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */,
+				AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */,
 				ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */,
 				ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */,
 				ADF8DDED1C895BAB004C682C /* FiniteDifference.cpp in Sources */,
@@ -1335,6 +1379,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
+					../../tests,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1357,6 +1402,7 @@
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
+					../../tests,
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

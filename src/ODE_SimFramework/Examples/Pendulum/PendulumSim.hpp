@@ -14,15 +14,17 @@
 #include "ExplicitEuler.hpp"
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
+#include "Timer.hpp"
 
 
-class PendulumSim : public Simulator<PendulumSim,ExplicitTrapezoidal> {
+class PendulumSim : public Simulator<PendulumSim,ExplicitEuler> {
 public:
     
     PendulumSim(){
+        timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 10;
+        state.printFrequency = 20;
         numMC = 1;
         writeSimHistory = true;
     }
@@ -39,14 +41,18 @@ public:
         return getTime() > 5;
     }
     void _finalizeMonteCarloRun(){
-        printf("Finished the %ith Monte Carlo run!\n",static_cast<int>(getCompletedMC()));
+        printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));
     }
     void _finalize(){
         printf("Finished!\n");
+        timer.stop();
+        
+        printf("Simulation complete after %lf seconds\n",timer.getDuration());
     }
     
 private:
     
+    Timer timer;
     TimeStep tstep;
     PendulumModel pendulum;
     

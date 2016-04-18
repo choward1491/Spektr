@@ -6,11 +6,11 @@
 //
 
 #include <string>
-#include "TestPendulumSim.hpp"
+#include "TestAdvectionEqn.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    testPendulumSim("/Users/christianjhoward/history0.txt");
+    testAdvectionEqnSim("/Users/christianjhoward/history5.txt");
     
     // exit
     return 0;

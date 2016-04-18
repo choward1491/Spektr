@@ -11,8 +11,8 @@
 
 #include <stdio.h>
 #include "DynamicModel.hpp"
-#include <math.h>
 #include "SimState.hpp"
+#include <math.h>
 #include "Constants.hpp"
 
 
@@ -64,8 +64,8 @@ public:
      *
      */
     virtual void setupPrintData(){
-        simState->dataPrinter.addVariableToPrint(&theta,    "Theta");
-        simState->dataPrinter.addVariableToPrint(&thetaDot, "ThetaDot");
+        simState->dataPrinter.addVariableToPrint(&state[0],    "Theta");
+        simState->dataPrinter.addVariableToPrint(&state[1], "ThetaDot");
     }
     
     
