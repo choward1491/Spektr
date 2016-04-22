@@ -1,8 +1,8 @@
 //
-//  AdvectionEqn.hpp
+//  HodgkinHuxleyNeuronModel.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 4/17/16.
+//  Created by Christian J Howard on 4/18/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,8 +27,8 @@
 //
 //
 
-#ifndef AdvectionEqn_hpp
-#define AdvectionEqn_hpp
+#ifndef HodgkinHuxleyNeuronModel_hpp
+#define HodgkinHuxleyNeuronModel_hpp
 
 #include <stdio.h>
 #include "DynamicModel.hpp"
@@ -43,22 +43,14 @@
 /*!
  * These dynamics represent a simple time varying 1D Heat Equation
  */
-class AdvectionEqn : public DynamicModel {
+class HodgkinHuxleyNeuronModel : public DynamicModel {
     
 public:
     
     
-    AdvectionEqn(){
-        num_points = 100;
-        x_pos.resize(num_points);
-        xmin = 0;
-        xmax = 1;
-        b[0] = 0.5; b[1] = -2; b[2] = 1.5;
-        dx = (xmax - xmin)/static_cast<double>(num_points-1);
-        for(float i = 0.0; i < num_points; i+=1.0 ){
-            x_pos[i] = xmin + i*dx;
-        }
-        model_name = "advection_equation";
+    HodgkinHuxleyNeuronModel(){
+        
+        model_name = "HodgkinHuxleyNeuronModel";
     }
     
     
@@ -76,7 +68,21 @@ public:
      * \returns None
      */
     virtual void initialize(){
-        speed            = generator->rand() * 4 + -2;
+        Cm = 1.0;
+        gk = 36.0;
+        gNa= 120.0;
+        gl = 0.3;
+        Vm = -65;
+        n  = 0.317;
+        m  = 0.05;
+        h  = 0.6;
+        state[0] = Vm;
+        state[1] = n;
+        state[2] = m;
+        state[3] = h;
+        VK = -77;
+        VNa= 50;
+        Vl = -54.4;
         initialCondition();
     }
     
@@ -88,11 +94,10 @@ public:
      *
      */
     virtual void setupPrintData(){
-        char varname[24];
-        for(int i = 0; i < num_points; i++ ){
-            sprintf(varname,"u_%i",i);
-            simState->dataPrinter.addVariableToPrint(&state[i], std::string(varname) );
-        }
+        simState->dataPrinter.addVariableToPrint(&state[0], "Vm" );
+        simState->dataPrinter.addVariableToPrint(&state[1], "n" );
+        simState->dataPrinter.addVariableToPrint(&state[2], "m" );
+        simState->dataPrinter.addVariableToPrint(&state[3], "h" );
     }
     
     
@@ -106,7 +111,7 @@ public:
      * \params None
      * \returns Number of Dimensions in System of ODEs
      */
-    virtual int numDims() const { return num_points; }
+    virtual int numDims() const { return 4; }
     
     
     
@@ -124,64 +129,59 @@ public:
      * \returns None
      */
     virtual void operator()( double time , ModelState & dqdt ){
-        interiorComputation(time, dqdt);
-        leftBC(time, dqdt);
-        rightBC(time, dqdt);
+        Vm = state[0];
+        n  = state[1];
+        m  = state[2];
+        h  = state[3];
+        double n4 = pow(n,4.0), m3 = pow(m,3.0);
+        dqdt[0] = (I(time) - gk*n4*(Vm-VK) - gNa*m3*h*(Vm-VNa) - gl*(Vm-Vl) )/Cm;
+        dqdt[1] = alpha_n(Vm)*(1.0-n) - beta_n(Vm)*n;
+        dqdt[2] = alpha_m(Vm)*(1.0-m) - beta_m(Vm)*m;
+        dqdt[3] = alpha_h(Vm)*(1.0-h) - beta_h(Vm)*h;
     }
     
     
 private:
-    int num_points;
-    double b[3];
-    double speed; // thermal diffusivity
-    double xmin, xmax, dx;
-    std::vector<float> x_pos;
     
+    double Cm, gk, gNa, gl, Vm, n, m, h;
+    double VK, VNa, Vl;
     
+    double alpha_n( double Vm ){
+        return 0.01*(Vm-10.0)/( exp( (Vm-10.0)*0.1) - 1.0 );
+    }
     
-    void interiorComputation( double time, ModelState & dqdt ){
-        double c = speed / dx;
-        if( c >= 0.0 ){
-            for(int i = 2; i < num_points; i++ ){
-                dqdt[i] = -c * (b[0]*state[i-2] + b[1]*state[i-1] + b[2]*state[i]);
-            }
-        }else{
-            for(int i = 0; i < (num_points-2); i++ ){
-                dqdt[i] = -c * -(b[0]*state[i+2] + b[1]*state[i+1] + b[2]*state[i]);
-            }
-        }
+    double alpha_m( double Vm ){
+        return 0.1*(Vm-25.0)/( exp( (Vm-25.0)*0.1) - 1.0 );
     }
-    void leftBC( double time, ModelState & dqdt ){
-        // periodic BC
-        if( speed > 0 ){
-            double c = speed / dx;
-            int end = num_points-1;
-            dqdt[0] = -c * (b[0]*state[end-1] + b[1]*state[end] + b[2]*state[0]);
-            dqdt[1] = -c * (b[0]*state[end]   + b[1]*state[0]   + b[2]*state[1]);
-        }
+    
+    double alpha_h( double Vm ){
+        return 0.07*exp(Vm/20.0);
     }
-    void rightBC( double time, ModelState & dqdt ){
-        // periodic BC
-        if( speed < 0 ){
-            double c = speed / dx;
-            int end = num_points-1;
-            dqdt[end]   = -c * -(b[0]*state[1] + b[1]*state[0]    + b[2]*state[end]);
-            dqdt[end-1] = -c * -(b[0]*state[0] + b[1]*state[end]  + b[2]*state[end-1]);
-        }
+    
+    double beta_n( double Vm ){
+        return 0.125*exp(Vm/80.0);
     }
+    
+    double beta_m( double Vm ){
+        return 4.0*exp(Vm/18.0);
+    }
+    
+    double beta_h( double Vm ){
+        return 1.0/( exp( (Vm - 30.0)* 0.1 ) + 1.0);
+    }
+    
+    double I( double time ){
+        if( time > 0.3 && time < 0.6 ){
+            return 15;
+        }
+        return 0;
+    }
+    
     void initialCondition(){
-        double m = 0.5*(xmin+xmax);
-        double s = (xmax-m)/3.0, del = 0.0;
         
-        // Centered Gaussian
-        for(int i = 0; i < num_points; i++){
-            del = (x_pos[i]-m)/s;
-            state[i] = 5*exp( -del*del );
-        }
     }
-    
     
 };
 
 
-#endif /* AdvectionEqn_hpp */
+#endif /* HodgkinHuxleyNeuronModel_hpp */

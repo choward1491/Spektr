@@ -6,11 +6,11 @@
 //
 
 #include <string>
-#include "TestAdvectionEqn.hpp"
+#include "TestNeuronSim.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    testAdvectionEqnSim("/Users/christianjhoward/history5.txt");
+    testNeuronSim("/Users/christianjhoward/history6.txt");
     
     // exit
     return 0;

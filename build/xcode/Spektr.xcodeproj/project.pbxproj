@@ -12,13 +12,13 @@
 		AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */; };
 		AD40619F1CC450230000D18A /* AdvectionEqn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD40619D1CC450230000D18A /* AdvectionEqn.cpp */; };
 		AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */; };
+		AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
+		AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
 		ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
 		ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
 		ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */; };
 		ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */; };
-		ADF8DC7D1C895B6C004C682C /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */; };
-		ADF8DC7E1C895B6C004C682C /* libpng16.16.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */; };
 		ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
 		ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
 		ADF8DD421C895BAB004C682C /* FileObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; };
@@ -211,6 +211,11 @@
 		AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = AdvectionEqnSim.cpp; path = Examples/AdvectionEqn/AdvectionEqnSim.cpp; sourceTree = "<group>"; };
 		AD4061A11CC455C20000D18A /* AdvectionEqnSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = AdvectionEqnSim.hpp; path = Examples/AdvectionEqn/AdvectionEqnSim.hpp; sourceTree = "<group>"; };
 		AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestAdvectionEqn.hpp; sourceTree = "<group>"; };
+		AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HodgkinHuxleyNeuronModel.cpp; path = "Examples/Hodgkin–Huxley/HodgkinHuxleyNeuronModel.cpp"; sourceTree = "<group>"; };
+		AD4061A61CC5EB280000D18A /* HodgkinHuxleyNeuronModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = HodgkinHuxleyNeuronModel.hpp; path = "Examples/Hodgkin–Huxley/HodgkinHuxleyNeuronModel.hpp"; sourceTree = "<group>"; };
+		AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NeuronSim.cpp; path = "Examples/Hodgkin–Huxley/NeuronSim.cpp"; sourceTree = "<group>"; };
+		AD4061A91CC5F7A30000D18A /* NeuronSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = NeuronSim.hpp; path = "Examples/Hodgkin–Huxley/NeuronSim.hpp"; sourceTree = "<group>"; };
+		AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuronSim.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -237,7 +242,6 @@
 		ADF75EA51CC2160A00092A38 /* ExplicitEuler.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExplicitEuler.hpp; path = ButcherIntegrator/ExplicitEuler.hpp; sourceTree = "<group>"; };
 		ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RungeKutta4.cpp; path = ButcherIntegrator/RungeKutta4.cpp; sourceTree = "<group>"; };
 		ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RungeKutta4.hpp; path = ButcherIntegrator/RungeKutta4.hpp; sourceTree = "<group>"; };
-		ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpng16.16.dylib; path = ../../libs/libpng16.16.dylib; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
 		ADF8DC841C895BAB004C682C /* DataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFilter.h; sourceTree = "<group>"; };
@@ -364,7 +368,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADF8DC7D1C895B6C004C682C /* libpng16.16.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,7 +382,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADF8DC7E1C895B6C004C682C /* libpng16.16.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +417,17 @@
 				AD4061A11CC455C20000D18A /* AdvectionEqnSim.hpp */,
 			);
 			name = AdvectionEqn;
+			sourceTree = "<group>";
+		};
+		AD4061A41CC5EAFB0000D18A /* Hodgkin–Huxley */ = {
+			isa = PBXGroup;
+			children = (
+				AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */,
+				AD4061A61CC5EB280000D18A /* HodgkinHuxleyNeuronModel.hpp */,
+				AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */,
+				AD4061A91CC5F7A30000D18A /* NeuronSim.hpp */,
+			);
+			name = "Hodgkin–Huxley";
 			sourceTree = "<group>";
 		};
 		AD4767F91B76EAF100E6B11D = {
@@ -467,6 +480,7 @@
 		AD5CE1BD1C9A551C00E6CC2A /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				AD4061A41CC5EAFB0000D18A /* Hodgkin–Huxley */,
 				AD40619C1CC450050000D18A /* AdvectionEqn */,
 				AD4061941CC405970000D18A /* HeatEquation */,
 				AD5CE1BE1C9A552200E6CC2A /* Pendulum */,
@@ -526,7 +540,6 @@
 		AD5CE1C41C9A690400E6CC2A /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DC7C1C895B6C004C682C /* libpng16.16.dylib */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -1000,6 +1013,7 @@
 				ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */,
 				AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */,
 				AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */,
+				AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */,
 			);
 			name = tests;
 			path = ../../tests;
@@ -1222,6 +1236,7 @@
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
 				AD40619F1CC450230000D18A /* AdvectionEqn.cpp in Sources */,
 				ADF8DDB11C895BAB004C682C /* DiscreteModel.cpp in Sources */,
+				AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */,
 				ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD471C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */,
@@ -1234,6 +1249,7 @@
 				AD4061971CC405D00000D18A /* HeatEquation.cpp in Sources */,
 				ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */,
 				ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */,
+				AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */,
 				AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */,
 				ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */,
 				ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */,
