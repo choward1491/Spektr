@@ -15,161 +15,288 @@
 		AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
 		AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		AD9A74FF1CCD430000615C78 /* Parser.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; };
+		AD9A75001CCD430000615C78 /* FileObject.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; };
+		AD9A75011CCD430000615C78 /* DataFilter.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; };
+		AD9A75021CCD430000615C78 /* TargetDyn.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC851C895BAB004C682C /* TargetDyn.hpp */; };
+		AD9A75031CCD430000615C78 /* TargetMeas.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC861C895BAB004C682C /* TargetMeas.hpp */; };
+		AD9A75041CCD430000615C78 /* UKF.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC871C895BAB004C682C /* UKF.hpp */; };
+		AD9A75051CCD430000615C78 /* Function.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8A1C895BAB004C682C /* Function.hpp */; };
+		AD9A75061CCD430000615C78 /* Geometry.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8C1C895BAB004C682C /* Geometry.h */; };
+		AD9A75071CCD430000615C78 /* Quaternion.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */; };
+		AD9A75081CCD430000615C78 /* vec3.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC901C895BAB004C682C /* vec3.hpp */; };
+		AD9A75091CCD430000615C78 /* LinearAlgebra.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCA81C895BAB004C682C /* LinearAlgebra.h */; };
+		AD9A750A1CCD430000615C78 /* Cholesky.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCA51C895BAB004C682C /* Cholesky.hpp */; };
+		AD9A750B1CCD430000615C78 /* LDL.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCA61C895BAB004C682C /* LDL.hpp */; };
+		AD9A750C1CCD430000615C78 /* QR.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCA71C895BAB004C682C /* QR.hpp */; };
+		AD9A750D1CCD430000615C78 /* ScalarTypes.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */; };
+		AD9A750E1CCD430000615C78 /* AllMatExprs.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAA1C895BAB004C682C /* AllMatExprs.hpp */; };
+		AD9A750F1CCD430000615C78 /* MatMinusExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAB1C895BAB004C682C /* MatMinusExpr.hpp */; };
+		AD9A75101CCD430000615C78 /* MatMultExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAC1C895BAB004C682C /* MatMultExpr.hpp */; };
+		AD9A75111CCD430000615C78 /* MatrixExpression.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAD1C895BAB004C682C /* MatrixExpression.hpp */; };
+		AD9A75121CCD430000615C78 /* MatScalarAddExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAE1C895BAB004C682C /* MatScalarAddExpr.hpp */; };
+		AD9A75131CCD430000615C78 /* MatScalarDivExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCAF1C895BAB004C682C /* MatScalarDivExpr.hpp */; };
+		AD9A75141CCD430000615C78 /* MatScalarMinusExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB01C895BAB004C682C /* MatScalarMinusExpr.hpp */; };
+		AD9A75151CCD430000615C78 /* MatScalarMultExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB11C895BAB004C682C /* MatScalarMultExpr.hpp */; };
+		AD9A75161CCD430000615C78 /* MatSumExpr.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB21C895BAB004C682C /* MatSumExpr.hpp */; };
+		AD9A75171CCD430000615C78 /* MatHashes.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB51C895BAB004C682C /* MatHashes.hpp */; };
+		AD9A75181CCD430000615C78 /* Dims.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB71C895BAB004C682C /* Dims.hpp */; };
+		AD9A75191CCD430000615C78 /* Matrix.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB91C895BAB004C682C /* Matrix.hpp */; };
+		AD9A751A1CCD430000615C78 /* MatTypes.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCBA1C895BAB004C682C /* MatTypes.hpp */; };
+		AD9A751B1CCD430000615C78 /* Special_Diag.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCBC1C895BAB004C682C /* Special_Diag.hpp */; };
+		AD9A751C1CCD430000615C78 /* Special_General.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCBD1C895BAB004C682C /* Special_General.hpp */; };
+		AD9A751D1CCD430000615C78 /* Special_Lower.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCBE1C895BAB004C682C /* Special_Lower.hpp */; };
+		AD9A751E1CCD430000615C78 /* Special_Sparse.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCBF1C895BAB004C682C /* Special_Sparse.hpp */; };
+		AD9A751F1CCD430000615C78 /* Special_Symmetric.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */; };
+		AD9A75201CCD430000615C78 /* Special_Tridiag.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */; };
+		AD9A75211CCD430000615C78 /* Special_Upper.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */; };
+		AD9A75221CCD430000615C78 /* Special_FastMat.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE02CBB1CA64A2F00A3D736 /* Special_FastMat.hpp */; };
+		AD9A75231CCD430000615C78 /* FastStorage.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE02CB91CA644D500A3D736 /* FastStorage.hpp */; };
+		AD9A75241CCD430000615C78 /* FastStorage_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE02CBA1CA6460300A3D736 /* FastStorage_Impl.hpp */; };
+		AD9A75251CCD430000615C78 /* ComplexFastStorage.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */; };
+		AD9A75261CCD430000615C78 /* MatStorage.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC51C895BAB004C682C /* MatStorage.hpp */; };
+		AD9A75271CCD430000615C78 /* MatStorage_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE02CB41CA4F6C500A3D736 /* MatStorage_Impl.hpp */; };
+		AD9A75281CCD430000615C78 /* MatStorage_Sparse.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADE02CB51CA4F83400A3D736 /* MatStorage_Sparse.hpp */; };
+		AD9A75291CCD430000615C78 /* ComplexMatStorage.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39480E1CA83DE800797BB3 /* ComplexMatStorage.hpp */; };
+		AD9A752A1CCD430000615C78 /* ConjGrad.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC81C895BAB004C682C /* ConjGrad.hpp */; };
+		AD9A752B1CCD430000615C78 /* DiagonalSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCC91C895BAB004C682C /* DiagonalSolver.hpp */; };
+		AD9A752C1CCD430000615C78 /* LowerSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCA1C895BAB004C682C /* LowerSolver.hpp */; };
+		AD9A752D1CCD430000615C78 /* Solver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCB1C895BAB004C682C /* Solver.hpp */; };
+		AD9A752E1CCD430000615C78 /* SymmetricSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCC1C895BAB004C682C /* SymmetricSolver.hpp */; };
+		AD9A752F1CCD430000615C78 /* TriDiagSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCD1C895BAB004C682C /* TriDiagSolver.hpp */; };
+		AD9A75301CCD430000615C78 /* UpperSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCE1C895BAB004C682C /* UpperSolver.hpp */; };
+		AD9A75311CCD430000615C78 /* LocalFitter.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */; };
+		AD9A75321CCD430000615C78 /* LocalRegression.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */; };
+		AD9A75331CCD430000615C78 /* LocalRegression_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */; };
+		AD9A75341CCD430000615C78 /* ActivationFuncs.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD21C895BAB004C682C /* ActivationFuncs.hpp */; };
+		AD9A75351CCD430000615C78 /* DataSet.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD41C895BAB004C682C /* DataSet.hpp */; };
+		AD9A75361CCD430000615C78 /* DefaultMaps.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */; };
+		AD9A75371CCD430000615C78 /* L2Cost.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD61C895BAB004C682C /* L2Cost.hpp */; };
+		AD9A75381CCD430000615C78 /* LogisticRegression.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */; };
+		AD9A75391CCD430000615C78 /* Network.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD91C895BAB004C682C /* Network.hpp */; };
+		AD9A753A1CCD430000615C78 /* Node.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDB1C895BAB004C682C /* Node.hpp */; };
+		AD9A753B1CCD430000615C78 /* RBF_Poly.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDC1C895BAB004C682C /* RBF_Poly.hpp */; };
+		AD9A753C1CCD430000615C78 /* Trainer.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDD1C895BAB004C682C /* Trainer.hpp */; };
+		AD9A753D1CCD430000615C78 /* Complex.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39480A1CA7338300797BB3 /* Complex.hpp */; };
+		AD9A753E1CCD430000615C78 /* Complex_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */; };
+		AD9A753F1CCD430000615C78 /* RandomNumberGenerator.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */; };
+		AD9A75401CCD430000615C78 /* Fraction.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE11C895BAB004C682C /* Fraction.hpp */; };
+		AD9A75411CCD430000615C78 /* Simulator.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB461231C9F34FE0088FF7C /* Simulator.hpp */; };
+		AD9A75421CCD430000615C78 /* Simulator_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */; };
+		AD9A75431CCD430000615C78 /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
+		AD9A75441CCD430000615C78 /* HodgkinHuxleyNeuronModel.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A61CC5EB280000D18A /* HodgkinHuxleyNeuronModel.hpp */; };
+		AD9A75451CCD430000615C78 /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
+		AD9A75461CCD430000615C78 /* NeuronSim.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A91CC5F7A30000D18A /* NeuronSim.hpp */; };
+		AD9A75471CCD430000615C78 /* AdvectionEqn.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD40619D1CC450230000D18A /* AdvectionEqn.cpp */; };
+		AD9A75481CCD430000615C78 /* AdvectionEqn.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD40619E1CC450230000D18A /* AdvectionEqn.hpp */; };
+		AD9A75491CCD430000615C78 /* AdvectionEqnSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A01CC455C20000D18A /* AdvectionEqnSim.cpp */; };
+		AD9A754A1CCD430000615C78 /* AdvectionEqnSim.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A11CC455C20000D18A /* AdvectionEqnSim.hpp */; };
+		AD9A754B1CCD430000615C78 /* HeatEquation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061951CC405D00000D18A /* HeatEquation.cpp */; };
+		AD9A754C1CCD430000615C78 /* HeatEquation.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061961CC405D00000D18A /* HeatEquation.hpp */; };
+		AD9A754D1CCD430000615C78 /* HeatEquationSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */; };
+		AD9A754E1CCD430000615C78 /* HeatEquationSim.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061991CC40DCE0000D18A /* HeatEquationSim.hpp */; };
+		AD9A754F1CCD430000615C78 /* Pendulum.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD051C895BAB004C682C /* Pendulum.hpp */; };
+		AD9A75501CCD430000615C78 /* PendulumSim.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */; };
+		AD9A75511CCD430000615C78 /* SimState.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimState.hpp */; };
+		AD9A75521CCD430000615C78 /* SimTime.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0C1C895BAB004C682C /* SimTime.hpp */; };
+		AD9A75531CCD430000615C78 /* ModelList.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCFA1C895BAB004C682C /* ModelList.hpp */; };
+		AD9A75541CCD430000615C78 /* SimExceptions.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */; };
+		AD9A75551CCD430000615C78 /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		AD9A75561CCD430000615C78 /* ModelState.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */; };
+		AD9A75571CCD430000615C78 /* Constants.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCED1C895BAB004C682C /* Constants.hpp */; };
+		AD9A75581CCD430000615C78 /* DataPrinter.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF01C895BAB004C682C /* DataPrinter.hpp */; };
+		AD9A75591CCD430000615C78 /* DiscreteModel.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF31C895BAB004C682C /* DiscreteModel.hpp */; };
+		AD9A755A1CCD430000615C78 /* DynamicModel.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF61C895BAB004C682C /* DynamicModel.hpp */; };
+		AD9A755B1CCD430000615C78 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
+		AD9A755C1CCD430000615C78 /* ButcherIntegrator.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA21CC20C9F00092A38 /* ButcherIntegrator.hpp */; };
+		AD9A755D1CCD430000615C78 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */; };
+		AD9A755E1CCD430000615C78 /* ExplicitEuler.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA51CC2160A00092A38 /* ExplicitEuler.hpp */; };
+		AD9A755F1CCD430000615C78 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */; };
+		AD9A75601CCD430000615C78 /* RungeKutta4.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */; };
+		AD9A75611CCD430000615C78 /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */; };
+		AD9A75621CCD430000615C78 /* ExplicitTrapezoidal.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */; };
+		AD9A75631CCD430000615C78 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
+		AD9A75641CCD430000615C78 /* ButcherTable.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9E1CC203BE00092A38 /* ButcherTable.hpp */; };
+		AD9A75651CCD430000615C78 /* NumericIntegration.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061901CC3643A0000D18A /* NumericIntegration.hpp */; };
+		AD9A75661CCD430000615C78 /* PreciseTime.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD071C895BAB004C682C /* PreciseTime.h */; };
+		AD9A75671CCD430000615C78 /* Scheduler.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */; };
+		AD9A75681CCD430000615C78 /* MultiPSO.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; };
+		AD9A75691CCD430000615C78 /* Particle.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD191C895BAB004C682C /* Particle.hpp */; };
+		AD9A756A1CCD430000615C78 /* PSO.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1A1C895BAB004C682C /* PSO.hpp */; };
+		AD9A756B1CCD430000615C78 /* Swarm.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1B1C895BAB004C682C /* Swarm.hpp */; };
+		AD9A756C1CCD430000615C78 /* ConstantStep.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1D1C895BAB004C682C /* ConstantStep.hpp */; };
+		AD9A756D1CCD430000615C78 /* GradientBase.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1E1C895BAB004C682C /* GradientBase.hpp */; };
+		AD9A756E1CCD430000615C78 /* RandomInit.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD221C895BAB004C682C /* RandomInit.hpp */; };
+		AD9A756F1CCD430000615C78 /* Optimization.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD231C895BAB004C682C /* Optimization.h */; };
+		AD9A75701CCD430000615C78 /* Optimizer.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD241C895BAB004C682C /* Optimizer.hpp */; };
+		AD9A75711CCD430000615C78 /* Parabola2D.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD261C895BAB004C682C /* Parabola2D.hpp */; };
+		AD9A75721CCD430000615C78 /* Rosenbrock.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD271C895BAB004C682C /* Rosenbrock.hpp */; };
+		AD9A75731CCD430000615C78 /* Element.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2A1C895BAB004C682C /* Element.hpp */; };
+		AD9A75741CCD430000615C78 /* FiniteDifference.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2C1C895BAB004C682C /* FiniteDifference.hpp */; };
+		AD9A75751CCD430000615C78 /* FiniteElement.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2E1C895BAB004C682C /* FiniteElement.hpp */; };
+		AD9A75761CCD430000615C78 /* FiniteVolume.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD301C895BAB004C682C /* FiniteVolume.hpp */; };
+		AD9A75771CCD430000615C78 /* PDESim.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD311C895BAB004C682C /* PDESim.h */; };
+		AD9A75781CCD430000615C78 /* Quadrature.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD331C895BAB004C682C /* Quadrature.hpp */; };
+		AD9A75791CCD430000615C78 /* TanhSinh.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD351C895BAB004C682C /* TanhSinh.hpp */; };
+		AD9A757A1CCD430000615C78 /* Timer.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD381C895BAB004C682C /* Timer.hpp */; };
+		AD9A75B41CD3C91E00615C78 /* EulerAngles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */; };
+		AD9A75B51CD3C91E00615C78 /* EulerAngles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */; };
+		AD9A75B61CD3C91E00615C78 /* EulerAngles.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */; };
 		ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
 		ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
 		ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */; };
 		ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA71CC28F8200092A38 /* RungeKutta4.cpp */; };
 		ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
 		ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
-		ADF8DD421C895BAB004C682C /* FileObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; };
-		ADF8DD431C895BAB004C682C /* DataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; };
-		ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC851C895BAB004C682C /* TargetDyn.hpp */; };
-		ADF8DD451C895BAB004C682C /* TargetMeas.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC861C895BAB004C682C /* TargetMeas.hpp */; };
-		ADF8DD461C895BAB004C682C /* UKF.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC871C895BAB004C682C /* UKF.hpp */; };
+		ADF8DD421C895BAB004C682C /* FileObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD431C895BAB004C682C /* DataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC851C895BAB004C682C /* TargetDyn.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD451C895BAB004C682C /* TargetMeas.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC861C895BAB004C682C /* TargetMeas.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD461C895BAB004C682C /* UKF.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC871C895BAB004C682C /* UKF.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD471C895BAB004C682C /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC891C895BAB004C682C /* Function.cpp */; };
 		ADF8DD481C895BAB004C682C /* Function.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC891C895BAB004C682C /* Function.cpp */; };
-		ADF8DD491C895BAB004C682C /* Function.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8A1C895BAB004C682C /* Function.hpp */; };
-		ADF8DD4A1C895BAB004C682C /* Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8C1C895BAB004C682C /* Geometry.h */; };
+		ADF8DD491C895BAB004C682C /* Function.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8A1C895BAB004C682C /* Function.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD4A1C895BAB004C682C /* Geometry.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8C1C895BAB004C682C /* Geometry.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */; };
 		ADF8DD4C1C895BAB004C682C /* Quaternion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8D1C895BAB004C682C /* Quaternion.cpp */; };
-		ADF8DD4D1C895BAB004C682C /* Quaternion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */; };
+		ADF8DD4D1C895BAB004C682C /* Quaternion.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* vec3.cpp */; };
 		ADF8DD4F1C895BAB004C682C /* vec3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC8F1C895BAB004C682C /* vec3.cpp */; };
-		ADF8DD501C895BAB004C682C /* vec3.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC901C895BAB004C682C /* vec3.hpp */; };
-		ADF8DD651C895BAB004C682C /* Cholesky.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA51C895BAB004C682C /* Cholesky.hpp */; };
-		ADF8DD661C895BAB004C682C /* LDL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA61C895BAB004C682C /* LDL.hpp */; };
-		ADF8DD671C895BAB004C682C /* QR.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA71C895BAB004C682C /* QR.hpp */; };
-		ADF8DD681C895BAB004C682C /* LinearAlgebra.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA81C895BAB004C682C /* LinearAlgebra.h */; };
-		ADF8DD691C895BAB004C682C /* AllMatExprs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAA1C895BAB004C682C /* AllMatExprs.hpp */; };
-		ADF8DD6A1C895BAB004C682C /* MatMinusExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAB1C895BAB004C682C /* MatMinusExpr.hpp */; };
-		ADF8DD6B1C895BAB004C682C /* MatMultExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAC1C895BAB004C682C /* MatMultExpr.hpp */; };
-		ADF8DD6C1C895BAB004C682C /* MatrixExpression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAD1C895BAB004C682C /* MatrixExpression.hpp */; };
-		ADF8DD6D1C895BAB004C682C /* MatScalarAddExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAE1C895BAB004C682C /* MatScalarAddExpr.hpp */; };
-		ADF8DD6E1C895BAB004C682C /* MatScalarDivExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAF1C895BAB004C682C /* MatScalarDivExpr.hpp */; };
-		ADF8DD6F1C895BAB004C682C /* MatScalarMinusExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB01C895BAB004C682C /* MatScalarMinusExpr.hpp */; };
-		ADF8DD701C895BAB004C682C /* MatScalarMultExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB11C895BAB004C682C /* MatScalarMultExpr.hpp */; };
-		ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB21C895BAB004C682C /* MatSumExpr.hpp */; };
+		ADF8DD501C895BAB004C682C /* vec3.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC901C895BAB004C682C /* vec3.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD651C895BAB004C682C /* Cholesky.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA51C895BAB004C682C /* Cholesky.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD661C895BAB004C682C /* LDL.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA61C895BAB004C682C /* LDL.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD671C895BAB004C682C /* QR.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA71C895BAB004C682C /* QR.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD681C895BAB004C682C /* LinearAlgebra.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCA81C895BAB004C682C /* LinearAlgebra.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD691C895BAB004C682C /* AllMatExprs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAA1C895BAB004C682C /* AllMatExprs.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6A1C895BAB004C682C /* MatMinusExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAB1C895BAB004C682C /* MatMinusExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6B1C895BAB004C682C /* MatMultExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAC1C895BAB004C682C /* MatMultExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6C1C895BAB004C682C /* MatrixExpression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAD1C895BAB004C682C /* MatrixExpression.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6D1C895BAB004C682C /* MatScalarAddExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAE1C895BAB004C682C /* MatScalarAddExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6E1C895BAB004C682C /* MatScalarDivExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCAF1C895BAB004C682C /* MatScalarDivExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD6F1C895BAB004C682C /* MatScalarMinusExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB01C895BAB004C682C /* MatScalarMinusExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD701C895BAB004C682C /* MatScalarMultExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB11C895BAB004C682C /* MatScalarMultExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB21C895BAB004C682C /* MatSumExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB41C895BAB004C682C /* MatHashes.cpp */; };
 		ADF8DD731C895BAB004C682C /* MatHashes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB41C895BAB004C682C /* MatHashes.cpp */; };
-		ADF8DD741C895BAB004C682C /* MatHashes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB51C895BAB004C682C /* MatHashes.hpp */; };
-		ADF8DD751C895BAB004C682C /* Dims.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB71C895BAB004C682C /* Dims.hpp */; };
-		ADF8DD781C895BAB004C682C /* Matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB91C895BAB004C682C /* Matrix.hpp */; };
-		ADF8DD791C895BAB004C682C /* MatTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBA1C895BAB004C682C /* MatTypes.hpp */; };
-		ADF8DD7A1C895BAB004C682C /* Special_Diag.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBC1C895BAB004C682C /* Special_Diag.hpp */; };
-		ADF8DD7B1C895BAB004C682C /* Special_General.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBD1C895BAB004C682C /* Special_General.hpp */; };
-		ADF8DD7C1C895BAB004C682C /* Special_Lower.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBE1C895BAB004C682C /* Special_Lower.hpp */; };
-		ADF8DD7D1C895BAB004C682C /* Special_Sparse.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBF1C895BAB004C682C /* Special_Sparse.hpp */; };
-		ADF8DD7E1C895BAB004C682C /* Special_Symmetric.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */; };
-		ADF8DD7F1C895BAB004C682C /* Special_Tridiag.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */; };
-		ADF8DD801C895BAB004C682C /* Special_Upper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */; };
-		ADF8DD831C895BAB004C682C /* MatStorage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC51C895BAB004C682C /* MatStorage.hpp */; };
-		ADF8DD851C895BAB004C682C /* ConjGrad.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC81C895BAB004C682C /* ConjGrad.hpp */; };
-		ADF8DD861C895BAB004C682C /* DiagonalSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC91C895BAB004C682C /* DiagonalSolver.hpp */; };
-		ADF8DD871C895BAB004C682C /* LowerSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCA1C895BAB004C682C /* LowerSolver.hpp */; };
-		ADF8DD881C895BAB004C682C /* Solver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCB1C895BAB004C682C /* Solver.hpp */; };
-		ADF8DD891C895BAB004C682C /* SymmetricSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCC1C895BAB004C682C /* SymmetricSolver.hpp */; };
-		ADF8DD8A1C895BAB004C682C /* TriDiagSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCD1C895BAB004C682C /* TriDiagSolver.hpp */; };
-		ADF8DD8B1C895BAB004C682C /* UpperSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCE1C895BAB004C682C /* UpperSolver.hpp */; };
+		ADF8DD741C895BAB004C682C /* MatHashes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB51C895BAB004C682C /* MatHashes.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD751C895BAB004C682C /* Dims.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB71C895BAB004C682C /* Dims.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD781C895BAB004C682C /* Matrix.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB91C895BAB004C682C /* Matrix.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD791C895BAB004C682C /* MatTypes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBA1C895BAB004C682C /* MatTypes.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7A1C895BAB004C682C /* Special_Diag.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBC1C895BAB004C682C /* Special_Diag.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7B1C895BAB004C682C /* Special_General.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBD1C895BAB004C682C /* Special_General.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7C1C895BAB004C682C /* Special_Lower.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBE1C895BAB004C682C /* Special_Lower.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7D1C895BAB004C682C /* Special_Sparse.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCBF1C895BAB004C682C /* Special_Sparse.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7E1C895BAB004C682C /* Special_Symmetric.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC01C895BAB004C682C /* Special_Symmetric.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD7F1C895BAB004C682C /* Special_Tridiag.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC11C895BAB004C682C /* Special_Tridiag.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD801C895BAB004C682C /* Special_Upper.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC21C895BAB004C682C /* Special_Upper.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD831C895BAB004C682C /* MatStorage.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC51C895BAB004C682C /* MatStorage.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD851C895BAB004C682C /* ConjGrad.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC81C895BAB004C682C /* ConjGrad.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD861C895BAB004C682C /* DiagonalSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCC91C895BAB004C682C /* DiagonalSolver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD871C895BAB004C682C /* LowerSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCA1C895BAB004C682C /* LowerSolver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD881C895BAB004C682C /* Solver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCB1C895BAB004C682C /* Solver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD891C895BAB004C682C /* SymmetricSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCC1C895BAB004C682C /* SymmetricSolver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD8A1C895BAB004C682C /* TriDiagSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCD1C895BAB004C682C /* TriDiagSolver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD8B1C895BAB004C682C /* UpperSolver.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCCE1C895BAB004C682C /* UpperSolver.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD8C1C895BAB004C682C /* ActivationFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD11C895BAB004C682C /* ActivationFuncs.cpp */; };
 		ADF8DD8D1C895BAB004C682C /* ActivationFuncs.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD11C895BAB004C682C /* ActivationFuncs.cpp */; };
-		ADF8DD8E1C895BAB004C682C /* ActivationFuncs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD21C895BAB004C682C /* ActivationFuncs.hpp */; };
+		ADF8DD8E1C895BAB004C682C /* ActivationFuncs.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD21C895BAB004C682C /* ActivationFuncs.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD8F1C895BAB004C682C /* DataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD31C895BAB004C682C /* DataSet.cpp */; };
 		ADF8DD901C895BAB004C682C /* DataSet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD31C895BAB004C682C /* DataSet.cpp */; };
-		ADF8DD911C895BAB004C682C /* DataSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD41C895BAB004C682C /* DataSet.hpp */; };
-		ADF8DD921C895BAB004C682C /* DefaultMaps.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */; };
-		ADF8DD931C895BAB004C682C /* L2Cost.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD61C895BAB004C682C /* L2Cost.hpp */; };
-		ADF8DD941C895BAB004C682C /* LogisticRegression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */; };
+		ADF8DD911C895BAB004C682C /* DataSet.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD41C895BAB004C682C /* DataSet.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD921C895BAB004C682C /* DefaultMaps.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD931C895BAB004C682C /* L2Cost.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD61C895BAB004C682C /* L2Cost.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD941C895BAB004C682C /* LogisticRegression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD951C895BAB004C682C /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD81C895BAB004C682C /* Network.cpp */; };
 		ADF8DD961C895BAB004C682C /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD81C895BAB004C682C /* Network.cpp */; };
-		ADF8DD971C895BAB004C682C /* Network.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD91C895BAB004C682C /* Network.hpp */; };
+		ADF8DD971C895BAB004C682C /* Network.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD91C895BAB004C682C /* Network.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD981C895BAB004C682C /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDA1C895BAB004C682C /* Node.cpp */; };
 		ADF8DD991C895BAB004C682C /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDA1C895BAB004C682C /* Node.cpp */; };
-		ADF8DD9A1C895BAB004C682C /* Node.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDB1C895BAB004C682C /* Node.hpp */; };
-		ADF8DD9B1C895BAB004C682C /* RBF_Poly.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDC1C895BAB004C682C /* RBF_Poly.hpp */; };
-		ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDD1C895BAB004C682C /* Trainer.hpp */; };
+		ADF8DD9A1C895BAB004C682C /* Node.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDB1C895BAB004C682C /* Node.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD9B1C895BAB004C682C /* RBF_Poly.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDC1C895BAB004C682C /* RBF_Poly.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCDD1C895BAB004C682C /* Trainer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDE1C895BAB004C682C /* main.cpp */; };
 		ADF8DD9E1C895BAB004C682C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDE1C895BAB004C682C /* main.cpp */; };
 		ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE01C895BAB004C682C /* Fraction.cpp */; };
 		ADF8DDA01C895BAB004C682C /* Fraction.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE01C895BAB004C682C /* Fraction.cpp */; };
-		ADF8DDA11C895BAB004C682C /* Fraction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE11C895BAB004C682C /* Fraction.hpp */; };
+		ADF8DDA11C895BAB004C682C /* Fraction.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE11C895BAB004C682C /* Fraction.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */; };
 		ADF8DDA51C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE41C895BAB004C682C /* RandomNumberGenerator.cpp */; };
-		ADF8DDA61C895BAB004C682C /* RandomNumberGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */; };
+		ADF8DDA61C895BAB004C682C /* RandomNumberGenerator.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCE51C895BAB004C682C /* RandomNumberGenerator.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDA81C895BAB004C682C /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE91C895BAB004C682C /* Parser.cpp */; };
 		ADF8DDA91C895BAB004C682C /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCE91C895BAB004C682C /* Parser.cpp */; };
-		ADF8DDAA1C895BAB004C682C /* Parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; };
+		ADF8DDAA1C895BAB004C682C /* Parser.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* Constants.cpp */; };
 		ADF8DDAC1C895BAB004C682C /* Constants.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEC1C895BAB004C682C /* Constants.cpp */; };
-		ADF8DDAD1C895BAB004C682C /* Constants.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCED1C895BAB004C682C /* Constants.hpp */; };
+		ADF8DDAD1C895BAB004C682C /* Constants.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCED1C895BAB004C682C /* Constants.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEF1C895BAB004C682C /* DataPrinter.cpp */; };
 		ADF8DDAF1C895BAB004C682C /* DataPrinter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEF1C895BAB004C682C /* DataPrinter.cpp */; };
-		ADF8DDB01C895BAB004C682C /* DataPrinter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF01C895BAB004C682C /* DataPrinter.hpp */; };
+		ADF8DDB01C895BAB004C682C /* DataPrinter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF01C895BAB004C682C /* DataPrinter.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDB11C895BAB004C682C /* DiscreteModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF21C895BAB004C682C /* DiscreteModel.cpp */; };
 		ADF8DDB21C895BAB004C682C /* DiscreteModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF21C895BAB004C682C /* DiscreteModel.cpp */; };
-		ADF8DDB31C895BAB004C682C /* DiscreteModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF31C895BAB004C682C /* DiscreteModel.hpp */; };
+		ADF8DDB31C895BAB004C682C /* DiscreteModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF31C895BAB004C682C /* DiscreteModel.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF51C895BAB004C682C /* DynamicModel.cpp */; };
 		ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF51C895BAB004C682C /* DynamicModel.cpp */; };
-		ADF8DDB61C895BAB004C682C /* DynamicModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF61C895BAB004C682C /* DynamicModel.hpp */; };
+		ADF8DDB61C895BAB004C682C /* DynamicModel.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF61C895BAB004C682C /* DynamicModel.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */; };
 		ADF8DDB81C895BAB004C682C /* PendulumSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF71C895BAB004C682C /* PendulumSim.cpp */; };
-		ADF8DDB91C895BAB004C682C /* PendulumSim.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */; };
+		ADF8DDB91C895BAB004C682C /* PendulumSim.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCF81C895BAB004C682C /* PendulumSim.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
 		ADF8DDBB1C895BAB004C682C /* ModelList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCF91C895BAB004C682C /* ModelList.cpp */; };
-		ADF8DDBC1C895BAB004C682C /* ModelList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFA1C895BAB004C682C /* ModelList.hpp */; };
+		ADF8DDBC1C895BAB004C682C /* ModelList.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCFA1C895BAB004C682C /* ModelList.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD041C895BAB004C682C /* Pendulum.cpp */; };
 		ADF8DDC91C895BAB004C682C /* Pendulum.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD041C895BAB004C682C /* Pendulum.cpp */; };
-		ADF8DDCA1C895BAB004C682C /* Pendulum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD051C895BAB004C682C /* Pendulum.hpp */; };
-		ADF8DDCB1C895BAB004C682C /* PreciseTime.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD071C895BAB004C682C /* PreciseTime.h */; };
+		ADF8DDCA1C895BAB004C682C /* Pendulum.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD051C895BAB004C682C /* Pendulum.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDCB1C895BAB004C682C /* PreciseTime.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD071C895BAB004C682C /* PreciseTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD091C895BAB004C682C /* Scheduler.cpp */; };
 		ADF8DDCD1C895BAB004C682C /* Scheduler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD091C895BAB004C682C /* Scheduler.cpp */; };
-		ADF8DDCE1C895BAB004C682C /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */; };
+		ADF8DDCE1C895BAB004C682C /* Scheduler.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimTime.cpp */; };
 		ADF8DDD01C895BAB004C682C /* SimTime.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0B1C895BAB004C682C /* SimTime.cpp */; };
-		ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0C1C895BAB004C682C /* SimTime.hpp */; };
+		ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0C1C895BAB004C682C /* SimTime.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
 		ADF8DDD31C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
-		ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimState.hpp */; };
+		ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimState.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
 		ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
-		ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; };
+		ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD181C895BAB004C682C /* Particle.cpp */; };
 		ADF8DDDD1C895BAB004C682C /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD181C895BAB004C682C /* Particle.cpp */; };
-		ADF8DDDE1C895BAB004C682C /* Particle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD191C895BAB004C682C /* Particle.hpp */; };
-		ADF8DDDF1C895BAB004C682C /* PSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1A1C895BAB004C682C /* PSO.hpp */; };
-		ADF8DDE01C895BAB004C682C /* Swarm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1B1C895BAB004C682C /* Swarm.hpp */; };
-		ADF8DDE11C895BAB004C682C /* ConstantStep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1D1C895BAB004C682C /* ConstantStep.hpp */; };
-		ADF8DDE21C895BAB004C682C /* GradientBase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1E1C895BAB004C682C /* GradientBase.hpp */; };
+		ADF8DDDE1C895BAB004C682C /* Particle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD191C895BAB004C682C /* Particle.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDDF1C895BAB004C682C /* PSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1A1C895BAB004C682C /* PSO.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE01C895BAB004C682C /* Swarm.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1B1C895BAB004C682C /* Swarm.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE11C895BAB004C682C /* ConstantStep.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1D1C895BAB004C682C /* ConstantStep.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE21C895BAB004C682C /* GradientBase.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD1E1C895BAB004C682C /* GradientBase.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD211C895BAB004C682C /* RandomInit.cpp */; };
 		ADF8DDE41C895BAB004C682C /* RandomInit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD211C895BAB004C682C /* RandomInit.cpp */; };
-		ADF8DDE51C895BAB004C682C /* RandomInit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD221C895BAB004C682C /* RandomInit.hpp */; };
-		ADF8DDE61C895BAB004C682C /* Optimization.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD231C895BAB004C682C /* Optimization.h */; };
-		ADF8DDE71C895BAB004C682C /* Optimizer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD241C895BAB004C682C /* Optimizer.hpp */; };
-		ADF8DDE81C895BAB004C682C /* Parabola2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD261C895BAB004C682C /* Parabola2D.hpp */; };
-		ADF8DDE91C895BAB004C682C /* Rosenbrock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD271C895BAB004C682C /* Rosenbrock.hpp */; };
+		ADF8DDE51C895BAB004C682C /* RandomInit.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD221C895BAB004C682C /* RandomInit.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE61C895BAB004C682C /* Optimization.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD231C895BAB004C682C /* Optimization.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE71C895BAB004C682C /* Optimizer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD241C895BAB004C682C /* Optimizer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE81C895BAB004C682C /* Parabola2D.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD261C895BAB004C682C /* Parabola2D.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDE91C895BAB004C682C /* Rosenbrock.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD271C895BAB004C682C /* Rosenbrock.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD291C895BAB004C682C /* Element.cpp */; };
 		ADF8DDEB1C895BAB004C682C /* Element.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD291C895BAB004C682C /* Element.cpp */; };
-		ADF8DDEC1C895BAB004C682C /* Element.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2A1C895BAB004C682C /* Element.hpp */; };
+		ADF8DDEC1C895BAB004C682C /* Element.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2A1C895BAB004C682C /* Element.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDED1C895BAB004C682C /* FiniteDifference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2B1C895BAB004C682C /* FiniteDifference.cpp */; };
 		ADF8DDEE1C895BAB004C682C /* FiniteDifference.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2B1C895BAB004C682C /* FiniteDifference.cpp */; };
-		ADF8DDEF1C895BAB004C682C /* FiniteDifference.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2C1C895BAB004C682C /* FiniteDifference.hpp */; };
+		ADF8DDEF1C895BAB004C682C /* FiniteDifference.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2C1C895BAB004C682C /* FiniteDifference.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDF01C895BAB004C682C /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2D1C895BAB004C682C /* FiniteElement.cpp */; };
 		ADF8DDF11C895BAB004C682C /* FiniteElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2D1C895BAB004C682C /* FiniteElement.cpp */; };
-		ADF8DDF21C895BAB004C682C /* FiniteElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2E1C895BAB004C682C /* FiniteElement.hpp */; };
+		ADF8DDF21C895BAB004C682C /* FiniteElement.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD2E1C895BAB004C682C /* FiniteElement.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDF31C895BAB004C682C /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2F1C895BAB004C682C /* FiniteVolume.cpp */; };
 		ADF8DDF41C895BAB004C682C /* FiniteVolume.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD2F1C895BAB004C682C /* FiniteVolume.cpp */; };
-		ADF8DDF51C895BAB004C682C /* FiniteVolume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD301C895BAB004C682C /* FiniteVolume.hpp */; };
-		ADF8DDF61C895BAB004C682C /* PDESim.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD311C895BAB004C682C /* PDESim.h */; };
-		ADF8DDF71C895BAB004C682C /* Quadrature.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD331C895BAB004C682C /* Quadrature.hpp */; };
+		ADF8DDF51C895BAB004C682C /* FiniteVolume.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD301C895BAB004C682C /* FiniteVolume.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDF61C895BAB004C682C /* PDESim.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD311C895BAB004C682C /* PDESim.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDF71C895BAB004C682C /* Quadrature.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD331C895BAB004C682C /* Quadrature.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD341C895BAB004C682C /* TanhSinh.cpp */; };
 		ADF8DDF91C895BAB004C682C /* TanhSinh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD341C895BAB004C682C /* TanhSinh.cpp */; };
-		ADF8DDFA1C895BAB004C682C /* TanhSinh.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD351C895BAB004C682C /* TanhSinh.hpp */; };
+		ADF8DDFA1C895BAB004C682C /* TanhSinh.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD351C895BAB004C682C /* TanhSinh.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDFB1C895BAB004C682C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD371C895BAB004C682C /* Timer.cpp */; };
 		ADF8DDFC1C895BAB004C682C /* Timer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD371C895BAB004C682C /* Timer.cpp */; };
-		ADF8DDFD1C895BAB004C682C /* Timer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD381C895BAB004C682C /* Timer.hpp */; };
-		ADF8DDFE1C895BAB004C682C /* TestCostFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3A1C895BAB004C682C /* TestCostFunc.h */; };
-		ADF8DDFF1C895BAB004C682C /* TestExample1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3B1C895BAB004C682C /* TestExample1.hpp */; };
-		ADF8DE001C895BAB004C682C /* TestMPSO1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */; };
-		ADF8DE011C895BAB004C682C /* TestPSO1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */; };
+		ADF8DDFD1C895BAB004C682C /* Timer.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD381C895BAB004C682C /* Timer.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDFE1C895BAB004C682C /* TestCostFunc.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3A1C895BAB004C682C /* TestCostFunc.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DDFF1C895BAB004C682C /* TestExample1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3B1C895BAB004C682C /* TestExample1.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DE001C895BAB004C682C /* TestMPSO1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
+		ADF8DE011C895BAB004C682C /* TestPSO1.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -223,6 +350,8 @@
 		AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelState.hpp; path = ModelState/ModelState.hpp; sourceTree = "<group>"; };
 		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EulerAngles.cpp; sourceTree = "<group>"; };
+		AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EulerAngles.hpp; sourceTree = "<group>"; };
 		ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression.hpp; path = LocalRegression/LocalRegression.hpp; sourceTree = "<group>"; };
 		ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression_Impl.hpp; path = LocalRegression/LocalRegression_Impl.hpp; sourceTree = "<group>"; };
 		ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalFitter.hpp; path = LocalRegression/LocalFitter/LocalFitter.hpp; sourceTree = "<group>"; };
@@ -674,6 +803,8 @@
 				ADF8DC8E1C895BAB004C682C /* Quaternion.hpp */,
 				ADF8DC8F1C895BAB004C682C /* vec3.cpp */,
 				ADF8DC901C895BAB004C682C /* vec3.hpp */,
+				AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */,
+				AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */,
 			);
 			path = Geometry;
 			sourceTree = "<group>";
@@ -1070,6 +1201,7 @@
 				ADF8DDF61C895BAB004C682C /* PDESim.h in Headers */,
 				ADF8DD831C895BAB004C682C /* MatStorage.hpp in Headers */,
 				ADF8DD9B1C895BAB004C682C /* RBF_Poly.hpp in Headers */,
+				AD9A75B61CD3C91E00615C78 /* EulerAngles.hpp in Headers */,
 				ADF8DDFE1C895BAB004C682C /* TestCostFunc.h in Headers */,
 				ADF8DD9A1C895BAB004C682C /* Node.hpp in Headers */,
 				ADF8DD681C895BAB004C682C /* LinearAlgebra.h in Headers */,
@@ -1228,6 +1360,7 @@
 				ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF31C895BAB004C682C /* FiniteVolume.cpp in Sources */,
+				AD9A75B41CD3C91E00615C78 /* EulerAngles.cpp in Sources */,
 				ADF8DD8F1C895BAB004C682C /* DataSet.cpp in Sources */,
 				ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */,
@@ -1272,6 +1405,131 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD9A74FF1CCD430000615C78 /* Parser.hpp in Sources */,
+				AD9A75001CCD430000615C78 /* FileObject.hpp in Sources */,
+				AD9A75011CCD430000615C78 /* DataFilter.h in Sources */,
+				AD9A75021CCD430000615C78 /* TargetDyn.hpp in Sources */,
+				AD9A75031CCD430000615C78 /* TargetMeas.hpp in Sources */,
+				AD9A75041CCD430000615C78 /* UKF.hpp in Sources */,
+				AD9A75051CCD430000615C78 /* Function.hpp in Sources */,
+				AD9A75061CCD430000615C78 /* Geometry.h in Sources */,
+				AD9A75071CCD430000615C78 /* Quaternion.hpp in Sources */,
+				AD9A75081CCD430000615C78 /* vec3.hpp in Sources */,
+				AD9A75091CCD430000615C78 /* LinearAlgebra.h in Sources */,
+				AD9A750A1CCD430000615C78 /* Cholesky.hpp in Sources */,
+				AD9A750B1CCD430000615C78 /* LDL.hpp in Sources */,
+				AD9A750C1CCD430000615C78 /* QR.hpp in Sources */,
+				AD9A750D1CCD430000615C78 /* ScalarTypes.hpp in Sources */,
+				AD9A750E1CCD430000615C78 /* AllMatExprs.hpp in Sources */,
+				AD9A750F1CCD430000615C78 /* MatMinusExpr.hpp in Sources */,
+				AD9A75101CCD430000615C78 /* MatMultExpr.hpp in Sources */,
+				AD9A75111CCD430000615C78 /* MatrixExpression.hpp in Sources */,
+				AD9A75121CCD430000615C78 /* MatScalarAddExpr.hpp in Sources */,
+				AD9A75131CCD430000615C78 /* MatScalarDivExpr.hpp in Sources */,
+				AD9A75141CCD430000615C78 /* MatScalarMinusExpr.hpp in Sources */,
+				AD9A75151CCD430000615C78 /* MatScalarMultExpr.hpp in Sources */,
+				AD9A75161CCD430000615C78 /* MatSumExpr.hpp in Sources */,
+				AD9A75171CCD430000615C78 /* MatHashes.hpp in Sources */,
+				AD9A75181CCD430000615C78 /* Dims.hpp in Sources */,
+				AD9A75191CCD430000615C78 /* Matrix.hpp in Sources */,
+				AD9A751A1CCD430000615C78 /* MatTypes.hpp in Sources */,
+				AD9A751B1CCD430000615C78 /* Special_Diag.hpp in Sources */,
+				AD9A751C1CCD430000615C78 /* Special_General.hpp in Sources */,
+				AD9A751D1CCD430000615C78 /* Special_Lower.hpp in Sources */,
+				AD9A751E1CCD430000615C78 /* Special_Sparse.hpp in Sources */,
+				AD9A751F1CCD430000615C78 /* Special_Symmetric.hpp in Sources */,
+				AD9A75201CCD430000615C78 /* Special_Tridiag.hpp in Sources */,
+				AD9A75211CCD430000615C78 /* Special_Upper.hpp in Sources */,
+				AD9A75221CCD430000615C78 /* Special_FastMat.hpp in Sources */,
+				AD9A75231CCD430000615C78 /* FastStorage.hpp in Sources */,
+				AD9A75241CCD430000615C78 /* FastStorage_Impl.hpp in Sources */,
+				AD9A75251CCD430000615C78 /* ComplexFastStorage.hpp in Sources */,
+				AD9A75261CCD430000615C78 /* MatStorage.hpp in Sources */,
+				AD9A75271CCD430000615C78 /* MatStorage_Impl.hpp in Sources */,
+				AD9A75281CCD430000615C78 /* MatStorage_Sparse.hpp in Sources */,
+				AD9A75291CCD430000615C78 /* ComplexMatStorage.hpp in Sources */,
+				AD9A752A1CCD430000615C78 /* ConjGrad.hpp in Sources */,
+				AD9A752B1CCD430000615C78 /* DiagonalSolver.hpp in Sources */,
+				AD9A752C1CCD430000615C78 /* LowerSolver.hpp in Sources */,
+				AD9A752D1CCD430000615C78 /* Solver.hpp in Sources */,
+				AD9A752E1CCD430000615C78 /* SymmetricSolver.hpp in Sources */,
+				AD9A752F1CCD430000615C78 /* TriDiagSolver.hpp in Sources */,
+				AD9A75301CCD430000615C78 /* UpperSolver.hpp in Sources */,
+				AD9A75311CCD430000615C78 /* LocalFitter.hpp in Sources */,
+				AD9A75321CCD430000615C78 /* LocalRegression.hpp in Sources */,
+				AD9A75331CCD430000615C78 /* LocalRegression_Impl.hpp in Sources */,
+				AD9A75341CCD430000615C78 /* ActivationFuncs.hpp in Sources */,
+				AD9A75351CCD430000615C78 /* DataSet.hpp in Sources */,
+				AD9A75361CCD430000615C78 /* DefaultMaps.hpp in Sources */,
+				AD9A75371CCD430000615C78 /* L2Cost.hpp in Sources */,
+				AD9A75381CCD430000615C78 /* LogisticRegression.hpp in Sources */,
+				AD9A75391CCD430000615C78 /* Network.hpp in Sources */,
+				AD9A753A1CCD430000615C78 /* Node.hpp in Sources */,
+				AD9A753B1CCD430000615C78 /* RBF_Poly.hpp in Sources */,
+				AD9A75B51CD3C91E00615C78 /* EulerAngles.cpp in Sources */,
+				AD9A753C1CCD430000615C78 /* Trainer.hpp in Sources */,
+				AD9A753D1CCD430000615C78 /* Complex.hpp in Sources */,
+				AD9A753E1CCD430000615C78 /* Complex_Impl.hpp in Sources */,
+				AD9A753F1CCD430000615C78 /* RandomNumberGenerator.hpp in Sources */,
+				AD9A75401CCD430000615C78 /* Fraction.hpp in Sources */,
+				AD9A75411CCD430000615C78 /* Simulator.hpp in Sources */,
+				AD9A75421CCD430000615C78 /* Simulator_Impl.hpp in Sources */,
+				AD9A75431CCD430000615C78 /* HodgkinHuxleyNeuronModel.cpp in Sources */,
+				AD9A75441CCD430000615C78 /* HodgkinHuxleyNeuronModel.hpp in Sources */,
+				AD9A75451CCD430000615C78 /* NeuronSim.cpp in Sources */,
+				AD9A75461CCD430000615C78 /* NeuronSim.hpp in Sources */,
+				AD9A75471CCD430000615C78 /* AdvectionEqn.cpp in Sources */,
+				AD9A75481CCD430000615C78 /* AdvectionEqn.hpp in Sources */,
+				AD9A75491CCD430000615C78 /* AdvectionEqnSim.cpp in Sources */,
+				AD9A754A1CCD430000615C78 /* AdvectionEqnSim.hpp in Sources */,
+				AD9A754B1CCD430000615C78 /* HeatEquation.cpp in Sources */,
+				AD9A754C1CCD430000615C78 /* HeatEquation.hpp in Sources */,
+				AD9A754D1CCD430000615C78 /* HeatEquationSim.cpp in Sources */,
+				AD9A754E1CCD430000615C78 /* HeatEquationSim.hpp in Sources */,
+				AD9A754F1CCD430000615C78 /* Pendulum.hpp in Sources */,
+				AD9A75501CCD430000615C78 /* PendulumSim.hpp in Sources */,
+				AD9A75511CCD430000615C78 /* SimState.hpp in Sources */,
+				AD9A75521CCD430000615C78 /* SimTime.hpp in Sources */,
+				AD9A75531CCD430000615C78 /* ModelList.hpp in Sources */,
+				AD9A75541CCD430000615C78 /* SimExceptions.hpp in Sources */,
+				AD9A75551CCD430000615C78 /* ModelState.cpp in Sources */,
+				AD9A75561CCD430000615C78 /* ModelState.hpp in Sources */,
+				AD9A75571CCD430000615C78 /* Constants.hpp in Sources */,
+				AD9A75581CCD430000615C78 /* DataPrinter.hpp in Sources */,
+				AD9A75591CCD430000615C78 /* DiscreteModel.hpp in Sources */,
+				AD9A755A1CCD430000615C78 /* DynamicModel.hpp in Sources */,
+				AD9A755B1CCD430000615C78 /* ButcherIntegrator.cpp in Sources */,
+				AD9A755C1CCD430000615C78 /* ButcherIntegrator.hpp in Sources */,
+				AD9A755D1CCD430000615C78 /* ExplicitEuler.cpp in Sources */,
+				AD9A755E1CCD430000615C78 /* ExplicitEuler.hpp in Sources */,
+				AD9A755F1CCD430000615C78 /* RungeKutta4.cpp in Sources */,
+				AD9A75601CCD430000615C78 /* RungeKutta4.hpp in Sources */,
+				AD9A75611CCD430000615C78 /* ExplicitTrapezoidal.cpp in Sources */,
+				AD9A75621CCD430000615C78 /* ExplicitTrapezoidal.hpp in Sources */,
+				AD9A75631CCD430000615C78 /* ButcherTable.cpp in Sources */,
+				AD9A75641CCD430000615C78 /* ButcherTable.hpp in Sources */,
+				AD9A75651CCD430000615C78 /* NumericIntegration.hpp in Sources */,
+				AD9A75661CCD430000615C78 /* PreciseTime.h in Sources */,
+				AD9A75671CCD430000615C78 /* Scheduler.hpp in Sources */,
+				AD9A75681CCD430000615C78 /* MultiPSO.hpp in Sources */,
+				AD9A75691CCD430000615C78 /* Particle.hpp in Sources */,
+				AD9A756A1CCD430000615C78 /* PSO.hpp in Sources */,
+				AD9A756B1CCD430000615C78 /* Swarm.hpp in Sources */,
+				AD9A756C1CCD430000615C78 /* ConstantStep.hpp in Sources */,
+				AD9A756D1CCD430000615C78 /* GradientBase.hpp in Sources */,
+				AD9A756E1CCD430000615C78 /* RandomInit.hpp in Sources */,
+				AD9A756F1CCD430000615C78 /* Optimization.h in Sources */,
+				AD9A75701CCD430000615C78 /* Optimizer.hpp in Sources */,
+				AD9A75711CCD430000615C78 /* Parabola2D.hpp in Sources */,
+				AD9A75721CCD430000615C78 /* Rosenbrock.hpp in Sources */,
+				AD9A75731CCD430000615C78 /* Element.hpp in Sources */,
+				AD9A75741CCD430000615C78 /* FiniteDifference.hpp in Sources */,
+				AD9A75751CCD430000615C78 /* FiniteElement.hpp in Sources */,
+				AD9A75761CCD430000615C78 /* FiniteVolume.hpp in Sources */,
+				AD9A75771CCD430000615C78 /* PDESim.h in Sources */,
+				AD9A75781CCD430000615C78 /* Quadrature.hpp in Sources */,
+				AD9A75791CCD430000615C78 /* TanhSinh.hpp in Sources */,
+				AD9A757A1CCD430000615C78 /* Timer.hpp in Sources */,
 				ADF8DDFC1C895BAB004C682C /* Timer.cpp in Sources */,
 				ADF8DD8D1C895BAB004C682C /* ActivationFuncs.cpp in Sources */,
 				ADF8DD991C895BAB004C682C /* Node.cpp in Sources */,
@@ -1414,7 +1672,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				CURRENT_PROJECT_VERSION = 0.1;
-				GCC_OPTIMIZATION_LEVEL = fast;
+				GCC_OPTIMIZATION_LEVEL = s;
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
@@ -1454,6 +1712,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"../../src/**",
+					"../../external/Bones/src/**",
+					../../tests,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1469,6 +1732,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = (
+					"../../src/**",
+					"../../external/Bones/src/**",
+					../../tests,
+				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

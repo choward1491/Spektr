@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:../../external/Bones/build/xcode/Data_Structs.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Spektr.xcodeproj">
    </FileRef>
 </Workspace>

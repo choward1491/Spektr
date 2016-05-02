@@ -36,7 +36,7 @@
 class Fraction {
 public:
     
-    
+    typedef unsigned long num_type;
     static Fraction decimal2fraction( double val );
     
     
@@ -98,10 +98,10 @@ private:
     
     int abs(int a){ if( a >= 0 ){ return a; }else{ return -a; } }
     bool sign( int a ){ return a>=0; }
-    unsigned int gcd(unsigned int u, unsigned int v) const;
-    unsigned int numerator;
-    unsigned int denominator;
-    unsigned int complete;
+    num_type gcd(num_type u, num_type v) const;
+    num_type numerator;
+    num_type denominator;
+    num_type complete;
     bool positive;
     
 };

@@ -35,6 +35,8 @@
 #include "vec3.hpp"
 #include "Constants.hpp"
 
+class EulerAngles;
+
 /*!
  *
  * Quaternion Class
@@ -46,9 +48,12 @@
 class Quaternion {
 public:
     
+    
+    
     // Constructor
     Quaternion();
     Quaternion( double roll, double pitch, double yaw ); // Assumes Euler Rotation Order of X -> Y -> Z
+    Quaternion( const EulerAngles & angles ); // Assumes Euler Rotation Order of X -> Y -> Z
     Quaternion( double angleRadians, const vec3 & axis );
     
     // Method to rotate vector based on quaternion
@@ -69,6 +74,8 @@ public:
     // get the angle the quaternion rotates
     // about the axis
     double      getAmountRotated() const;
+    
+    EulerAngles getEulerAngles() const;
     
     
     

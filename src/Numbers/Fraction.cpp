@@ -55,9 +55,9 @@ Fraction::Fraction(){
 
 Fraction::Fraction(int num, int denom ){
     
-    unsigned int n = abs(num);
-    unsigned int d = abs(denom);
-    unsigned int gc = gcd(n, d);
+    num_type n = abs(num);
+    num_type d = abs(denom);
+    num_type gc = gcd(n, d);
     n /= gc;
     d /= gc;
     
@@ -77,7 +77,7 @@ Fraction::Fraction(int complete_, int rem_num, int rem_denom ){
     if (odd%2==1) {
         positive = false;
     }else{ positive = true; }
-    unsigned int gc = gcd(rem_num, rem_denom);
+    num_type gc = gcd(rem_num, rem_denom);
     complete = complete_;
     numerator = rem_num / gc;
     denominator = rem_denom / gc;
@@ -114,16 +114,16 @@ void Fraction::MCF_helper( double val, Fraction & frac, double thresh ){
 Fraction Fraction::operator*( const Fraction& frac ) const{
     Fraction output;
     
-    unsigned int num = this->complete * frac.complete * frac.denominator * this->denominator;
+    num_type num = this->complete * frac.complete * frac.denominator * this->denominator;
     num += this->numerator * frac.complete * frac.denominator;
     num += this->complete * this->denominator * frac.numerator;
     num += this->numerator * frac.numerator;
     
-    unsigned int denom = this->denominator * frac.denominator;
-    unsigned int gc = gcd(num, denom);
+    num_type denom = this->denominator * frac.denominator;
+    num_type gc = gcd(num, denom);
     num /= gc;
     denom /= gc;
-    unsigned int comp = 0;
+    num_type comp = 0;
     
     bool pos = this->positive == frac.positive;
     
@@ -156,7 +156,7 @@ void Fraction::operator-=( const Fraction & f ) {
  */
 Fraction Fraction::operator+( const Fraction& frac ) const{
     Fraction output;
-    unsigned int num, denom, gc, comp = 0;
+    num_type num, denom, gc, comp = 0;
     bool pos;
     
     
@@ -197,7 +197,7 @@ Fraction Fraction::operator+( const Fraction& frac ) const{
 
 Fraction Fraction::operator/( const Fraction& frac ) const{
     Fraction output;
-    unsigned int num, denom, gc, comp = 0;
+    num_type num, denom, gc, comp = 0;
     bool pos = this->positive == frac.positive;
     
     num = (this->complete*this->denominator + this->numerator)*frac.denominator;
@@ -225,8 +225,8 @@ Fraction Fraction::operator/( const Fraction& frac ) const{
 Fraction Fraction::operator-( const Fraction& frac ) const{
     
     Fraction output;
-    unsigned int num, denom, gc, comp = 0;
-    unsigned int tmp1, tmp2;
+    num_type num, denom, gc, comp = 0;
+    num_type tmp1, tmp2;
     bool pos1, pos2;
     bool pos = true;
     
@@ -339,7 +339,7 @@ bool Fraction::operator!=( const Fraction & frac) const{
 }
 
 
-unsigned int Fraction::gcd(unsigned int u, unsigned int v) const
+Fraction::num_type Fraction::gcd(num_type u, num_type v) const
 {
     int shift;
     
@@ -369,7 +369,7 @@ unsigned int Fraction::gcd(unsigned int u, unsigned int v) const
          swapping is just pointer movement, and the subtraction
          can be done in-place. */
         if (u > v) {
-            unsigned int t = v; v = u; u = t;}  // Swap u and v.
+            num_type t = v; v = u; u = t;}  // Swap u and v.
         v = v - u;                       // Here v >= u.
     } while (v != 0);
     

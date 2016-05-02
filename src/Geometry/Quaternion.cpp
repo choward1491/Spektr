@@ -7,20 +7,34 @@
 //
 
 #include "Quaternion.hpp"
-
+#include "EulerAngles.hpp"
 
 Quaternion::Quaternion(){
     s = 0.0;
     v = vec3();
 }
 Quaternion::Quaternion( double roll, double pitch, double yaw ){
-    double c1 = cos(roll);
-    double c2 = cos(pitch);
-    double c3 = cos(yaw);
-    double s1 = sin(roll);
-    double s2 = sin(pitch);
-    double s3 = sin(yaw);
+    Quaternion q1( roll, vec3_ops::equal(1.0, 0.0, 0.0));
+    Quaternion q2( pitch, vec3_ops::equal(0.0, 1.0, 0.0));
+    Quaternion q3( yaw, vec3_ops::equal(0.0, 0.0, 1.0));
+    *this = q3*q2*q1;
 }
+
+Quaternion::Quaternion( const EulerAngles & angles ){
+    Quaternion q1( angles[0], vec3_ops::equal(1.0, 0.0, 0.0));
+    Quaternion q2( angles[1], vec3_ops::equal(0.0, 1.0, 0.0));
+    Quaternion q3( angles[2], vec3_ops::equal(0.0, 0.0, 1.0));
+    *this = q3*q2*q1;
+}
+
+EulerAngles Quaternion::getEulerAngles() const{
+    EulerAngles angles;
+    angles[0] = atan2( 2.0*(s*v[0]+v[1]*v[2]), 1.0 - 2.0*(v[0]*v[0]+v[1]*v[1] ) );
+    angles[1] = asin( 2.0*(s*v[1]-v[0]*v[2] ) );
+    angles[2] = atan2( 2.0*(s*v[2]+v[1]*v[0]), 1.0 - 2.0*(v[2]*v[2]+v[1]*v[1] ) );
+    return angles;
+}
+
 Quaternion::Quaternion( double angle, const vec3 & axis ){
     s = cos(angle*0.5);
     double t = sin(angle*0.5);

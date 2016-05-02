@@ -10,6 +10,13 @@
 
 namespace vec3_ops {
     
+    vec3 equal( double x, double y, double z){
+        vec3 out;
+        out[0] = x;
+        out[1] = y;
+        out[2] = z;
+        return out;
+    }
     
     vec3 cross( const vec3 & v1, const vec3 & v2 ) {
         vec3 out;

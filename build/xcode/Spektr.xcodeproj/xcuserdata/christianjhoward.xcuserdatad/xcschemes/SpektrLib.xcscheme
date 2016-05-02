@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0720"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AD4768011B76EAF100E6B11D"
-               BuildableName = "Spektr"
-               BlueprintName = "Spektr"
+               BlueprintIdentifier = "AD5B19031BE4540D003E0233"
+               BuildableName = "libSpektr.a"
+               BlueprintName = "SpektrLib"
                ReferencedContainer = "container:Spektr.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -32,9 +32,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD4768011B76EAF100E6B11D"
-            BuildableName = "Spektr"
-            BlueprintName = "Spektr"
+            BlueprintIdentifier = "AD5B19031BE4540D003E0233"
+            BuildableName = "libSpektr.a"
+            BlueprintName = "SpektrLib"
             ReferencedContainer = "container:Spektr.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -51,16 +51,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD4768011B76EAF100E6B11D"
-            BuildableName = "Spektr"
-            BlueprintName = "Spektr"
+            BlueprintIdentifier = "AD5B19031BE4540D003E0233"
+            BuildableName = "libSpektr.a"
+            BlueprintName = "SpektrLib"
             ReferencedContainer = "container:Spektr.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,23 +69,21 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AD4768011B76EAF100E6B11D"
-            BuildableName = "Spektr"
-            BlueprintName = "Spektr"
+            BlueprintIdentifier = "AD5B19031BE4540D003E0233"
+            BuildableName = "libSpektr.a"
+            BlueprintName = "SpektrLib"
             ReferencedContainer = "container:Spektr.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
-      customArchiveName = "Spektr"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>
