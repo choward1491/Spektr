@@ -147,7 +147,7 @@ namespace ANN {
         
     }
     std::vector<double> Network::backprop( const std::vector<double> & dEdO ){
-        std::vector<double> grad(this->numWeights());
+        static std::vector<double> grad(this->numWeights());
         backprop(dEdO,grad);
         return grad;
     }

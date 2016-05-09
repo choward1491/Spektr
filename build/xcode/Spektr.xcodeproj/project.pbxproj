@@ -15,6 +15,12 @@
 		AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
 		AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		AD9634271CD99BFE00AAB6D8 /* ADELINE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* ADELINE.cpp */; };
+		AD9634281CD99BFE00AAB6D8 /* ADELINE.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* ADELINE.cpp */; };
+		AD9634291CD99BFE00AAB6D8 /* ADELINE.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9634261CD99BFE00AAB6D8 /* ADELINE.hpp */; };
+		AD9634301CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */; };
+		AD9634311CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */; };
+		AD9634321CE0489000AAB6D8 /* RecursiveLS.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */; };
 		AD9A74FF1CCD430000615C78 /* Parser.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; };
 		AD9A75001CCD430000615C78 /* FileObject.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; };
 		AD9A75011CCD430000615C78 /* DataFilter.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; };
@@ -350,6 +356,11 @@
 		AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelState.hpp; path = ModelState/ModelState.hpp; sourceTree = "<group>"; };
 		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		AD9634251CD99BFE00AAB6D8 /* ADELINE.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ADELINE.cpp; sourceTree = "<group>"; };
+		AD9634261CD99BFE00AAB6D8 /* ADELINE.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ADELINE.hpp; sourceTree = "<group>"; };
+		AD96342D1CD9B61400AAB6D8 /* TestADELINE_Filter1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestADELINE_Filter1.hpp; sourceTree = "<group>"; };
+		AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecursiveLS.cpp; sourceTree = "<group>"; };
+		AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RecursiveLS.hpp; sourceTree = "<group>"; };
 		AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EulerAngles.cpp; sourceTree = "<group>"; };
 		AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EulerAngles.hpp; sourceTree = "<group>"; };
 		ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression.hpp; path = LocalRegression/LocalRegression.hpp; sourceTree = "<group>"; };
@@ -782,6 +793,10 @@
 				ADF8DC851C895BAB004C682C /* TargetDyn.hpp */,
 				ADF8DC861C895BAB004C682C /* TargetMeas.hpp */,
 				ADF8DC871C895BAB004C682C /* UKF.hpp */,
+				AD9634251CD99BFE00AAB6D8 /* ADELINE.cpp */,
+				AD9634261CD99BFE00AAB6D8 /* ADELINE.hpp */,
+				AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */,
+				AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -1145,6 +1160,7 @@
 				AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */,
 				AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */,
 				AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */,
+				AD96342D1CD9B61400AAB6D8 /* TestADELINE_Filter1.hpp */,
 			);
 			name = tests;
 			path = ../../tests;
@@ -1169,6 +1185,7 @@
 				ADF8DD871C895BAB004C682C /* LowerSolver.hpp in Headers */,
 				ADF8DD661C895BAB004C682C /* LDL.hpp in Headers */,
 				ADF8DDCA1C895BAB004C682C /* Pendulum.hpp in Headers */,
+				AD9634321CE0489000AAB6D8 /* RecursiveLS.hpp in Headers */,
 				ADF8DDDE1C895BAB004C682C /* Particle.hpp in Headers */,
 				ADF8DDA61C895BAB004C682C /* RandomNumberGenerator.hpp in Headers */,
 				ADF8DD651C895BAB004C682C /* Cholesky.hpp in Headers */,
@@ -1223,6 +1240,7 @@
 				ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */,
 				ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */,
 				ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */,
+				AD9634291CD99BFE00AAB6D8 /* ADELINE.hpp in Headers */,
 				ADF8DD8E1C895BAB004C682C /* ActivationFuncs.hpp in Headers */,
 				ADF8DDB61C895BAB004C682C /* DynamicModel.hpp in Headers */,
 				ADF8DD6F1C895BAB004C682C /* MatScalarMinusExpr.hpp in Headers */,
@@ -1352,6 +1370,7 @@
 				ADF8DD951C895BAB004C682C /* Network.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
+				AD9634301CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */,
 				ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */,
 				ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */,
@@ -1382,6 +1401,7 @@
 				AD4061971CC405D00000D18A /* HeatEquation.cpp in Sources */,
 				ADF8DDB71C895BAB004C682C /* PendulumSim.cpp in Sources */,
 				ADF8DDAB1C895BAB004C682C /* Constants.cpp in Sources */,
+				AD9634271CD99BFE00AAB6D8 /* ADELINE.cpp in Sources */,
 				AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */,
 				AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */,
 				ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */,
@@ -1522,6 +1542,7 @@
 				AD9A75701CCD430000615C78 /* Optimizer.hpp in Sources */,
 				AD9A75711CCD430000615C78 /* Parabola2D.hpp in Sources */,
 				AD9A75721CCD430000615C78 /* Rosenbrock.hpp in Sources */,
+				AD9634311CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */,
 				AD9A75731CCD430000615C78 /* Element.hpp in Sources */,
 				AD9A75741CCD430000615C78 /* FiniteDifference.hpp in Sources */,
 				AD9A75751CCD430000615C78 /* FiniteElement.hpp in Sources */,
@@ -1533,6 +1554,7 @@
 				ADF8DDFC1C895BAB004C682C /* Timer.cpp in Sources */,
 				ADF8DD8D1C895BAB004C682C /* ActivationFuncs.cpp in Sources */,
 				ADF8DD991C895BAB004C682C /* Node.cpp in Sources */,
+				AD9634281CD99BFE00AAB6D8 /* ADELINE.cpp in Sources */,
 				ADF8DD961C895BAB004C682C /* Network.cpp in Sources */,
 				ADF8DDC91C895BAB004C682C /* Pendulum.cpp in Sources */,
 				ADF8DDE41C895BAB004C682C /* RandomInit.cpp in Sources */,
