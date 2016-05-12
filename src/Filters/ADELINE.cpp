@@ -19,12 +19,20 @@ namespace spektr {
         }
         
         
-        ADELINE::ADELINE():out(1){
+        ADELINE::ADELINE():out(1),max_iters(10){
             
         }
-        ADELINE::ADELINE(int num_data):input(num_data),list(num_data),out(1){
+        ADELINE::ADELINE(int num_data):input(num_data),list(num_data),out(1),max_iters(10){
             
             
+        }
+        
+        void ADELINE::setMaxLearningIterations( int max_iter ){
+            max_iters = max_iter;
+        }
+        
+        void ADELINE::setLearningStepSize( double step ){
+            stepsize = step;
         }
         
         void ADELINE::setInitState( const Mat & x0 ){
@@ -33,9 +41,10 @@ namespace spektr {
             int num_meas = static_cast<int>(x0.size().rows);
             estimate.resize(x0.size());
             
-            std::vector<int> layout(2);
+            std::vector<int> layout(3);
             layout[0] = num_data;
-            layout[1] = 1;
+            layout[1] = 3;
+            layout[2] = 1;
             
             num_meas = static_cast<int>(x0.size().rows);
             nets.resize(num_meas);
@@ -63,23 +72,24 @@ namespace spektr {
             
             
             // Refine the filter based on measurement
-            int max_iter = 50;
             for(int i = 0; i < num_meas; i++ ){
                 for(int j = 0; j < num_data; j++ ){
                     input[j] = list[j][i];
                 }
                 
-                for(int j = 0; j < max_iter; j++ ){
+                for(int j = 0; j < max_iters; j++ ){
                     nets[i](input,out);
-                    if( j == max_iter-1 ){
+                    if( j == max_iters-1 ){
                         estimate[i] = out[0];
                     }
                     derr = out[0]-meas[i];
-                    printf("Error(%i)=%lf\n",j,0.5*derr*derr);
                     dEdO[0] = derr;
                     nets[i].backprop(dEdO, grad);
-                    updateWeights(nets[i].w(), grad, 1e-6);
-                }printf("\n");
+                    updateWeights(nets[i].w(), grad, stepsize);
+                    //printf("Error = %0.8lf, Grad = [%lf, %lf], Weights = [%lf, %lf]\n",0.5*derr*derr, grad[0], grad[1],
+                    //       nets[i].weightAt(0), nets[i].weightAt(1));
+                    for(int k = 0; k < grad.size(); k++ ){ grad[k] = 0.0; }
+                }//printf("\n");
             }
             
             

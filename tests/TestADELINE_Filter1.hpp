@@ -32,17 +32,24 @@
 
 #include "ADELINE.hpp"
 #include "RandomNumberGenerator.hpp"
+#include "FileObject.hpp"
 
 void runExample1_ADELINE(){
     
-    // Define UKF type
+    // File Handle
+    FileObject file;
+    file.openFile("/Users/christianjhoward/adeline.txt", FileObject::Write);
+    
+    // Define ADELINE filter type
     typedef spektr::filter::ADELINE ADELINE;
     
     // Create Random Number Generator
     RandomNumberGenerator rng;
     
-    // Create ukf filter
+    // Create adeline filter
     ADELINE filter(5);
+    filter.setMaxLearningIterations(3);
+    filter.setLearningStepSize(1e-2);
     
     // Init initial conditions
     ADELINE::Mat x0(2,1,0);
@@ -59,7 +66,7 @@ void runExample1_ADELINE(){
     // xb = initial target location
     // z  = target sensor measurement
     // rnd= random noise component to sensor measurement
-    ADELINE::Mat xt(2,1,0), xb(2,1,0), z(2,1,0);
+    ADELINE::Mat xt(2,1,0), xb(2,1,0), z(2,1,0), truth(2,1,0);
     ADELINE::Mat rnd(2,1,0);
     xb(0) = 4;   // in m
     xb(1) = 2.5; // in m
@@ -70,22 +77,24 @@ void runExample1_ADELINE(){
         
         // compute noise component for sensor
         for (int i = 0; i < 2; i++) {
-            rnd(i) = 0.0*rng.gaussRand();
+            rnd(i) = 1.0*rng.gaussRand();
         }
-        z = xb + t*xt; // compute exact target pos
+        truth = xb + t*xt; // compute exact target pos
         
         // print the true pos of the target
         printf("Truth:\n");
-        z.print();
+        truth.print();
         
-        // add noise to z and feed into UKF
-        z = z + rnd;
+        // add noise to z and feed into filter
+        z = truth + rnd;
         filter(t,z);
         
         // print the estimated value for
         // the target's pos
         printf("Estimate:\n");
         filter.state().print();
+        
+        fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],filter.state()[0],filter.state()[1]);
         
         // increment time
         t += dt;

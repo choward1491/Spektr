@@ -48,6 +48,8 @@ namespace spektr {
             ADELINE(int num_data);
             void setNumData(int num_data);
             void setInitState( const Mat & x0 );
+            void setMaxLearningIterations( int max_iter );
+            void setLearningStepSize( double step );
             void operator()( double t_, const Mat & meas );
             const Mat & state() const;
             
@@ -60,6 +62,8 @@ namespace spektr {
             std::vector<double> out;
             CircularQueue<Mat> list;
             std::vector<ANN::Network> nets;
+            int max_iters;
+            double stepsize;
         };
         
     }

@@ -9,22 +9,7 @@
 #include "TestADELINE_Filter1.hpp"
 #include "Network.hpp"
 
-void updateWeights( std::vector<double> & w, std::vector<double> grad, double alpha ){
-    for(int i = 0; i < w.size(); i++ ){
-        w[i] -= alpha*grad[i];
-    }
-    //w[0] = 2;
-    //w[1] = 3;
-}
 
-void inputMap( std::vector<double> & in ){
-    for(int i = 0; i < in.size(); i++ ){
-        in[i] = (in[i]-10.0)/10.0;
-    }
-}
-void outputMap( std::vector<double> & out ){
-    
-}
 
 
 int main(int argc, const char * argv[]) {
@@ -34,17 +19,14 @@ int main(int argc, const char * argv[]) {
     /*
     ANN::Network net({1,1});
     
-    std::vector<double> x, y;
-    for(int i = 1; i < 15; i++){
-        x.push_back( i );
-        y.push_back( 2*i + 3 );
-    }
+    std::vector<double> x{1, 5}, y{3, 11};
     
-    double error = 0;
+    double error = 0, eps = 1e-2;
     std::vector<double> input(1),output(1);
     std::vector<double> grad(2), dEdO(1);
-    for(int i = 0; i < 1600; i++ ){
+    for(int i = 0; i < 3000; i++ ){
         error = 0;
+        dEdO[0] = 0;
         for( int j = 0; j < 2; j++ ){ grad[j] = 0.0; }
         
         for( int j = 0; j < x.size(); j++ ){
@@ -52,16 +34,16 @@ int main(int argc, const char * argv[]) {
             net(input,output);
             double derr = output[0] - y[j];
             error += 0.5*derr*derr;
-            
-            dEdO[0] = derr;
+            dEdO[0] += derr;
             net.backprop(dEdO, grad);
         }
         
-        printf("Error(%i) = %lf\n",i,error);
-        updateWeights(net.w(), grad, 1e-3);
-        printf("Weights = [%lf, %lf]\n",net.weightAt(0), net.weightAt(1));
+        for(int j = 0; j < grad.size(); j++ ){
+            net.w()[j] -= eps*grad[j];
+        }
+        printf("Error = %0.8lf, Grad = [%lf, %lf], Weights = [%lf, %lf]\n",error, grad[0], grad[1], net.weightAt(0), net.weightAt(1));
     }
-     */
+    */
     
     
     // exit

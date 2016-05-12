@@ -56,7 +56,7 @@ namespace spektr {
             double estimate;
             Mat wn, Pn, gn, an, xn;
             double delta, lambda;
-            CircularQueue<double> list
+            CircularQueue<double> list;
         };
         
     }
