@@ -6,16 +6,18 @@
 //
 
 #include <string>
-#include "TestADELINE_Filter1.hpp"
+#include "TestNeuralKalmanFilter.hpp"
 #include "Network.hpp"
+#include "TestExample1.hpp"
 
 
 
 
 int main(int argc, const char * argv[]) {
     
-    runExample1_ADELINE();
-    
+    //runExample1_ADELINE();
+    runExample1_NeuralKalman();
+    //runExample1_UKF();
     /*
     ANN::Network net({1,1});
     

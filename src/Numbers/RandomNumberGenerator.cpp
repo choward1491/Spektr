@@ -16,22 +16,24 @@ RandomNumberGenerator::RandomNumberGenerator(int seed){
 
 void RandomNumberGenerator::setSeed( int seed ){
     currentNumber = seed % MAX_NUM_INT;
-    m_z = seed % 1291;
-    m_w = seed % 9127;
+    p = seed % 16;
+    s[0] = (13728 ^ seed);
+    for(int i = 1; i < 16; i++ ){
+        s[i] = ((234 ^ s[i-1]) << 3) +  s[i-1] ^ seed;
+    }
 }
 
 
 double RandomNumberGenerator::rand(){
-    m_z = 36969 * (m_z & 65535) + (m_z >> 16);
-    m_w = 18000 * (m_w & 65535) + (m_w >> 16);
-    currentNumber = (m_z << 16) + m_w;
-    return INV_MAX_NUM_DBL * (double)currentNumber;
+    return INV_MAX_NUM_DBL * (double)randInt();
 }
 
-unsigned int RandomNumberGenerator::randInt(){
-    m_z = 36969 * (m_z & 65535) + (m_z >> 16);
-    m_w = 18000 * (m_w & 65535) + (m_w >> 16);
-    currentNumber = (m_z << 16) + m_w;
+uint64_t RandomNumberGenerator::randInt(){
+    const uint64_t s0 = s[p];
+    uint64_t s1 = s[p = (p + 1) & 15];
+    s1 ^= s1 << 31; // a
+    s[p] = s1 ^ s0 ^ (s1 >> 11) ^ (s0 >> 30); // b,c
+    currentNumber = s[p] * UINT64_C(1181783497276652981);
     return currentNumber;
 }
 

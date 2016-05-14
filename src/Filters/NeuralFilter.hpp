@@ -1,5 +1,5 @@
 //
-//  ADELINE.hpp
+//  NeuralFilter.hpp
 //  Spektr
 //
 //  Created by Christian J Howard on 5/3/16.
@@ -40,18 +40,21 @@ namespace spektr {
     
     namespace filter {
 
-        class ADELINE {
+        class NeuralFilter {
         public:
             typedef la::Mat<double> Mat;
             
-            ADELINE();
-            ADELINE(int num_data);
+            NeuralFilter();
+            NeuralFilter(int num_data);
             void setNumData(int num_data);
             void setInitState( const Mat & x0 );
             void setMaxLearningIterations( int max_iter );
             void setLearningStepSize( double step );
             void operator()( double t_, const Mat & meas );
             const Mat & state() const;
+            Mat truth;
+            std::vector<ANN::Network> nets;
+            
             
         private:
             
@@ -61,7 +64,7 @@ namespace spektr {
             std::vector<double> dEdO;
             std::vector<double> out;
             CircularQueue<Mat> list;
-            std::vector<ANN::Network> nets;
+            
             int max_iters;
             double stepsize;
         };

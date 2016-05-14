@@ -66,7 +66,8 @@ public:
     
     
 private:
-    
+    T dummy;
+    const T cdummy;
     Dims dims;
     int nt;
     bool isT;

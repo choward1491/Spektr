@@ -37,15 +37,15 @@
 
 
 TEMPLATE_HEADER
-STORAGE::MatStorage():table(0),nt(0),dims(0,0),isT(false){}
+STORAGE::MatStorage():table(0),nt(0),dims(0,0),isT(false),dummy(0),cdummy(0){}
 
 TEMPLATE_HEADER
 STORAGE::MatStorage(int r, int c, T dval):nt(Hash::netSize(r,c)),
-table(nt,dval),dims(r,c),isT(false){}
+table(nt,dval),dims(r,c),isT(false),dummy(0),cdummy(0){}
 
 TEMPLATE_HEADER
 STORAGE::MatStorage(Dims d, T dval):nt(Hash::netSize(d.rows,d.cols)),
-table(nt,dval),dims(d),isT(false){}
+table(nt,dval),dims(d),isT(false),dummy(0),cdummy(0){}
 
 TEMPLATE_HEADER
 void STORAGE::resize(int r, int c, T dval){
@@ -78,7 +78,12 @@ T & STORAGE::operator()(int r, int c){
     }else{
         k = Hash::hash(r,c,dims.cols,nt);
     }
-    return table[k%nt];
+    if( k != nt ){
+        return table[k];
+    }else{
+        dummy = cdummy;
+        return dummy;
+    }
 }
 
 TEMPLATE_HEADER
@@ -89,7 +94,11 @@ const T & STORAGE::operator()(int r, int c) const{
     }else{
         k = Hash::hash(r,c,dims.cols,nt);
     }
-    return table[k%nt];
+    if( k != nt ){
+        return table[k];
+    }else{
+        return cdummy;
+    }
 }
 
 TEMPLATE_HEADER

@@ -1,12 +1,12 @@
 //
-//  ADELINE.cpp
+//  NeuralFilter.cpp
 //  Spektr
 //
 //  Created by Christian J Howard on 5/3/16.
 //  Copyright © 2016 Christian Howard. All rights reserved.
 //
 
-#include "ADELINE.hpp"
+#include "NeuralFilter.hpp"
 
 namespace spektr {
     
@@ -19,32 +19,33 @@ namespace spektr {
         }
         
         
-        ADELINE::ADELINE():out(1),max_iters(10){
+        NeuralFilter::NeuralFilter():out(1),max_iters(10){
             
         }
-        ADELINE::ADELINE(int num_data):input(num_data),list(num_data),out(1),max_iters(10){
+        NeuralFilter::NeuralFilter(int num_data):input(num_data),list(num_data),out(1),max_iters(10){
             
             
         }
         
-        void ADELINE::setMaxLearningIterations( int max_iter ){
+        void NeuralFilter::setMaxLearningIterations( int max_iter ){
             max_iters = max_iter;
         }
         
-        void ADELINE::setLearningStepSize( double step ){
+        void NeuralFilter::setLearningStepSize( double step ){
             stepsize = step;
         }
         
-        void ADELINE::setInitState( const Mat & x0 ){
+        void NeuralFilter::setInitState( const Mat & x0 ){
             
             int num_data = static_cast<int>(input.size());
             int num_meas = static_cast<int>(x0.size().rows);
             estimate.resize(x0.size());
             
-            std::vector<int> layout(3);
+            std::vector<int> layout(4);
             layout[0] = num_data;
             layout[1] = 3;
-            layout[2] = 1;
+            layout[2] = 2;
+            layout[3] = 1;
             
             num_meas = static_cast<int>(x0.size().rows);
             nets.resize(num_meas);
@@ -60,15 +61,17 @@ namespace spektr {
             dEdO.resize(nets[0].numOutputs());
         }
         
-        void ADELINE::setNumData(int num_data){
+        void NeuralFilter::setNumData(int num_data){
             input.resize(num_data);
             list.setMaxSize(num_data);
         }
         
-        void ADELINE::operator()( double t_, const Mat & meas ){
+        void NeuralFilter::operator()( double t_, const Mat & meas ){
             static int num_meas = static_cast<int>(meas.size().rows);;
+            static int counter = 0;
             int num_data = static_cast<int>(input.size());
             double derr = 0;
+            int num_iters = max_iters;
             
             
             // Refine the filter based on measurement
@@ -77,9 +80,10 @@ namespace spektr {
                     input[j] = list[j][i];
                 }
                 
-                for(int j = 0; j < max_iters; j++ ){
+                for(int j = 0; j < num_iters; j++ ){
                     nets[i](input,out);
-                    if( j == max_iters-1 ){
+                    
+                    if( j == 0 ){
                         estimate[i] = out[0];
                     }
                     derr = out[0]-meas[i];
@@ -95,10 +99,11 @@ namespace spektr {
             
             // add current measurement to list
             list.push(meas);
+            counter++;
             
         }
         
-        const ADELINE::Mat & ADELINE::state() const{
+        const NeuralFilter::Mat & NeuralFilter::state() const{
             return estimate;
         }
         

@@ -1,8 +1,8 @@
 //
-//  TestADELINE_Filter1.hpp
+//  TestNeuralKalmanFilter.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 5/3/16.
+//  Created by Christian J Howard on 5/12/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,36 +27,68 @@
 //
 //
 
-#ifndef TestADELINE_Filter1_h
-#define TestADELINE_Filter1_h
+#ifndef TestNeuralKalmanFilter_h
+#define TestNeuralKalmanFilter_h
 
-#include "ADELINE.hpp"
+#include "TargetDyn.hpp"
+#include "TargetMeas.hpp"
+#include "UKF.hpp"
+#include "NeuralFilter.hpp"
 #include "RandomNumberGenerator.hpp"
 #include "FileObject.hpp"
+#include <math.h>
 
-void runExample1_ADELINE(){
+void runExample1_NeuralKalman(){
     
     // File Handle
     FileObject file;
-    file.openFile("/Users/christianjhoward/adeline.txt", FileObject::Write);
     
-    // Define ADELINE filter type
-    typedef spektr::filter::ADELINE ADELINE;
+    
+    // Define NeuralFilter filter type
+    typedef spektr::filter::NeuralFilter NeuralFilter;
+    
+    // Define UKF type
+    typedef spektr::filter::UnscentedKF<spektr::TargetDyn, spektr::TargetMeas> UKF;
     
     // Create Random Number Generator
     RandomNumberGenerator rng;
     
+    // Create ukf filter
+    UKF ukf;
+    
     // Create adeline filter
-    ADELINE filter(5);
+    NeuralFilter filter(5);
     filter.setMaxLearningIterations(3);
     filter.setLearningStepSize(1e-2);
     
     // Init initial conditions
-    ADELINE::Mat x0(2,1,0);
-    x0(0) = 3.7; // x pos
-    x0(1) = 2.4; // y pos
+    UKF::Mat x0(4,1,0);
+    x0(0) = 0; // x pos
+    x0(1) = 0; // y pos
     
     // Set initial state estimate for ukf
+    ukf.setInitState(x0);
+    
+    
+    // Specify the dynamics noise covariance
+    // and state estimate covariance
+    for (int i = 0; i < ukf.numState(); i++) {
+        for (int j = 0; j < ukf.numState(); j++) {
+            ukf.stateNoise(i, j) = (i==j) * 1e-3 + 0*(i!=j);
+        }
+        ukf.stateCov(i, i) = 5;
+    }
+    
+    // Specify the measurement noise covariance
+    for (int i = 0; i < ukf.numMeas(); i++) {
+        for (int j = 0; j < ukf.numMeas(); j++) {
+            ukf.measNoise(i, j) = 0.1*(i==j) - 0*1/(i+j+1)*(i!=j);
+        }
+    }
+    
+    // Set initial state estimate for ukf
+    x0.resize(2, 1);
+    x0(0) = 0; x0(1) = 0;
     filter.setInitState(x0);
     
     // specify time step and set initial time
@@ -66,20 +98,22 @@ void runExample1_ADELINE(){
     // xb = initial target location
     // z  = target sensor measurement
     // rnd= random noise component to sensor measurement
-    ADELINE::Mat xt(2,1,0), xb(2,1,0), z(2,1,0), truth(2,1,0);
-    ADELINE::Mat rnd(2,1,0);
+    NeuralFilter::Mat xt(2,1,0), xb(2,1,0), z(2,1,0), truth(2,1,0);
+    NeuralFilter::Mat rnd(2,1,0);
     xb(0) = 4;   // in m
     xb(1) = 2.5; // in m
     xt(0) = 1.0; // in m/s
+    
+    file.openFile("/Users/christianjhoward/neuralKalman.txt", FileObject::Write);
     
     // run sim until time exceeds 5 seconds
     while ( t <= 5 ) {
         
         // compute noise component for sensor
         for (int i = 0; i < 2; i++) {
-            rnd(i) = 1.0*rng.gaussRand();
+            rnd(i) = 2.0*rng.gaussRand();
         }
-        truth = xb + t*xt; // compute exact target pos
+        truth = xb + sin(5*t)*xt; // compute exact target pos
         
         // print the true pos of the target
         printf("Truth:\n");
@@ -87,19 +121,31 @@ void runExample1_ADELINE(){
         
         // add noise to z and feed into filter
         z = truth + rnd;
+        filter.truth = truth;
         filter(t,z);
+        ukf(t,filter.state());
+        double alpha = 0.5, beta = 1.0-alpha;
+        x0 = alpha*filter.state() + beta*x0;
         
         // print the estimated value for
         // the target's pos
-        printf("Estimate:\n");
+        printf("Estimate1:\n");
         filter.state().print();
         
-        fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],filter.state()[0],filter.state()[1]);
+        printf("Estimate2:\n");
+        x0.print();
+        //ukf.state().print();
+        //ukf.stateCov().print();
+        
+        fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],
+                filter.state()[0],filter.state()[1],ukf.state()[0],ukf.state()[1]);
         
         // increment time
         t += dt;
     }
+    
+    
 }
 
 
-#endif /* TestADELINE_Filter1_h */
+#endif /* TestNeuralKalmanFilter_h */

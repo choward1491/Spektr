@@ -60,7 +60,7 @@ namespace la {
         LDL(A, L, D);
         solve(L, b, y);
         solve(D, y, y);
-        L.T();
+        L.t();
         solve(L, y, x);
     }
 

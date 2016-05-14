@@ -37,8 +37,8 @@
 namespace la {
 
 
-template<class T, class C>
-void cholesky( const Matrix<T,C> & m, LMat<T> & L ){
+template<class T, class C, class D>
+void cholesky( const Matrix<T,C> & m, Matrix<T,D> & L ){
     if( !m.isSquare() ){
         printf("Error: Input matrix not square.\n");
         return;

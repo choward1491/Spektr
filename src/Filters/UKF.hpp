@@ -139,7 +139,7 @@ namespace filter {
         static std::vector<Mat> hx(1+2*nx);
         
         double dt = t_ - t; t = t_;
-        Lower D;
+        Mat D;
         la::cholesky( Pxx, D );
         
         // Compute initial sigma points
@@ -162,16 +162,14 @@ namespace filter {
         
         // Compute State Covariance prediction
         dx = fx[0]-xt; dxt = dx;
-        dxt.T();
+        dxt.t();
         Pxx = Q + w0*dx*dxt;
-        
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.T();
+            dxt.t();
             dx = fx[i]-xt;
-            dxt = dx; dxt.T();
+            dxt = dx; dxt.t();
             Pxx = Pxx + w1*dx*dxt;
         }
-        
         
         // Compute new sigma points
         sigx[0] = xt;
@@ -191,29 +189,28 @@ namespace filter {
         }
         
         // compute measurement covariance
-        dxt.T();
-        dx = zt - hx[0]; dxt = dx; dxt.T();
+        dxt.t();
+        dx = zt - hx[0]; dxt = dx; dxt.t();
         Pzz = R + w0*dx*dxt;
         
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.T();
+            dxt.t();
             dx = zt - hx[i];
-            dxt = dx; dxt.T();
+            dxt = dx; dxt.t();
             Pzz = Pzz + w1*dx*dxt;
         }
         
         // compute cross correlation
-        if( dxt.isTransposed()){ dxt.T(); }
+        if( dxt.isTransposed()){ dxt.t(); }
         dx = fx[0]-xt;
-        dxt = hx[0] - zt; dxt.T();
+        dxt = hx[0] - zt; dxt.t();
         Pxz = w0*dx*dxt;
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.T();
+            dxt.t();
             dx = fx[i]-xt;
-            dxt = hx[i] - zt; dxt.T();
+            dxt = hx[i] - zt; dxt.t();
             Pxz = Pxz + w1*dx*dxt;
         }
-        
         
         // Compute kalman gain
         Mat PzzInv;
@@ -224,7 +221,7 @@ namespace filter {
         
         // Compute state estimate and covariance estimate
         x = xt + K*( meas - zt );
-        Mat M = K*Pzz; K.T();
+        Mat M = K*Pzz; K.t();
         Pxx = Pxx - M*K;
         
     }
