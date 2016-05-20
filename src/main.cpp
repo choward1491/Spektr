@@ -9,14 +9,19 @@
 #include "TestNeuralKalmanFilter.hpp"
 #include "Network.hpp"
 #include "TestExample1.hpp"
-
+#include "NBodySim.hpp"
+#include "TestPendulumSim.hpp"
 
 
 
 int main(int argc, const char * argv[]) {
     
+    //NBodySim sim;
+    //sim.runSim();
+    testPendulumSim("/Users/christianjhoward/history.txt");
+    
     //runExample1_ADELINE();
-    runExample1_NeuralKalman();
+    //runExample1_NeuralKalman();
     //runExample1_UKF();
     /*
     ANN::Network net({1,1});

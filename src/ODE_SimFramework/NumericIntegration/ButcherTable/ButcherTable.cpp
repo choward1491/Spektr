@@ -57,6 +57,10 @@ const double & ButcherTable::a(int row, int column) const{
     return a_[column + row*dim];
 }
 
+bool ButcherTable::isAdaptive() const{
+    return num_estimates > 1;
+}
+
 bool ButcherTable::isImplicit() const{
     for(int i = 0; i < dim; i++ ){
         for(int j = i; j < dim; j++){

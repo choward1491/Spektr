@@ -40,6 +40,11 @@ namespace spektr {
             int num_data = static_cast<int>(input.size());
             int num_meas = static_cast<int>(x0.size().rows);
             estimate.resize(x0.size());
+            avg_error.resize(num_meas);
+            meas_error.resize(num_meas);
+            ratio.resize(num_meas);
+            ratio_avg.resize(num_meas);
+            num_times = 0;
             
             std::vector<int> layout(4);
             layout[0] = num_data;
@@ -66,12 +71,31 @@ namespace spektr {
             list.setMaxSize(num_data);
         }
         
+        double coef( double ratio , double ratio_avg ){
+            /*if( ratio > 3 ){
+                return ratio*ratio;
+            }else if( ratio > 2 ){
+                return 6e-1/(ratio*ratio);
+            }else if( ratio > 1 ){
+                return 1e-1;
+            }else if( ratio > 0.5 ){
+                return ratio*ratio*ratio;
+            }else if( ratio > 0.3 ){
+                return ratio*ratio;
+            }else{
+                return ratio;
+            }*/
+            
+            return 7*(1.01 - exp( -1*(ratio-ratio_avg)*(ratio-ratio_avg) ));
+        }
+        
         void NeuralFilter::operator()( double t_, const Mat & meas ){
             static int num_meas = static_cast<int>(meas.size().rows);;
             static int counter = 0;
             int num_data = static_cast<int>(input.size());
             double derr = 0;
             int num_iters = max_iters;
+            double alpha = 0.05;
             
             
             // Refine the filter based on measurement
@@ -82,11 +106,29 @@ namespace spektr {
                 
                 for(int j = 0; j < num_iters; j++ ){
                     nets[i](input,out);
+                    derr = out[0]-meas[i];
                     
                     if( j == 0 ){
                         estimate[i] = out[0];
+                        meas_error[i] = (1-alpha)*fabs(derr) + alpha*meas_error[i];
+                        if( num_times == 0 ){
+                            avg_error[i] = fabs(derr);
+                            num_times++;
+                        }else{
+                            double K = static_cast<double>(num_times);
+                            double N = K+1.0;
+                            avg_error[i] = (fabs(derr) + K*avg_error[i])/N;
+                            num_times++;
+                        }
+                        ratio[i] = meas_error[i]/avg_error[i];
+                        ratio_avg[i] = 0.5*ratio[i] + 0.5*ratio_avg[i];
+                        stepsize = 20e-4/coef(ratio[i],ratio_avg[i]);
+                        double del = fabs(ratio[i]-ratio_avg[i]);
+                        //stepsize = (1e-1*fabs(1.0-ratio[i]) + 1e-2*del)/(1 + 7*ratio_avg[i]*ratio_avg[i]);
+                        //stepsize = (1e-3 + 4e-2*del)/(ratio[i]*(1+del));
                     }
-                    derr = out[0]-meas[i];
+                    
+                    
                     dEdO[0] = derr;
                     nets[i].backprop(dEdO, grad);
                     updateWeights(nets[i].w(), grad, stepsize);

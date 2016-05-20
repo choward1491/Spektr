@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD267D4D1CED587500E3EB69 /* PointBodyModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD267D4B1CED587500E3EB69 /* PointBodyModel.cpp */; };
+		AD39C7411CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */; };
+		AD39C7421CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */; };
+		AD39C7431CEEEB3F001658F8 /* RKCashKarp.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD39C7401CEEEB3F001658F8 /* RKCashKarp.hpp */; };
 		AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */; };
 		AD4061971CC405D00000D18A /* HeatEquation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061951CC405D00000D18A /* HeatEquation.cpp */; };
 		AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061981CC40DCE0000D18A /* HeatEquationSim.cpp */; };
@@ -327,10 +331,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD267D4A1CED581400E3EB69 /* NBodySim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = NBodySim.hpp; path = Examples/NBodyProblem/NBodySim.hpp; sourceTree = "<group>"; };
+		AD267D4B1CED587500E3EB69 /* PointBodyModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointBodyModel.cpp; path = Examples/NBodyProblem/PointBodyModel.cpp; sourceTree = "<group>"; };
+		AD267D4C1CED587500E3EB69 /* PointBodyModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PointBodyModel.hpp; path = Examples/NBodyProblem/PointBodyModel.hpp; sourceTree = "<group>"; };
 		AD39480A1CA7338300797BB3 /* Complex.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex.hpp; sourceTree = "<group>"; };
 		AD39480B1CA7547000797BB3 /* Complex_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Complex_Impl.hpp; sourceTree = "<group>"; };
 		AD39480D1CA837A800797BB3 /* ComplexFastStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexFastStorage.hpp; sourceTree = "<group>"; };
 		AD39480E1CA83DE800797BB3 /* ComplexMatStorage.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ComplexMatStorage.hpp; sourceTree = "<group>"; };
+		AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = RKCashKarp.cpp; path = ButcherIntegrator/RKCashKarp.cpp; sourceTree = "<group>"; };
+		AD39C7401CEEEB3F001658F8 /* RKCashKarp.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RKCashKarp.hpp; path = ButcherIntegrator/RKCashKarp.hpp; sourceTree = "<group>"; };
 		AD4061901CC3643A0000D18A /* NumericIntegration.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NumericIntegration.hpp; sourceTree = "<group>"; };
 		AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ExplicitTrapezoidal.cpp; path = ButcherIntegrator/ExplicitTrapezoidal.cpp; sourceTree = "<group>"; };
 		AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ExplicitTrapezoidal.hpp; path = ButcherIntegrator/ExplicitTrapezoidal.hpp; sourceTree = "<group>"; };
@@ -529,6 +538,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD267D491CED57C800E3EB69 /* N-Body Problem */ = {
+			isa = PBXGroup;
+			children = (
+				AD267D4A1CED581400E3EB69 /* NBodySim.hpp */,
+				AD267D4B1CED587500E3EB69 /* PointBodyModel.cpp */,
+				AD267D4C1CED587500E3EB69 /* PointBodyModel.hpp */,
+			);
+			name = "N-Body Problem";
+			sourceTree = "<group>";
+		};
 		AD3948091CA7336C00797BB3 /* complex */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +640,7 @@
 		AD5CE1BD1C9A551C00E6CC2A /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				AD267D491CED57C800E3EB69 /* N-Body Problem */,
 				AD4061A41CC5EAFB0000D18A /* Hodgkin–Huxley */,
 				AD40619C1CC450050000D18A /* AdvectionEqn */,
 				AD4061941CC405970000D18A /* HeatEquation */,
@@ -753,6 +773,8 @@
 				ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */,
 				AD4061911CC3654E0000D18A /* ExplicitTrapezoidal.cpp */,
 				AD4061921CC3654E0000D18A /* ExplicitTrapezoidal.hpp */,
+				AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */,
+				AD39C7401CEEEB3F001658F8 /* RKCashKarp.hpp */,
 			);
 			name = ButcherIntegrator;
 			sourceTree = "<group>";
@@ -1209,6 +1231,7 @@
 				ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */,
 				ADF8DDAD1C895BAB004C682C /* Constants.hpp in Headers */,
 				ADF8DD7D1C895BAB004C682C /* Special_Sparse.hpp in Headers */,
+				AD39C7431CEEEB3F001658F8 /* RKCashKarp.hpp in Headers */,
 				ADF8DD7A1C895BAB004C682C /* Special_Diag.hpp in Headers */,
 				ADF8DD4D1C895BAB004C682C /* Quaternion.hpp in Headers */,
 				ADF8DD701C895BAB004C682C /* MatScalarMultExpr.hpp in Headers */,
@@ -1394,9 +1417,11 @@
 				ADF8DDCC1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD471C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */,
+				AD267D4D1CED587500E3EB69 /* PointBodyModel.cpp in Sources */,
 				AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */,
 				ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */,
 				ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */,
+				AD39C7411CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */,
 				ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */,
 				AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */,
 				ADF8DDA81C895BAB004C682C /* Parser.cpp in Sources */,
@@ -1500,6 +1525,7 @@
 				AD9A75441CCD430000615C78 /* HodgkinHuxleyNeuronModel.hpp in Sources */,
 				AD9A75451CCD430000615C78 /* NeuronSim.cpp in Sources */,
 				AD9A75461CCD430000615C78 /* NeuronSim.hpp in Sources */,
+				AD39C7421CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */,
 				AD9A75471CCD430000615C78 /* AdvectionEqn.cpp in Sources */,
 				AD9A75481CCD430000615C78 /* AdvectionEqn.hpp in Sources */,
 				AD9A75491CCD430000615C78 /* AdvectionEqnSim.cpp in Sources */,

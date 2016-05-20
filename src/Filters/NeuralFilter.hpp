@@ -55,6 +55,10 @@ namespace spektr {
             Mat truth;
             std::vector<ANN::Network> nets;
             
+            std::vector<double> ratio;
+            std::vector<double> ratio_avg;
+            std::vector<double> meas_error;
+            std::vector<double> avg_error;
             
         private:
             
@@ -67,6 +71,9 @@ namespace spektr {
             
             int max_iters;
             double stepsize;
+            
+            
+            int num_times;
         };
         
     }

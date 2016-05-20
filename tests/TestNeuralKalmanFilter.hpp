@@ -74,7 +74,7 @@ void runExample1_NeuralKalman(){
     // and state estimate covariance
     for (int i = 0; i < ukf.numState(); i++) {
         for (int j = 0; j < ukf.numState(); j++) {
-            ukf.stateNoise(i, j) = (i==j) * 1e-3 + 0*(i!=j);
+            ukf.stateNoise(i, j) = (i==j) * 2e-4 + 0*(i!=j);
         }
         ukf.stateCov(i, i) = 5;
     }
@@ -107,13 +107,17 @@ void runExample1_NeuralKalman(){
     file.openFile("/Users/christianjhoward/neuralKalman.txt", FileObject::Write);
     
     // run sim until time exceeds 5 seconds
-    while ( t <= 5 ) {
+    while ( t <= 10 ) {
         
         // compute noise component for sensor
         for (int i = 0; i < 2; i++) {
-            rnd(i) = 2.0*rng.gaussRand();
+            rnd(i) = 1*rng.gaussRand();
         }
-        truth = xb + sin(5*t)*xt; // compute exact target pos
+        if( t <= 5 ){
+            truth = xb + 0.5*t*t; // compute exact target pos
+        }else{
+            truth = xb + 0.5*5*5 - 0.7*(t-5)*(t-5);
+        }
         
         // print the true pos of the target
         printf("Truth:\n");
@@ -137,8 +141,9 @@ void runExample1_NeuralKalman(){
         //ukf.state().print();
         //ukf.stateCov().print();
         
-        fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],
-                filter.state()[0],filter.state()[1],ukf.state()[0],ukf.state()[1]);
+        fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],
+                filter.state()[0],filter.state()[1],ukf.state()[0],ukf.state()[1], filter.ratio[0],filter.ratio[1],
+                filter.meas_error[0],filter.meas_error[1],filter.avg_error[0],filter.avg_error[1]);
         
         // increment time
         t += dt;

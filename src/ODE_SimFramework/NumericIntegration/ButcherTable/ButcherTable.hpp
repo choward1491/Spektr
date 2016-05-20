@@ -30,6 +30,7 @@ public:
     
     bool isImplicit() const;
     bool isExplicit() const;
+    bool isAdaptive() const;
     
     int numSteps() const;
     int numEstimates() const;

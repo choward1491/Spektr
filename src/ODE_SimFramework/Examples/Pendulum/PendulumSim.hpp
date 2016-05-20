@@ -15,23 +15,24 @@
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
+#include "RKCashKarp.hpp"
 
 
-class PendulumSim : public Simulator<PendulumSim,ExplicitEuler> {
+class PendulumSim : public Simulator<PendulumSim,RungeKutta4> {
 public:
     
     PendulumSim(){
         timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 20;
+        state.printFrequency = 10;
         numMC = 1;
         writeSimHistory = true;
     }
    
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 1000);
+        addDiscrete(&tstep, 10);
         addDynamics(&pendulum);
     }
     void _connectModelsTogether(){
