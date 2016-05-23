@@ -18,28 +18,29 @@
 #include "RKCashKarp.hpp"
 
 
-class PendulumSim : public Simulator<PendulumSim,RungeKutta4> {
+class PendulumSim : public Simulator<PendulumSim,RKCashKarp> {
 public:
     
     PendulumSim(){
         timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 10;
+        state.printFrequency = 1;
         numMC = 1;
         writeSimHistory = true;
+        integrator.setTolerance(1e-10);
     }
    
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 10);
+        addDiscrete(&tstep, 1);
         addDynamics(&pendulum);
     }
     void _connectModelsTogether(){
         
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 5;
+        return getTime() > 20;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));

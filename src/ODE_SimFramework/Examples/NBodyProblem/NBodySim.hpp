@@ -51,7 +51,7 @@ public:
         numMC = 1;
         writeSimHistory = true;
         bodies.resize(3);
-        integrator.setTolerance(1e-8);
+        integrator.setTolerance(1e-10);
     }
     
     

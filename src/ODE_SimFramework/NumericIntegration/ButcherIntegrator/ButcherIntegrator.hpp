@@ -31,6 +31,8 @@ private:
     int numDims;
     void computeNewStep( double * y0, double* dydt, double dt, double * out);
     void computeDerivatives( double time, double * dqdt, DiffeqList & list );
+    void adaptiveIntegration( double time, double dt , double* & inOutState, DiffeqList & list );
+    void nominalIntegration( double time, double dt , double* & inOutState, DiffeqList & list );
     std::vector<double*> K;
     double * tmp;
     double * err, *y1, *y2; // for adaptive stuff

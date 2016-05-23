@@ -108,12 +108,12 @@ public:
      * \params updateRateInHz The update rate in Hz
      * \returns None
      */
-    void assignUpdateRate( int updateRateInHz ){
+    void assignUpdateRate( double updateRateInHz ){
         try {
             if( updateRateInHz <= 0 ){
                 throw sim::exception("Invalid Update Rate: Must be Greater than 0.");
             }
-            incrementTime = Time(1, updateRateInHz);
+            incrementTime = Fraction(1.0/updateRateInHz);
         } catch ( std::exception & e ){
             printf("Error in %s.\nMsg = '%s'\n",model_name.c_str(),e.what());
         }

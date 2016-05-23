@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
-            timestampString = "482566798.603919"
+            timestampString = "485641327.228811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "213"
+            endingLineNumber = "213"
             landmarkName = "runIndividualSim()"
             landmarkType = "7">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485420997.427319"
+            timestampString = "485638432.446642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485420997.427319"
+            timestampString = "485638432.446642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "199"
+            endingLineNumber = "199"
             landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485447651.161247"
+            timestampString = "485638432.446642"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "220"
-            endingLineNumber = "220"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
             landmarkName = "ButcherIntegrator::computeDerivatives( double time, double * dqdt, DiffeqList &amp; list )"
             landmarkType = "5">
          </BreakpointContent>
@@ -665,13 +665,299 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485423049.020108"
+            filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+            timestampString = "485574887.532734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "runIndividualSim()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;PendulumSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485574890.412798"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "42">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;AdvectionEqnSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485574890.413023"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "184"
+                  endingLineNumber = "184"
+                  offsetFromSymbolStart = "42">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+            timestampString = "485575011.564803"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "initialize()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;PendulumSim, RKCashKarp&gt;::initialize()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485575086.094039"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;AdvectionEqnSim, RKCashKarp&gt;::initialize()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485575086.094306"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "39">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Examples/Pendulum/PendulumSim.hpp"
+            timestampString = "485575051.208183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "PendulumSim()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Examples/Pendulum/PendulumSim.hpp"
+            timestampString = "485588476.964205"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "_linkModelsToSim( SimState &amp; state )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+            timestampString = "485641327.228811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "runIndividualSim()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;PendulumSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485590174.815037"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "507">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;AdvectionEqnSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485590174.81519"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "507">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;HeatEquationSim, RungeKutta4&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485590174.815301"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "206"
+                  endingLineNumber = "206"
+                  offsetFromSymbolStart = "507">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+            timestampString = "485641327.228811"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
+            landmarkName = "runIndividualSim()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;PendulumSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485592603.432464"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;AdvectionEqnSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485592603.432685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "244">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;HeatEquationSim, RungeKutta4&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485592603.432851"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "201"
+                  endingLineNumber = "201"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Examples/HeatEquation/HeatEquationSim.hpp"
+            timestampString = "485592687.149711"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "_linkModelsToSim( SimState &amp; state )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/Examples/AdvectionEqn/AdvectionEqnSim.hpp"
+            timestampString = "485593583.457612"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "_linkModelsToSim( SimState &amp; state )"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/ODE_SimFramework/ModelList/ModelList.cpp"
+            timestampString = "485593603.840178"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "ModelList::addDiscrete( DiscreteModel * model , double computationFrequency )"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -681,62 +967,61 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485447651.161247"
+            filePath = "../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+            timestampString = "485594964.048756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158"
-            landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485447651.161247"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
-            landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485447647.949598"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485447896.10896"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "137"
-            endingLineNumber = "137"
-            landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
-            landmarkType = "5">
+            startingLineNumber = "195"
+            endingLineNumber = "195"
+            landmarkName = "runIndividualSim()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;PendulumSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485641220.175444"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;AdvectionEqnSim, RungeKutta4&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485641220.175657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Simulator&lt;HeatEquationSim, RKCashKarp&gt;::runIndividualSim()"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/ODE_SimFramework/Simulator/Simulator_Impl.hpp"
+                  timestampString = "485641220.175818"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "195"
+                  endingLineNumber = "195"
+                  offsetFromSymbolStart = "126">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

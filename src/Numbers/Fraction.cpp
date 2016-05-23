@@ -11,6 +11,7 @@
 
 template<>
 void Fraction::operator=( const double & val ){
+    printf("operator = double\n");
     *this = Fraction::decimal2fraction(val);
 }
 
@@ -51,6 +52,10 @@ Fraction::Fraction(){
     denominator = 1;
     complete = 0;
     positive = true;
+}
+
+Fraction::Fraction( double decimal ){
+    *this = Fraction::decimal2fraction(decimal);
 }
 
 Fraction::Fraction(int num, int denom ){

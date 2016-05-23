@@ -11,6 +11,8 @@
 #include "TestExample1.hpp"
 #include "NBodySim.hpp"
 #include "TestPendulumSim.hpp"
+#include "TestAdvectionEqn.hpp"
+#include "TestHeatEquationSim.hpp"
 
 
 
@@ -18,7 +20,9 @@ int main(int argc, const char * argv[]) {
     
     //NBodySim sim;
     //sim.runSim();
-    testPendulumSim("/Users/christianjhoward/history.txt");
+    //testPendulumSim("/Users/christianjhoward/history.txt");
+    //testAdvectionEqnSim("/Users/christianjhoward/history.txt");
+    testHeatEquationSim("/Users/christianjhoward/history.txt");
     
     //runExample1_ADELINE();
     //runExample1_NeuralKalman();

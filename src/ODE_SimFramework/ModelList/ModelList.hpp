@@ -47,7 +47,7 @@ public:
     // to the simulation
     //
     void addDynamics( DynamicModel * model );
-    void addDiscrete( DiscreteModel * model , int computationFrequency );
+    void addDiscrete( DiscreteModel * model , double computationFrequency );
     
     // Method to initialize models
     void initializeModels();

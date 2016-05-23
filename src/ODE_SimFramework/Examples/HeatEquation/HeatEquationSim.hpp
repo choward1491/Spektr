@@ -36,30 +36,32 @@
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
+#include "RKCashKarp.hpp"
 
 
-class HeatEquationSim : public Simulator<HeatEquationSim,ExplicitTrapezoidal> {
+class HeatEquationSim : public Simulator<HeatEquationSim,RKCashKarp> {
 public:
     
     HeatEquationSim(){
         timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 1000;
+        state.printFrequency = 100;
         numMC = 1;
         writeSimHistory = true;
+        
     }
     
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 50000);
+        addDiscrete(&tstep, 10000);
         addDynamics(&heatEqn);
     }
     void _connectModelsTogether(){
         
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 1;
+        return getTime() > 5;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));

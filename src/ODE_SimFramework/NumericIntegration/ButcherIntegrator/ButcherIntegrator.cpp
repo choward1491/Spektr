@@ -72,97 +72,25 @@ void ButcherIntegrator::setNumDimensions( int numDimensions ){
     }
     
 }
-void ButcherIntegrator::integrate( double time, double dt , double* & inOutState, DiffeqList & list){
-    static const bool isExplicit = btable.isExplicit();
+
+void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & inOutState, DiffeqList & list ){
+    double finalTime = time + dt;
+    double newTime = time;
+    double maxErr = 0.0;
     double * tmpState = inOutState;
+    bool isNotDone = true;
     inOutState = tmp;
     
-    if( btable.isAdaptive() ){
-        double finalTime = time + dt;
-        double newTime = time;
-        double maxErr = 0.0;
-        bool isNotDone = true;
+    while( isNotDone ){
+        maxErr = -1.0;
+        newTime = time;
         
-        while( isNotDone ){
-            maxErr = -1.0;
-            newTime = time;
-            
-            for(int i = 0; i < numDims; i++ ){
-                y1[i] = tmpState[i];
-                y2[i] = tmpState[i];
-            }
-        
-            if( isExplicit ){
-                for(int i = 0; i < btable.numSteps(); i++){
-                    
-                    // set tmp = y_n
-                    for(int j = 0; j < numDims; j++ ){
-                        tmp[j] = tmpState[j];
-                    }
-                    
-                    // compute Y = y_n + sum_{j} a(i,j) K_j
-                    for(int j = 0; j < i; j++ ){
-                        if( btable.a(i,j) != 0.0 ){
-                            for(int k = 0; k < numDims; k++ ){
-                                tmp[k] += (dt*btable.a(i, j))*K[j][k];
-                            }
-                        }
-                    }
-                    
-                    // compute K_i = f( t + ci*dt, Y )
-                    computeDerivatives( time + btable.c(i)*dt, K[i], list );
-                }
-            }
-            
-            
-            // Compute y_{n+1} = y_{n} + sum_{l} b(l)*K_l
-            for(int i = 0; i < numDims; i++ ){
-                for( int l = 0; l < btable.numSteps(); l++ ){
-                    if( btable.b(0, l) != 0.0 ){
-                        double coef = btable.b(0, l);
-                        //printf("b(0,%i) = %lf\n",l,coef);
-                        y1[i] += (dt*btable.b(0, l)*K[l][i]);
-                    }
-                    if( btable.b(1, l) != 0.0 ){
-                        double coef = btable.b(1, l);
-                        //printf("b(1,%i) = %lf\n",l,coef);
-                        y2[i] += (dt*btable.b(1, l)*K[l][i]);
-                    }
-                }
-                err[i] = 100.0*fabs( (y2[i] - y1[i])/ y1[i] );
-                maxErr = fmax(err[i],maxErr);
-            }
-            
-            //printf("Max Err = %0.9lf\n",maxErr);
-            double new_dt = newStepSize(dt, maxErr );
-            //printf("New Dt = %lf, dt = %lf\n",new_dt, dt);
-            newTime += new_dt;
-            if( new_dt >= dt ){
-                if( time + dt >= finalTime ){
-                    isNotDone = false;
-                }else{
-                    //printf("Adapting\n");
-                }
-                
-                for(int i = 0; i < numDims; i++ ){
-                    tmpState[i] = y2[i];
-                }
-                if( isNotDone ){
-                    for (int i = 0; i < list.size(); i++) {
-                        (*list[i]).update();
-                    }
-                }
-                time += dt;
-            }
-            
-            dt = fmin(new_dt,finalTime - time);
-            
+        for(int i = 0; i < numDims; i++ ){
+            y1[i] = tmpState[i];
+            y2[i] = tmpState[i];
         }
         
-        
-    }else{
-    
-        if( isExplicit ){
+        if( btable.isExplicit() ){
             for(int i = 0; i < btable.numSteps(); i++){
                 
                 // set tmp = y_n
@@ -182,24 +110,98 @@ void ButcherIntegrator::integrate( double time, double dt , double* & inOutState
                 // compute K_i = f( t + ci*dt, Y )
                 computeDerivatives( time + btable.c(i)*dt, K[i], list );
             }
-        }else{
-            
         }
         
         
         // Compute y_{n+1} = y_{n} + sum_{l} b(l)*K_l
-        for( int l = 0; l < btable.numSteps(); l++ ){
-            if( btable.b(0, l) != 0.0 ){
-                for(int i = 0; i < numDims; i++ ){
-                    tmpState[i] += (dt*btable.b(0, l)*K[l][i]);
+        for(int i = 0; i < numDims; i++ ){
+            for( int l = 0; l < btable.numSteps(); l++ ){
+                if( btable.b(0, l) != 0.0 ){
+                    y1[i] += (dt*btable.b(0, l)*K[l][i]);
                 }
+                if( btable.b(1, l) != 0.0 ){
+                    y2[i] += (dt*btable.b(1, l)*K[l][i]);
+                }
+            }
+            err[i] = fabs( (y2[i] - y1[i]) );
+            maxErr = fmax(err[i],maxErr);
+        }
+        
+        double new_dt = newStepSize(dt, maxErr );
+        
+        newTime += new_dt;
+        if( new_dt >= dt ){
+            if( time + dt >= finalTime ){
+                isNotDone = false;
+            }
+            
+            for(int i = 0; i < numDims; i++ ){
+                tmpState[i] = y2[i];
+            }
+            if( isNotDone ){
+                for (int i = 0; i < list.size(); i++) {
+                    (*list[i]).update();
+                }
+            }
+            time += dt;
+        }
+        
+        dt = fmin(new_dt,finalTime - time);
+    }
+    
+    // reassign correct pointer
+    inOutState = tmpState;
+
+}
+void ButcherIntegrator::nominalIntegration( double time, double dt , double* & inOutState, DiffeqList & list ){
+    double * tmpState = inOutState;
+    inOutState = tmp;
+    
+    if( btable.isExplicit() ){
+        for(int i = 0; i < btable.numSteps(); i++){
+            
+            // set tmp = y_n
+            for(int j = 0; j < numDims; j++ ){
+                tmp[j] = tmpState[j];
+            }
+            
+            // compute Y = y_n + sum_{j} a(i,j) K_j
+            for(int j = 0; j < i; j++ ){
+                if( btable.a(i,j) != 0.0 ){
+                    for(int k = 0; k < numDims; k++ ){
+                        tmp[k] += (dt*btable.a(i, j))*K[j][k];
+                    }
+                }
+            }
+            
+            // compute K_i = f( t + ci*dt, Y )
+            computeDerivatives( time + btable.c(i)*dt, K[i], list );
+        }
+    }else{
+        
+    }
+    
+    
+    // Compute y_{n+1} = y_{n} + sum_{l} b(l)*K_l
+    for( int l = 0; l < btable.numSteps(); l++ ){
+        if( btable.b(0, l) != 0.0 ){
+            for(int i = 0; i < numDims; i++ ){
+                tmpState[i] += (dt*btable.b(0, l)*K[l][i]);
             }
         }
     }
     
     // reassign correct pointer
     inOutState = tmpState;
-    
+
+}
+
+void ButcherIntegrator::integrate( double time, double dt , double* & inOutState, DiffeqList & list){
+    if( btable.isAdaptive() ){
+        adaptiveIntegration(time, dt, inOutState, list);
+    }else{
+        nominalIntegration(time, dt, inOutState, list);
+    }
 }
 
 void ButcherIntegrator::computeNewStep( double * y0, double* dydt, double dt, double * out){

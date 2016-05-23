@@ -40,7 +40,7 @@
 
 template<class Sim, class Integrator>
 Simulator<Sim,Integrator>::Simulator() {
-    queue.resize(20);
+    queue.resize(40);
 }
 
 
@@ -190,6 +190,7 @@ void Simulator<Sim,Integrator>::runIndividualSim(){
     Time newt(0,1);             // init model's next time to appear var
     SimTime* t = &state.time;   // get SimTime reference
     Scheduler* scheduler = &state.mlist.scheduler;  // reference scheduler
+    int numModels = 0;
     
     while ( !finishedSimulation() ){     // loop through sim
         
@@ -201,8 +202,11 @@ void Simulator<Sim,Integrator>::runIndividualSim(){
         newt = t->getFractionalTime() + model->getFracDt();
         scheduler->push( newt, model );
         
-        
         nextTime    = scheduler->getNextTime().convert<double>();// obtain time of future event
+        if( numModels == queue.size() ){ queue.resize(queue.size()*2); }
+        queue[numModels] = model;  // add model to queue that will run once all
+                            //models executing at current time have been seen
+        numModels++;
         if( tn < nextTime ){    // if the current time is different than the next
             dt          = tn - to;                              // obtain time step
             integrator.integrate(to, dt,                        // integrate state
@@ -214,13 +218,12 @@ void Simulator<Sim,Integrator>::runIndividualSim(){
             state.mlist.updateDynamicModels();
             
             // execute models in queue
-            while( queue.size() != 0 ){
-                model = queue.front(); queue.pop_back();
+            while( numModels != 0 ){
+                model = queue[numModels-1];
                 if( model != 0 ){ model->update(); }            // update discrete model
+                numModels--;
             }
-        }else{
-            queue.push_back(model); // add model to queue that will run
-                                    // once all models executing at current time have been seen
+            
         }
         
     }// end of simulation run
@@ -254,7 +257,7 @@ void Simulator<Sim,Integrator>::addDynamics( DynamicModel * model ){
 
 // interface method to add discrete model
 template<class Sim, class Integrator>
-void Simulator<Sim,Integrator>::addDiscrete( DiscreteModel * model , int computationFrequency ){
+void Simulator<Sim,Integrator>::addDiscrete( DiscreteModel * model , double computationFrequency ){
     state.mlist.addDiscrete(model, computationFrequency);
 }
 

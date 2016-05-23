@@ -58,7 +58,7 @@ public:
     // Sim history data printer
     //
     DataPrinter dataPrinter;
-    int printFrequency; // frequency the data printer will print to file
+    double printFrequency; // frequency the data printer will print to file
     
     
     // list of all the models

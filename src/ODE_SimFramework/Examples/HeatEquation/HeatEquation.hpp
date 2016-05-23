@@ -162,6 +162,7 @@ private:
             del = (x_pos[i]-m)/s;
             state[i] = 5*exp( -del*del );
         }
+        state[0] = 0.0;
     }
     
     

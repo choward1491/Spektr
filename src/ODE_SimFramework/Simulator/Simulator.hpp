@@ -80,7 +80,7 @@ public:
     void addDynamics( DynamicModel * model );
     
     // interface method to add discrete model
-    void addDiscrete( DiscreteModel * model , int computationFrequency );
+    void addDiscrete( DiscreteModel * model , double computationFrequency );
     
     
 protected:

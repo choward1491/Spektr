@@ -42,11 +42,10 @@ void ModelList::addDynamics( DynamicModel * model ){
     diffeqList.push_back(model);
     numStates += model->numDims();
 }
-void ModelList::addDiscrete( DiscreteModel * model , int computationFrequency ){
-    Time dt(1,computationFrequency);
+void ModelList::addDiscrete( DiscreteModel * model , double computationFrequency ){
     model->assignUpdateRate( computationFrequency );
     discreteList.push_back(model);
-    scheduler.push(dt, model);
+    scheduler.push(model->getFracDt(), model);
 }
 
 DynamicModel* ModelList::getDynamicsAt(int index){

@@ -41,6 +41,7 @@ public:
     
     
     Fraction();
+    Fraction( double decimal );
     Fraction(int num, int denom );
     Fraction(int complete, int rem_num, int rem_denom );
     template<typename T>
@@ -93,8 +94,8 @@ public:
 private:
     friend Fraction;
     
-    static void methodOfContinuousFractions( double val, Fraction & frac, double thresh = 0.005 );
-    static void MCF_helper( double val, Fraction & frac, double thresh = 0.005 );
+    static void methodOfContinuousFractions( double val, Fraction & frac, double thresh = 1e-8 );
+    static void MCF_helper( double val, Fraction & frac, double thresh = 1e-8 );
     
     int abs(int a){ if( a >= 0 ){ return a; }else{ return -a; } }
     bool sign( int a ){ return a>=0; }

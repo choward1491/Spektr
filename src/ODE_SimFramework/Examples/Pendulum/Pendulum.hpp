@@ -46,9 +46,9 @@ public:
      * \returns None
      */
     virtual void initialize(){
-        mass            = generator->rand() * 50 + 50;
-        dampening       = generator->rand() * 15;
-        lengthPendulum  = generator->rand() * 10;
+        mass            = 0*generator->rand() * 50 + 50;
+        dampening       = 0*generator->rand() * 15 + 15;
+        lengthPendulum  = 0*generator->rand() * 10 + 1;
         gravity         = 9.81;
         state[0]        = Constants::pi/3;
         state[1]        = Constants::pi/12;

@@ -36,22 +36,23 @@
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
+#include "RKCashKarp.hpp"
 
-class AdvectionEqnSim : public Simulator<AdvectionEqnSim,ExplicitTrapezoidal> {
+class AdvectionEqnSim : public Simulator<AdvectionEqnSim,RungeKutta4> {
 public:
     
     AdvectionEqnSim(){
         timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 1000;
+        state.printFrequency = 100;
         numMC = 1;
         writeSimHistory = true;
     }
     
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 10000);
+        addDiscrete(&tstep, 1000);
         addDynamics(&advectEqn);
     }
     void _connectModelsTogether(){
