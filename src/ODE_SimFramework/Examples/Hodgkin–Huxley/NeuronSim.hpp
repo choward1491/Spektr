@@ -36,29 +36,30 @@
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
+#include "RKCashKarp.hpp"
 
-class NeuronSim : public Simulator<NeuronSim,ExplicitTrapezoidal> {
+class NeuronSim : public Simulator<NeuronSim,RKCashKarp> {
 public:
     
     NeuronSim(){
         timer.start();
         std::string historyFile("history.txt");
         setSimHistoryPath(historyFile);
-        state.printFrequency = 5000;
+        state.printFrequency = 100;
         numMC = 1;
         writeSimHistory = true;
     }
     
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 10000);
+        addDiscrete(&tstep, 100);
         addDynamics(&neuron);
     }
     void _connectModelsTogether(){
         
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 1.0;
+        return getTime() > 10.0;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));

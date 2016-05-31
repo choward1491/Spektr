@@ -37,14 +37,13 @@ void ButcherIntegrator::setTolerance( double tol ){
     
 }
 
-ButcherIntegrator::ButcherIntegrator():numDims(-1),tmp(0),err(0),y1(0),y2(0),tol(1e-5){
+ButcherIntegrator::ButcherIntegrator():numDims(-1),tmp(0),y1(0),y2(0),tol(1e-5){
 
 }
 
 ButcherIntegrator::~ButcherIntegrator(){
     deleteVectorPointers(K);
     if( tmp ){delete [] tmp; tmp = 0;}
-    if( err ){ delete [] err; err = 0; }
     if( y1 ){ delete [] y1; y1 = 0; }
     if( y2 ){ delete [] y2; y2 = 0; }
 }
@@ -61,8 +60,6 @@ void ButcherIntegrator::setNumDimensions( int numDimensions ){
     
     // allocate adaptive stuff if needed
     if( btable.isAdaptive() ){
-        if( err ){ delete [] err; err = 0; }
-        err = new double[numDims]();
         
         if( y1 ){ delete [] y1; y1 = 0; }
         y1 = new double[numDims]();
@@ -107,6 +104,12 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
                     }
                 }
                 
+                if( i != 0 ){
+                    for (int k = 0; k < list.size(); k++) {
+                        list[k]->update();
+                    }
+                }
+                
                 // compute K_i = f( t + ci*dt, Y )
                 computeDerivatives( time + btable.c(i)*dt, K[i], list );
             }
@@ -123,8 +126,7 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
                     y2[i] += (dt*btable.b(1, l)*K[l][i]);
                 }
             }
-            err[i] = fabs( (y2[i] - y1[i]) );
-            maxErr = fmax(err[i],maxErr);
+            maxErr = fmax(fabs( (y2[i] - y1[i]) / y1[i] ),maxErr);
         }
         
         double new_dt = newStepSize(dt, maxErr );
@@ -171,6 +173,12 @@ void ButcherIntegrator::nominalIntegration( double time, double dt , double* & i
                     for(int k = 0; k < numDims; k++ ){
                         tmp[k] += (dt*btable.a(i, j))*K[j][k];
                     }
+                }
+            }
+            
+            if( i != 0 ){
+                for (int k = 0; k < list.size(); k++) {
+                    list[k]->update();
                 }
             }
             

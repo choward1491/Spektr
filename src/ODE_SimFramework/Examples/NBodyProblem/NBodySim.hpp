@@ -71,7 +71,7 @@ public:
         }
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 9.0;
+        return getTime() > 300.0;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));

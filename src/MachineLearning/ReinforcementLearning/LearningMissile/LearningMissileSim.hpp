@@ -1,8 +1,8 @@
 //
-//  HeatEquationSim.hpp
+//  LearningMissileSim.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 4/17/16.
+//  Created by Christian J Howard on 5/24/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,41 +27,32 @@
 //
 //
 
-#ifndef HeatEquationSim_hpp
-#define HeatEquationSim_hpp
+#ifndef LearningMissileSim_hpp
+#define LearningMissileSim_hpp
 
-#include "Simulator.hpp"
-#include "HeatEquation.hpp"
+#include <stdio.h>
 #include "ExplicitEuler.hpp"
-#include "RungeKutta4.hpp"
-#include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
-#include "RKCashKarp.hpp"
+#include "Simulator.hpp"
 
-
-class HeatEquationSim : public Simulator<HeatEquationSim,RKCashKarp> {
+class LearningMissileSim : public Simulator<LearningMissileSim ,ExplicitEuler> {
 public:
     
-    HeatEquationSim(){
+    LearningMissileSim (){
         timer.start();
-        std::string historyFile("history.txt");
-        setSimHistoryPath(historyFile);
-        state.printFrequency = 100;
-        numMC = 1;
-        writeSimHistory = true;
-        
+        numMC = 20;
+        writeSimHistory = false;
     }
     
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 1000);
-        addDynamics(&heatEqn);
+        addDiscrete(&tstep, 100);
     }
     void _connectModelsTogether(){
         
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 5;
+        return getTime() > 10.0;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));
@@ -77,8 +68,7 @@ private:
     
     Timer timer;
     TimeStep tstep;
-    HeatEquation heatEqn;
     
 };
 
-#endif /* HeatEquationSim_hpp */
+#endif /* LearningMissileSim_hpp */

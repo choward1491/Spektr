@@ -13,6 +13,8 @@
 #include "TestPendulumSim.hpp"
 #include "TestAdvectionEqn.hpp"
 #include "TestHeatEquationSim.hpp"
+#include "TestNeuronSim.hpp"
+#include "NonlinearSim.h"
 
 
 
@@ -20,42 +22,17 @@ int main(int argc, const char * argv[]) {
     
     //NBodySim sim;
     //sim.runSim();
+    NonlinearSim sim;
+    sim.runSim();
+    
     //testPendulumSim("/Users/christianjhoward/history.txt");
     //testAdvectionEqnSim("/Users/christianjhoward/history.txt");
-    testHeatEquationSim("/Users/christianjhoward/history.txt");
+    //testHeatEquationSim("/Users/christianjhoward/history.txt");
+    //testNeuronSim("/Users/christianjhoward/history.txt");
     
     //runExample1_ADELINE();
     //runExample1_NeuralKalman();
     //runExample1_UKF();
-    /*
-    ANN::Network net({1,1});
-    
-    std::vector<double> x{1, 5}, y{3, 11};
-    
-    double error = 0, eps = 1e-2;
-    std::vector<double> input(1),output(1);
-    std::vector<double> grad(2), dEdO(1);
-    for(int i = 0; i < 3000; i++ ){
-        error = 0;
-        dEdO[0] = 0;
-        for( int j = 0; j < 2; j++ ){ grad[j] = 0.0; }
-        
-        for( int j = 0; j < x.size(); j++ ){
-            input[0] = x[j];
-            net(input,output);
-            double derr = output[0] - y[j];
-            error += 0.5*derr*derr;
-            dEdO[0] += derr;
-            net.backprop(dEdO, grad);
-        }
-        
-        for(int j = 0; j < grad.size(); j++ ){
-            net.w()[j] -= eps*grad[j];
-        }
-        printf("Error = %0.8lf, Grad = [%lf, %lf], Weights = [%lf, %lf]\n",error, grad[0], grad[1], net.weightAt(0), net.weightAt(1));
-    }
-    */
-    
     
     // exit
     return 0;

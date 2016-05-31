@@ -35,7 +35,7 @@ private:
     void nominalIntegration( double time, double dt , double* & inOutState, DiffeqList & list );
     std::vector<double*> K;
     double * tmp;
-    double * err, *y1, *y2; // for adaptive stuff
+    double *y1, *y2; // for adaptive stuff
     std::vector<bool>    hasComputed;
     
     

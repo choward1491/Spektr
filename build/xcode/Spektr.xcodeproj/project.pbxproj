@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD11677F1CFD49ED0052FA34 /* NonlinearModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD11677D1CFD49ED0052FA34 /* NonlinearModel.cpp */; };
 		AD267D4D1CED587500E3EB69 /* PointBodyModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD267D4B1CED587500E3EB69 /* PointBodyModel.cpp */; };
 		AD39C7411CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */; };
 		AD39C7421CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD39C73F1CEEEB3F001658F8 /* RKCashKarp.cpp */; };
@@ -19,6 +20,9 @@
 		AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
 		AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */; };
+		AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
+		AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD9634271CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634281CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634291CD99BFE00AAB6D8 /* NeuralFilter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */; };
@@ -331,6 +335,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AD11677C1CFD49DA0052FA34 /* NonlinearSim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NonlinearSim.h; path = Examples/NonlinearTest/NonlinearSim.h; sourceTree = "<group>"; };
+		AD11677D1CFD49ED0052FA34 /* NonlinearModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = NonlinearModel.cpp; path = Examples/NonlinearTest/NonlinearModel.cpp; sourceTree = "<group>"; };
+		AD11677E1CFD49ED0052FA34 /* NonlinearModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = NonlinearModel.hpp; path = Examples/NonlinearTest/NonlinearModel.hpp; sourceTree = "<group>"; };
 		AD267D4A1CED581400E3EB69 /* NBodySim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = NBodySim.hpp; path = Examples/NBodyProblem/NBodySim.hpp; sourceTree = "<group>"; };
 		AD267D4B1CED587500E3EB69 /* PointBodyModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PointBodyModel.cpp; path = Examples/NBodyProblem/PointBodyModel.cpp; sourceTree = "<group>"; };
 		AD267D4C1CED587500E3EB69 /* PointBodyModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = PointBodyModel.hpp; path = Examples/NBodyProblem/PointBodyModel.hpp; sourceTree = "<group>"; };
@@ -366,6 +373,10 @@
 		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
 		AD623E911CE566CA0072FF07 /* TestNeuralKalmanFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralKalmanFilter.hpp; sourceTree = "<group>"; };
+		AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LearningMissileSim.cpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.cpp; sourceTree = "<group>"; };
+		AD704E371CF5532600BF5757 /* LearningMissileSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LearningMissileSim.hpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.hpp; sourceTree = "<group>"; };
+		AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GSA_Particle.cpp; path = GSA/GSA_Particle.cpp; sourceTree = "<group>"; };
+		AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GSA_Particle.hpp; path = GSA/GSA_Particle.hpp; sourceTree = "<group>"; };
 		AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralFilter.cpp; sourceTree = "<group>"; };
 		AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NeuralFilter.hpp; sourceTree = "<group>"; };
 		AD96342D1CD9B61400AAB6D8 /* TestNeuralFilter1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralFilter1.hpp; sourceTree = "<group>"; };
@@ -538,6 +549,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD11677B1CFD49B80052FA34 /* NonlinearTest */ = {
+			isa = PBXGroup;
+			children = (
+				AD11677C1CFD49DA0052FA34 /* NonlinearSim.h */,
+				AD11677D1CFD49ED0052FA34 /* NonlinearModel.cpp */,
+				AD11677E1CFD49ED0052FA34 /* NonlinearModel.hpp */,
+			);
+			name = NonlinearTest;
+			sourceTree = "<group>";
+		};
 		AD267D491CED57C800E3EB69 /* N-Body Problem */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +661,7 @@
 		AD5CE1BD1C9A551C00E6CC2A /* Examples */ = {
 			isa = PBXGroup;
 			children = (
+				AD11677B1CFD49B80052FA34 /* NonlinearTest */,
 				AD267D491CED57C800E3EB69 /* N-Body Problem */,
 				AD4061A41CC5EAFB0000D18A /* Hodgkin–Huxley */,
 				AD40619C1CC450050000D18A /* AdvectionEqn */,
@@ -703,6 +725,79 @@
 			children = (
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		AD704E2E1CF5522600BF5757 /* ReinforcementLearning */ = {
+			isa = PBXGroup;
+			children = (
+				AD704E321CF552B300BF5757 /* Examples */,
+			);
+			name = ReinforcementLearning;
+			sourceTree = "<group>";
+		};
+		AD704E2F1CF5523200BF5757 /* SupervisedLearning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = SupervisedLearning;
+			sourceTree = "<group>";
+		};
+		AD704E301CF5525600BF5757 /* UnsupervisedLearning */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = UnsupervisedLearning;
+			sourceTree = "<group>";
+		};
+		AD704E311CF5526400BF5757 /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				ADB28FC41CA3802A00E738F2 /* LocalRegression */,
+				ADF8DCD01C895BAB004C682C /* ANN */,
+			);
+			name = Algorithms;
+			sourceTree = "<group>";
+		};
+		AD704E321CF552B300BF5757 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				AD704E331CF552BB00BF5757 /* LearnMissile */,
+			);
+			name = Examples;
+			sourceTree = "<group>";
+		};
+		AD704E331CF552BB00BF5757 /* LearnMissile */ = {
+			isa = PBXGroup;
+			children = (
+				AD704E351CF552E600BF5757 /* Trainer */,
+				AD704E341CF552DF00BF5757 /* Sim */,
+			);
+			name = LearnMissile;
+			sourceTree = "<group>";
+		};
+		AD704E341CF552DF00BF5757 /* Sim */ = {
+			isa = PBXGroup;
+			children = (
+				AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */,
+				AD704E371CF5532600BF5757 /* LearningMissileSim.hpp */,
+			);
+			name = Sim;
+			sourceTree = "<group>";
+		};
+		AD704E351CF552E600BF5757 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Trainer;
+			sourceTree = "<group>";
+		};
+		AD94BC361CFCA1E400E8A846 /* GSA */ = {
+			isa = PBXGroup;
+			children = (
+				AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */,
+				AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */,
+			);
+			name = GSA;
 			sourceTree = "<group>";
 		};
 		ADB28FC41CA3802A00E738F2 /* LocalRegression */ = {
@@ -949,8 +1044,10 @@
 		ADF8DCCF1C895BAB004C682C /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
-				ADB28FC41CA3802A00E738F2 /* LocalRegression */,
-				ADF8DCD01C895BAB004C682C /* ANN */,
+				AD704E311CF5526400BF5757 /* Algorithms */,
+				AD704E301CF5525600BF5757 /* UnsupervisedLearning */,
+				AD704E2F1CF5523200BF5757 /* SupervisedLearning */,
+				AD704E2E1CF5522600BF5757 /* ReinforcementLearning */,
 			);
 			path = MachineLearning;
 			sourceTree = "<group>";
@@ -1085,6 +1182,7 @@
 		ADF8DD141C895BAB004C682C /* DerivativeFree */ = {
 			isa = PBXGroup;
 			children = (
+				AD94BC361CFCA1E400E8A846 /* GSA */,
 				ADF8DD151C895BAB004C682C /* PSO */,
 			);
 			path = DerivativeFree;
@@ -1418,7 +1516,9 @@
 				ADF8DD471C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4B1C895BAB004C682C /* Quaternion.cpp in Sources */,
 				AD267D4D1CED587500E3EB69 /* PointBodyModel.cpp in Sources */,
+				AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */,
 				AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */,
+				AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */,
 				ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */,
 				ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				AD39C7411CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */,
@@ -1437,6 +1537,7 @@
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */,
 				ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */,
+				AD11677F1CFD49ED0052FA34 /* NonlinearModel.cpp in Sources */,
 				ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1593,6 +1694,7 @@
 				ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF41C895BAB004C682C /* FiniteVolume.cpp in Sources */,
 				ADF8DD901C895BAB004C682C /* DataSet.cpp in Sources */,
+				AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */,
 				ADF8DDD01C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAF1C895BAB004C682C /* DataPrinter.cpp in Sources */,
 				ADF8DDA51C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,

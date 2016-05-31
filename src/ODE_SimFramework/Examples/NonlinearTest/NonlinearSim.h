@@ -1,8 +1,8 @@
 //
-//  HeatEquationSim.hpp
+//  NonlinearSim.h
 //  Spektr
 //
-//  Created by Christian J Howard on 4/17/16.
+//  Created by Christian J Howard on 5/30/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,41 +27,39 @@
 //
 //
 
-#ifndef HeatEquationSim_hpp
-#define HeatEquationSim_hpp
+#ifndef NonlinearSim_h
+#define NonlinearSim_h
 
 #include "Simulator.hpp"
-#include "HeatEquation.hpp"
 #include "ExplicitEuler.hpp"
 #include "RungeKutta4.hpp"
 #include "ExplicitTrapezoidal.hpp"
 #include "Timer.hpp"
 #include "RKCashKarp.hpp"
+#include "NonlinearModel.hpp"
 
-
-class HeatEquationSim : public Simulator<HeatEquationSim,RKCashKarp> {
+class NonlinearSim : public Simulator<NonlinearSim,RKCashKarp> {
 public:
     
-    HeatEquationSim(){
+    NonlinearSim(){
         timer.start();
-        std::string historyFile("history.txt");
+        std::string historyFile("/Users/christianjhoward/history.txt");
         setSimHistoryPath(historyFile);
         state.printFrequency = 100;
         numMC = 1;
         writeSimHistory = true;
-        
+        integrator.setTolerance(1e-10);
     }
     
     
     void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 1000);
-        addDynamics(&heatEqn);
+        addDynamics(&nmodel);
+
     }
     void _connectModelsTogether(){
-        
     }
     bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 5;
+        return getTime() > 16.0;
     }
     void _finalizeMonteCarloRun(){
         printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));
@@ -77,8 +75,8 @@ private:
     
     Timer timer;
     TimeStep tstep;
-    HeatEquation heatEqn;
+    NonlinearModel nmodel;
     
 };
 
-#endif /* HeatEquationSim_hpp */
+#endif /* NonlinearSim_h */
