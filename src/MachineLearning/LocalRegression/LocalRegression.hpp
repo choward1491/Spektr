@@ -31,27 +31,41 @@
 #define LocalRegression_h
 
 #include "KDTree.hpp"
+#include "Matrix.hpp"
 
 
 template<   class Coordinate,
-            class Data,
-            template <typename,typename,typename> LocalFitter,
+            class Cost, class Basis,
+            class WeightFunc,
             template <int,typename,typename> class DistMeas = L2_Norm
             >
 class LocalRegression {
 public:
+    typedef double Data;
     typedef KDTree<Coordinate,Data,DistMeas> Tree;
-    typedef std::vector<Coordinate> CoordList;
-    typedef std::vector<Data>       DataList;
+    typedef Tree::NNSet Neighbors;
     
     LocalRegression();
-    LocalRegression( const CoordList & coordinates, const DataList & values );
-    void setDataSet( const CoordList & coordinates, const DataList & values );
+    LocalRegression( Tree & tree );
+    void setDataSet( Tree & tree );
+    void setNumNeighborsForFit( int nn_fit );
     Data operator()( const Coordinate & c ) const;
     
+    Basis basis;
+    WeightFunc wfunc;
+    
 private:
-    Tree tree;
-    LocalFitter<Coordinate,Data,Tree> fitter;
+    
+    Data solveNormalEqn( const Coordinate & c, Neighbors & nset );
+    void scale( const Coordinate & lb, const Coordinate rb, const Coordinate & in, Coordinate & out);
+    
+    la::SMat<double> A;
+    la::Mat<double>  y;
+    la::Mat<double> coef;
+    
+    int numNeighbors;
+    Tree * tree;
+    
     
 };
 

@@ -31,8 +31,9 @@
 #define LocalFitter_h
 
 #include "KDTree.hpp"
+#include "Matrix.hpp"
 
-template< class Coordinate, class Data, class Tree, class Cost >
+template< class Coordinate, class Data, class Tree, class Cost, class Basis >
 class LocalFitter {
 public:
     
@@ -40,6 +41,8 @@ public:
     
     
 private:
+    
+    
     
     // SMat hessian;
     // Mat  grad;

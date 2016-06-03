@@ -33,37 +33,106 @@
 #include "LocalRegression.hpp"
 
 #define TEMPLATE_HEADER template<   class Coordinate,\
-                                    class Data,\
-                                    template <typename,typename> LocalFitter,\
-                                    template <int,typename,typename> class DistMeas >
-#define LR LocalRegression<Coordinate,Data,LocalFitter,DistMeas>
+                                    class Cost, class Basis, \
+                                    class WeightFunc, \
+                                    template <int,typename,typename> class DistMeas \
+                                    >
+#define LR LocalRegression<Coordinate,Cost,Basis,WeightFunc,DistMeas>
 
 
 
-/*
-typedef KDTree<Coordinate,Data,DistMeas> Tree;
-typedef std::vector<Coordinate> CoordList;
-typedef std::vector<Data>       DataList;
- Weight wfunc;
- Tree storage;
- */
+
 
 TEMPLATE_HEADER
-LR::LocalRegression(){}
-
-TEMPLATE_HEADER
-LR::LocalRegression( const CoordList & c, const DataList & v ):tree(c,v){}
-
-TEMPLATE_HEADER
-void LR::setDataSet( const CoordList & coordinates, const DataList & values ){
-    tree.setData(coordinates,values);
+LR::LocalRegression():tree(0){
+    A.resize( Basis::size, Basis::size );
+    y.resize( Basis::size, 1);
 }
 
 TEMPLATE_HEADER
-Data LR::operator()( const Coordinate & c ) const{
-    Tree::NNSet soln;
-    tree.findNearestNeighbors( c, LocalFitter<Coordinate,Data>::NumNeighbors, soln );
-    return fitter( soln );
+LR::LocalRegression( Tree & tree_ ):tree(&tree_){
+    A.resize( Basis::size, Basis::size );
+    y.resize( Basis::size, 1);
+}
+
+TEMPLATE_HEADER
+void LR::setDataSet( Tree & tree_ ){
+    tree = &tree_;
+}
+
+TEMPLATE_HEADER
+void LR::setNumNeighborsForFit( int nn_fit ){
+    numNeighbors = nn_fit;
+}
+
+
+TEMPLATE_HEADER
+void LR::scale( const Coordinate & lb, const Coordinate rb, const Coordinate & in, Coordinate & out){
+    for( int i = 0; i < Coordinate::Dims; i++){
+        out[i] = (in[i] - lb[i])/(rb[i]-lb[i]);
+    }
+}
+
+
+TEMPLATE_HEADER
+LR::Data LR::solveNormalEqn( const Coordinate & c, Neighbors & nset ){
+    
+    // find bounds for points
+    Coordinate lb = nset[0].point, rb = nset[0].point, tmp;
+    
+    for( int j = 0; j < Coordinate::Dims ; j++ ){
+        for( int i = 1; i < nset.size(); i++ ){
+            lb[j] = min(nset[i].point[j],lb[j]);
+            rb[j] = max(nset[i].point[j],rb[j]);
+        }
+    }
+    
+    // compute weights
+    std::vector<double> weights(nset.size());
+    wfunc(weights,nset);
+    
+    
+    // store values for A
+    A = 0;
+    for(int j = 0; j < Basis::size; j++ ){
+        for( int k = j; k < Basis::size; k++ ){
+            for( int i = 0; i < nset.size(); i++ ){
+                scale(lb,rb,nset[i].point,tmp);
+                A(j,k) += basis(k, tmp)*basis(j, tmp)*weights[i];
+            }
+        }
+    }
+    
+    
+    // store values for y
+    y = 0;
+    for(int j = 0; j < Basis::size; j++ ){
+        for( int i = 0; i < nset.size(); i++ ){
+            scale(lb,rb,nset[i].point,tmp);
+            y[j] += basis(j, tmp)*weights[i]*nset[i].data;
+        }
+    }
+    
+    // solve system of equations
+    coefs = y / A;
+    
+    // compute point
+    Data output = 0;
+    
+    for( int i = 0; i < Basis::size; i++ ){
+        scale(lb,rb,c,tmp);
+        output += coefs[i]*basis(i,tmp);
+    }
+    
+    return output;
+}
+
+TEMPLATE_HEADER
+LR::Data LR::operator()( const Coordinate & c ) const{
+    Neighbors soln;
+    tree->findNearestNeighbors( c, numNeighbors, soln );
+    return computeNormalEqn( c, soln );
+    
 }
 
 
