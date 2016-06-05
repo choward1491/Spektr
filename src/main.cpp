@@ -6,33 +6,13 @@
 //
 
 #include <string>
-#include "TestNeuralKalmanFilter.hpp"
-#include "Network.hpp"
-#include "TestExample1.hpp"
-#include "NBodySim.hpp"
-#include "TestPendulumSim.hpp"
-#include "TestAdvectionEqn.hpp"
-#include "TestHeatEquationSim.hpp"
-#include "TestNeuronSim.hpp"
-#include "NonlinearSim.h"
-
-
+#include <math.h>
+#include "LocalRegression.hpp"
+#include "TestLocalRegression1D.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    //NBodySim sim;
-    //sim.runSim();
-    NonlinearSim sim;
-    sim.runSim();
-    
-    //testPendulumSim("/Users/christianjhoward/history.txt");
-    //testAdvectionEqnSim("/Users/christianjhoward/history.txt");
-    //testHeatEquationSim("/Users/christianjhoward/history.txt");
-    //testNeuronSim("/Users/christianjhoward/history.txt");
-    
-    //runExample1_ADELINE();
-    //runExample1_NeuralKalman();
-    //runExample1_UKF();
+    testLocalRegression1D();
     
     // exit
     return 0;

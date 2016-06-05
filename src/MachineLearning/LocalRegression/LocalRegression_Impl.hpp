@@ -31,6 +31,7 @@
 #define LocalRegression_Impl_h
 
 #include "LocalRegression.hpp"
+#include <math.h>
 
 #define TEMPLATE_HEADER template<   class Coordinate,\
                                     class Cost, class Basis, \
@@ -45,14 +46,10 @@
 
 TEMPLATE_HEADER
 LR::LocalRegression():tree(0){
-    A.resize( Basis::size, Basis::size );
-    y.resize( Basis::size, 1);
 }
 
 TEMPLATE_HEADER
 LR::LocalRegression( Tree & tree_ ):tree(&tree_){
-    A.resize( Basis::size, Basis::size );
-    y.resize( Basis::size, 1);
 }
 
 TEMPLATE_HEADER
@@ -75,17 +72,24 @@ void LR::scale( const Coordinate & lb, const Coordinate rb, const Coordinate & i
 
 
 TEMPLATE_HEADER
-LR::Data LR::solveNormalEqn( const Coordinate & c, Neighbors & nset ){
+typename LR::Data LR::solveNormalEqn( Coordinate & c, Neighbors & nset ){
+    
+    if( y.size().rows != Basis::size ){
+        A.resize( Basis::size, Basis::size );
+        y.resize( Basis::size, 1);
+    }
     
     // find bounds for points
     Coordinate lb = nset[0].point, rb = nset[0].point, tmp;
     
     for( int j = 0; j < Coordinate::Dims ; j++ ){
         for( int i = 1; i < nset.size(); i++ ){
-            lb[j] = min(nset[i].point[j],lb[j]);
-            rb[j] = max(nset[i].point[j],rb[j]);
+            lb[j] = fmin(nset[i].point[j],lb[j]);
+            rb[j] = fmax(nset[i].point[j],rb[j]);
         }
     }
+    
+    
     
     // compute weights
     std::vector<double> weights(nset.size());
@@ -114,24 +118,24 @@ LR::Data LR::solveNormalEqn( const Coordinate & c, Neighbors & nset ){
     }
     
     // solve system of equations
-    coefs = y / A;
+    la::solve(A,y,coef);
     
     // compute point
     Data output = 0;
     
     for( int i = 0; i < Basis::size; i++ ){
         scale(lb,rb,c,tmp);
-        output += coefs[i]*basis(i,tmp);
+        output += coef[i]*basis(i,tmp);
     }
     
     return output;
 }
 
 TEMPLATE_HEADER
-LR::Data LR::operator()( const Coordinate & c ) const{
+typename LR::Data LR::operator()( Coordinate & c ) {
     Neighbors soln;
     tree->findNearestNeighbors( c, numNeighbors, soln );
-    return computeNormalEqn( c, soln );
+    return solveNormalEqn( c, soln );
     
 }
 

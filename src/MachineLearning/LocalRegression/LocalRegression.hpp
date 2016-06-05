@@ -35,7 +35,7 @@
 
 
 template<   class Coordinate,
-            class Cost, class Basis,
+            class Cost, class Basis_,
             class WeightFunc,
             template <int,typename,typename> class DistMeas = L2_Norm
             >
@@ -43,20 +43,21 @@ class LocalRegression {
 public:
     typedef double Data;
     typedef KDTree<Coordinate,Data,DistMeas> Tree;
-    typedef Tree::NNSet Neighbors;
+    typedef typename Tree::NNSet Neighbors;
+    typedef Basis_ Basis;
     
     LocalRegression();
     LocalRegression( Tree & tree );
     void setDataSet( Tree & tree );
     void setNumNeighborsForFit( int nn_fit );
-    Data operator()( const Coordinate & c ) const;
+    Data operator()( Coordinate & c ) ;
     
     Basis basis;
     WeightFunc wfunc;
     
 private:
     
-    Data solveNormalEqn( const Coordinate & c, Neighbors & nset );
+    Data solveNormalEqn( Coordinate & c, Neighbors & nset );
     void scale( const Coordinate & lb, const Coordinate rb, const Coordinate & in, Coordinate & out);
     
     la::SMat<double> A;

@@ -23,6 +23,7 @@
 		AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */; };
 		AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
+		AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */; };
 		AD9634271CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634281CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634291CD99BFE00AAB6D8 /* NeuralFilter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */; };
@@ -79,7 +80,6 @@
 		AD9A752E1CCD430000615C78 /* SymmetricSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCC1C895BAB004C682C /* SymmetricSolver.hpp */; };
 		AD9A752F1CCD430000615C78 /* TriDiagSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCD1C895BAB004C682C /* TriDiagSolver.hpp */; };
 		AD9A75301CCD430000615C78 /* UpperSolver.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCCE1C895BAB004C682C /* UpperSolver.hpp */; };
-		AD9A75311CCD430000615C78 /* LocalFitter.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */; };
 		AD9A75321CCD430000615C78 /* LocalRegression.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */; };
 		AD9A75331CCD430000615C78 /* LocalRegression_Impl.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */; };
 		AD9A75341CCD430000615C78 /* ActivationFuncs.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD21C895BAB004C682C /* ActivationFuncs.hpp */; };
@@ -377,6 +377,8 @@
 		AD704E371CF5532600BF5757 /* LearningMissileSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LearningMissileSim.hpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.hpp; sourceTree = "<group>"; };
 		AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GSA_Particle.cpp; path = GSA/GSA_Particle.cpp; sourceTree = "<group>"; };
 		AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GSA_Particle.hpp; path = GSA/GSA_Particle.hpp; sourceTree = "<group>"; };
+		AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression1D.cpp; sourceTree = "<group>"; };
+		AD957EDD1D04AA5D004204AE /* TestLocalRegression1D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestLocalRegression1D.hpp; sourceTree = "<group>"; };
 		AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralFilter.cpp; sourceTree = "<group>"; };
 		AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NeuralFilter.hpp; sourceTree = "<group>"; };
 		AD96342D1CD9B61400AAB6D8 /* TestNeuralFilter1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralFilter1.hpp; sourceTree = "<group>"; };
@@ -386,7 +388,6 @@
 		AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EulerAngles.hpp; sourceTree = "<group>"; };
 		ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression.hpp; path = LocalRegression/LocalRegression.hpp; sourceTree = "<group>"; };
 		ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression_Impl.hpp; path = LocalRegression/LocalRegression_Impl.hpp; sourceTree = "<group>"; };
-		ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalFitter.hpp; path = LocalRegression/LocalFitter/LocalFitter.hpp; sourceTree = "<group>"; };
 		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
 		ADB461241C9F35200088FF7C /* Simulator_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Simulator_Impl.hpp; path = Simulator/Simulator_Impl.hpp; sourceTree = "<group>"; };
 		ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestPendulumSim.hpp; sourceTree = "<group>"; };
@@ -800,22 +801,61 @@
 			name = GSA;
 			sourceTree = "<group>";
 		};
-		ADB28FC41CA3802A00E738F2 /* LocalRegression */ = {
+		AD957ED81D04A9E7004204AE /* Sim Tests */ = {
 			isa = PBXGroup;
 			children = (
-				ADB28FC71CA38CCA00E738F2 /* LocalFitter */,
-				ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */,
-				ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */,
+				ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */,
+				AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */,
+				AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */,
+				AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */,
+			);
+			name = "Sim Tests";
+			sourceTree = "<group>";
+		};
+		AD957ED91D04A9FE004204AE /* Filter Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DD3B1C895BAB004C682C /* TestExample1.hpp */,
+				AD96342D1CD9B61400AAB6D8 /* TestNeuralFilter1.hpp */,
+				AD623E911CE566CA0072FF07 /* TestNeuralKalmanFilter.hpp */,
+			);
+			name = "Filter Tests";
+			sourceTree = "<group>";
+		};
+		AD957EDA1D04AA29004204AE /* Optimization Tests */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DD3A1C895BAB004C682C /* TestCostFunc.h */,
+				ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */,
+				ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */,
+			);
+			name = "Optimization Tests";
+			sourceTree = "<group>";
+		};
+		AD957EDB1D04AA38004204AE /* Machine Learning Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AD957EDF1D04D261004204AE /* LocalRegression */,
+			);
+			name = "Machine Learning Tests";
+			sourceTree = "<group>";
+		};
+		AD957EDF1D04D261004204AE /* LocalRegression */ = {
+			isa = PBXGroup;
+			children = (
+				AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */,
+				AD957EDD1D04AA5D004204AE /* TestLocalRegression1D.hpp */,
 			);
 			name = LocalRegression;
 			sourceTree = "<group>";
 		};
-		ADB28FC71CA38CCA00E738F2 /* LocalFitter */ = {
+		ADB28FC41CA3802A00E738F2 /* LocalRegression */ = {
 			isa = PBXGroup;
 			children = (
-				ADB28FC81CA38EF200E738F2 /* LocalFitter.hpp */,
+				ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */,
+				ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */,
 			);
-			name = LocalFitter;
+			name = LocalRegression;
 			sourceTree = "<group>";
 		};
 		ADB461251C9F35280088FF7C /* Simulator */ = {
@@ -1273,16 +1313,10 @@
 		ADF8DD391C895BAB004C682C /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DD3A1C895BAB004C682C /* TestCostFunc.h */,
-				ADF8DD3B1C895BAB004C682C /* TestExample1.hpp */,
-				ADF8DD3C1C895BAB004C682C /* TestMPSO1.hpp */,
-				ADF8DD3D1C895BAB004C682C /* TestPSO1.hpp */,
-				ADB461261C9F4DCB0088FF7C /* TestPendulumSim.hpp */,
-				AD40619B1CC40E8E0000D18A /* TestHeatEquationSim.hpp */,
-				AD4061A31CC456330000D18A /* TestAdvectionEqn.hpp */,
-				AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */,
-				AD96342D1CD9B61400AAB6D8 /* TestNeuralFilter1.hpp */,
-				AD623E911CE566CA0072FF07 /* TestNeuralKalmanFilter.hpp */,
+				AD957EDB1D04AA38004204AE /* Machine Learning Tests */,
+				AD957EDA1D04AA29004204AE /* Optimization Tests */,
+				AD957ED91D04A9FE004204AE /* Filter Tests */,
+				AD957ED81D04A9E7004204AE /* Sim Tests */,
 			);
 			name = tests;
 			path = ../../tests;
@@ -1490,6 +1524,7 @@
 				ADF8DDFB1C895BAB004C682C /* Timer.cpp in Sources */,
 				ADF8DD8C1C895BAB004C682C /* ActivationFuncs.cpp in Sources */,
 				ADF8DD981C895BAB004C682C /* Node.cpp in Sources */,
+				AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */,
 				ADF8DD951C895BAB004C682C /* Network.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
@@ -1603,7 +1638,6 @@
 				AD9A752E1CCD430000615C78 /* SymmetricSolver.hpp in Sources */,
 				AD9A752F1CCD430000615C78 /* TriDiagSolver.hpp in Sources */,
 				AD9A75301CCD430000615C78 /* UpperSolver.hpp in Sources */,
-				AD9A75311CCD430000615C78 /* LocalFitter.hpp in Sources */,
 				AD9A75321CCD430000615C78 /* LocalRegression.hpp in Sources */,
 				AD9A75331CCD430000615C78 /* LocalRegression_Impl.hpp in Sources */,
 				AD9A75341CCD430000615C78 /* ActivationFuncs.hpp in Sources */,
