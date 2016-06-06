@@ -15,7 +15,7 @@ bool testLocalRegression1D(){
     Timer timer;
     timer.start();
     
-    int n = 100;
+    int n = 100000;
     double w = 12;
     std::vector<Point1D> x(n);
     std::vector<double> y(n);
@@ -27,7 +27,7 @@ bool testLocalRegression1D(){
     
     LR::Tree tree(x,y);
     LR localReg( tree );
-    localReg.basis.setSize(LR::Basis::Linear);
+    localReg.basis.setSize(LR::Basis::Quadratic);
     localReg.setNumNeighborsForFit(2*LR::Basis::size);
     
     

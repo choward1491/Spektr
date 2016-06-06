@@ -92,7 +92,7 @@ public:
     }
     
 };
-typedef LocalRegression<Point1D,double,PolyBasis1D,WeightFunc> LR;
+typedef LocalRegression<Point1D,PolyBasis1D,WeightFunc> LR;
 
 
 bool testLocalRegression1D();

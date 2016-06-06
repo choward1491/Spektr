@@ -34,11 +34,11 @@
 #include <math.h>
 
 #define TEMPLATE_HEADER template<   class Coordinate,\
-                                    class Cost, class Basis, \
+                                    class Basis, \
                                     class WeightFunc, \
                                     template <int,typename,typename> class DistMeas \
                                     >
-#define LR LocalRegression<Coordinate,Cost,Basis,WeightFunc,DistMeas>
+#define LR LocalRegression<Coordinate,Basis,WeightFunc,DistMeas>
 
 
 

@@ -35,7 +35,7 @@
 
 
 template<   class Coordinate,
-            class Cost, class Basis_,
+            class Basis_,
             class WeightFunc,
             template <int,typename,typename> class DistMeas = L2_Norm
             >
