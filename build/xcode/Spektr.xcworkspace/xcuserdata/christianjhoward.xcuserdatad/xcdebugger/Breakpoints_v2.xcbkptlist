@@ -1104,5 +1104,149 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../tests/TestLocalRegression2D.cpp"
+            timestampString = "486967026.249172"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "testLocalRegression2D()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+            timestampString = "486965971.815745"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "LR::solveNormalEqn( Coordinate &amp; c, Neighbors &amp; nset )"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocalRegression&lt;Point1D, PolyBasis1D, WeightFunc, L2_Norm&gt;::solveNormalEqn(Point1D&amp;, MinHeap&lt;double, KDTree&lt;Point1D, double, L2_Norm, 1, double&gt;::Node&gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+                  timestampString = "486965971.818571"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "507">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocalRegression&lt;Point2D, PolyBasis2D, WeightFunc, L2_Norm&gt;::solveNormalEqn(Point2D&amp;, MinHeap&lt;double, KDTree&lt;Point2D, double, L2_Norm, 2, double&gt;::Node&gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+                  timestampString = "486965971.818728"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "523">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+            timestampString = "486966075.61245"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "LR::solveNormalEqn( Coordinate &amp; c, Neighbors &amp; nset )"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocalRegression&lt;Point1D, PolyBasis1D, WeightFunc, L2_Norm&gt;::solveNormalEqn(Point1D&amp;, MinHeap&lt;double, KDTree&lt;Point1D, double, L2_Norm, 1, double&gt;::Node&gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+                  timestampString = "486967696.903316"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "535">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "LocalRegression&lt;Point2D, PolyBasis2D, WeightFunc, L2_Norm&gt;::solveNormalEqn(Point2D&amp;, MinHeap&lt;double, KDTree&lt;Point2D, double, L2_Norm, 2, double&gt;::Node&gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/LocalRegression/LocalRegression_Impl.hpp"
+                  timestampString = "486967696.903525"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "554">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../tests/TestLocalRegression2D.hpp"
+            timestampString = "486967207.223499"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "operator()( vec &amp; v, NNSet &amp; set )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../tests/TestLocalRegression2D.hpp"
+            timestampString = "486967152.590429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "97"
+            endingLineNumber = "97"
+            landmarkName = "operator()( vec &amp; v, NNSet &amp; set )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

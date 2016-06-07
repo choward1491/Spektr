@@ -20,6 +20,8 @@
 		AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A51CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp */; };
 		AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061A81CC5F7A30000D18A /* NeuronSim.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
+		AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F011D067E8D00D89490 /* TestLocalRegression2D.cpp */; };
+		AD608F061D0685E000D89490 /* TestLocalRegression3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F041D0685E000D89490 /* TestLocalRegression3D.cpp */; };
 		AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */; };
 		AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
@@ -372,6 +374,10 @@
 		AD5CE1B61C99170B00E6CC2A /* ModelState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = ModelState.hpp; path = ModelState/ModelState.hpp; sourceTree = "<group>"; };
 		AD5CE1B91C991A2700E6CC2A /* SimExceptions.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = SimExceptions.hpp; path = SimExceptions/SimExceptions.hpp; sourceTree = "<group>"; };
 		AD5CE1C11C9A5E2800E6CC2A /* ScalarTypes.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ScalarTypes.hpp; sourceTree = "<group>"; };
+		AD608F011D067E8D00D89490 /* TestLocalRegression2D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression2D.cpp; sourceTree = "<group>"; };
+		AD608F021D067E8D00D89490 /* TestLocalRegression2D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestLocalRegression2D.hpp; sourceTree = "<group>"; };
+		AD608F041D0685E000D89490 /* TestLocalRegression3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression3D.cpp; sourceTree = "<group>"; };
+		AD608F051D0685E000D89490 /* TestLocalRegression3D.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestLocalRegression3D.hpp; sourceTree = "<group>"; };
 		AD623E911CE566CA0072FF07 /* TestNeuralKalmanFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralKalmanFilter.hpp; sourceTree = "<group>"; };
 		AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LearningMissileSim.cpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.cpp; sourceTree = "<group>"; };
 		AD704E371CF5532600BF5757 /* LearningMissileSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LearningMissileSim.hpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.hpp; sourceTree = "<group>"; };
@@ -845,6 +851,10 @@
 			children = (
 				AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */,
 				AD957EDD1D04AA5D004204AE /* TestLocalRegression1D.hpp */,
+				AD608F011D067E8D00D89490 /* TestLocalRegression2D.cpp */,
+				AD608F021D067E8D00D89490 /* TestLocalRegression2D.hpp */,
+				AD608F041D0685E000D89490 /* TestLocalRegression3D.cpp */,
+				AD608F051D0685E000D89490 /* TestLocalRegression3D.hpp */,
 			);
 			name = LocalRegression;
 			sourceTree = "<group>";
@@ -1525,6 +1535,7 @@
 				ADF8DD8C1C895BAB004C682C /* ActivationFuncs.cpp in Sources */,
 				ADF8DD981C895BAB004C682C /* Node.cpp in Sources */,
 				AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */,
+				AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */,
 				ADF8DD951C895BAB004C682C /* Network.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
@@ -1544,6 +1555,7 @@
 				ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */,
 				ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
+				AD608F061D0685E000D89490 /* TestLocalRegression3D.cpp in Sources */,
 				AD40619F1CC450230000D18A /* AdvectionEqn.cpp in Sources */,
 				ADF8DDB11C895BAB004C682C /* DiscreteModel.cpp in Sources */,
 				AD4061AA1CC5F7A30000D18A /* NeuronSim.cpp in Sources */,

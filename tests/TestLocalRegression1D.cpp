@@ -13,9 +13,9 @@ int PolyBasis1D::size = 1;
 bool testLocalRegression1D(){
     
     Timer timer;
-    timer.start();
     
-    int n = 100000;
+    
+    int n = 1000000;
     double w = 12;
     std::vector<Point1D> x(n);
     std::vector<double> y(n);
@@ -30,6 +30,7 @@ bool testLocalRegression1D(){
     localReg.basis.setSize(LR::Basis::Quadratic);
     localReg.setNumNeighborsForFit(2*LR::Basis::size);
     
+    timer.start();
     
     for( int i = 0; i < 1001; i++ ){
         Point1D xx = i/(double)1001;

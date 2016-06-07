@@ -1,8 +1,8 @@
 //
-//  TestLocalRegression1D.hpp
+//  LocalRegression2D.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 6/5/16.
+//  Created by Christian J Howard on 6/6/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,45 +27,57 @@
 //
 //
 
-#ifndef TestLocalRegression1D_hpp
-#define TestLocalRegression1D_hpp
+#ifndef LocalRegression2D_hpp
+#define LocalRegression2D_hpp
 
 #include <stdio.h>
 #include "LocalRegression.hpp"
 #include "Timer.hpp"
 
 
-class Point1D {
+class Point2D {
 public:
     typedef double Type;
-    static const int Dims = 1;
+    static const int Dims = 2;
     
-    Point1D():x(0){}
-    Point1D( Type x_ ):x(x_){}
-    operator double() {
-        return x;
-    }
-    Type   operator[](int i ) const { return x; }
-    Type & operator[](int i )       { return x; }
+    Point2D(){ x[0] = 0; x[1] = 0; }
+    Point2D( Type x_ , Type y_){x[0] = x_; x[1] = y_;}
+    Type   operator[](int i ) const { return x[i%2]; }
+    Type & operator[](int i )       { return x[i%2]; }
     
 private:
-    Type x;
+    Type x[2];
     
 };
 
 
-class PolyBasis1D {
+class PolyBasis2D {
 public:
     static int size;
     
-    enum BasisSize { Constant=1,Linear,Quadratic,Cubic,Quartic };
+    enum BasisSize { Constant=1,Linear= 3,Quadratic= 6,Cubic,Quartic };
     
-    PolyBasis1D(){ size = 1; }
-    PolyBasis1D( int size_ ){ size = size_; }
+    PolyBasis2D(){ size = 1; }
+    PolyBasis2D( int size_ ){ size = size_; }
     void setSize( int size_ ){ size = size_; }
     
-    double operator()(int i, Point1D & pt){
-        return pow(pt[0], static_cast<double>(i));
+    double operator()(int i, Point2D & pt){
+        switch (i){
+            case 0:
+                return 1.0;
+            case 1:
+                return pt[0];
+            case 2:
+                return pt[1];
+            case 3:
+                return pt[0]*pt[0];
+            case 4:
+                return pt[1]*pt[1];
+            case 5:
+                return pt[0]*pt[1];
+            default:
+                return 1.0;
+        }
     }
 };
 
@@ -74,7 +86,7 @@ public:
 
 class WeightFunc {
 public:
-    typedef KDTree<Point1D,double,L2_Norm>::NNSet NNSet;
+    typedef KDTree<Point2D,double,L2_Norm>::NNSet NNSet;
     typedef std::vector<double> vec;
     
     void operator()( vec & v, NNSet & set ){
@@ -82,7 +94,7 @@ public:
         for(int i = 0; i < v.size(); i++ ){
             mdist = fmax(set.getKeyAt(i),mdist);
         }
-        
+        mdist = sqrt(mdist);
         for(int i = 0; i < v.size(); i++ ){
             double dist = sqrt(set.getKeyAt(i));
             v[i] = pow(1-pow(dist/mdist,3),3);
@@ -92,14 +104,8 @@ public:
     }
     
 };
-typedef LocalRegression<Point1D,PolyBasis1D,WeightFunc> LR;
+typedef LocalRegression<Point2D,PolyBasis2D,WeightFunc> LR;
+bool testLocalRegression2D();
 
 
-bool testLocalRegression1D();
-
-
-
-
-
-
-#endif /* TestLocalRegression1D_hpp */
+#endif /* LocalRegression2D_hpp */

@@ -8,11 +8,13 @@
 #include <string>
 #include <math.h>
 #include "LocalRegression.hpp"
-#include "TestLocalRegression1D.hpp"
+//#include "TestLocalRegression1D.hpp"
+#include "TestLocalRegression2D.hpp"
 
 int main(int argc, const char * argv[]) {
     
-    testLocalRegression1D();
+    //testLocalRegression1D();
+    testLocalRegression2D();
     
     // exit
     return 0;
