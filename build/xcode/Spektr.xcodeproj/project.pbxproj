@@ -158,6 +158,7 @@
 		AD9A75B41CD3C91E00615C78 /* EulerAngles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */; };
 		AD9A75B51CD3C91E00615C78 /* EulerAngles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */; };
 		AD9A75B61CD3C91E00615C78 /* EulerAngles.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */; };
+		ADA0F8351D0A8EE700582870 /* libiomp5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ADA0F8341D0A8EE700582870 /* libiomp5.dylib */; };
 		ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75E9D1CC203BE00092A38 /* ButcherTable.cpp */; };
 		ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA11CC20C9F00092A38 /* ButcherIntegrator.cpp */; };
 		ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF75EA41CC2160A00092A38 /* ExplicitEuler.cpp */; };
@@ -392,6 +393,7 @@
 		AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RecursiveLS.hpp; sourceTree = "<group>"; };
 		AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EulerAngles.cpp; sourceTree = "<group>"; };
 		AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EulerAngles.hpp; sourceTree = "<group>"; };
+		ADA0F8341D0A8EE700582870 /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = ../../../../../../../../usr/local/lib/libiomp5.dylib; sourceTree = "<group>"; };
 		ADB28FC51CA3828100E738F2 /* LocalRegression.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression.hpp; path = LocalRegression/LocalRegression.hpp; sourceTree = "<group>"; };
 		ADB28FC61CA388B000E738F2 /* LocalRegression_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = LocalRegression_Impl.hpp; path = LocalRegression/LocalRegression_Impl.hpp; sourceTree = "<group>"; };
 		ADB461231C9F34FE0088FF7C /* Simulator.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = Simulator.hpp; path = Simulator/Simulator.hpp; sourceTree = "<group>"; };
@@ -536,6 +538,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADA0F8351D0A8EE700582870 /* libiomp5.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +624,7 @@
 		AD4767F91B76EAF100E6B11D = {
 			isa = PBXGroup;
 			children = (
+				ADA0F8341D0A8EE700582870 /* libiomp5.dylib */,
 				AD5CE1C41C9A690400E6CC2A /* libs */,
 				ADF8DD391C895BAB004C682C /* tests */,
 				ADF8DC7F1C895BAB004C682C /* src */,
@@ -1847,17 +1851,26 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CC = "/usr/local/bin/clang-omp++";
+				CLANG_ENABLE_MODULES = NO;
 				CURRENT_PROJECT_VERSION = 0.1;
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
 					../../tests,
+					/usr/local/include,
 				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/lib/,
 					../../libs,
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fopenmp",
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = Spektr;
@@ -1869,18 +1882,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CC = "/usr/local/bin/clang-omp++";
+				CLANG_ENABLE_MODULES = NO;
 				CURRENT_PROJECT_VERSION = 0.1;
-				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_OPTIMIZATION_LEVEL = fast;
 				HEADER_SEARCH_PATHS = (
 					"../../src/**",
 					"../../external/Bones/src/**",
 					../../tests,
+					/usr/local/include,
 				);
+				LD_RUNPATH_SEARCH_PATHS = /usr/local/lib;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					/usr/lib/,
 					../../libs,
+					/usr/local/lib,
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"$(OTHER_CFLAGS)",
+					"-fopenmp",
 				);
 				PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES;
 				PRODUCT_NAME = Spektr;

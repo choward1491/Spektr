@@ -9,6 +9,7 @@
 #include "RKCashKarp.hpp"
 #include <math.h>
 
+
 RKCashKarp::RKCashKarp():ButcherIntegrator(){
     btable.resize(6,2);
     btable.c(0) = 0.0;

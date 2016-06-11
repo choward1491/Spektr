@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485837788.044877"
+            timestampString = "487230638.74399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "ButcherIntegrator::setNumDimensions( int numDimensions )"
             landmarkType = "5">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485420997.427319"
+            timestampString = "487230638.74399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
             landmarkName = "ButcherIntegrator::~ButcherIntegrator()"
             landmarkType = "5">
          </BreakpointContent>
@@ -314,11 +314,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485837788.044877"
+            timestampString = "487233000.560936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
             landmarkType = "5">
          </BreakpointContent>
@@ -330,11 +330,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485837788.044877"
+            timestampString = "487233000.560936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "ButcherIntegrator::integrate( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list)"
             landmarkType = "5">
          </BreakpointContent>
@@ -362,11 +362,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485837788.044877"
+            timestampString = "487233000.560936"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "ButcherIntegrator::computeDerivatives( double time, double * dqdt, DiffeqList &amp; list )"
             landmarkType = "5">
          </BreakpointContent>
@@ -618,7 +618,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
-            timestampString = "484802250.676368"
+            timestampString = "487236889.616396"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
@@ -650,11 +650,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485420982.424289"
+            timestampString = "487230638.74399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "ButcherIntegrator::ButcherIntegrator()"
             landmarkType = "5">
          </BreakpointContent>
@@ -1047,11 +1047,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/ODE_SimFramework/NumericIntegration/ButcherIntegrator/ButcherIntegrator.cpp"
-            timestampString = "485837788.044877"
+            timestampString = "487230638.74399"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
             landmarkName = "ButcherIntegrator::nominalIntegration( double time, double dt , double* &amp; inOutState, DiffeqList &amp; list )"
             landmarkType = "5">
          </BreakpointContent>
@@ -1246,6 +1246,22 @@
             endingLineNumber = "97"
             landmarkName = "operator()( vec &amp; v, NNSet &amp; set )"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../tests/TestLocalRegression1D.cpp"
+            timestampString = "487236934.22331"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "testLocalRegression1D()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

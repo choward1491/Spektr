@@ -37,7 +37,6 @@ bool testLocalRegression1D(){
         double yy = localReg( xx );
         double yt = sin(w*xx);
         printf("YY = %lf, Y = %lf, Error = %0.10lf\n",yy,yt, fabs(yt-yy));
-        
     }
     
     timer.stop();

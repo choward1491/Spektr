@@ -83,6 +83,7 @@ public:
             mdist = fmax(set.getKeyAt(i),mdist);
         }
         
+        mdist = sqrt(mdist);
         for(int i = 0; i < v.size(); i++ ){
             double dist = sqrt(set.getKeyAt(i));
             v[i] = pow(1-pow(dist/mdist,3),3);

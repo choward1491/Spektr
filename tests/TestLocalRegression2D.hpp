@@ -94,12 +94,12 @@ public:
         for(int i = 0; i < v.size(); i++ ){
             mdist = fmax(set.getKeyAt(i),mdist);
         }
-        mdist = sqrt(mdist);
+
         for(int i = 0; i < v.size(); i++ ){
-            double dist = sqrt(set.getKeyAt(i));
-            v[i] = pow(1-pow(dist/mdist,3),3);
-            double d = dist/mdist;
-            v[i] = exp( - d*d );
+            double dist = sqrt(set.getKeyAt(i)/mdist);
+            v[i] = pow(1-pow(dist,3),3);
+            //double d = dist/mdist;
+            //v[i] = exp( - d*d );
         }
     }
     

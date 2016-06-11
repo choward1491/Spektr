@@ -8,6 +8,8 @@
 
 #include "ButcherIntegrator.hpp"
 #include <math.h>
+#include <libiomp/omp.h>
+
 //ButcherTable btable;
 //int numDims;
 //std::vector<double*> K;
@@ -27,6 +29,8 @@ void deleteVectorPointers( std::vector<double*> & vec ){
 
 void allocVectorPointers( std::vector<double*> & vec , int num ){
     if( vec.size() != 0 ){
+        
+        //#pragma omp parallel for
         for(int i = 0; i < vec.size(); i++ ){
             vec[i] = new double[num]();
         }
@@ -51,6 +55,8 @@ void ButcherIntegrator::setNumDimensions( int numDimensions ){
     numDims = numDimensions;
     deleteVectorPointers(K);
     K.resize(btable.numSteps());
+    
+    //#pragma omp parallel for
     for(int i = 0; i < K.size(); i++ ){ K[i] = 0; }
     allocVectorPointers(K, numDims);
     if( tmp ){
@@ -82,6 +88,7 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
         maxErr = -1.0;
         newTime = time;
         
+        //#pragma omp parallel for
         for(int i = 0; i < numDims; i++ ){
             y1[i] = tmpState[i];
             y2[i] = tmpState[i];
@@ -91,6 +98,7 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
             for(int i = 0; i < btable.numSteps(); i++){
                 
                 // set tmp = y_n
+                //#pragma omp parallel for
                 for(int j = 0; j < numDims; j++ ){
                     tmp[j] = tmpState[j];
                 }
@@ -98,6 +106,8 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
                 // compute Y = y_n + sum_{j} a(i,j) K_j
                 for(int j = 0; j < i; j++ ){
                     if( btable.a(i,j) != 0.0 ){
+                        
+                        //#pragma omp parallel for
                         for(int k = 0; k < numDims; k++ ){
                             tmp[k] += (dt*btable.a(i, j))*K[j][k];
                         }
@@ -105,6 +115,8 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
                 }
                 
                 if( i != 0 ){
+                    
+                    //#pragma omp parallel for
                     for (int k = 0; k < list.size(); k++) {
                         list[k]->update();
                     }
@@ -118,6 +130,8 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
         
         // Compute y_{n+1} = y_{n} + sum_{l} b(l)*K_l
         for(int i = 0; i < numDims; i++ ){
+            
+            //#pragma omp parallel for
             for( int l = 0; l < btable.numSteps(); l++ ){
                 if( btable.b(0, l) != 0.0 ){
                     y1[i] += (dt*btable.b(0, l)*K[l][i]);
@@ -137,10 +151,13 @@ void ButcherIntegrator::adaptiveIntegration( double time, double dt , double* & 
                 isNotDone = false;
             }
             
+            //#pragma omp parallel for
             for(int i = 0; i < numDims; i++ ){
                 tmpState[i] = y2[i];
             }
             if( isNotDone ){
+                
+                //#pragma omp parallel for
                 for (int i = 0; i < list.size(); i++) {
                     (*list[i]).update();
                 }
@@ -163,13 +180,16 @@ void ButcherIntegrator::nominalIntegration( double time, double dt , double* & i
         for(int i = 0; i < btable.numSteps(); i++){
             
             // set tmp = y_n
+            //#pragma omp parallel for
             for(int j = 0; j < numDims; j++ ){
                 tmp[j] = tmpState[j];
             }
             
             // compute Y = y_n + sum_{j} a(i,j) K_j
+            
             for(int j = 0; j < i; j++ ){
                 if( btable.a(i,j) != 0.0 ){
+                    //#pragma omp parallel for
                     for(int k = 0; k < numDims; k++ ){
                         tmp[k] += (dt*btable.a(i, j))*K[j][k];
                     }
@@ -213,16 +233,18 @@ void ButcherIntegrator::integrate( double time, double dt , double* & inOutState
 }
 
 void ButcherIntegrator::computeNewStep( double * y0, double* dydt, double dt, double * out){
+    
+    //#pragma omp parallel for
     for (int i = 0; i < numDims; i++) {
         out[i] = y0[i] + dt*dydt[i];
     }
 }
 
 void ButcherIntegrator::computeDerivatives( double time, double * dqdt, DiffeqList & list ){
-    ModelState dqdt_;
-    size_t ndim, offset = 0;
     
+    ModelState dqdt_;
     dqdt_.setAddress(&dqdt);
+    size_t ndim, offset = 0;
     for (int i = 0; i < list.size(); i++) {
         ndim = list[i]->numDims();
         dqdt_.setNumDims(ndim);
