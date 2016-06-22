@@ -6,7 +6,7 @@ Example applications might be for simulation, numerical optimization, Machine Le
 
 ## Progress Made
 At this point, algorithms have been developed for the following tasks:
-- Simulation Framework for Time Dependent ODE/discrete systems of equations
+- Simulation Framework for Time Dependent ODE/discrete systems of equations that has optional capability for Monte Carlo simulations
 - Numerical Optimization algorithms
   - Gradient Based (Gradient Descent)
   - Stochastic Based (Particle Swarm)
