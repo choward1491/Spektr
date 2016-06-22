@@ -30,7 +30,7 @@
 #ifndef Trainer_h
 #define Trainer_h
 
-#include "Network.hpp"
+#include "ANN_Network.hpp"
 #include "DataSet.hpp"
 
 namespace ANN {

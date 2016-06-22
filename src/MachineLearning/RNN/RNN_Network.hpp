@@ -1,8 +1,8 @@
 //
-//  RecursiveLS.hpp
+//  RNN.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 5/8/16.
+//  Created by Christian J Howard on 6/11/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,39 +27,17 @@
 //
 //
 
-#ifndef RecursiveLS_hpp
-#define RecursiveLS_hpp
+#ifndef RNN_hpp
+#define RNN_hpp
 
 #include <stdio.h>
-#include "ANN_Network.hpp"
-#include "Matrix.hpp"
-#include <queue>
-#include "CircularQueue.hpp"
 
-namespace spektr {
+namespace RNN {
     
-    namespace filter {
+    class Network {
         
-        class RecursiveLS {
-        public:
-            typedef la::Mat<double> Mat;
-            
-            RecursiveLS();
-            RecursiveLS(int num_data);
-            void setNumData(int num_data);
-            void setInitState( const double & x0 );
-            void operator()( double t_, const double & meas );
-            const double & state() const;
-            
-        private:
-            
-            double estimate;
-            Mat wn, Pn, gn, an, xn;
-            double delta, lambda;
-            CircularQueue<double> list;
-        };
-        
-    }
+    };
+    
 }
 
-#endif /* RecursiveLS_hpp */
+#endif /* RNN_hpp */

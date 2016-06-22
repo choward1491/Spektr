@@ -47,14 +47,14 @@ void runExample1_ADELINE(){
     RandomNumberGenerator rng;
     
     // Create adeline filter
-    NeuralFilter filter(5);
-    filter.setMaxLearningIterations(50);
-    filter.setLearningStepSize(1e-1);
+    NeuralFilter filter(3);
+    filter.setMaxLearningIterations(10);
+    filter.setLearningStepSize(1e-3);
     
     // Init initial conditions
     NeuralFilter::Mat x0(2,1,0);
-    x0(0) = 3.7; // x pos
-    x0(1) = 2.4; // y pos
+    x0(0) = 0; // x pos
+    x0(1) = 0; // y pos
     
     // Set initial state estimate for ukf
     filter.setInitState(x0);
@@ -77,7 +77,7 @@ void runExample1_ADELINE(){
         
         // compute noise component for sensor
         for (int i = 0; i < 2; i++) {
-            rnd(i) = 1.0*rng.gaussRand();
+            rnd(i) = 5.0*rng.gaussRand();
         }
         truth = xb + t*xt; // compute exact target pos
         

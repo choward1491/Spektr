@@ -31,7 +31,7 @@
 #define ADELINE_hpp
 
 #include <stdio.h>
-#include "Network.hpp"
+#include "ANN_Network.hpp"
 #include "Matrix.hpp"
 #include <queue>
 #include "CircularQueue.hpp"

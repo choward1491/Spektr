@@ -20,7 +20,6 @@ bool testLocalRegression2D(){
     
     
     int n = 50;
-    double w = 12;
     std::vector<Point2D> x(n*n);
     std::vector<double> y(n*n);
     

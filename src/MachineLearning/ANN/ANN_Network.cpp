@@ -6,7 +6,7 @@
 //  Copyright © 2016 Christian Howard. All rights reserved.
 //
 
-#include "Network.hpp"
+#include "ANN_Network.hpp"
 #include "DefaultMaps.hpp"
 
 namespace ANN {

@@ -122,7 +122,7 @@ namespace spektr {
                         }
                         ratio[i] = meas_error[i]/avg_error[i];
                         ratio_avg[i] = 0.5*ratio[i] + 0.5*ratio_avg[i];
-                        stepsize = 20e-4/coef(ratio[i],ratio_avg[i]);
+                        //stepsize = 20e-4/coef(ratio[i],ratio_avg[i]);
                         double del = fabs(ratio[i]-ratio_avg[i]);
                         //stepsize = (1e-1*fabs(1.0-ratio[i]) + 1e-2*del)/(1 + 7*ratio_avg[i]*ratio_avg[i]);
                         //stepsize = (1e-3 + 4e-2*del)/(ratio[i]*(1+del));

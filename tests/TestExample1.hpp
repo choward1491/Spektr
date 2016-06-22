@@ -38,15 +38,15 @@ void runExample1_UKF(){
     // and state estimate covariance
     for (int i = 0; i < ukf.numState(); i++) {
         for (int j = 0; j < ukf.numState(); j++) {
-            ukf.stateNoise(i, j) = (i==j)*10;
+            ukf.stateNoise(i, j) = (i==j)*1e-2;
         }
-        ukf.stateCov(i, i) = 30.0;
+        ukf.stateCov(i, i) = 10.0;
     }
     
     // Specify the measurement noise covariance
     for (int i = 0; i < ukf.numMeas(); i++) {
         for (int j = 0; j < ukf.numMeas(); j++) {
-            ukf.measNoise(i, j) = 1*(i==j);
+            ukf.measNoise(i, j) = 5*(i==j);
         }
     }
     
@@ -68,7 +68,7 @@ void runExample1_UKF(){
         
         // compute noise component for sensor
         for (int i = 0; i < 2; i++) {
-            rnd(i) = 1,0*rng.gaussRand();
+            rnd(i) = 5.0*rng.gaussRand();
         }
         z = xb + t*xt; // compute exact target pos
         
