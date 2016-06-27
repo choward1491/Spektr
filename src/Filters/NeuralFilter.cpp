@@ -12,17 +12,18 @@ namespace spektr {
     
     namespace filter {
         
-        void updateWeights( std::vector<double> & w, std::vector<double> grad, double alpha ){
-            for(int i = 0; i < w.size(); i++ ){
-                w[i] -= alpha*grad[i];
+        void updateWeights( ANN::Network & net, la::Mat<double> & grad, double alpha ){
+            for(int i = 0; i < net.numWeights(); i++ ){
+                net.weightAt(i) -= alpha*grad[i];
+                grad[i] = 0.0;
             }
         }
         
         
-        NeuralFilter::NeuralFilter():out(1),max_iters(10){
+        NeuralFilter::NeuralFilter():out(1,1,0),max_iters(10){
             
         }
-        NeuralFilter::NeuralFilter(int num_data):input(num_data),list(num_data),out(1),max_iters(10){
+        NeuralFilter::NeuralFilter(int num_data):input(num_data,1,0),list(num_data),out(1,1,0),max_iters(10){
             
             
         }
@@ -37,7 +38,7 @@ namespace spektr {
         
         void NeuralFilter::setInitState( const Mat & x0 ){
             
-            int num_data = static_cast<int>(input.size());
+            int num_data = static_cast<int>(input.size().rows);
             int num_meas = static_cast<int>(x0.size().rows);
             estimate.resize(x0.size());
             avg_error.resize(num_meas);
@@ -46,11 +47,10 @@ namespace spektr {
             ratio_avg.resize(num_meas);
             num_times = 0;
             
-            std::vector<int> layout(4);
+            std::vector<int> layout(3);
             layout[0] = num_data;
             layout[1] = 3;
-            layout[2] = 2;
-            layout[3] = 1;
+            layout[2] = 1;
             
             num_meas = static_cast<int>(x0.size().rows);
             nets.resize(num_meas);
@@ -62,12 +62,14 @@ namespace spektr {
             for(int i = 0; i < num_data; i++ ){
                 list.push(x0);
             }
-            grad.resize(nets[0].numWeights());
-            dEdO.resize(nets[0].numOutputs());
+            
+
+            grad.resize(nets[0].numWeights(),1);
+            dEdO.resize(nets[0].numOutputs(),1);
         }
         
         void NeuralFilter::setNumData(int num_data){
-            input.resize(num_data);
+            input.resize(num_data,1);
             list.setMaxSize(num_data);
         }
         
@@ -92,7 +94,7 @@ namespace spektr {
         void NeuralFilter::operator()( double t_, const Mat & meas ){
             static int num_meas = static_cast<int>(meas.size().rows);;
             static int counter = 0;
-            int num_data = static_cast<int>(input.size());
+            int num_data = static_cast<int>(input.size().rows);
             double derr = 0;
             int num_iters = max_iters;
             double alpha = 0.05;
@@ -131,10 +133,8 @@ namespace spektr {
                     
                     dEdO[0] = derr;
                     nets[i].backprop(dEdO, grad);
-                    updateWeights(nets[i].w(), grad, stepsize);
-                    //printf("Error = %0.8lf, Grad = [%lf, %lf], Weights = [%lf, %lf]\n",0.5*derr*derr, grad[0], grad[1],
-                    //       nets[i].weightAt(0), nets[i].weightAt(1));
-                    for(int k = 0; k < grad.size(); k++ ){ grad[k] = 0.0; }
+                    updateWeights(nets[i], grad, stepsize);
+                    /*printf("Error = %0.8lf, Grad = [%lf, %lf], Weights = [%lf, %lf]\n",0.5*derr*derr, grad[0], grad[1],nets[i].weightAt(0), nets[i].weightAt(1));*/
                 }//printf("\n");
             }
             

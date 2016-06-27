@@ -57,9 +57,9 @@ void runExample1_NeuralKalman(){
     UKF ukf;
     
     // Create adeline filter
-    NeuralFilter filter(5);
-    filter.setMaxLearningIterations(3);
-    filter.setLearningStepSize(1e-2);
+    NeuralFilter filter(3);
+    filter.setMaxLearningIterations(1);
+    filter.setLearningStepSize(1e-1);
     
     // Init initial conditions
     UKF::Mat x0(4,1,0);
@@ -137,8 +137,8 @@ void runExample1_NeuralKalman(){
         filter.state().print();
         
         printf("Estimate2:\n");
-        x0.print();
-        //ukf.state().print();
+        //x0.print();
+        ukf.state().print();
         //ukf.stateCov().print();
         
         fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],

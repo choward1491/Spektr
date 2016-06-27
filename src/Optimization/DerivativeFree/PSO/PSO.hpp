@@ -69,6 +69,8 @@ namespace opt {
             return swarm.getBestSoln();
         }
         
+        Function func;
+        
         
     protected:
         
@@ -95,7 +97,7 @@ namespace opt {
         
     private:
         template<class T> friend class optimizer;
-        Function func;
+        
         
         int numIter;
         int maxIter;

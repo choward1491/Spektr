@@ -34,7 +34,7 @@
 
 namespace opt {
     
-    template< class Function, class Step >
+    template< class Function, template<class> class Step >
     class gradient  : public optimizer< gradient<Function,Step> > {
     public:
         
@@ -50,13 +50,14 @@ namespace opt {
         const Mat & soln() const { return xbest; }
         double bestCost() const { return bcost; }
         
-        Step step;
+        Step<Function> step;
         Function func;
         
     protected:
         
         void init_(){
             step.setFunc(&func);
+            step.setState(&x);
             initStateSize();
         }
         virtual bool isComplete_(){
@@ -80,17 +81,20 @@ namespace opt {
                 xbest = x;
                 bcost = cost;
             }
+            grad = func.gradient();
+            //grad.print();
             double s = step(numIter);
-            dx = mom_coef*dx - s*func.gradient();
+            dx = mom_coef*dx - s*grad;
             x = x + dx;
         }
         
         void initStateSize(){
-            int Nx = func.numDims();
+           int Nx = func.numDims();
             if( x.size() != Dims(Nx,1) ){
                 x.resize(Nx,1);
             }
             xbest.resize(Nx,1);
+            grad.resize(Nx,1);
             dx.resize(Nx,1);
         }
         
@@ -109,6 +113,7 @@ namespace opt {
         Mat x;
         Mat xbest;
         Mat dx;
+        Mat grad;
         
     };
     

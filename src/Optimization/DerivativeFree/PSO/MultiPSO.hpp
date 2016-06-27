@@ -99,6 +99,8 @@ namespace opt {
             return swarms[bind].getBestSoln();
         }
         
+        Function func;
+        
         
     protected:
         
@@ -137,7 +139,7 @@ namespace opt {
     private:
         template<class T> friend class optimizer;
         typedef swarm<Function, Initializer> Swarm;
-        Function func;
+        
         
         int numIter;
         int maxIter;

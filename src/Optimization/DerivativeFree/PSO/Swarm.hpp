@@ -105,7 +105,6 @@ namespace opt {
         for (int i = 0; i < particles.size(); i++) {
             cost = (*func)(particles[i].pose);
             
-            
             if( cost < particles[i].cbest ){
                 particles[i].cbest = cost;
                 particles[i].pbest = particles[i].pose;

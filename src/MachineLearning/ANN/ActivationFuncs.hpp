@@ -44,6 +44,7 @@ namespace ANN {
     Activation sigmoid( double z );
     Activation linear( double z );
     Activation bias( double z );
+    Activation leakyReLU( double z);
     
     
 }

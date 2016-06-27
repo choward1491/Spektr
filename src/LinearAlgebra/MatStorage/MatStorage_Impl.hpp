@@ -123,7 +123,7 @@ void STORAGE::print() const {
         printf("| ");
         for (size_t ic=0; ic < dims.cols; ic++) {
             if( ic != 0 ){ printf(", "); }
-            printf("%lf",static_cast<double>((*this)(ir,ic)));
+            printf("%0.12e",static_cast<double>((*this)(ir,ic)));
             
         }
         printf(" |\n");

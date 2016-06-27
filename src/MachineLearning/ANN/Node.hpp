@@ -50,6 +50,9 @@ namespace ANN {
         void computeBackPropErr( double dEdo );
         double getBackPropErr() const;
         
+        void setOutputGrad( double og );
+        double getOutputGrad();
+        
     protected:
         
     private:
@@ -57,6 +60,7 @@ namespace ANN {
         Activation (*a)(double z);
         Activation currentActivation;
         double backPropError;
+        double outputGrad;
         
     };
     

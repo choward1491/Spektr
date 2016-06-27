@@ -31,6 +31,8 @@
 #define ConstantStep_h
 
 
+#include "Matrix.hpp"
+
 namespace opt {
 
 template<class Function>
@@ -44,6 +46,7 @@ public:
     }
     
     void setFunc( Function * func ){}
+    void setState( la::Mat<double> * state_ ){}
     
     
 private:

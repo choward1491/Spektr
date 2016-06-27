@@ -11,7 +11,7 @@
 namespace ANN {
     
     Node::Node(){
-        setActivationFunc(sigmoid);
+        setActivationFunc(leakyReLU);
     }
     
     Node::Node( Activation (*func)(double z) ){
@@ -37,6 +37,12 @@ namespace ANN {
         return backPropError;
     }
     
+    void Node::setOutputGrad( double og ){
+        outputGrad = og;
+    }
+    double Node::getOutputGrad(){
+        return outputGrad;
+    }
     
     
 }

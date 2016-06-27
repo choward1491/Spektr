@@ -33,6 +33,7 @@
 #include <stdio.h>
 #include <vector>
 #include "Node.hpp"
+#include "Matrix.hpp"
 
 namespace ANN {
     
@@ -49,21 +50,22 @@ namespace ANN {
         void setLayers( const std::vector<int> & layers );
         
         // operator
-        std::vector<double> operator()(std::vector<double> & input );
-        void operator()(std::vector<double> & input , std::vector<double> & output );
+        std::vector<double> operator()(la::Mat<double> & input );
+        void operator()(la::Mat<double> & input , la::Mat<double> & output );
         Network & operator=( const Network & net );
         
         // back propogation
-        void backprop( const std::vector<double> & dEdO,std::vector<double> & gradient );
-        std::vector<double> backprop( const std::vector<double> & dEdO );
+        void backprop( const la::Mat<double> & dEdO,la::Mat<double> & gradient );
+        la::Mat<double> backprop( const la::Mat<double> & dEdO );
+        
+        // get gradient with respect to input
+        void grad( la::Mat<double> & gradient );
         
         
         
         
         // weight stuff
         size_t numWeights() const;
-        const std::vector<double> & w() const;
-        std::vector<double> & w();
         const double & weightAt(int index) const;
         double & weightAt(int index);
         const double & weightAt(int layer, int li, int ri) const;
@@ -84,25 +86,28 @@ namespace ANN {
         
         
         // set input/output mappings
-        void setInputMap( void (*im)( std::vector<double> & in ) );
-        void setOutputMap( void (*om)( std::vector<double> & out ) );
+        void setInputMap( void (*im)( la::Mat<double> & in ) );
+        void setOutputMap( void (*om)( la::Mat<double> & out ) );
+        
+        
+        void print() const;
         
     protected:
         
         
     private:
-        friend class Network;
         
-        std::vector<double> weights;
         std::vector<int> layers;
         std::vector<int> layerSums;
+        std::vector<int> wsums;
         std::vector<Node> nodes;
-        std::vector<double> input;
-        std::vector<double> output;
+        std::vector<la::Mat<double>> weights;
+        std::vector<la::Mat<double>> layer_outputs;
+        std::vector<la::Mat<double>> layer_inputs;
+        int num_layers;
         
-        void (*inputMap)( std::vector<double> & in );
-        void (*outputMap)( std::vector<double> & out );
-        
+        void (*inputMap)( la::Mat<double> & in );
+        void (*outputMap)( la::Mat<double> & out );
         
         
         struct Connection {

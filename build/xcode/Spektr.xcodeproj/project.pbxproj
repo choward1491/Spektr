@@ -26,6 +26,8 @@
 		AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F011D067E8D00D89490 /* TestLocalRegression2D.cpp */; };
 		AD608F061D0685E000D89490 /* TestLocalRegression3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F041D0685E000D89490 /* TestLocalRegression3D.cpp */; };
 		AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */; };
+		AD8A7EFA1D1D7D650030D777 /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */; };
+		AD8A7EFB1D1D7D650030D777 /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */; };
 		AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */; };
@@ -226,8 +228,6 @@
 		ADF8DD921C895BAB004C682C /* DefaultMaps.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD931C895BAB004C682C /* L2Cost.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD61C895BAB004C682C /* L2Cost.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD941C895BAB004C682C /* LogisticRegression.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADF8DD951C895BAB004C682C /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD81C895BAB004C682C /* ANN_Network.cpp */; };
-		ADF8DD961C895BAB004C682C /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCD81C895BAB004C682C /* ANN_Network.cpp */; };
 		ADF8DD971C895BAB004C682C /* ANN_Network.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCD91C895BAB004C682C /* ANN_Network.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD981C895BAB004C682C /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDA1C895BAB004C682C /* Node.cpp */; };
 		ADF8DD991C895BAB004C682C /* Node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCDA1C895BAB004C682C /* Node.cpp */; };
@@ -387,6 +387,12 @@
 		AD623E911CE566CA0072FF07 /* TestNeuralKalmanFilter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralKalmanFilter.hpp; sourceTree = "<group>"; };
 		AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LearningMissileSim.cpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.cpp; sourceTree = "<group>"; };
 		AD704E371CF5532600BF5757 /* LearningMissileSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = LearningMissileSim.hpp; path = ReinforcementLearning/LearningMissile/LearningMissileSim.hpp; sourceTree = "<group>"; };
+		AD8A7EF61D1D76FB0030D777 /* TestANN_Autoencoder.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TestANN_Autoencoder.hpp; sourceTree = "<group>"; };
+		AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ANN_Network.cpp; sourceTree = "<group>"; };
+		AD8A7F021D1F9D870030D777 /* TestANN_SingleClassification.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestANN_SingleClassification.hpp; sourceTree = "<group>"; };
+		AD8A7F031D2054E90030D777 /* HessianFreeStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HessianFreeStep.hpp; sourceTree = "<group>"; };
+		AD8A7F041D20ADB00030D777 /* TestANN_GradientCheck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestANN_GradientCheck.hpp; sourceTree = "<group>"; };
+		AD8A7F051D20BFC50030D777 /* TestANN_SingleClassificationPSO.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestANN_SingleClassificationPSO.hpp; sourceTree = "<group>"; };
 		AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GSA_Particle.cpp; path = GSA/GSA_Particle.cpp; sourceTree = "<group>"; };
 		AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GSA_Particle.hpp; path = GSA/GSA_Particle.hpp; sourceTree = "<group>"; };
 		AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression1D.cpp; sourceTree = "<group>"; };
@@ -470,7 +476,6 @@
 		ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DefaultMaps.hpp; sourceTree = "<group>"; };
 		ADF8DCD61C895BAB004C682C /* L2Cost.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = L2Cost.hpp; sourceTree = "<group>"; };
 		ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LogisticRegression.hpp; sourceTree = "<group>"; };
-		ADF8DCD81C895BAB004C682C /* ANN_Network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ANN_Network.cpp; sourceTree = "<group>"; };
 		ADF8DCD91C895BAB004C682C /* ANN_Network.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ANN_Network.hpp; sourceTree = "<group>"; };
 		ADF8DCDA1C895BAB004C682C /* Node.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Node.cpp; sourceTree = "<group>"; };
 		ADF8DCDB1C895BAB004C682C /* Node.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Node.hpp; sourceTree = "<group>"; };
@@ -824,6 +829,17 @@
 			name = Trainer;
 			sourceTree = "<group>";
 		};
+		AD8A7EF41D1D769B0030D777 /* ANN */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A7EF61D1D76FB0030D777 /* TestANN_Autoencoder.hpp */,
+				AD8A7F021D1F9D870030D777 /* TestANN_SingleClassification.hpp */,
+				AD8A7F051D20BFC50030D777 /* TestANN_SingleClassificationPSO.hpp */,
+				AD8A7F041D20ADB00030D777 /* TestANN_GradientCheck.hpp */,
+			);
+			name = ANN;
+			sourceTree = "<group>";
+		};
 		AD94BC361CFCA1E400E8A846 /* GSA */ = {
 			isa = PBXGroup;
 			children = (
@@ -867,6 +883,7 @@
 		AD957EDB1D04AA38004204AE /* Machine Learning Tests */ = {
 			isa = PBXGroup;
 			children = (
+				AD8A7EF41D1D769B0030D777 /* ANN */,
 				AD957EDF1D04D261004204AE /* LocalRegression */,
 			);
 			name = "Machine Learning Tests";
@@ -1138,7 +1155,7 @@
 				ADF8DCD51C895BAB004C682C /* DefaultMaps.hpp */,
 				ADF8DCD61C895BAB004C682C /* L2Cost.hpp */,
 				ADF8DCD71C895BAB004C682C /* LogisticRegression.hpp */,
-				ADF8DCD81C895BAB004C682C /* ANN_Network.cpp */,
+				AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */,
 				ADF8DCD91C895BAB004C682C /* ANN_Network.hpp */,
 				ADF8DCDA1C895BAB004C682C /* Node.cpp */,
 				ADF8DCDB1C895BAB004C682C /* Node.hpp */,
@@ -1282,6 +1299,7 @@
 			children = (
 				ADF8DD1D1C895BAB004C682C /* ConstantStep.hpp */,
 				ADF8DD1E1C895BAB004C682C /* GradientBase.hpp */,
+				AD8A7F031D2054E90030D777 /* HessianFreeStep.hpp */,
 			);
 			path = Gradient;
 			sourceTree = "<group>";
@@ -1564,7 +1582,6 @@
 				ADF8DD981C895BAB004C682C /* Node.cpp in Sources */,
 				AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */,
 				AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */,
-				ADF8DD951C895BAB004C682C /* ANN_Network.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
 				AD9634301CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */,
@@ -1613,6 +1630,7 @@
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
 				ADF8DDF81C895BAB004C682C /* TanhSinh.cpp in Sources */,
 				ADF8DD4E1C895BAB004C682C /* vec3.cpp in Sources */,
+				AD8A7EFA1D1D7D650030D777 /* ANN_Network.cpp in Sources */,
 				AD11677F1CFD49ED0052FA34 /* NonlinearModel.cpp in Sources */,
 				ADF75E9F1CC203BE00092A38 /* ButcherTable.cpp in Sources */,
 			);
@@ -1759,12 +1777,12 @@
 				ADF8DD8D1C895BAB004C682C /* ActivationFuncs.cpp in Sources */,
 				ADF8DD991C895BAB004C682C /* Node.cpp in Sources */,
 				AD9634281CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */,
-				ADF8DD961C895BAB004C682C /* ANN_Network.cpp in Sources */,
 				ADF8DDC91C895BAB004C682C /* Pendulum.cpp in Sources */,
 				ADF8DDE41C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DDA01C895BAB004C682C /* Fraction.cpp in Sources */,
 				ADF8DDD31C895BAB004C682C /* SimState.cpp in Sources */,
 				ADF8DDF11C895BAB004C682C /* FiniteElement.cpp in Sources */,
+				AD8A7EFB1D1D7D650030D777 /* ANN_Network.cpp in Sources */,
 				ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB51C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF41C895BAB004C682C /* FiniteVolume.cpp in Sources */,

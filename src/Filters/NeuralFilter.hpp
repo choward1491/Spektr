@@ -63,10 +63,10 @@ namespace spektr {
         private:
             
             Mat estimate;
-            std::vector<double> input;
-            std::vector<double> grad;
-            std::vector<double> dEdO;
-            std::vector<double> out;
+            la::Mat<double> input;
+            la::Mat<double> grad;
+            la::Mat<double> dEdO;
+            la::Mat<double> out;
             CircularQueue<Mat> list;
             
             int max_iters;

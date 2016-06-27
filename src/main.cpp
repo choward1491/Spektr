@@ -14,17 +14,24 @@
 #include <libiomp/omp.h>
 #include "TestExample1.hpp"
 #include "TestNeuralFilter1.hpp"
+#include "TestNeuralKalmanFilter.hpp"
+//#include "TestANN_Autoencoder.hpp"
+//#include "TestANN_SingleClassification.hpp"
+#include "TestANN_SingleClassificationPSO.hpp"
+#include "TestANN_GradientCheck.hpp"
 
 int main(int argc, const char * argv[]) {
     
     //testLocalRegression1D();
     //testLocalRegression2D();
-    runExample1_UKF();
-    runExample1_ADELINE();
+    //runExample1_UKF();
+    //runExample1_ADELINE();
+    //runExample1_NeuralKalman();
     
-    //double dtime = omp_get_wtime();
-    //testAdvectionEqnSim("/User/christianjhoward/history.txt");
-        
+    
+    //TestANN_Autoencoder();
+    TestANN_SingleClassificationPSO();
+    
     // exit
     return 0;
 }

@@ -30,4 +30,12 @@ namespace ANN {
         return a;
     }
     
+    Activation leakyReLU( double z){
+        if( z > 0.0 ){
+            return Activation {z, 1.0};
+        }else{
+            return Activation {0.1*z, 0.1};
+        }
+    }
+    
 }

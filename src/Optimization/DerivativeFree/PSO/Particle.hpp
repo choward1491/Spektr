@@ -61,7 +61,8 @@ namespace opt {
         void update(){
             double u1 = rng.rand();
             double u2 = rng.rand();
-            vel = vel + ( u1*(*lstep)*( pbest - pose ) + u2*(*gstep)*( (*gbest) - pose ) );
+            double inertia = 1.05;
+            vel = inertia*vel + ( u1*(*lstep)*( pbest - pose ) + u2*(*gstep)*( (*gbest) - pose ) );
             pose = pose + vel;
         }
         

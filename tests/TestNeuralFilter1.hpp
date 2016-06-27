@@ -48,8 +48,8 @@ void runExample1_ADELINE(){
     
     // Create adeline filter
     NeuralFilter filter(3);
-    filter.setMaxLearningIterations(10);
-    filter.setLearningStepSize(1e-3);
+    filter.setMaxLearningIterations(1);
+    filter.setLearningStepSize(1e-1);
     
     // Init initial conditions
     NeuralFilter::Mat x0(2,1,0);
