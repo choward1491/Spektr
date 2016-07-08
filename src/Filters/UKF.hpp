@@ -53,6 +53,7 @@ namespace filter {
         UnscentedKF( const Mat & x0 );
         ~UnscentedKF();
         
+        void init();
         
         void setInitState( const Mat & x0 );
         void operator()( double t_, const Mat & meas );
@@ -62,6 +63,7 @@ namespace filter {
         double & stateCov(int i, int j);
         double & stateNoise(int i, int j);
         double & measNoise(int i, int j);
+        
         
         size_t numState() const { return nx; }
         size_t numMeas()  const { return nz; }
@@ -78,6 +80,8 @@ namespace filter {
         Sym R;
         
         Sym Pxx;
+        Lower S;
+        bool setCholesky;
         std::vector<Mat> sigx;
         Sym Pzz;
         Mat Pxz;
@@ -93,13 +97,16 @@ namespace filter {
         
     };
     
-    
-    
+    template<class D, class M>
+    void UnscentedKF<D,M>::init(){
+        la::cholesky( Pxx, S );
+        setCholesky = true;
+    }
     
         
     template<class D, class M>
     UnscentedKF<D,M>::UnscentedKF():Q(nx,nx),R(nz,nz),Pxx(nx,nx),Pzz(nz,nz),
-                                    Pxz(nx,nz),sigx(1+2*nx),x(nx,1){
+                                    Pxz(nx,nz),sigx(1+2*nx),x(nx,1),setCholesky(false){
         for (int i = 0; i < nx; i++) { Q(i,i) = 1.0; Pxx(i,i) = 1.0; }
         for (int i = 0; i < nz; i++) { R(i,i) = 1.0; Pzz(i,i) = 1.0; }
         t = 0;
@@ -108,7 +115,7 @@ namespace filter {
     
     template<class D, class M>
     UnscentedKF<D,M>::UnscentedKF( const Mat & x0 ):Q(nx,nx),R(nz,nz),Pxx(nx,nx),Pzz(nz,nz),
-                                                    Pxz(nx,nz),sigx(1+2*nx),x(x0){
+                                                    Pxz(nx,nz),sigx(1+2*nx),x(x0),setCholesky(false){
         for (int i = 0; i < nx; i++) { Q(i,i) = 1.0; Pxx(i,i) = 1.0; }
         for (int i = 0; i < nz; i++) { R(i,i) = 1.0; Pzz(i,i) = 1.0; }
         t = 0;
@@ -137,15 +144,13 @@ namespace filter {
         static Mat ut(x), xt(x.size(),0), zt(meas.size(),0), dx(x),dxt(x);
         static std::vector<Mat> fx(1+2*nx);
         static std::vector<Mat> hx(1+2*nx);
-        
         double dt = t_ - t; t = t_;
-        Mat D;
-        la::cholesky( Pxx, D );
+        if( !setCholesky ){ init(); }
         
         // Compute initial sigma points
         sigx[0] = x;
         for (int i = 1; i <= nx; i++) {
-            D.getColumn(ut,i-1);
+            S.getColumn(ut,i-1);
             int ind = 1 + 2*(i-1);
             sigx[ind]     = x + q*ut;
             sigx[ind+1]   = x - q*ut;
@@ -161,20 +166,18 @@ namespace filter {
         
         
         // Compute State Covariance prediction
-        dx = fx[0]-xt; dxt = dx;
-        dxt.t();
-        Pxx = Q + w0*dx*dxt;
+        dx = sqrt(w0)*(fx[0]-xt);
+        la::cholesky(Q, S);
+        S.rankOneUpdate(dx);
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.t();
-            dx = fx[i]-xt;
-            dxt = dx; dxt.t();
-            Pxx = Pxx + w1*dx*dxt;
+            dx = sqrt(w1)*(fx[i]-xt);
+            S.rankOneUpdate(dx);
         }
         
         // Compute new sigma points
         sigx[0] = xt;
         for (int i = 1; i <= nx; i++) {
-            D.getColumn(ut,i-1);
+            S.getColumn(ut,i-1);
             int ind = 1 + 2*(i-1);
             sigx[ind]     = xt + q*ut;
             sigx[ind+1]   = xt - q*ut;
@@ -189,40 +192,43 @@ namespace filter {
         }
         
         // compute measurement covariance
-        dxt.t();
         dx = zt - hx[0]; dxt = dx; dxt.t();
         Pzz = R + w0*dx*dxt;
+        dxt.t();
         
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.t();
             dx = zt - hx[i];
             dxt = dx; dxt.t();
             Pzz = Pzz + w1*dx*dxt;
+            dxt.t();
         }
         
+        
+        
         // compute cross correlation
-        if( dxt.isTransposed()){ dxt.t(); }
         dx = fx[0]-xt;
         dxt = hx[0] - zt; dxt.t();
         Pxz = w0*dx*dxt;
+        dxt.t();
         for (int i = 1; i <= 2*nx; i++) {
-            dxt.t();
             dx = fx[i]-xt;
             dxt = hx[i] - zt; dxt.t();
             Pxz = Pxz + w1*dx*dxt;
+            dxt.t();
         }
         
         // Compute kalman gain
         Mat PzzInv;
         Diag I(nz,nz,1);
         solve(Pzz,I,PzzInv);
-        Mat It = Pzz*PzzInv;
         Mat K = Pxz * PzzInv;
         
         // Compute state estimate and covariance estimate
         x = xt + K*( meas - zt );
-        Mat M = K*Pzz; K.t();
-        Pxx = Pxx - M*K;
+        Mat M = K*Pzz;
+        K.t();
+        Mat D = M*K;
+        S.rankOneDowndate(D);
         
     }
     

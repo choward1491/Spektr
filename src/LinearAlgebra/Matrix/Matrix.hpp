@@ -130,6 +130,18 @@ namespace la {
         const S & operator[](int k) const{return data(k);}
         
         
+        S trace() const {
+            S sum = static_cast<S>(0);
+            if( this->isSquare() ){
+                for( int i = 0; i < this->size().rows; i++ ){
+                    sum += (*this)(i,i);
+                }
+            }
+            
+            return sum;
+        }
+        
+        
         
         
         Dims size() const{return data.size();}

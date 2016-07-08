@@ -22,6 +22,8 @@ public:
         Mat dqdt(xi);
         dqdt[0] = xi[2];
         dqdt[1] = xi[3];
+        dqdt[2] = 0;
+        dqdt[3] = 0;
         
         
         return xi + dt*dqdt;

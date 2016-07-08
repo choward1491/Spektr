@@ -33,6 +33,8 @@
 
 #include "Matrix.hpp"
 #include "LowerSolver.hpp"
+#include "Cholesky.hpp"
+#include "LDL.hpp"
 
 namespace la {
     
@@ -72,12 +74,102 @@ namespace la {
         
         template<class C>
         void rankOneUpdate( const Matrix<T,C> & x ){
+            if( x.size().rows == this->size().rows && (x.size().cols == 1 || x.isSquare()) ){
+                if( x.size().cols == 1 ){
+                    Dims d = this->size();
+                    Matrix<T,C> xt = x;
+                    
+                    for( int k = 0; k < d.rows; k++ ){
+                        T lkk = (*this)(k,k);
+                        T xk  = xt(k);
+                        T r = static_cast<T>(sqrt(static_cast<double>(lkk*lkk+xk*xk)));
+                        T c = r / lkk;
+                        T s = xk / lkk;
+                        (*this)(k,k) = r;
+                        for(int l = k+1; l < d.rows; l++){
+                            (*this)(l,k) = ( (*this)(l,k) + s*xt(l) ) / c;
+                            xt(l) = c*xt(l) - s*(*this)(l,k);
+                        }
+                    }
+                }else{
+                    Dims d = this->size();
+                    LMat L(d,0);
+                    cholesky(x, L);
+                    
+                    for( int i = 0; i < d.rows; i++ ){
+                        for( int k = 0; k < d.rows; k++ ){
+                            T lkk = (*this)(k,k);
+                            T xk  = L(k,i);
+                            T r = static_cast<T>(sqrt(static_cast<double>(lkk*lkk+xk*xk)));
+                            T c = r / lkk;
+                            T s = xk / lkk;
+                            (*this)(k,k) = r;
+                            for(int l = k+1; l < d.rows; l++){
+                                (*this)(l,k) = ( (*this)(l,k) + s*L(l,i) ) / c;
+                                L(l,i) = c*L(l,i) - s*(*this)(l,k);
+                            }
+                        }
+                    }
+                    
+                    
+                }
                 
+            }else{ assert(false); }
         }
         
         template<class C>
         void rankOneDowndate( const Matrix<T,C> & x ){
-            
+            if( x.size().rows == this->size().rows && (x.size().cols == 1 || x.isSquare()) ){
+                if( x.size().cols == 1 ){
+                    Dims d = this->size();
+                    Matrix<T,C> xt = x;
+                    
+                    for( int k = 0; k < d.rows; k++ ){
+                        T lkk = (*this)(k,k);
+                        T xk  = xt(k);
+                        T r = static_cast<T>(sqrt(static_cast<double>(lkk*lkk-xk*xk)));
+                        T c = r / lkk;
+                        T s = xk / lkk;
+                        (*this)(k,k) = r;
+                        for(int l = k+1; l < d.rows; l++){
+                            (*this)(l,k) = ( (*this)(l,k) - s*xt(l) ) / c;
+                            xt(l) = c*xt(l) - s*(*this)(l,k);
+                        }
+                    }
+                }else{
+                    Dims d = this->size();
+                    LMat L(d,0);
+                    DMat<T> D(d,0);
+                    //cholesky(x, L);
+                    LDL(x, L, D);
+                    
+                    for( int i = 0; i < d.rows; i++ ){
+                        for( int k = 0; k < d.rows; k++ ){
+                            L(i,k) *= sqrt(fmax(D(k,k),0));
+                        }
+                    }
+                    
+                    for( int i = 0; i < d.rows; i++ ){
+                        if( fmax(D(i,i),0) != 0 ){
+                            for( int k = 0; k < d.rows; k++ ){
+                                T lkk = (*this)(k,k);
+                                T xk  = L(k,i);
+                                T r = static_cast<T>(sqrt(static_cast<double>(lkk*lkk-xk*xk)));
+                                T c = r / lkk;
+                                T s = xk / lkk;
+                                (*this)(k,k) = r;
+                                for(int l = k+1; l < d.rows; l++){
+                                    (*this)(l,k) = ( (*this)(l,k) - s*L(l,i) ) / c;
+                                    L(l,i) = c*L(l,i) - s*(*this)(l,k);
+                                }
+                            }
+                        }
+                    }
+                    
+                    
+                }
+
+            }else{ assert(false); }
         }
         
         

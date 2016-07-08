@@ -119,14 +119,26 @@ int STORAGE::total() const { return nt; }
 
 TEMPLATE_HEADER
 void STORAGE::print() const {
-    for (size_t ir=0; ir < dims.rows; ir++) {
-        printf("| ");
-        for (size_t ic=0; ic < dims.cols; ic++) {
-            if( ic != 0 ){ printf(", "); }
-            printf("%0.12e",static_cast<double>((*this)(ir,ic)));
-            
+    if( isT ){
+        for (size_t ir=0; ir < dims.cols; ir++) {
+            printf(" ");
+            for (size_t ic=0; ic < dims.rows; ic++) {
+                if( ic != 0 ){ printf(", "); }
+                printf("%0.12e",static_cast<double>((*this)(ir,ic)));
+                
+            }
+            printf(" \n");
         }
-        printf(" |\n");
+    }else{
+        for (size_t ir=0; ir < dims.rows; ir++) {
+            printf(" ");
+            for (size_t ic=0; ic < dims.cols; ic++) {
+                if( ic != 0 ){ printf(", "); }
+                printf("%0.12e",static_cast<double>((*this)(ir,ic)));
+                
+            }
+            printf(" \n");
+        }
     }
     printf("\n");
 }

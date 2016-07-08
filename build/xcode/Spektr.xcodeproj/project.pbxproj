@@ -141,7 +141,6 @@
 		AD9A75651CCD430000615C78 /* NumericIntegration.hpp in Sources */ = {isa = PBXBuildFile; fileRef = AD4061901CC3643A0000D18A /* NumericIntegration.hpp */; };
 		AD9A75661CCD430000615C78 /* PreciseTime.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD071C895BAB004C682C /* PreciseTime.h */; };
 		AD9A75671CCD430000615C78 /* Scheduler.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0A1C895BAB004C682C /* Scheduler.hpp */; };
-		AD9A75681CCD430000615C78 /* MultiPSO.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; };
 		AD9A75691CCD430000615C78 /* Particle.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD191C895BAB004C682C /* Particle.hpp */; };
 		AD9A756A1CCD430000615C78 /* PSO.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1A1C895BAB004C682C /* PSO.hpp */; };
 		AD9A756B1CCD430000615C78 /* Swarm.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD1B1C895BAB004C682C /* Swarm.hpp */; };
@@ -276,9 +275,6 @@
 		ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
 		ADF8DDD31C895BAB004C682C /* SimState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD0D1C895BAB004C682C /* SimState.cpp */; };
 		ADF8DDD41C895BAB004C682C /* SimState.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD0E1C895BAB004C682C /* SimState.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
-		ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD161C895BAB004C682C /* MultiPSO.cpp */; };
-		ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD171C895BAB004C682C /* MultiPSO.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD181C895BAB004C682C /* Particle.cpp */; };
 		ADF8DDDD1C895BAB004C682C /* Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DD181C895BAB004C682C /* Particle.cpp */; };
 		ADF8DDDE1C895BAB004C682C /* Particle.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DD191C895BAB004C682C /* Particle.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -509,8 +505,6 @@
 		ADF8DD0C1C895BAB004C682C /* SimTime.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimTime.hpp; path = OverallSimState/SimTime.hpp; sourceTree = "<group>"; };
 		ADF8DD0D1C895BAB004C682C /* SimState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = SimState.cpp; path = OverallSimState/SimState.cpp; sourceTree = "<group>"; };
 		ADF8DD0E1C895BAB004C682C /* SimState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = SimState.hpp; path = OverallSimState/SimState.hpp; sourceTree = "<group>"; };
-		ADF8DD161C895BAB004C682C /* MultiPSO.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MultiPSO.cpp; sourceTree = "<group>"; };
-		ADF8DD171C895BAB004C682C /* MultiPSO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MultiPSO.hpp; sourceTree = "<group>"; };
 		ADF8DD181C895BAB004C682C /* Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Particle.cpp; sourceTree = "<group>"; };
 		ADF8DD191C895BAB004C682C /* Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Particle.hpp; sourceTree = "<group>"; };
 		ADF8DD1A1C895BAB004C682C /* PSO.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PSO.hpp; sourceTree = "<group>"; };
@@ -1284,8 +1278,6 @@
 		ADF8DD151C895BAB004C682C /* PSO */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DD161C895BAB004C682C /* MultiPSO.cpp */,
-				ADF8DD171C895BAB004C682C /* MultiPSO.hpp */,
 				ADF8DD181C895BAB004C682C /* Particle.cpp */,
 				ADF8DD191C895BAB004C682C /* Particle.hpp */,
 				ADF8DD1A1C895BAB004C682C /* PSO.hpp */,
@@ -1451,7 +1443,6 @@
 				ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */,
 				ADF8DDA11C895BAB004C682C /* Fraction.hpp in Headers */,
 				ADF8DD9C1C895BAB004C682C /* Trainer.hpp in Headers */,
-				ADF8DDDB1C895BAB004C682C /* MultiPSO.hpp in Headers */,
 				ADF8DDD11C895BAB004C682C /* SimTime.hpp in Headers */,
 				AD9634291CD99BFE00AAB6D8 /* NeuralFilter.hpp in Headers */,
 				ADF8DD8E1C895BAB004C682C /* ActivationFuncs.hpp in Headers */,
@@ -1613,7 +1604,6 @@
 				AD4061931CC3654E0000D18A /* ExplicitTrapezoidal.cpp in Sources */,
 				AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */,
 				ADF75EA91CC28F8200092A38 /* RungeKutta4.cpp in Sources */,
-				ADF8DDD91C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				AD39C7411CEEEB3F001658F8 /* RKCashKarp.cpp in Sources */,
 				ADF8DD9D1C895BAB004C682C /* main.cpp in Sources */,
 				AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */,
@@ -1753,7 +1743,6 @@
 				AD9A75651CCD430000615C78 /* NumericIntegration.hpp in Sources */,
 				AD9A75661CCD430000615C78 /* PreciseTime.h in Sources */,
 				AD9A75671CCD430000615C78 /* Scheduler.hpp in Sources */,
-				AD9A75681CCD430000615C78 /* MultiPSO.hpp in Sources */,
 				AD9A75691CCD430000615C78 /* Particle.hpp in Sources */,
 				AD9A756A1CCD430000615C78 /* PSO.hpp in Sources */,
 				AD9A756B1CCD430000615C78 /* Swarm.hpp in Sources */,
@@ -1796,7 +1785,6 @@
 				ADF8DDCD1C895BAB004C682C /* Scheduler.cpp in Sources */,
 				ADF8DD481C895BAB004C682C /* Function.cpp in Sources */,
 				ADF8DD4C1C895BAB004C682C /* Quaternion.cpp in Sources */,
-				ADF8DDDA1C895BAB004C682C /* MultiPSO.cpp in Sources */,
 				ADF8DD9E1C895BAB004C682C /* main.cpp in Sources */,
 				ADF8DDA91C895BAB004C682C /* Parser.cpp in Sources */,
 				ADF8DDB81C895BAB004C682C /* PendulumSim.cpp in Sources */,

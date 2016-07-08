@@ -38,7 +38,8 @@ namespace la {
 //template<class T, MatType C>
 template<class T, class C, class E, class F>
 void LDL( const Matrix<T,C> & m, Matrix<T,E> & L, Matrix<T,F> & D ){
-    
+    static int counter = 0;
+    counter++;
     if( !m.isSquare() ){
         printf("Error: Input matrix not square.\n");
         return;
@@ -50,27 +51,44 @@ void LDL( const Matrix<T,C> & m, Matrix<T,E> & L, Matrix<T,F> & D ){
         D.resize(m.size());
     }
     const int numr = static_cast<int>(L.size().rows);
-    
+    printf("counter = %i\n",counter);
+    if( counter == 30 ){
+        m.print();
+    }
+    //m.print();
     double sum = T();
     for (int i = 0; i < numr; i++) {
         for (int j = 0; j <= i; j++) {
-            sum = m(i,j);
+            sum = T();
             for (int k = 0; k < j; k++) {
-                sum -= L(i,k)*L(j,k)*D(k);
+                sum += L(i,k)*L(j,k)*D(k);
             }
+
+            sum = m(i,j) - sum;
             if( i == j ){
+                L.print();
+                D.print();
                 D(i) = sum;
                 L(i,i) = 1;
             }else{
                 T tmp = D(j);
                 if( tmp == T() ){
                     printf("Error: Divide by Zero\n");
-                    return;
+                    m.print();
+                    L.print();
+                    D.print();
+                    
+                    D(j) = 1e-4;
+                    tmp = 1e-4;
                 }
                 L(i,j) = sum / tmp;
             }
+            
+            //L.print();
+            //D.print();
         }
     }
+    
 }
 
     

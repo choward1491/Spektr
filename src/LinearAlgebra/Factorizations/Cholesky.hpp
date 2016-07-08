@@ -66,6 +66,7 @@ void cholesky( const Matrix<T,C> & m, Matrix<T,D> & L ){
                 T tmp = L(j,j);
                 if( tmp == T() ){
                     printf("Error: Divide by Zero\n");
+                    L.print();
                     return;
                 }
                 L(i,j) = sum / tmp;

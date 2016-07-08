@@ -34,17 +34,33 @@
 #include "Swarm.hpp"
 
 
+
+
 namespace opt {
     
     
     template< class Function, class Initializer>
     class pso : public optimizer<pso<Function,Initializer> > {
     public:
-        pso():swarm(20),numIter(0),maxIter(200),displayStatus(true){}
+        
+        enum Neighborhood {
+            Star = 0,
+            Ring,
+            Line,
+            VonNeumann,
+            MNearest,
+            Cluster,
+            Random
+        };
+        
+        pso():swarm(20),numIter(0),maxIter(200),displayStatus(true),
+              type(Star),neighborhoodDim(1){}
+        
         ~pso(){}
         
         void showStatus(){ displayStatus = true; }
         void dontShowStatus(){ displayStatus = false; }
+        void setNeighborhood( Neighborhood _type, int num = 1 ){ type = _type; neighborhoodDim = num; }
         void setdims( const Mat & lb, const Mat & ub ){
             swarm.setdims(lb,ub);
         }
@@ -102,6 +118,8 @@ namespace opt {
         int numIter;
         int maxIter;
         bool displayStatus;
+        Neighborhood type;
+        int neighborhoodDim;
         
         swarm<Function,Initializer> swarm;
         
