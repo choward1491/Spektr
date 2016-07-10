@@ -37,55 +37,54 @@ namespace la {
 
 //template<class T, MatType C>
 template<class T, class C, class E, class F>
-void LDL( const Matrix<T,C> & m, Matrix<T,E> & L, Matrix<T,F> & D ){
-    static int counter = 0;
-    counter++;
-    if( !m.isSquare() ){
+void LDL( const Matrix<T,C> & A, Matrix<T,E> & L, Matrix<T,F> & D ){
+    // Algorithm based on one described in:
+    // - Matrix Computations 4th Edition by Golub & Van Loan
+    // - pg 158 LDL' decomposition
+    //
+    
+    if( !A.isSquare() ){
         printf("Error: Input matrix not square.\n");
         return;
     }
-    if (m.size() != L.size() ) {
-        L.resize(m.size());
+    if (A.size() != L.size() ) {
+        L.resize(A.size());
     }
-    if (m.size() != D.size() ){
-        D.resize(m.size());
+    if (A.size() != D.size() ){
+        D.resize(A.size());
     }
     const int numr = static_cast<int>(L.size().rows);
-    printf("counter = %i\n",counter);
-    if( counter == 30 ){
-        m.print();
-    }
-    //m.print();
-    double sum = T();
-    for (int i = 0; i < numr; i++) {
-        for (int j = 0; j <= i; j++) {
-            sum = T();
-            for (int k = 0; k < j; k++) {
-                sum += L(i,k)*L(j,k)*D(k);
+    
+    Mat<T> v(A.size().rows,1,0);
+    
+    double sum = T(),sum2 = T();
+    for (int j = 0; j < numr; j++) {
+        sum = T();
+        
+        L(j,j) = 1;
+        
+        for( int i = 0; i < j; i++){
+            v(i) = L(j,i)*D(i,i);
+        }
+        
+        sum = A(j,j);
+        for( int i = 0; i < j; i++ ){
+            sum -= L(j,i)*v(i);
+        }
+        
+        if( sum != sum ){// check for nan
+            D(j,j) = 0;
+        }else{
+            D(j,j) = sum;
+            if( sum == T() ){ sum = 1e-30; }
+        }
+        
+        for( int k = j+1; k < numr; k++){
+            sum2 = T();
+            for( int i = 0; i < j; i++ ){
+                sum2 += L(k,i)*v(i);
             }
-
-            sum = m(i,j) - sum;
-            if( i == j ){
-                L.print();
-                D.print();
-                D(i) = sum;
-                L(i,i) = 1;
-            }else{
-                T tmp = D(j);
-                if( tmp == T() ){
-                    printf("Error: Divide by Zero\n");
-                    m.print();
-                    L.print();
-                    D.print();
-                    
-                    D(j) = 1e-4;
-                    tmp = 1e-4;
-                }
-                L(i,j) = sum / tmp;
-            }
-            
-            //L.print();
-            //D.print();
+            L(k,j) = (A(k,j) - sum2)/sum;
         }
     }
     

@@ -27,10 +27,10 @@ void runExample1_UKF(){
     
     // Init initial conditions
     UKF::Mat x0(4,1,0);
-    x0(0) = 0.1; // x pos
-    x0(1) = -.1; // y pos
-    x0(2) = 0.1;
-    x0(3) = 0.01;
+    x0(0) = 0.0; // x pos
+    x0(1) = 0.0; // y pos
+    x0(2) = 0.0;
+    x0(3) = 0.0;
     
     // Set initial state estimate for ukf
     ukf.setInitState(x0);
@@ -40,7 +40,7 @@ void runExample1_UKF(){
     // and state estimate covariance
     for (int i = 0; i < ukf.numState(); i++) {
         for (int j = 0; j < ukf.numState(); j++) {
-            ukf.stateNoise(i, j) = (i==j)*1e-2;
+            ukf.stateNoise(i, j) = (i==j)*1e-5;
         }
         ukf.stateCov(i, i) = 10.0;
     }
