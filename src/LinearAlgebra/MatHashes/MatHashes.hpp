@@ -35,6 +35,7 @@
 
 
 
+
 template< MatType T >
 class Hasher {
 public:
@@ -47,6 +48,19 @@ public:
     }
 };
 
+
+#define DEFINITION public:\
+                    static size_t hash(int i, int j, int nc, int nt);\
+                    static size_t netSize(int r, int c);
+
+template<> class Hasher<Diagonal>{DEFINITION};
+template<> class Hasher<Symmetric>{DEFINITION};
+template<> class Hasher<Lower>{DEFINITION};
+template<> class Hasher<Upper>{DEFINITION};
+template<> class Hasher<Tridiagonal>{DEFINITION};
+template<> class Hasher<Sparse>{DEFINITION};
+
+#undef DEFINITION
 
 
 

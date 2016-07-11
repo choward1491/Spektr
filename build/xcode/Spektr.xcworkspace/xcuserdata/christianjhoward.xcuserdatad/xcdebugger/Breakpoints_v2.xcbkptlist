@@ -489,142 +489,46 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "172"
-            endingLineNumber = "172"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489650192.19374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489645990.707757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "147"
-            endingLineNumber = "147"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "223"
-            endingLineNumber = "223"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
-            timestampString = "487236889.616396"
+            timestampString = "489830055.063427"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "61"
             endingLineNumber = "61"
             landmarkName = "solve( const SMat&lt;T&gt; &amp; A, const MatExpression&lt;T,C&gt; &amp; b, Matrix&lt;T,O&gt; &amp; x )"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/NeuralFilter.cpp"
-            timestampString = "488480201.629066"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "NeuralFilter::operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void la::solve&lt;double, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, (MatType)0, Hasher&lt;(MatType)0&gt; &gt; &gt;, la::Mat&lt;double&gt; &gt;(la::SMat&lt;double&gt; const&amp;, MatExpression&lt;double, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, (MatType)0, Hasher&lt;(MatType)0&gt; &gt; &gt; &gt; const&amp;, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, MType&lt;double, la::Mat&lt;double&gt; &gt;::Type, Hasher&lt;MType&lt;double, la::Mat&lt;double&gt; &gt;::Type&gt; &gt; &gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
+                  timestampString = "489827551.192877"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "438">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void la::solve&lt;double, la::Matrix&lt;double, la::DMat&lt;double&gt;, MatStorage&lt;double, (MatType)5, Hasher&lt;(MatType)5&gt; &gt; &gt;, la::Mat&lt;double&gt; &gt;(la::SMat&lt;double&gt; const&amp;, MatExpression&lt;double, la::Matrix&lt;double, la::DMat&lt;double&gt;, MatStorage&lt;double, (MatType)5, Hasher&lt;(MatType)5&gt; &gt; &gt; &gt; const&amp;, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, MType&lt;double, la::Mat&lt;double&gt; &gt;::Type, Hasher&lt;MType&lt;double, la::Mat&lt;double&gt; &gt;::Type&gt; &gt; &gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
+                  timestampString = "489827551.193092"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "438">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1254,22 +1158,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489645990.707757"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "setCenterWeight( double w0_ )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../src/Filters/NeuralFilter.cpp"
             timestampString = "488480201.629066"
             startingColumnNumber = "9223372036854775807"
@@ -1494,38 +1382,6 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489650192.19374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "229"
-            endingLineNumber = "229"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489646808.713664"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "../../src/Filters/TargetDyn.hpp"
             timestampString = "489647001.826821"
             startingColumnNumber = "9223372036854775807"
@@ -1534,54 +1390,6 @@
             endingLineNumber = "22"
             landmarkName = "operator()(double dt, const Mat &amp; xi )"
             landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489649890.475819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "../../src/Filters/UKF.hpp"
-            timestampString = "489650192.19374"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "231"
-            endingLineNumber = "231"
-            landmarkName = "operator()( double t_, const Mat &amp; meas )"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1623,12 +1431,12 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "489810741.795816"
+                  timestampString = "489830138.516802"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "523">
+                  offsetFromSymbolStart = "888">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1638,12 +1446,12 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "489810741.796029"
+                  timestampString = "489830138.517017"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "523">
+                  offsetFromSymbolStart = "872">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -1740,6 +1548,54 @@
                   startingLineNumber = "61"
                   endingLineNumber = "61"
                   offsetFromSymbolStart = "432">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
+            timestampString = "489830055.063427"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "solve( const SMat&lt;T&gt; &amp; A, const MatExpression&lt;T,C&gt; &amp; b, Matrix&lt;T,O&gt; &amp; x )"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void la::solve&lt;double, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, (MatType)0, Hasher&lt;(MatType)0&gt; &gt; &gt;, la::Mat&lt;double&gt; &gt;(la::SMat&lt;double&gt; const&amp;, MatExpression&lt;double, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, (MatType)0, Hasher&lt;(MatType)0&gt; &gt; &gt; &gt; const&amp;, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, MType&lt;double, la::Mat&lt;double&gt; &gt;::Type, Hasher&lt;MType&lt;double, la::Mat&lt;double&gt; &gt;::Type&gt; &gt; &gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
+                  timestampString = "489830056.376233"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "433">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "void la::solve&lt;double, la::Matrix&lt;double, la::DMat&lt;double&gt;, MatStorage&lt;double, (MatType)5, Hasher&lt;(MatType)5&gt; &gt; &gt;, la::Mat&lt;double&gt; &gt;(la::SMat&lt;double&gt; const&amp;, MatExpression&lt;double, la::Matrix&lt;double, la::DMat&lt;double&gt;, MatStorage&lt;double, (MatType)5, Hasher&lt;(MatType)5&gt; &gt; &gt; &gt; const&amp;, la::Matrix&lt;double, la::Mat&lt;double&gt;, MatStorage&lt;double, MType&lt;double, la::Mat&lt;double&gt; &gt;::Type, Hasher&lt;MType&lt;double, la::Mat&lt;double&gt; &gt;::Type&gt; &gt; &gt;&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Solvers/SymmetricSolver.hpp"
+                  timestampString = "489830056.376397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62"
+                  offsetFromSymbolStart = "433">
                </Location>
             </Locations>
          </BreakpointContent>

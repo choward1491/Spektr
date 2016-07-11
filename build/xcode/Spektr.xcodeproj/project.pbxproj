@@ -28,18 +28,15 @@
 		AD704E381CF5532600BF5757 /* LearningMissileSim.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD704E361CF5532600BF5757 /* LearningMissileSim.cpp */; };
 		AD8A7EFA1D1D7D650030D777 /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */; };
 		AD8A7EFB1D1D7D650030D777 /* ANN_Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD8A7EF81D1D7D650030D777 /* ANN_Network.cpp */; };
+		AD8A7F541D3230FC0030D777 /* MatHashes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB41C895BAB004C682C /* MatHashes.cpp */; };
 		AD94BC391CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD94BC3A1CFCDBC600E8A846 /* GSA_Particle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */; };
 		AD957EDE1D04AA5D004204AE /* TestLocalRegression1D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */; };
 		AD9634271CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634281CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */; };
 		AD9634291CD99BFE00AAB6D8 /* NeuralFilter.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */; };
-		AD9634301CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */; };
-		AD9634311CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */; };
-		AD9634321CE0489000AAB6D8 /* RecursiveLS.hpp in Headers */ = {isa = PBXBuildFile; fileRef = AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */; };
 		AD9A74FF1CCD430000615C78 /* Parser.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCEA1C895BAB004C682C /* Parser.hpp */; };
 		AD9A75001CCD430000615C78 /* FileObject.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; };
-		AD9A75011CCD430000615C78 /* DataFilter.h in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; };
 		AD9A75021CCD430000615C78 /* TargetDyn.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC851C895BAB004C682C /* TargetDyn.hpp */; };
 		AD9A75031CCD430000615C78 /* TargetMeas.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC861C895BAB004C682C /* TargetMeas.hpp */; };
 		AD9A75041CCD430000615C78 /* UKF.hpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC871C895BAB004C682C /* UKF.hpp */; };
@@ -170,7 +167,6 @@
 		ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
 		ADF8DD411C895BAB004C682C /* FileObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DC811C895BAB004C682C /* FileObject.cpp */; };
 		ADF8DD421C895BAB004C682C /* FileObject.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC821C895BAB004C682C /* FileObject.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADF8DD431C895BAB004C682C /* DataFilter.h in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC841C895BAB004C682C /* DataFilter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD441C895BAB004C682C /* TargetDyn.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC851C895BAB004C682C /* TargetDyn.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD451C895BAB004C682C /* TargetMeas.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC861C895BAB004C682C /* TargetMeas.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD461C895BAB004C682C /* UKF.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DC871C895BAB004C682C /* UKF.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -197,7 +193,6 @@
 		ADF8DD6F1C895BAB004C682C /* MatScalarMinusExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB01C895BAB004C682C /* MatScalarMinusExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD701C895BAB004C682C /* MatScalarMultExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB11C895BAB004C682C /* MatScalarMultExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD711C895BAB004C682C /* MatSumExpr.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB21C895BAB004C682C /* MatSumExpr.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
-		ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB41C895BAB004C682C /* MatHashes.cpp */; };
 		ADF8DD731C895BAB004C682C /* MatHashes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = ADF8DCB41C895BAB004C682C /* MatHashes.cpp */; };
 		ADF8DD741C895BAB004C682C /* MatHashes.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB51C895BAB004C682C /* MatHashes.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
 		ADF8DD751C895BAB004C682C /* Dims.hpp in Headers */ = {isa = PBXBuildFile; fileRef = ADF8DCB71C895BAB004C682C /* Dims.hpp */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -389,6 +384,9 @@
 		AD8A7F031D2054E90030D777 /* HessianFreeStep.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HessianFreeStep.hpp; sourceTree = "<group>"; };
 		AD8A7F041D20ADB00030D777 /* TestANN_GradientCheck.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestANN_GradientCheck.hpp; sourceTree = "<group>"; };
 		AD8A7F051D20BFC50030D777 /* TestANN_SingleClassificationPSO.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestANN_SingleClassificationPSO.hpp; sourceTree = "<group>"; };
+		AD8A7F521D3222EA0030D777 /* UKF_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UKF_Impl.hpp; sourceTree = "<group>"; };
+		AD8A7F551D3339530030D777 /* LinearKF.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearKF.hpp; sourceTree = "<group>"; };
+		AD8A7F561D33396B0030D777 /* LinearKF_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearKF_Impl.hpp; sourceTree = "<group>"; };
 		AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GSA_Particle.cpp; path = GSA/GSA_Particle.cpp; sourceTree = "<group>"; };
 		AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GSA_Particle.hpp; path = GSA/GSA_Particle.hpp; sourceTree = "<group>"; };
 		AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression1D.cpp; sourceTree = "<group>"; };
@@ -396,8 +394,6 @@
 		AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralFilter.cpp; sourceTree = "<group>"; };
 		AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NeuralFilter.hpp; sourceTree = "<group>"; };
 		AD96342D1CD9B61400AAB6D8 /* TestNeuralFilter1.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuralFilter1.hpp; sourceTree = "<group>"; };
-		AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RecursiveLS.cpp; sourceTree = "<group>"; };
-		AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = RecursiveLS.hpp; sourceTree = "<group>"; };
 		AD9A75B21CD3C91E00615C78 /* EulerAngles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EulerAngles.cpp; sourceTree = "<group>"; };
 		AD9A75B31CD3C91E00615C78 /* EulerAngles.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = EulerAngles.hpp; sourceTree = "<group>"; };
 		ADA0F8341D0A8EE700582870 /* libiomp5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiomp5.dylib; path = ../../../../../../../../usr/local/lib/libiomp5.dylib; sourceTree = "<group>"; };
@@ -421,7 +417,6 @@
 		ADF75EA81CC28F8200092A38 /* RungeKutta4.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = RungeKutta4.hpp; path = ButcherIntegrator/RungeKutta4.hpp; sourceTree = "<group>"; };
 		ADF8DC811C895BAB004C682C /* FileObject.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FileObject.cpp; sourceTree = "<group>"; };
 		ADF8DC821C895BAB004C682C /* FileObject.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FileObject.hpp; sourceTree = "<group>"; };
-		ADF8DC841C895BAB004C682C /* DataFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFilter.h; sourceTree = "<group>"; };
 		ADF8DC851C895BAB004C682C /* TargetDyn.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TargetDyn.hpp; sourceTree = "<group>"; };
 		ADF8DC861C895BAB004C682C /* TargetMeas.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = TargetMeas.hpp; sourceTree = "<group>"; };
 		ADF8DC871C895BAB004C682C /* UKF.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = UKF.hpp; sourceTree = "<group>"; };
@@ -994,14 +989,14 @@
 		ADF8DC831C895BAB004C682C /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DC841C895BAB004C682C /* DataFilter.h */,
 				ADF8DC851C895BAB004C682C /* TargetDyn.hpp */,
 				ADF8DC861C895BAB004C682C /* TargetMeas.hpp */,
 				ADF8DC871C895BAB004C682C /* UKF.hpp */,
+				AD8A7F521D3222EA0030D777 /* UKF_Impl.hpp */,
 				AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */,
 				AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */,
-				AD96342E1CE0489000AAB6D8 /* RecursiveLS.cpp */,
-				AD96342F1CE0489000AAB6D8 /* RecursiveLS.hpp */,
+				AD8A7F551D3339530030D777 /* LinearKF.hpp */,
+				AD8A7F561D33396B0030D777 /* LinearKF_Impl.hpp */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
@@ -1389,7 +1384,6 @@
 				ADF8DD661C895BAB004C682C /* LDL.hpp in Headers */,
 				AD156A551D0CEF640015FDD7 /* RNN_Network.hpp in Headers */,
 				ADF8DDCA1C895BAB004C682C /* Pendulum.hpp in Headers */,
-				AD9634321CE0489000AAB6D8 /* RecursiveLS.hpp in Headers */,
 				ADF8DDDE1C895BAB004C682C /* Particle.hpp in Headers */,
 				ADF8DDA61C895BAB004C682C /* RandomNumberGenerator.hpp in Headers */,
 				ADF8DD651C895BAB004C682C /* Cholesky.hpp in Headers */,
@@ -1401,7 +1395,6 @@
 				ADF8DDFA1C895BAB004C682C /* TanhSinh.hpp in Headers */,
 				ADF8DD6D1C895BAB004C682C /* MatScalarAddExpr.hpp in Headers */,
 				ADF8DDE81C895BAB004C682C /* Parabola2D.hpp in Headers */,
-				ADF8DD431C895BAB004C682C /* DataFilter.h in Headers */,
 				ADF8DD7C1C895BAB004C682C /* Special_Lower.hpp in Headers */,
 				ADF8DDEC1C895BAB004C682C /* Element.hpp in Headers */,
 				ADF8DDE51C895BAB004C682C /* RandomInit.hpp in Headers */,
@@ -1575,12 +1568,12 @@
 				AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */,
 				ADF8DDC81C895BAB004C682C /* Pendulum.cpp in Sources */,
 				AD40619A1CC40DCE0000D18A /* HeatEquationSim.cpp in Sources */,
-				AD9634301CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */,
 				ADF8DDE31C895BAB004C682C /* RandomInit.cpp in Sources */,
 				ADF8DD9F1C895BAB004C682C /* Fraction.cpp in Sources */,
 				ADF8DDD21C895BAB004C682C /* SimState.cpp in Sources */,
 				ADF75EA61CC2160A00092A38 /* ExplicitEuler.cpp in Sources */,
 				ADF8DDF01C895BAB004C682C /* FiniteElement.cpp in Sources */,
+				AD8A7F541D3230FC0030D777 /* MatHashes.cpp in Sources */,
 				ADF8DD401C895BAB004C682C /* FileObject.cpp in Sources */,
 				ADF8DDB41C895BAB004C682C /* DynamicModel.cpp in Sources */,
 				ADF8DDF31C895BAB004C682C /* FiniteVolume.cpp in Sources */,
@@ -1614,7 +1607,6 @@
 				AD9634271CD99BFE00AAB6D8 /* NeuralFilter.cpp in Sources */,
 				AD4061A71CC5EB280000D18A /* HodgkinHuxleyNeuronModel.cpp in Sources */,
 				AD4061A21CC455C20000D18A /* AdvectionEqnSim.cpp in Sources */,
-				ADF8DD721C895BAB004C682C /* MatHashes.cpp in Sources */,
 				ADF8DDBA1C895BAB004C682C /* ModelList.cpp in Sources */,
 				ADF8DDED1C895BAB004C682C /* FiniteDifference.cpp in Sources */,
 				ADF8DDEA1C895BAB004C682C /* Element.cpp in Sources */,
@@ -1639,7 +1631,6 @@
 			files = (
 				AD9A74FF1CCD430000615C78 /* Parser.hpp in Sources */,
 				AD9A75001CCD430000615C78 /* FileObject.hpp in Sources */,
-				AD9A75011CCD430000615C78 /* DataFilter.h in Sources */,
 				AD9A75021CCD430000615C78 /* TargetDyn.hpp in Sources */,
 				AD9A75031CCD430000615C78 /* TargetMeas.hpp in Sources */,
 				AD9A75041CCD430000615C78 /* UKF.hpp in Sources */,
@@ -1753,7 +1744,6 @@
 				AD9A75701CCD430000615C78 /* Optimizer.hpp in Sources */,
 				AD9A75711CCD430000615C78 /* Parabola2D.hpp in Sources */,
 				AD9A75721CCD430000615C78 /* Rosenbrock.hpp in Sources */,
-				AD9634311CE0489000AAB6D8 /* RecursiveLS.cpp in Sources */,
 				AD9A75731CCD430000615C78 /* Element.hpp in Sources */,
 				AD9A75741CCD430000615C78 /* FiniteDifference.hpp in Sources */,
 				AD9A75751CCD430000615C78 /* FiniteElement.hpp in Sources */,

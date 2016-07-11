@@ -37,43 +37,82 @@
 #include "CircularQueue.hpp"
 
 namespace spektr {
-    
     namespace filter {
 
         class NeuralFilter {
         public:
+            // <define various typedefs for usage in code>
             typedef la::Mat<double> Mat;
             
+            // <neural filter constructors>
             NeuralFilter();
             NeuralFilter(int num_data);
-            void setNumData(int num_data);
-            void setInitState( const Mat & x0 );
-            void setMaxLearningIterations( int max_iter );
-            void setLearningStepSize( double step );
-            void operator()( double t_, const Mat & meas );
-            const Mat & state() const;
-            Mat truth;
-            std::vector<ANN::Network> nets;
             
-            std::vector<double> ratio;
-            std::vector<double> ratio_avg;
-            std::vector<double> meas_error;
-            std::vector<double> avg_error;
+            // number of data points in sequence to use
+            // to try and estimate future points
+            void setNumData(int num_data);
+            
+            // set the initial state estimate
+            void setInitState( const Mat & x0 );
+            
+            // set the max number of optimization iterations, per
+            // time step, to use to make the neural network learn
+            void setMaxLearningIterations( int max_iter );
+            
+            // set the learning step size for optimization
+            // small step sizes push for slow but sure convergence,
+            // while large step sizes lead to tracking the measurements
+            void setLearningStepSize( double step );
+            
+            // operator to update filter estimate based on time
+            // and a new measurements
+            void operator()( double t_, const Mat & meas );
+            
+            // function to get latest state estimate
+            const Mat & state() const;
+            
+            // vector storing neural networks.
+            // each neural network estimates
+            // one component of the state vector
+            std::vector<ANN::Network> nets;
             
         private:
             
+            // estimate vector
             Mat estimate;
-            la::Mat<double> input;
-            la::Mat<double> grad;
-            la::Mat<double> dEdO;
-            la::Mat<double> out;
+            
+            // input vector for neural network
+            Mat input;
+            
+            // output vector for neural network
+            Mat out;
+            
+            // gradient vector
+            Mat grad;
+            
+            // derivative of cost
+            // with respect to
+            // network output
+            Mat dEdO;
+            
+            // queue storing last N
+            // time sequence vectors
+            // from the measurement data.
+            // these are used as an input to
+            // the neural networks to do
+            // time series estimation
             CircularQueue<Mat> list;
             
+            // maximum iteration count
+            // for optimization of networks
+            // at each time step
             int max_iters;
+            
+            // stepsize neural networks
+            // train with when using
+            // gradient descent
             double stepsize;
             
-            
-            int num_times;
         };
         
     }

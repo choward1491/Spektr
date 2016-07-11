@@ -28,7 +28,6 @@ int main(int argc, const char * argv[]) {
     //runExample1_ADELINE();
     //runExample1_NeuralKalman();
     
-    
     //TestANN_Autoencoder();
     //TestANN_SingleClassificationPSO();
     

@@ -74,7 +74,7 @@ void runExample1_NeuralKalman(){
     // and state estimate covariance
     for (int i = 0; i < ukf.numState(); i++) {
         for (int j = 0; j < ukf.numState(); j++) {
-            ukf.stateNoise(i, j) = (i==j) * 2e-4 + 0*(i!=j);
+            ukf.dynNoise(i, j) = (i==j) * 2e-4 + 0*(i!=j);
         }
         ukf.stateCov(i, i) = 5;
     }

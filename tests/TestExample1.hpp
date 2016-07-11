@@ -40,7 +40,7 @@ void runExample1_UKF(){
     // and state estimate covariance
     for (int i = 0; i < ukf.numState(); i++) {
         for (int j = 0; j < ukf.numState(); j++) {
-            ukf.stateNoise(i, j) = (i==j)*1e-5;
+            ukf.dynNoise(i, j) = (i==j)*1e-5;
         }
         ukf.stateCov(i, i) = 10.0;
     }
