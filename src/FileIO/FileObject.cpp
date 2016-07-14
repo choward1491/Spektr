@@ -14,10 +14,10 @@
     FileObject::FileObject(){
         file = 0;
     }
-    FileObject::FileObject( const char* filename , AccessMode mode ){
+FileObject::FileObject( const char* filename , AccessMode mode ):file(0){
         openFile(filename, mode);
     }
-    FileObject::FileObject( const std::string & filename, AccessMode mode ){
+FileObject::FileObject( const std::string & filename, AccessMode mode ):file(0){
         openFile(filename, mode);
     }
     void FileObject::clear(){

@@ -829,6 +829,57 @@
 			name = ANN;
 			sourceTree = "<group>";
 		};
+		AD8A7F571D34B7C60030D777 /* SampleDynamics */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DC851C895BAB004C682C /* TargetDyn.hpp */,
+			);
+			name = SampleDynamics;
+			sourceTree = "<group>";
+		};
+		AD8A7F581D34B7D10030D777 /* SampleMeasurement */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DC861C895BAB004C682C /* TargetMeas.hpp */,
+			);
+			name = SampleMeasurement;
+			sourceTree = "<group>";
+		};
+		AD8A7F591D34B7DF0030D777 /* UKF */ = {
+			isa = PBXGroup;
+			children = (
+				ADF8DC871C895BAB004C682C /* UKF.hpp */,
+				AD8A7F521D3222EA0030D777 /* UKF_Impl.hpp */,
+			);
+			name = UKF;
+			sourceTree = "<group>";
+		};
+		AD8A7F5A1D34B7EA0030D777 /* LinearKF */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A7F551D3339530030D777 /* LinearKF.hpp */,
+				AD8A7F561D33396B0030D777 /* LinearKF_Impl.hpp */,
+			);
+			name = LinearKF;
+			sourceTree = "<group>";
+		};
+		AD8A7F5B1D34B7F70030D777 /* TimeSeries */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A7F5C1D34B7FE0030D777 /* Neural */,
+			);
+			name = TimeSeries;
+			sourceTree = "<group>";
+		};
+		AD8A7F5C1D34B7FE0030D777 /* Neural */ = {
+			isa = PBXGroup;
+			children = (
+				AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */,
+				AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */,
+			);
+			name = Neural;
+			sourceTree = "<group>";
+		};
 		AD94BC361CFCA1E400E8A846 /* GSA */ = {
 			isa = PBXGroup;
 			children = (
@@ -989,14 +1040,11 @@
 		ADF8DC831C895BAB004C682C /* Filters */ = {
 			isa = PBXGroup;
 			children = (
-				ADF8DC851C895BAB004C682C /* TargetDyn.hpp */,
-				ADF8DC861C895BAB004C682C /* TargetMeas.hpp */,
-				ADF8DC871C895BAB004C682C /* UKF.hpp */,
-				AD8A7F521D3222EA0030D777 /* UKF_Impl.hpp */,
-				AD9634251CD99BFE00AAB6D8 /* NeuralFilter.cpp */,
-				AD9634261CD99BFE00AAB6D8 /* NeuralFilter.hpp */,
-				AD8A7F551D3339530030D777 /* LinearKF.hpp */,
-				AD8A7F561D33396B0030D777 /* LinearKF_Impl.hpp */,
+				AD8A7F5B1D34B7F70030D777 /* TimeSeries */,
+				AD8A7F5A1D34B7EA0030D777 /* LinearKF */,
+				AD8A7F591D34B7DF0030D777 /* UKF */,
+				AD8A7F581D34B7D10030D777 /* SampleMeasurement */,
+				AD8A7F571D34B7C60030D777 /* SampleDynamics */,
 			);
 			path = Filters;
 			sourceTree = "<group>";
