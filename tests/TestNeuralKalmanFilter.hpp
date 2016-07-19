@@ -125,7 +125,6 @@ void runExample1_NeuralKalman(){
         
         // add noise to z and feed into filter
         z = truth + rnd;
-        filter.truth = truth;
         filter(t,z);
         ukf(t,filter.state());
         double alpha = 0.5, beta = 1.0-alpha;
@@ -142,8 +141,7 @@ void runExample1_NeuralKalman(){
         //ukf.stateCov().print();
         
         fprintf(file.ref(), "%lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf, %lf\n",truth[0],truth[1],z[0],z[1],
-                filter.state()[0],filter.state()[1],ukf.state()[0],ukf.state()[1], filter.ratio[0],filter.ratio[1],
-                filter.meas_error[0],filter.meas_error[1],filter.avg_error[0],filter.avg_error[1]);
+                filter.state()[0],filter.state()[1],ukf.state()[0],ukf.state()[1]);
         
         // increment time
         t += dt;

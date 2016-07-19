@@ -365,6 +365,7 @@
 		AD4061A91CC5F7A30000D18A /* NeuronSim.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = NeuronSim.hpp; path = "Examples/Hodgkin–Huxley/NeuronSim.hpp"; sourceTree = "<group>"; };
 		AD4061AB1CC5F8770000D18A /* TestNeuronSim.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TestNeuronSim.hpp; sourceTree = "<group>"; };
 		AD4768021B76EAF100E6B11D /* Spektr */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Spektr; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD51D8EE1D3DF7BE00E07EA6 /* CrossValidation_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CrossValidation_Impl.hpp; path = CrossValidation/CrossValidation_Impl.hpp; sourceTree = "<group>"; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelState.cpp; path = ModelState/ModelState.cpp; sourceTree = "<group>"; };
@@ -387,6 +388,7 @@
 		AD8A7F521D3222EA0030D777 /* UKF_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = UKF_Impl.hpp; sourceTree = "<group>"; };
 		AD8A7F551D3339530030D777 /* LinearKF.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearKF.hpp; sourceTree = "<group>"; };
 		AD8A7F561D33396B0030D777 /* LinearKF_Impl.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LinearKF_Impl.hpp; sourceTree = "<group>"; };
+		AD8A7F7F1D3C8EC30030D777 /* CrossValidation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = CrossValidation.hpp; path = CrossValidation/CrossValidation.hpp; sourceTree = "<group>"; };
 		AD94BC371CFCDBC600E8A846 /* GSA_Particle.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GSA_Particle.cpp; path = GSA/GSA_Particle.cpp; sourceTree = "<group>"; };
 		AD94BC381CFCDBC600E8A846 /* GSA_Particle.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = GSA_Particle.hpp; path = GSA/GSA_Particle.hpp; sourceTree = "<group>"; };
 		AD957EDC1D04AA5D004204AE /* TestLocalRegression1D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TestLocalRegression1D.cpp; sourceTree = "<group>"; };
@@ -880,6 +882,15 @@
 			name = Neural;
 			sourceTree = "<group>";
 		};
+		AD8A7F7E1D3C8E910030D777 /* CrossValidation */ = {
+			isa = PBXGroup;
+			children = (
+				AD8A7F7F1D3C8EC30030D777 /* CrossValidation.hpp */,
+				AD51D8EE1D3DF7BE00E07EA6 /* CrossValidation_Impl.hpp */,
+			);
+			name = CrossValidation;
+			sourceTree = "<group>";
+		};
 		AD94BC361CFCA1E400E8A846 /* GSA */ = {
 			isa = PBXGroup;
 			children = (
@@ -1174,6 +1185,7 @@
 		ADF8DCCF1C895BAB004C682C /* MachineLearning */ = {
 			isa = PBXGroup;
 			children = (
+				AD8A7F7E1D3C8E910030D777 /* CrossValidation */,
 				AD704E311CF5526400BF5757 /* Algorithms */,
 				AD704E301CF5525600BF5757 /* UnsupervisedLearning */,
 				AD704E2F1CF5523200BF5757 /* SupervisedLearning */,

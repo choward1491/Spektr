@@ -170,13 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/Numbers/Fraction.cpp"
-            timestampString = "480831681.876718"
+            timestampString = "490432260.188048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "Fraction::methodOfContinuousFractions( double val, Fraction &amp; frac, double thresh )"
-            landmarkType = "5">
+            startingLineNumber = "95"
+            endingLineNumber = "95">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -186,11 +184,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../src/Numbers/Fraction.cpp"
-            timestampString = "480831987.50386"
+            timestampString = "490432260.188048"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "Fraction::methodOfContinuousFractions( double val, Fraction &amp; frac, double thresh )"
             landmarkType = "5">
          </BreakpointContent>
@@ -458,11 +456,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "../../tests/TestNeuralKalmanFilter.hpp"
-            timestampString = "485250431.318786"
+            timestampString = "490432082.68389"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
+            startingLineNumber = "128"
+            endingLineNumber = "128"
             landmarkName = "runExample1_NeuralKalman()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1431,12 +1429,12 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "489830138.516802"
+                  timestampString = "490506402.935794"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "888">
+                  offsetFromSymbolStart = "523">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -1446,12 +1444,12 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "489830138.517017"
+                  timestampString = "490506402.93595"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
                   endingLineNumber = "68"
-                  offsetFromSymbolStart = "872">
+                  offsetFromSymbolStart = "523">
                </Location>
             </Locations>
          </BreakpointContent>

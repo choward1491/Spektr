@@ -11,7 +11,6 @@
 
 template<>
 void Fraction::operator=( const double & val ){
-    printf("operator = double\n");
     *this = Fraction::decimal2fraction(val);
 }
 

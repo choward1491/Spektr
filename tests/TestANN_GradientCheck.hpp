@@ -58,8 +58,6 @@ bool TestANN_GradientCheck(){
     double norm = sqrt( delta.innerProduct() );
     
     
-    
-    
     return (norm < 1e-10);
 }
 
