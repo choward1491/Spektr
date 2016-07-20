@@ -65,7 +65,7 @@ protected:
     class Sets {
     public:
         int operator()(int set, int set_index) const;
-        void init( Model<DataSet> &model);
+        void init( DataSet &data);
         int setSize(int set) const;
         int numSets() const;
         

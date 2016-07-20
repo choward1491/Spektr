@@ -50,7 +50,7 @@
 
 // null constructor
 HEADER
-CV::CrossValidation():data_set(),model(data_set,K){
+CV::CrossValidation():data_set(),model(data_set,sets){
     
 }
 
@@ -67,7 +67,7 @@ int CV::getNumShuffles(int ns) const{
 // compute cross validation
 HEADER
 double CV::evaluate(){
-    double inv_count = 1.0 / static_cast<double>(model.size()*numShuffles) ;
+    double inv_count = 1.0 / static_cast<double>(K*numShuffles) ;
     double error = 0.0;
     
     for(int shuffle = 0; shuffle < numShuffles; ++shuffle){
@@ -97,30 +97,31 @@ int CV::Sets::numSets() const {
 }
 
 HEADER
-void CV::Sets::init( Model<DataSet> & model) {
+void CV::Sets::init( DataSet & data_set ) {
     static RandomNumberGenerator rng;
     static bool hasNotInit = true;
+    static PopArray pa(data_set.size());
     
     // init variables for use in
     // subset creation
-    size = model.size();
+    size = data_set.size();
     int indiv_size = size/K;
     int rem = size % K;
     
     // init indices to random
     // locations
     if( hasNotInit ){
-        
-        PopArray pa(size);
         indices.resize(size);
         start.resize(K);
         sub_size.resize(K);
-        
-        for(int i = 0; i < size; i++ ){
-            indices[i] = pa.pop( rng.randInt() % pa.size() );
-        }
-        
         hasNotInit = false;
+    }else{
+        pa.reset();
+    }
+    
+    // initialize indices
+    for(int i = 0; i < size; i++ ){
+        indices[i] = pa.pop( rng.randInt() % pa.size() );
     }
     
     // reset starting location and each subset size
