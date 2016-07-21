@@ -34,7 +34,7 @@
 #include "PopArray.hpp"
 #include "RandomNumberGenerator.hpp"
 
-#define HEADER template< int K, class DS, template<class> class M>
+#define HEADER template< int K, class DS, template<class,class> class M>
 #define CV CrossValidation<K,DS,M>
     
 // number of folds to break data into
@@ -50,7 +50,7 @@
 
 // null constructor
 HEADER
-CV::CrossValidation():data_set(),model(data_set,sets){
+CV::CrossValidation():data_set(),model(data_set,subsets){
     
 }
 
@@ -100,7 +100,7 @@ HEADER
 void CV::Sets::init( DataSet & data_set ) {
     static RandomNumberGenerator rng;
     static bool hasNotInit = true;
-    static PopArray pa(data_set.size());
+    static PopArray<int> pa(data_set.size());
     
     // init variables for use in
     // subset creation

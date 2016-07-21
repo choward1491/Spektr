@@ -34,6 +34,9 @@
 
 template< int K_, class DataSet_, template<class,class> class Model_>
 class CrossValidation {
+protected:
+    class Sets;
+    
 public:
     
     // number of folds to break data into
@@ -41,8 +44,8 @@ public:
     
     // typedefs
     typedef DataSet_ DataSet;
-    typedef Model_   Model;
-    class Sets;
+    typedef Model_<DataSet,Sets>   Model;
+    
     
     // null constructor
     CrossValidation();
@@ -57,10 +60,10 @@ public:
     
     // Cross Validation Data Set and Models
     DataSet data_set;
-    Model<DataSet,Sets> model;
+    Model model;
     
 protected:
-    friend class Model<DataSet,Sets>;
+    friend class Model_<DataSet,Sets>;
     
     class Sets {
     public:
@@ -70,7 +73,7 @@ protected:
         int numSets() const;
         
     private:
-        static int K = K_;
+        static const int K = K_;
         int size;
         std::vector<int> indices;
         std::vector<int> start;

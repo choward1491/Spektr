@@ -19,6 +19,7 @@
 //#include "TestANN_SingleClassification.hpp"
 //#include "TestANN_SingleClassificationPSO.hpp"
 #include "TestANN_GradientCheck.hpp"
+#include "CrossValidation.hpp"
 
 int main(int argc, const char * argv[]) {
     
