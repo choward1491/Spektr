@@ -50,7 +50,7 @@
 
 // null constructor
 HEADER
-CV::CrossValidation():data_set(),model(data_set,subsets){
+CV::CrossValidation():data_set(),model(data_set,subsets),numShuffles(1){
     
 }
 
@@ -71,10 +71,10 @@ double CV::evaluate(){
     double error = 0.0;
     
     for(int shuffle = 0; shuffle < numShuffles; ++shuffle){
-        subsets.init(); // reshuffle
+        subsets.init(data_set); // reshuffle
         for(int set = 0; set < K; ++set ){
-            model.train(set, subsets);
-            error += (model.testError(set, subsets) * inv_count);
+            model.train(set);
+            error += (model.testError(set) * inv_count);
         }
     }
     return error;
@@ -83,7 +83,7 @@ double CV::evaluate(){
 
 HEADER
 int CV::Sets::operator()(int set, int set_index) const{
-    return indices[ (start[set] + sub_size[set_index]) % size ];
+    return indices[ (start[set] + set_index) % size ];
 }
 
 HEADER
@@ -101,6 +101,15 @@ void CV::Sets::init( DataSet & data_set ) {
     static RandomNumberGenerator rng;
     static bool hasNotInit = true;
     static PopArray<int> pa(data_set.size());
+    static bool initPopArray = false;
+    
+    // initialize pop array if needed
+    if( !initPopArray ){
+        for(int i = 0; i < pa.size(); ++i ){
+            pa[i] = i;
+        }
+        initPopArray = true;
+    }
     
     // init variables for use in
     // subset creation
@@ -133,6 +142,8 @@ void CV::Sets::init( DataSet & data_set ) {
         sub_size[i] = indiv_size + (rem > 0);
         --rem;
     }
+    double a = 0;
+    
 }
 
 #undef HEADER

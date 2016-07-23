@@ -20,8 +20,26 @@
 //#include "TestANN_SingleClassificationPSO.hpp"
 #include "TestANN_GradientCheck.hpp"
 #include "CrossValidation.hpp"
+#include "SampleDataSet.hpp"
+#include "SampleLinearModel.hpp"
+#include "SampleQuadraticModel.hpp"
+#include "SampleCubicModel.hpp"
+
+typedef CrossValidation<30, QuadraticDataSet, LinearModel> CVLTest;
+typedef CrossValidation<30, QuadraticDataSet, QuadraticModel> CVQTest;
+typedef CrossValidation<30, QuadraticDataSet, CubicModel> CVCTest;
 
 int main(int argc, const char * argv[]) {
+    
+    CVLTest cv_test;
+    printf("CVL Error = %lf\n",cv_test.evaluate() );
+    
+    CVQTest cv_test2;
+    printf("CVQ Error = %lf\n",cv_test2.evaluate() );
+    
+    CVCTest cv_test3;
+    printf("CVC Error = %lf\n",cv_test3.evaluate() );
+    
     
     //testLocalRegression1D();
     //testLocalRegression2D();

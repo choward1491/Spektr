@@ -1429,7 +1429,7 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "490670300.081783"
+                  timestampString = "490992972.173889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -1444,7 +1444,7 @@
                   moduleName = "Spektr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/LinearAlgebra/Factorizations/Cholesky.hpp"
-                  timestampString = "490670300.081972"
+                  timestampString = "490992972.174182"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "68"
@@ -1594,6 +1594,182 @@
                   startingLineNumber = "62"
                   endingLineNumber = "62"
                   offsetFromSymbolStart = "433">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/CrossValidation/SampleProblem/SampleLinearModel.hpp"
+            timestampString = "490979004.621636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "train( int hold_out_set )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/CrossValidation/SampleProblem/SampleLinearModel.hpp"
+            timestampString = "490979004.621636"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "testError( int test_set )"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+            timestampString = "490980145.714139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "144"
+            endingLineNumber = "144"
+            landmarkName = "CV::Sets::init( DataSet &amp; data_set )"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;5, QuadraticDataSet, QuadraticModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980126.606526"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "366">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;5, QuadraticDataSet, LinearModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980126.606774"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "366">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+            timestampString = "490980145.714139"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "147"
+            endingLineNumber = "147"
+            landmarkName = "CV::Sets::init( DataSet &amp; data_set )"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;5, QuadraticDataSet, QuadraticModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980105.561974"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "366">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;5, QuadraticDataSet, LinearModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980105.562221"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "366">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+            timestampString = "490980141.571286"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
+            landmarkName = "CV::Sets::init( DataSet &amp; data_set )"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;300, QuadraticDataSet, QuadraticModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980238.976111"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1218">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CrossValidation&lt;300, QuadraticDataSet, LinearModel&gt;::Sets::init(QuadraticDataSet&amp;)"
+                  moduleName = "Spektr"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/christianjhoward/Documents/ProgrammingProjects/CPlusPlus_Projects/Spektr/build/xcode/../../src/MachineLearning/CrossValidation/CrossValidation_Impl.hpp"
+                  timestampString = "490980238.976397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "145"
+                  endingLineNumber = "145"
+                  offsetFromSymbolStart = "1218">
                </Location>
             </Locations>
          </BreakpointContent>
