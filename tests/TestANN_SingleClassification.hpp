@@ -54,18 +54,26 @@ public:
     double logisticCost( double y, double out, bool isGrad ){
         
         //printf("Out = %lf, y = %lf\n",out,y);
-        if( isGrad ){
+        /*if( isGrad ){
             if( y == 1.0 ){
-                return -1.0/out;
+                return -1.0/(out+1e-8);
             }else{
-                return 1.0/(1-out);
+                return 1.0/(1-out+1e-8);
             }
         }else{
             if( y == 1.0 ){
-                return -log(out);
+                return -log(out+ 1e-8);
             }else{
-                return -log(1-out);
+                return -log(1 + 1e-8 -out);
             }
+        }*/
+        
+        double de = (out - y);
+        
+        if( isGrad ){
+            return de;
+        }else{
+            return 0.5*de*de;
         }
     }
     
@@ -108,7 +116,7 @@ public:
 
 la::Mat<double> CostFunction::grad(1,1,0);
 
-typedef opt::gradient<CostFunction, opt::ConstantStep> grad_descent;
+typedef opt::gradient<CostFunction, opt::HessianFreeStep> grad_descent;
 
 double binaryField( double x, double y ){
     bool check = ((x*x + y*y) <= (0.25*0.25));
@@ -138,17 +146,18 @@ bool TestANN_SingleClassification(){
     }
     
     // set the layers
-    std::vector<int> layers { 2, 10, 10, 1 };
+    std::vector<int> layers { 2, 5, 1 };
     
     // create classifier
     ANN::Network classifier( layers );
-    classifier.setActivationFunc(3, ANN::sigmoid);
+    classifier.setActivationFunc(1, ANN::sigmoid);
+    //classifier.setActivationFunc(2, ANN::sigmoid);
     
     la::Mat<double> guess(classifier.numWeights(),1,0);
     
     // Try to classify given inputs
     for( int i = 0; i < classifier.numWeights(); i++ ){
-        guess(i) = (1*rng.rand()-0.5);
+        guess(i) = (3*rng.rand()-1.5);
     }
     
     

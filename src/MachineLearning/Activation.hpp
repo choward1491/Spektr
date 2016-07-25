@@ -1,8 +1,8 @@
 //
-//  LearningMissileSim.hpp
+//  Activation.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 5/24/16.
+//  Created by Christian J Howard on 7/24/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,48 +27,14 @@
 //
 //
 
-#ifndef LearningMissileSim_hpp
-#define LearningMissileSim_hpp
+#ifndef Activation_h
+#define Activation_h
 
-#include <stdio.h>
-#include "ExplicitEuler.hpp"
-#include "Timer.hpp"
-#include "Simulator.hpp"
-
-class LearningMissileSim : public Simulator<LearningMissileSim ,ExplicitEuler> {
-public:
-    
-    LearningMissileSim (){
-        timer.start();
-        numMC = 20;
-        writeSimHistory = false;
-    }
-    
-    
-    void _linkModelsToSim( SimState & state ){
-        addDiscrete(&tstep, 100);
-    }
-    void _connectModelsTogether(){
-        
-    }
-    bool _finishedSimulation( SimState & state ) const{
-        return getTime() > 10.0;
-    }
-    void _finalizeMonteCarloRun(){
-        printf("Finished #%i Monte Carlo run!\n",static_cast<int>(getCompletedMC()));
-    }
-    void _finalize(){
-        printf("Finished!\n");
-        timer.stop();
-        
-        printf("Simulation complete after %lf seconds\n",timer.getDuration());
-    }
-    
-private:
-    
-    Timer timer;
-    TimeStep tstep;
-    
+struct Activation {
+    Activation():output(0),deriv(0){}
+    Activation(double o, double d):output(o),deriv(d){}
+    double output;
+    double deriv;
 };
 
-#endif /* LearningMissileSim_hpp */
+#endif /* Activation_h */

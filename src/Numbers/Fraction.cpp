@@ -89,7 +89,7 @@ Fraction::Fraction(int complete_, int rem_num, int rem_denom ){
 
 Fraction Fraction::decimal2fraction( double val ){
     Fraction f;
-    methodOfContinuousFractions(val, f);
+    methodOfContinuousFractions(val, f, 1e-8);
     return f;
 }
 
@@ -99,18 +99,18 @@ void Fraction::methodOfContinuousFractions( double val, Fraction & frac, double 
     int w = (int)mag;
     double rem = mag-w;
     Fraction r;
-    MCF_helper(rem, r, thresh);
+    MCF_helper(rem, r, thresh, 0);
     frac = r + Fraction(w,1);
     frac.positive = (val >= 0);
 }
 
-void Fraction::MCF_helper( double val, Fraction & frac, double thresh ){
-    if( val > thresh ){
+void Fraction::MCF_helper( double val, Fraction & frac, double thresh, int count ){
+    if( val > thresh && count <= 20 ){
         double inv = 1.0/val;
         int w = (int)inv;
         double rem = inv-w;
         Fraction r;
-        MCF_helper(rem, r);
+        MCF_helper(rem, r, thresh, count + 1);
         frac = Fraction(1,1)/(Fraction(w,1) + r);
     }else{ frac = Fraction(); }
 }

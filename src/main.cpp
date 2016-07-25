@@ -16,7 +16,7 @@
 #include "TestNeuralFilter1.hpp"
 #include "TestNeuralKalmanFilter.hpp"
 //#include "TestANN_Autoencoder.hpp"
-//#include "TestANN_SingleClassification.hpp"
+#include "TestANN_SingleClassification.hpp"
 //#include "TestANN_SingleClassificationPSO.hpp"
 #include "TestANN_GradientCheck.hpp"
 #include "CrossValidation.hpp"
@@ -31,14 +31,14 @@ typedef CrossValidation<30, QuadraticDataSet, CubicModel> CVCTest;
 
 int main(int argc, const char * argv[]) {
     
-    CVLTest cv_test;
+    /*CVLTest cv_test;
     printf("CVL Error = %lf\n",cv_test.evaluate() );
     
     CVQTest cv_test2;
     printf("CVQ Error = %lf\n",cv_test2.evaluate() );
     
     CVCTest cv_test3;
-    printf("CVC Error = %lf\n",cv_test3.evaluate() );
+    printf("CVC Error = %lf\n",cv_test3.evaluate() );*/
     
     
     //testLocalRegression1D();
@@ -47,6 +47,7 @@ int main(int argc, const char * argv[]) {
     //runExample1_ADELINE();
     //runExample1_NeuralKalman();
     //TestANN_Autoencoder();
+    TestANN_SingleClassification();
     //TestANN_SingleClassificationPSO();
     
     

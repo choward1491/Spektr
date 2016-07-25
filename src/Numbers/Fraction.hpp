@@ -94,8 +94,8 @@ public:
 private:
     friend Fraction;
     
-    static void methodOfContinuousFractions( double val, Fraction & frac, double thresh = 1e-4 );
-    static void MCF_helper( double val, Fraction & frac, double thresh = 1e-4 );
+    static void methodOfContinuousFractions( double val, Fraction & frac, double thresh  );
+    static void MCF_helper( double val, Fraction & frac, double thresh, int count );
     
     int abs(int a){ if( a >= 0 ){ return a; }else{ return -a; } }
     bool sign( int a ){ return a>=0; }

@@ -39,6 +39,8 @@ namespace opt {
     public:
         HessianFreeStep():stepsize(0.01){}
         
+        void setStepSize(double z){}
+        
         double operator()(int iterationCount){
             
             grad1 = func->gradient();
