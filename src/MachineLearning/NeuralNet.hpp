@@ -71,6 +71,7 @@ public:
     double & weightAt(int index);
     const double & weightAt(int layer, int li, int ri) const;
     double & weightAt(int layer, int li, int ri);
+    void printWeights() const;
     
     
     
@@ -87,6 +88,12 @@ public:
 private:
     std::vector<NetLayer> layers;
     std::vector<Mat> weights;
+    int total_nodes;
+    int total_weights;
+    std::vector<int> weight_count;
+    
+    int binarySearchWeightIdx( int index, int & mat_idx ) const ;
+    
 };
 
 #endif /* NeuralNet_hpp */

@@ -39,6 +39,7 @@ class NetFunc {
 public:
     virtual Activation operator()(double z) const = 0;
     virtual std::string name() const = 0;
+    virtual ~NetFunc(){}
 };
 
 #endif /* NetNode_hpp */

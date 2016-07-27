@@ -24,12 +24,25 @@
 #include "SampleLinearModel.hpp"
 #include "SampleQuadraticModel.hpp"
 #include "SampleCubicModel.hpp"
-
-typedef CrossValidation<30, QuadraticDataSet, LinearModel> CVLTest;
-typedef CrossValidation<30, QuadraticDataSet, QuadraticModel> CVQTest;
-typedef CrossValidation<30, QuadraticDataSet, CubicModel> CVCTest;
+#include "NeuralNet.hpp"
 
 int main(int argc, const char * argv[]) {
+    
+    RandomNumberGenerator rng;
+    NeuralNet net( {1, 1, 1} );
+    NeuralNet::Mat x(1,1,5);
+    NeuralNet::Mat o(1,1,0);
+    
+    for(int i = 0; i < net.numWeights(); ++i){
+        double value = rng.rand()*3-1.5;
+        net.weightAt(i) = value;
+    }
+    printf("Number of weights = %i\n",net.numWeights());
+    net.printWeights();
+    
+    o = net(x);
+    x.print();
+    o.print();
     
     /*CVLTest cv_test;
     printf("CVL Error = %lf\n",cv_test.evaluate() );
@@ -47,7 +60,7 @@ int main(int argc, const char * argv[]) {
     //runExample1_ADELINE();
     //runExample1_NeuralKalman();
     //TestANN_Autoencoder();
-    TestANN_SingleClassification();
+    //TestANN_SingleClassification();
     //TestANN_SingleClassificationPSO();
     
     

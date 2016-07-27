@@ -8,6 +8,7 @@
 
 #include "NetLayer.hpp"
 #include "NetFunc.hpp"
+#include "NeuralPrototypes.hpp"
 
 
 //typedef la::Mat<double> Mat;
@@ -17,9 +18,13 @@ NetLayer::NetLayer( int num_nodes_):num_nodes(num_nodes_),
                                     inputs(num_nodes-1,1,0.0),
                                     derivs(num_nodes-1,1,0.0),
                                     outputs(num_nodes,1,0.0),
-                                    err(num_nodes-1,1,0.0)
+                                    err(num_nodes-1,1,0.0),
+                                    node_funcs(num_nodes,0)
 {
-    // need something here to initialize node functions
+    for(int i = 0; i < num_nodes-1; ++i ){
+        node_funcs[i] = NeuralPrototypes::prototypes.getFunction(NeuralPrototypes::LeakyLU);
+    }
+    node_funcs[num_nodes-1] = NeuralPrototypes::prototypes.getFunction(NeuralPrototypes::Bias);
 }
 NetLayer::~NetLayer(){
     

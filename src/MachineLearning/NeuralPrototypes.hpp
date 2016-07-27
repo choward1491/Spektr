@@ -1,8 +1,8 @@
 //
-//  NetFunctions.hpp
+//  NeuralFactory.hpp
 //  Spektr
 //
-//  Created by Christian J Howard on 7/24/16.
+//  Created by Christian J Howard on 7/26/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -27,43 +27,32 @@
 //
 //
 
-#ifndef NetFunctions_hpp
-#define NetFunctions_hpp
+#ifndef NeuralPrototypes_h
+#define NeuralPrototypes_h
 
-#include <stdio.h>
-#include "NetFunc.hpp"
+#include <vector>
+class NetFunc;
 
 
-namespace NetFunctions {
+class NeuralPrototypes {
     
-    class bias : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~bias(){}
-    };
+public:
+    enum Type { Bias = 0,
+                Linear,
+                Sigmoid,
+                LeakyLU
+               };
     
-    class linear : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~linear(){}
-    };
+    static NeuralPrototypes prototypes;
     
-    class sigmoid : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~sigmoid(){}
-    };
+    NeuralPrototypes();
+    ~NeuralPrototypes();
+    NetFunc* getFunction( enum Type type ) const;
     
-    class leakyLU : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~leakyLU(){}
-    };
+private:
+    std::vector<NetFunc*> funcs;
     
-}
+    
+};
 
-#endif /* NetFunctions_hpp */
+#endif /* NeuralFactory_h */

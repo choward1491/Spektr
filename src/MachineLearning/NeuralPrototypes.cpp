@@ -1,8 +1,8 @@
 //
-//  NetFunctions.hpp
+//  NeuralPrototypes.cpp
 //  Spektr
 //
-//  Created by Christian J Howard on 7/24/16.
+//  Created by Christian J Howard on 7/26/16.
 //
 //  The MIT License (MIT)
 //    Copyright © 2016 Christian Howard. All rights reserved.
@@ -25,45 +25,32 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //  SOFTWARE.
 //
-//
 
-#ifndef NetFunctions_hpp
-#define NetFunctions_hpp
+#include "NeuralPrototypes.hpp"
+#include "NetFunctions.hpp"
 
-#include <stdio.h>
-#include "NetFunc.hpp"
+//std::vector<NetFunc*> funcs;
+/*enum Type { Bias = 0,
+    Linear,
+    Sigmoid,
+    LeakyLU
+};*/
 
+NeuralPrototypes NeuralPrototypes::prototypes;
 
-namespace NetFunctions {
-    
-    class bias : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~bias(){}
-    };
-    
-    class linear : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~linear(){}
-    };
-    
-    class sigmoid : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~sigmoid(){}
-    };
-    
-    class leakyLU : public NetFunc {
-    public:
-        virtual Activation operator()(double z) const;
-        virtual std::string name() const;
-        virtual ~leakyLU(){}
-    };
-    
+NeuralPrototypes::NeuralPrototypes(){
+    funcs.push_back( new NetFunctions::bias() );
+    funcs.push_back( new NetFunctions::linear() );
+    funcs.push_back( new NetFunctions::sigmoid() );
+    funcs.push_back( new NetFunctions::leakyLU() );
+}
+NeuralPrototypes::~NeuralPrototypes(){
+    for(int i = 0; i < funcs.size(); ++i ){
+        delete funcs[i]; funcs[i] = 0;
+    }
 }
 
-#endif /* NetFunctions_hpp */
+NetFunc* NeuralPrototypes::getFunction( enum Type type ) const {
+    return funcs[type];
+}
+

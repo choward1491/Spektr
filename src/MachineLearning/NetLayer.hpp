@@ -39,7 +39,7 @@ class NetFunc;
 class NetLayer {
 public:
     typedef la::Mat<double> Mat;
-    NetLayer( int num_nodes );
+    NetLayer( int num_nodes = 1 );
     ~NetLayer();
     
     int numNodes() const;

@@ -9,6 +9,7 @@
 #include "NeuralNet.hpp"
 #include "NetFunc.hpp"
 #include "NetLayer.hpp"
+#include "NeuralPrototypes.hpp"
 
 
 //typedef la::Mat<double> Mat;
@@ -20,7 +21,7 @@ NeuralNet::NeuralNet(){
     
 }
 NeuralNet::NeuralNet( const std::vector<int> & layers ){
-    
+    setLayers(layers);
 }
 NeuralNet::NeuralNet( const NeuralNet & net ){
     
@@ -30,7 +31,29 @@ NeuralNet::~NeuralNet(){
 }
 
 // set layer dimensions
-void NeuralNet::setLayers( const std::vector<int> & layers ){
+void NeuralNet::setLayers( const std::vector<int> & layers_cnt ){
+    
+    if( layers_cnt.size() != layers.size() ){
+        layers.resize(layers_cnt.size());
+        weights.resize(layers_cnt.size()-1);
+        weight_count.resize(layers_cnt.size(),0);
+    }
+    
+    total_nodes = total_weights = 0;
+    layers[0] = NetLayer(layers_cnt[0]+1);
+    total_nodes = layers_cnt[0];
+    weight_count[0] = 0;
+    
+    for(int i = 1; i < layers_cnt.size(); i++ ){
+        layers[i] = NetLayer(layers_cnt[i]+1);
+        total_nodes += layers_cnt[i]+1;
+        weights[i-1].resize(layers_cnt[i],layers_cnt[i-1]+1);
+        total_weights += layers_cnt[i]*(layers_cnt[i-1]+1);
+        weight_count[i] = total_weights;
+    }
+    
+    layers[layers.size()-1].setLayerFunc( NeuralPrototypes::prototypes.getFunction( NeuralPrototypes::Linear ) );
+    
     
 }
 
@@ -49,7 +72,11 @@ void NeuralNet::operator()(Mat & input , Mat & output ){
         layers[i].computeActivation();
     }
     
-    output = layers[layers.size()-1].getLayerOutput();
+    const Mat & o = layers[layers.size()-1].getLayerOutput();
+    if( output.size() != o.size() ){ output.resize( o.size().rows-1, 1 ); }
+    for( int i = 0; i < o.size().rows-1; ++i ){
+        output[i] = o[i];
+    }
 }
 void NeuralNet::operator()(std::vector<double> & input , std::vector<double> & output ){
     Mat & in = layers[0].getLayerInput();
@@ -66,7 +93,11 @@ void NeuralNet::operator()(std::vector<double> & input , std::vector<double> & o
     for( int i = 0; i < output.size(); ++i ){ output[i] = out[i]; }
 }
 NeuralNet & NeuralNet::operator=( const NeuralNet & net ){
+    if( this != &net ){
+        
+    }
     
+    return *this;
 }
 
 // back propogation
@@ -74,7 +105,7 @@ void NeuralNet::backprop( const Mat & dEdO,Mat & gradient ){
     
 }
 typename NeuralNet::Mat NeuralNet::backprop( const Mat & dEdO ){
-    
+    return Mat();
 }
 
 // get gradient with respect to input
@@ -83,23 +114,61 @@ void NeuralNet::grad( Mat & gradient ){
 }
 
 
+int NeuralNet::binarySearchWeightIdx( int index, int & mat_idx ) const {
+    if( index < 0 ){ mat_idx = 0; return 0; }
+    if( index < weight_count[weight_count.size()-1] ){
+        
+        int cidx = static_cast<int>(weight_count.size()/2);
+        int li = 0, ri = static_cast<int>(weight_count.size()-1);
+        
+        while( (cidx-li)>1 && (ri-cidx)>1 ){
+            if( weight_count[cidx] > index ){
+                ri = cidx;
+                cidx = ( cidx + li )/2;
+            }else {
+                li = cidx;
+                cidx = (cidx + ri)/2;
+            }
+        }
+        
+        if( weight_count[cidx] > index ){ mat_idx = li; }
+        if( weight_count[cidx] <= index ){ mat_idx = cidx; }
+        return index - weight_count[mat_idx];
+        
+    }else{
+        mat_idx = static_cast<int>(weights.size()-1);
+        return weight_count[mat_idx+1] - weight_count[mat_idx] - 1;
+    }
+}
+
 
 
 // weight stuff
 size_t NeuralNet::numWeights() const{
-    
+    return static_cast<size_t>(total_weights);
 }
 const double & NeuralNet::weightAt(int index) const{
-    
+    int mat_idx = 0;
+    int del_idx = binarySearchWeightIdx(index, mat_idx);
+    return weights[mat_idx](del_idx);
 }
 double & NeuralNet::weightAt(int index){
-    
+    int mat_idx = 0;
+    int del_idx = binarySearchWeightIdx(index, mat_idx);
+    return weights[mat_idx](del_idx);
 }
 const double & NeuralNet::weightAt(int layer, int li, int ri) const {
-    
+    return weights[layer](ri,li);
 }
 double & NeuralNet::weightAt(int layer, int li, int ri){
-    
+    return weights[layer](ri,li);
+}
+
+void NeuralNet::printWeights() const {
+    for(int i = 0; i < weights.size(); ++i ){
+        printf("Weight Matrix #%i\n",i+1);
+        weights[i].print();
+    }
 }
 
 
@@ -109,7 +178,7 @@ size_t NeuralNet::numNodes( int layer ){
     return layers[layer].numNodes();
 }
 size_t NeuralNet::numNodes() const{
-    
+    return static_cast<size_t>(total_nodes);
 }
 void NeuralNet::setActivationFunc( int layer, NetFunc * func){
     layers[layer].setLayerFunc(func);

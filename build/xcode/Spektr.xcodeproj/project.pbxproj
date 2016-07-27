@@ -27,6 +27,7 @@
 		AD51D9011D45CA5A00E07EA6 /* NetLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD51D8FF1D45CA5A00E07EA6 /* NetLayer.cpp */; };
 		AD51D9041D45CA6D00E07EA6 /* NetFunc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD51D9021D45CA6D00E07EA6 /* NetFunc.cpp */; };
 		AD51D9071D45CF2C00E07EA6 /* NetFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD51D9051D45CF2C00E07EA6 /* NetFunctions.cpp */; };
+		AD51D90B1D488A2200E07EA6 /* NeuralPrototypes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD51D90A1D488A2200E07EA6 /* NeuralPrototypes.cpp */; };
 		AD5CE1B71C99170B00E6CC2A /* ModelState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */; };
 		AD608F031D067E8D00D89490 /* TestLocalRegression2D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F011D067E8D00D89490 /* TestLocalRegression2D.cpp */; };
 		AD608F061D0685E000D89490 /* TestLocalRegression3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AD608F041D0685E000D89490 /* TestLocalRegression3D.cpp */; };
@@ -386,6 +387,8 @@
 		AD51D9051D45CF2C00E07EA6 /* NetFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NetFunctions.cpp; sourceTree = "<group>"; };
 		AD51D9061D45CF2C00E07EA6 /* NetFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = NetFunctions.hpp; sourceTree = "<group>"; };
 		AD51D9081D45CF8E00E07EA6 /* Activation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Activation.hpp; sourceTree = "<group>"; };
+		AD51D9091D48888E00E07EA6 /* NeuralPrototypes.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NeuralPrototypes.hpp; sourceTree = "<group>"; };
+		AD51D90A1D488A2200E07EA6 /* NeuralPrototypes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NeuralPrototypes.cpp; sourceTree = "<group>"; };
 		AD5B18641BE442CE003E0233 /* LearnCannonAI */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LearnCannonAI; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5B19041BE4540D003E0233 /* libSpektr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSpektr.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD5CE1B51C99170B00E6CC2A /* ModelState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ModelState.cpp; path = ModelState/ModelState.cpp; sourceTree = "<group>"; };
@@ -727,6 +730,8 @@
 				AD51D9051D45CF2C00E07EA6 /* NetFunctions.cpp */,
 				AD51D9061D45CF2C00E07EA6 /* NetFunctions.hpp */,
 				AD51D9081D45CF8E00E07EA6 /* Activation.hpp */,
+				AD51D9091D48888E00E07EA6 /* NeuralPrototypes.hpp */,
+				AD51D90A1D488A2200E07EA6 /* NeuralPrototypes.cpp */,
 			);
 			name = ANN2;
 			sourceTree = "<group>";
@@ -1683,6 +1688,7 @@
 				ADF8DDCF1C895BAB004C682C /* SimTime.cpp in Sources */,
 				ADF8DDAE1C895BAB004C682C /* DataPrinter.cpp in Sources */,
 				ADF75EA31CC20C9F00092A38 /* ButcherIntegrator.cpp in Sources */,
+				AD51D90B1D488A2200E07EA6 /* NeuralPrototypes.cpp in Sources */,
 				ADF8DDA41C895BAB004C682C /* RandomNumberGenerator.cpp in Sources */,
 				ADF8DDDC1C895BAB004C682C /* Particle.cpp in Sources */,
 				AD608F061D0685E000D89490 /* TestLocalRegression3D.cpp in Sources */,
