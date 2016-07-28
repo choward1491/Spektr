@@ -93,6 +93,9 @@ private:
     std::vector<int> weight_count;
     
     int binarySearchWeightIdx( int index, int & mat_idx ) const ;
+    void computeOuterLayerErrors( NetLayer & ol, const Mat & dEdO );
+    void computeInnerLayerErrors( NetLayer & il, NetLayer & next_layer, const Mat & layer_weights );
+    void computeLayerWeightGradient( int layer, Mat & grad );
     
 };
 

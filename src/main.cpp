@@ -29,18 +29,36 @@
 int main(int argc, const char * argv[]) {
     
     RandomNumberGenerator rng;
-    NeuralNet net( {1, 1, 1} );
-    NeuralNet::Mat x(1,1,5);
+    NeuralNet net( {1, 5, 1} );
+    NeuralNet::Mat x(1,1,1), y(1,1,13), dEdO(1,1,0), grad(16,1,0);
     NeuralNet::Mat o(1,1,0);
     
+    ANN::Network net2( {1, 5, 1} );
     for(int i = 0; i < net.numWeights(); ++i){
-        double value = rng.rand()*3-1.5;
-        net.weightAt(i) = value;
+        double val = rng.rand()*10-5;
+        net.weightAt(i) = val;
+        net2.weightAt(i) = val;
     }
+    
+    
     printf("Number of weights = %i\n",net.numWeights());
     net.printWeights();
     
-    o = net(x);
+    net(x,o);
+    dEdO = (o[0] - y[0]);
+    dEdO.print();
+    net.backprop(dEdO, grad);
+    grad.print();
+    grad = 0;
+    
+    
+    net2.print();
+    net2(x,o);
+    dEdO = (o[0] - y[0]);
+    dEdO.print();
+    net2.backprop(dEdO, grad);
+    grad.print();
+    
     x.print();
     o.print();
     

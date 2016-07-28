@@ -101,11 +101,67 @@ NeuralNet & NeuralNet::operator=( const NeuralNet & net ){
 }
 
 // back propogation
+
+void NeuralNet::computeOuterLayerErrors( NetLayer & ol, const Mat & dEdO ) {
+    int num_inputs = ol.numNodesWithoutBias();
+    Mat & derivs = ol.getLayerDerivatives();
+    Mat & errors = ol.getLayerBackPropError();
+    
+    for( int i = 0; i < num_inputs; ++i ){
+        errors[i] = dEdO[i]*derivs[i];
+    }
+}
+void NeuralNet::computeInnerLayerErrors( NetLayer & il, NetLayer & next_layer, const Mat & w ) {
+    int num_inputs = il.numNodesWithoutBias();
+    Mat & derivs = il.getLayerDerivatives();
+    Mat & errors = il.getLayerBackPropError();
+    Mat & next_errs = next_layer.getLayerBackPropError();
+    
+    for( int i = 0; i < num_inputs; ++i ){
+        errors[i] = 0.0;
+        for (int m = 0; m < next_errs.size().rows; ++m) {
+            errors[i] += next_errs[m]*w(m,i);
+        }
+        errors[i] *= derivs[i];
+    }
+}
+
+void NeuralNet::computeLayerWeightGradient( int layer, Mat & grad ) {
+    Mat & errors = layers[layer+1].getLayerBackPropError();
+    Mat & out    = layers[layer].getLayerOutput();
+    Dims dims    = weights[layer].size();
+    int start_dx = weight_count[layer];
+    int k = 0;
+    
+    for( int i = 0; i < dims.rows; ++i ){
+        for( int j = 0; j < dims.cols; ++j ){
+            grad[start_dx+k] += errors[i]*out[j];
+            ++k;
+        }
+    }
+    
+}
+
 void NeuralNet::backprop( const Mat & dEdO,Mat & gradient ){
+    // create backprop error based on outer layer
+    int lastlayer = static_cast<int>(layers.size()-1);
+    computeOuterLayerErrors(layers[lastlayer], dEdO);
+    
+    // propogate error and compute gradient of weights
+    int num_weight_maps = static_cast<int>(weights.size()-1);
+    for(int i = num_weight_maps; i > 0; --i ){
+        computeInnerLayerErrors(layers[i], layers[i+1], weights[i]);
+        computeLayerWeightGradient(i, gradient);
+    }
+    
+    // compute final gradient portion for first weight map
+    computeLayerWeightGradient(0, gradient);
     
 }
 typename NeuralNet::Mat NeuralNet::backprop( const Mat & dEdO ){
-    return Mat();
+    Mat grad((int)this->numWeights(),1,0);
+    this->backprop(dEdO, grad);
+    return grad;
 }
 
 // get gradient with respect to input
