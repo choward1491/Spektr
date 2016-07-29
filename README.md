@@ -41,7 +41,12 @@ At this point, algorithms have been developed for the following tasks:
 - Add algorithms for computing determinant and other common measures (trace, matrix norms, etc)
 - Add structure to allow for complex matrices and unitary matrices
 - Add matrix type that can store matrices as sub-matrices
-- Add Trust Region optimization algorithms
-- Add Newton and Quasi-Newton optimization algorithms
-- Add Genetic Algorithms implementation(s)
-- Add Gravitational Search Algorithms
+- Add following Optimization Codes
+  - Trust Region optimization algorithms
+  - Genetic Algorithms implementation(s)
+  - Gravitational Search Algorithms
+  - Rprop Optimization Algorithm
+  - Global Descent Algorithm
+  - SARPROP Optimization Algorithm
+  - BFGS Optimization Algorithm
+  - Nonlinear Conjugate Gradient Algorithm
